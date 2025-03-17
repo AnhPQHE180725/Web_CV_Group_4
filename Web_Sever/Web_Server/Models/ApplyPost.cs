@@ -8,7 +8,7 @@
 
         public int RecruitmentId { get; set; }
 
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         public string CreatedAt { get; set; }
 

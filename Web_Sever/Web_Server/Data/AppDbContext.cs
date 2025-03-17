@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Web_Server.Models;
 
 namespace Web_Server.Data
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Recruitment> Recruitments { get; set; }
         public DbSet<Company> Companies { get; set; }
@@ -24,43 +23,32 @@ namespace Web_Server.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Company>()
-               .HasOne(c => c.User)
-               .WithMany()
-               .HasForeignKey(c => c.UserId);
 
-            builder.Entity<CV>()
-                .HasOne(c => c.User)
-                .WithMany()
-                .HasForeignKey(c => c.UserId);
-
-            builder.Entity<FollowJob>()
-                .HasOne(s => s.User)
-                .WithMany()
-                .HasForeignKey(s => s.UserId);
-
-            builder.Entity<FollowCompany>()
-                .HasOne(f => f.User)
-                .WithMany()
-                .HasForeignKey(f => f.UserId);
+            builder.Entity<User>()
+                .HasOne(u => u.CV)
+                .WithOne(c => c.User)
+                .HasForeignKey<CV>(c => c.UserId)
+                .OnDelete(DeleteBehavior.Cascade); // Chỉ cần 1 mối quan hệ dùng Cascade
 
             builder.Entity<FollowCompany>()
                 .HasOne(f => f.Company)
                 .WithMany()
-                .HasForeignKey(f => f.CompanyId);
-
-            builder.Entity<Recruitment>()
-                .HasOne(r => r.Company)
-                .WithMany()
-                .HasForeignKey(r => r.CompanyId);
+                .HasForeignKey(f => f.CompanyId)
+                .OnDelete(DeleteBehavior.NoAction);  // Ngăn xung đột
 
             builder.Entity<ApplyPost>()
                 .HasOne(a => a.User)
                 .WithMany()
-                .HasForeignKey(a => a.UserId);
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.NoAction);  // Ngăn xung đột
+            builder.Entity<FollowJob>()
+                .HasOne(fj => fj.User)
+                .WithMany(u => u.FollowJobs)  // 🔥 Quan hệ 1-n
+                .HasForeignKey(fj => fj.UserId) // ✅ Xác định `UserId` là FK
+                .OnDelete(DeleteBehavior.NoAction);
+
             SeedData.Seed(builder);
         }
-
 
     }
 }
