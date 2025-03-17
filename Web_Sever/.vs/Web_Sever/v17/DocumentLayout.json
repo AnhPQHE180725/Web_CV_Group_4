@@ -122,7 +122,8 @@
               "RelativeToolTip": "Web_Server\\Models\\ApplyPost.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:45:04.166Z"
+              "WhenOpened": "2025-03-17T03:45:04.166Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -134,7 +135,8 @@
               "RelativeToolTip": "Web_Server\\Models\\FollowCompany.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:43:16.73Z"
+              "WhenOpened": "2025-03-17T03:43:16.73Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -146,7 +148,8 @@
               "RelativeToolTip": "Web_Server\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:32:41.508Z"
+              "WhenOpened": "2025-03-17T03:32:41.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -171,7 +174,8 @@
               "RelativeToolTip": "Web_Server\\Models\\Company.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:26:53.648Z"
+              "WhenOpened": "2025-03-17T03:26:53.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -196,7 +200,8 @@
               "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T04:02:42.724Z"
+              "WhenOpened": "2025-03-17T04:02:42.724Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -208,7 +213,8 @@
               "RelativeToolTip": "Web_Server\\Models\\CV.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:23:01.709Z"
+              "WhenOpened": "2025-03-17T03:23:01.709Z",
+              "EditorCaption": ""
             }
           ]
         }
