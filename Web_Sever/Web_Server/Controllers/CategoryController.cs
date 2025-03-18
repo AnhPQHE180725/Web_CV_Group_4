@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Web_Server.Interfaces;
+using Web_Server.Services;
 
 namespace Web_Server.Controllers
 {
@@ -7,5 +9,18 @@ namespace Web_Server.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        private readonly ICategoryService categoryService;
+
+        public CategoryController(ICategoryService categoryService)
+        {
+            this.categoryService = categoryService;
+        }
+
+        [HttpGet("get-all-categories")]
+
+        public async Task<IActionResult> GetAllCategories()
+        {
+            return Ok(await categoryService.GetAllCategories());
+        }
     }
 }

@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "Web_Server.Controllers.CategoryController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/Category/get-all-categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

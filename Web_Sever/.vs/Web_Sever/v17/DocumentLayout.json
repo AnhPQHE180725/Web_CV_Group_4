@@ -1,86 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
+  "WorkspaceRootPath": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\followjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\followjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\recruitment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\recruitment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\migrations\\20250317083256_initialdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\migrations\\20250317083256_initialdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317083214_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250317083214_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317082456_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250317082456_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317081902_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250317081902_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\models\\followcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\followcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317080639_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250317080639_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317075809_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250317075809_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317075510_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250317075510_InitialDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,8 +46,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
+              "RelativeToolTip": "Web_Server\\Models\\User.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:24:03.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Role.cs",
+              "RelativeToolTip": "Web_Server\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:24:03.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
+              "RelativeToolTip": "Web_Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-18T03:18:53.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Program.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "RelativeToolTip": "Web_Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:18:41.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Web_Server\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:17:03.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:15:53.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CategoryService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:14:46.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T03:11:27.219Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -113,252 +173,21 @@
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Web_Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwDIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:50:09.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
-              "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T04:02:42.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Program.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
-              "RelativeToolTip": "Web_Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:51:44.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
-              "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
-              "RelativeToolTip": "Web_Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-17T07:09:58.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplyPost.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\ApplyPost.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
-              "RelativeToolTip": "Web_Server\\Models\\ApplyPost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:45:04.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FollowJob.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\FollowJob.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\FollowJob.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\FollowJob.cs",
-              "RelativeToolTip": "Web_Server\\Models\\FollowJob.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:56:30.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Recruitment.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Recruitment.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\Recruitment.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Recruitment.cs",
-              "RelativeToolTip": "Web_Server\\Models\\Recruitment.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA1wAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:30:00.715Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\Role.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Role.cs",
-              "RelativeToolTip": "Web_Server\\Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:28:23.743Z",
+              "WhenOpened": "2025-03-18T03:09:15.05Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
-              "RelativeToolTip": "Web_Server\\Models\\User.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAowBUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:19:43.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20250317083256_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317083256_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317083256_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317083256_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317083256_InitialDb.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAQwAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:32:56.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20250317082456_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317082456_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317082456_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317082456_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317082456_InitialDb.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:24:56.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20250317083214_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317083214_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317083214_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317083214_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317083214_InitialDb.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:32:14.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Company.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Company.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\Company.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Company.cs",
-              "RelativeToolTip": "Web_Server\\Models\\Company.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:26:53.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CV.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\CV.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\CV.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\CV.cs",
-              "RelativeToolTip": "Web_Server\\Models\\CV.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:23:01.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20250317081902_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317081902_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317081902_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317081902_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317081902_InitialDb.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:19:02.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\Category.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Category.cs",
-              "RelativeToolTip": "Web_Server\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:32:41.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FollowCompany.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\FollowCompany.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\FollowCompany.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\FollowCompany.cs",
-              "RelativeToolTip": "Web_Server\\Models\\FollowCompany.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T03:43:16.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20250317080639_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317080639_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317080639_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317080639_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317080639_InitialDb.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:06:39.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "20250317075809_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317075809_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317075809_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317075809_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317075809_InitialDb.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:58:10.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20250317075510_InitialDb.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317075510_InitialDb.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250317075510_InitialDb.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250317075510_InitialDb.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250317075510_InitialDb.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T07:55:10.962Z"
             }
           ]
         },
