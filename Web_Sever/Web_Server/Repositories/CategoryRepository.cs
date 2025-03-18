@@ -14,9 +14,16 @@ namespace Web_Server.Repositories
             _context = context;
         }
 
+        public async Task<List<Category>> Get5TopCategories()
+        {
+            return await _context.Categories.OrderByDescending(c => c.Recruitments.Count()).Take(5).ToListAsync();
+        }
+
         public async Task<List<Category>> GetAllCategories()
         {
-           return await _context.Categories.ToListAsync();  
+           return await _context.Categories.ToListAsync();
         }
+
+
     }
 }

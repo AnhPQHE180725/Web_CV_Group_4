@@ -22,5 +22,12 @@ namespace Web_Server.Controllers
         {
             return Ok(await categoryService.GetAllCategories());
         }
+
+        [HttpGet("get-top-categories")]
+
+        public async Task<IActionResult> GetTopCategories()
+        {
+            return Ok(await categoryService.Get5TopCategories());
+        }
     }
 }

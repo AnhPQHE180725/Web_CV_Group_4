@@ -12,9 +12,16 @@ namespace Web_Server.Services
             _categoryRepository = categoryRepository;
         }
 
+        public async Task<List<Category>> Get5TopCategories()
+        {
+           return await _categoryRepository.Get5TopCategories();
+        }
+
         public async Task<List<Category>> GetAllCategories()
         {
             return await _categoryRepository.GetAllCategories();
         }
+
+
     }
 }
