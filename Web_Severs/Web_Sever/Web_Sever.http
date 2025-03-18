@@ -1,0 +1,6 @@
+@Web_Sever_HostAddress = http://localhost:5257
+
+GET {{Web_Sever_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

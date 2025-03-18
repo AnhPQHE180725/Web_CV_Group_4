@@ -28,23 +28,23 @@ namespace Web_Server.Data
                 .HasOne(u => u.CV)
                 .WithOne(c => c.User)
                 .HasForeignKey<CV>(c => c.UserId)
-                .OnDelete(DeleteBehavior.Cascade); // Chỉ cần 1 mối quan hệ dùng Cascade
+                .OnDelete(DeleteBehavior.Cascade); 
 
             builder.Entity<FollowCompany>()
                 .HasOne(f => f.Company)
                 .WithMany()
                 .HasForeignKey(f => f.CompanyId)
-                .OnDelete(DeleteBehavior.NoAction);  // Ngăn xung đột
+                .OnDelete(DeleteBehavior.NoAction);  
 
             builder.Entity<ApplyPost>()
                 .HasOne(a => a.User)
                 .WithMany()
                 .HasForeignKey(a => a.UserId)
-                .OnDelete(DeleteBehavior.NoAction);  // Ngăn xung đột
+                .OnDelete(DeleteBehavior.NoAction);  
             builder.Entity<FollowJob>()
                 .HasOne(fj => fj.User)
-                .WithMany(u => u.FollowJobs)  // 🔥 Quan hệ 1-n
-                .HasForeignKey(fj => fj.UserId) // ✅ Xác định `UserId` là FK
+                .WithMany(u => u.FollowJobs)  
+                .HasForeignKey(fj => fj.UserId) 
                 .OnDelete(DeleteBehavior.NoAction);
 
             SeedData.Seed(builder);
