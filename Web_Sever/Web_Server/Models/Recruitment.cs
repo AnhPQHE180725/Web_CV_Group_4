@@ -4,12 +4,12 @@
     {
         public int Id { get; set; }
         public string Address {  get; set; }
-        public string CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         public string Description { get; set; }
         public string Experience { get; set; }
         public int Quantity { get; set; }
          public string Rank { get; set; }
-        public string salary { get; set; }
+        public double Salary { get; set; }
 
         public int Status {  get; set; }
 
