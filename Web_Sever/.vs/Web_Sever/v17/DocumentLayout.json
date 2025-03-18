@@ -119,8 +119,7 @@
               "RelativeToolTip": "Web_Server\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T03:01:00.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T03:01:00.904Z"
             },
             {
               "$type": "Document",
@@ -132,8 +131,7 @@
               "RelativeToolTip": "Web_Server\\Controllers\\CompanyController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T03:00:44.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T03:00:44.657Z"
             },
             {
               "$type": "Document",
@@ -145,8 +143,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\CompanyRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T03:00:11.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T03:00:11.578Z"
             },
             {
               "$type": "Document",
@@ -158,8 +155,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:59:54.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:59:54.199Z"
             },
             {
               "$type": "Document",
@@ -171,8 +167,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\CatergoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:59:37.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:59:37.656Z"
             },
             {
               "$type": "Document",
@@ -184,8 +179,7 @@
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:59:04.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:59:04.963Z"
             },
             {
               "$type": "Document",
@@ -197,8 +191,7 @@
               "RelativeToolTip": "Web_Server\\Services\\CompanyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:58:48.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:58:48.566Z"
             },
             {
               "$type": "Document",
@@ -210,8 +203,7 @@
               "RelativeToolTip": "Web_Server\\Services\\CategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:58:37.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:58:37.538Z"
             },
             {
               "$type": "Document",
@@ -223,8 +215,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:57:14.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:57:14.794Z"
             },
             {
               "$type": "Document",
@@ -236,8 +227,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:56:58.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:56:58.815Z"
             },
             {
               "$type": "Document",
@@ -249,8 +239,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICompanyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:56:45.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:56:45.948Z"
             },
             {
               "$type": "Document",
@@ -262,8 +251,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:56:04.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:56:04.117Z"
             },
             {
               "$type": "Document",
@@ -275,8 +263,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:55:44.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:55:44.751Z"
             },
             {
               "$type": "Document",
@@ -288,8 +275,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICompanyRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:55:17.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:55:17.025Z"
             }
           ]
         },
