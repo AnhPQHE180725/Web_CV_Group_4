@@ -401,6 +401,35 @@ namespace Web_Server.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Web_Server.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Candidate"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Recruiter"
+                        });
+                });
+
             modelBuilder.Entity("Web_Server.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -440,10 +469,15 @@ namespace Web_Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("User");
 
@@ -459,6 +493,7 @@ namespace Web_Server.Migrations
                             Image = "test",
                             Password = "hashedpassword",
                             PhoneNumber = "1234567890",
+                            RoleId = 1,
                             Status = 1
                         },
                         new
@@ -472,6 +507,7 @@ namespace Web_Server.Migrations
                             Image = "test",
                             Password = "hashedpassword",
                             PhoneNumber = "9876543210",
+                            RoleId = 2,
                             Status = 1
                         });
                 });
@@ -578,6 +614,17 @@ namespace Web_Server.Migrations
                     b.Navigation("Company");
                 });
 
+            modelBuilder.Entity("Web_Server.Models.User", b =>
+                {
+                    b.HasOne("Web_Server.Models.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("Web_Server.Models.Category", b =>
                 {
                     b.Navigation("Recruitments");
@@ -586,6 +633,11 @@ namespace Web_Server.Migrations
             modelBuilder.Entity("Web_Server.Models.Company", b =>
                 {
                     b.Navigation("Recruitments");
+                });
+
+            modelBuilder.Entity("Web_Server.Models.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Web_Server.Models.User", b =>

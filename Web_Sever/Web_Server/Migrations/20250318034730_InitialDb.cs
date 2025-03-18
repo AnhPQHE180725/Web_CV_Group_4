@@ -27,6 +27,19 @@ namespace Web_Server.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Roles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Roles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "User",
                 columns: table => new
                 {
@@ -40,11 +53,18 @@ namespace Web_Server.Migrations
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CVId = table.Column<int>(type: "int", nullable: false)
+                    CVId = table.Column<int>(type: "int", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_User_Roles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Roles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -226,12 +246,21 @@ namespace Web_Server.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "User",
-                columns: new[] { "Id", "Address", "CVId", "Description", "Email", "FullName", "Image", "Password", "PhoneNumber", "Status" },
+                table: "Roles",
+                columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { 1, "123 Main St", 1, "Software Developer", "john@example.com", "John Doe", "test", "hashedpassword", "1234567890", 1 },
-                    { 2, "456 Elm St", 2, "Data Analyst", "jane@example.com", "Jane Smith", "test", "hashedpassword", "9876543210", 1 }
+                    { 1, "Candidate" },
+                    { 2, "Recruiter" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "Id", "Address", "CVId", "Description", "Email", "FullName", "Image", "Password", "PhoneNumber", "RoleId", "Status" },
+                values: new object[,]
+                {
+                    { 1, "123 Main St", 1, "Software Developer", "john@example.com", "John Doe", "test", "hashedpassword", "1234567890", 1, 1 },
+                    { 2, "456 Elm St", 2, "Data Analyst", "jane@example.com", "Jane Smith", "test", "hashedpassword", "9876543210", 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -343,6 +372,11 @@ namespace Web_Server.Migrations
                 name: "IX_Recruitments_UserId",
                 table: "Recruitments",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_RoleId",
+                table: "User",
+                column: "RoleId");
         }
 
         /// <inheritdoc />
@@ -371,6 +405,9 @@ namespace Web_Server.Migrations
 
             migrationBuilder.DropTable(
                 name: "User");
+
+            migrationBuilder.DropTable(
+                name: "Roles");
         }
     }
 }

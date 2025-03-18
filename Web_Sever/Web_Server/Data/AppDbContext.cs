@@ -17,6 +17,7 @@ namespace Web_Server.Data
         public DbSet<FollowCompany> FollowCompanies { get; set; }
 
         public DbSet<FollowJob> FollowJobs { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         public AppDbContext(DbContextOptions options) : base(options) { }
 
