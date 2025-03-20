@@ -16,4 +16,8 @@ export class CategoryService {
     getTopCategories(): Observable<Category[]> {
         return this.http.get<Category[]>(`${this.baseUrl}/Category/get-top-categories`)
     }
+
+    getAllCategories(): Observable<Category[]> {
+        return this.http.get<Category[]>(`${this.baseUrl}/Category/get-all-categories`)
+    }
 }

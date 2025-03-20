@@ -20,42 +20,61 @@ export class RecruitmentListComponent {
   constructor(private route: ActivatedRoute, private recruitmentService: RecruitmentService) { }
 
   ngOnInit() {
-    this.route.url.subscribe(urlSegments => {
-      const path = urlSegments.map(segment => segment.path).join('/');
-      const filterId = Number(this.route.snapshot.paramMap.get('id'));
+    this.route.paramMap.subscribe(params => {
+      const filterId = Number(params.get('id'));
+      const urlPath = this.route.snapshot.url.map(segment => segment.path).join('/');
 
-      if (path.startsWith('recruitment/category/')) {
-        this.recruitmentService.getRecruitmentsByCategory(filterId).subscribe(
-          (data) => {
+      // Clear previous data
+      this.recruitments = [];
+      this.paginatedRecruitments = [];
+      this.totalPages = 1;
+      this.pageTitle = 'Danh Sách Tuyển Dụng';
 
-            this.recruitments = data;
-            this.pageTitle = `Danh Sách Tuyển Dụng - ${this.recruitments[0].categoryName}`;
-            this.totalPages = Math.ceil(this.recruitments.length / this.recordsPerPage);
-            this.updatePaginatedList();
-          },
-          (error) => console.error('Error fetching recruitments by category:', error)
-        );
-      } else if (path.startsWith('recruitment/company/')) {
-        this.recruitmentService.getRecruitmentsByCompany(filterId).subscribe(
-          (data) => {
-            this.recruitments = data;
-            this.pageTitle = `Danh Sách Tuyển Dụng - ${this.recruitments[0].companyName}`;
-            this.totalPages = Math.ceil(this.recruitments.length / this.recordsPerPage);
-            this.updatePaginatedList();
-          },
-          (error) => console.error('Error fetching recruitments by company:', error)
-        );
+      if (urlPath.startsWith('recruitment/category/')) {
+        this.fetchRecruitmentsByCategory(filterId);
+      } else if (urlPath.startsWith('recruitment/company/')) {
+        this.fetchRecruitmentsByCompany(filterId);
       }
     });
   }
 
-  updatePaginatedList() {
-    const startIndex = (this.currentPage - 1) * this.recordsPerPage;
-    this.paginatedRecruitments = this.recruitments.slice(startIndex, startIndex + this.recordsPerPage);
+  fetchRecruitmentsByCategory(categoryId: number) {
+    this.recruitmentService.getRecruitmentsByCategory(categoryId).subscribe(
+      (data) => {
+        this.recruitments = data;
+        if (this.recruitments.length > 0) {
+          this.pageTitle = `Danh Sách Tuyển Dụng - ${this.recruitments[0].categoryName}`;
+        } else {
+          this.pageTitle = 'Không có tuyển dụng nào trong danh mục này.';
+        }
+        this.updatePagination();
+      },
+      (error) => console.error('Error fetching recruitments by category:', error)
+    );
   }
 
+  fetchRecruitmentsByCompany(companyId: number) {
+    this.recruitmentService.getRecruitmentsByCompany(companyId).subscribe(
+      (data) => {
+        this.recruitments = data;
+        if (this.recruitments.length > 0) {
+          this.pageTitle = `Danh Sách Tuyển Dụng - ${this.recruitments[0].companyName}`;
+        } else {
+          this.pageTitle = 'Không có tuyển dụng nào trong công ty này.';
+        }
+        this.updatePagination();
+      },
+      (error) => console.error('Error fetching recruitments by company:', error)
+    );
+  }
+
+  updatePagination() {
+    this.totalPages = Math.ceil(this.recruitments.length / this.recordsPerPage);
+    this.goToPage(1);
+  }
   goToPage(page: number) {
     this.currentPage = page;
-    this.updatePaginatedList();
+    const startIndex = (this.currentPage - 1) * this.recordsPerPage;
+    this.paginatedRecruitments = this.recruitments.slice(startIndex, startIndex + this.recordsPerPage);
   }
 }
