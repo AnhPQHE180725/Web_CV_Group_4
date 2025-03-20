@@ -24,7 +24,7 @@ export class RecruitmentListComponent {
       const filterId = Number(params.get('id'));
       const urlPath = this.route.snapshot.url.map(segment => segment.path).join('/');
 
-      // Clear previous data
+
       this.recruitments = [];
       this.paginatedRecruitments = [];
       this.totalPages = 1;
@@ -34,6 +34,8 @@ export class RecruitmentListComponent {
         this.fetchRecruitmentsByCategory(filterId);
       } else if (urlPath.startsWith('recruitment/company/')) {
         this.fetchRecruitmentsByCompany(filterId);
+      } else if (urlPath === 'recruitment') {
+        this.fetchAllRecruitments();
       }
     });
   }
@@ -65,6 +67,20 @@ export class RecruitmentListComponent {
         this.updatePagination();
       },
       (error) => console.error('Error fetching recruitments by company:', error)
+    );
+  }
+  fetchAllRecruitments() {
+    this.recruitmentService.getAllRecruitments().subscribe(
+      (data) => {
+        this.recruitments = data;
+        if (this.recruitments.length > 0) {
+          this.pageTitle = 'Danh Sách Tất Cả Tuyển Dụng';
+        } else {
+          this.pageTitle = 'Không có tuyển dụng nào.';
+        }
+        this.updatePagination();
+      },
+      (error) => console.error('Error fetching all recruitments:', error)
     );
   }
 

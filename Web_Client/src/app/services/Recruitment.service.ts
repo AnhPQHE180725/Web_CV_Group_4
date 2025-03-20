@@ -25,4 +25,7 @@ export class RecruitmentService {
     getRecruitmentsByCategory(id: number): Observable<Recruitment[]> {
         return this.http.get<Recruitment[]>(`${this.baseUrl}/Recruitment/get-recruitments-by-category-id/${id}`)
     }
+    getAllRecruitments(): Observable<Recruitment[]> {
+        return this.http.get<Recruitment[]>(`${this.baseUrl}/Recruitment/get-all-recruitments`)
+    }
 }

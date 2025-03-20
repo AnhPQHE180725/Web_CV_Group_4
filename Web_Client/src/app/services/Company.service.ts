@@ -16,4 +16,7 @@ export class CompanyService {
     getTopCompanies(): Observable<Company[]> {
         return this.http.get<Company[]>(`${this.baseUrl}/Company/get-top-companies`)
     }
+    getAllCompanies(): Observable<Company[]> {
+        return this.http.get<Company[]>(`${this.baseUrl}/Company/get-all-companies`)
+    }
 }

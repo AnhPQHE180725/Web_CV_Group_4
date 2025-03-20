@@ -1,0 +1,25 @@
+.post {
+    background: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.post {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.apply-btn {
+    display: block;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
