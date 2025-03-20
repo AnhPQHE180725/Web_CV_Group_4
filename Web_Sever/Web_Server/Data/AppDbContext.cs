@@ -5,6 +5,7 @@ namespace Web_Server.Data
 {
     public class AppDbContext : DbContext
     {
+        public DbSet<User> Users { get; set; }
         public DbSet<Recruitment> Recruitments { get; set; }
         public DbSet<Company> Companies { get; set; }
 
