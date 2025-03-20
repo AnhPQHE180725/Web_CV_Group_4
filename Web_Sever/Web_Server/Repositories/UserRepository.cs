@@ -42,7 +42,8 @@ namespace Web_Server.Repositories
                 RoleId = _context.Roles
                  .Where(r => r.Name == registerVm.RoleName)
                  .Select(r => r.Id)
-                 .FirstOrDefault()
+                 .FirstOrDefault(),
+                Status = 1
             };
 
             await _context.Users.AddAsync(user);
