@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "CheckEmailExists",
+    "RelativePath": "api/Authentication/check-email-exists",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/Authentication/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginVm",
+        "Type": "Web_Server.ViewModels.LoginVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.CategoryController",
     "Method": "GetAllCategories",
     "RelativePath": "api/Category/get-all-categories",
