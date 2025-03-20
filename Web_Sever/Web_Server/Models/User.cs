@@ -20,9 +20,11 @@ namespace Web_Server.Models
         public int Status {  get; set; }
 
         public string Description { get; set; }
-
-        public CV CV { get; set; }
         public int CVId { get; set; }
+        public CV CV { get; set; }
+
+        public int RoleId { get; set; }
+        public Role Role { get; set; }
 
         public List<Recruitment> Recruitments { get; set; }  
         

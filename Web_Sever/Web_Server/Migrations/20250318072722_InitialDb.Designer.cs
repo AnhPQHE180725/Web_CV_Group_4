@@ -12,7 +12,7 @@ using Web_Server.Data;
 namespace Web_Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250317083256_InitialDb")]
+    [Migration("20250318072722_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
@@ -37,9 +37,8 @@ namespace Web_Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreatedAt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("RecruitmentId")
                         .HasColumnType("int");
@@ -61,6 +60,28 @@ namespace Web_Server.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("ApplyPosts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CVName = "Jane's CV",
+                            CreatedAt = new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            RecruitmentId = 1,
+                            Status = 0,
+                            Text = "Applying for Software Developer",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CVName = "John's CV",
+                            CreatedAt = new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            RecruitmentId = 2,
+                            Status = 0,
+                            Text = "Applying for Data Analyst",
+                            UserId = 1
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.CV", b =>
@@ -84,6 +105,20 @@ namespace Web_Server.Migrations
                         .IsUnique();
 
                     b.ToTable("CVs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "John's CV",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Jane's CV",
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.Category", b =>
@@ -101,6 +136,18 @@ namespace Web_Server.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Software Engineering"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Data Science"
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.Company", b =>
@@ -146,6 +193,32 @@ namespace Web_Server.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "789 Market St",
+                            Description = "A leading tech company",
+                            Email = "contact@techcorp.com",
+                            Logo = "a",
+                            Name = "Tech Corp",
+                            PhoneNumber = "1112223333",
+                            Status = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "321 Wall St",
+                            Description = "A finance firm",
+                            Email = "info@financeinc.com",
+                            Logo = "a",
+                            Name = "Finance Inc",
+                            PhoneNumber = "4445556666",
+                            Status = 1,
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.FollowCompany", b =>
@@ -169,6 +242,20 @@ namespace Web_Server.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("FollowCompanies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CompanyId = 2,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CompanyId = 1,
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.FollowJob", b =>
@@ -192,6 +279,20 @@ namespace Web_Server.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("FollowJobs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RecruitmentId = 2,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RecruitmentId = 1,
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.Recruitment", b =>
@@ -212,9 +313,8 @@ namespace Web_Server.Migrations
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreatedAt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Deadline")
                         .IsRequired()
@@ -235,6 +335,9 @@ namespace Web_Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Salary")
+                        .HasColumnType("float");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -252,10 +355,6 @@ namespace Web_Server.Migrations
                     b.Property<int>("View")
                         .HasColumnType("int");
 
-                    b.Property<string>("salary")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -265,6 +364,73 @@ namespace Web_Server.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Recruitments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Hanoi",
+                            CategoryId = 1,
+                            CompanyId = 1,
+                            CreatedAt = new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deadline = ".",
+                            Description = "Looking for a full-stack developer",
+                            Experience = "2 years",
+                            Quantity = 10,
+                            Rank = "S",
+                            Salary = 80000.0,
+                            Status = 1,
+                            Title = "Software Developer",
+                            Type = "Full-Time",
+                            View = 100
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Hanoi",
+                            CategoryId = 2,
+                            CompanyId = 2,
+                            CreatedAt = new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deadline = ".",
+                            Description = "Seeking an experienced data analyst",
+                            Experience = "3 years",
+                            Quantity = 10,
+                            Rank = "S",
+                            Salary = 75000.0,
+                            Status = 1,
+                            Title = "Data Analyst",
+                            Type = "Full-Time",
+                            View = 100
+                        });
+                });
+
+            modelBuilder.Entity("Web_Server.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Candidate"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Recruiter"
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.User", b =>
@@ -306,12 +472,47 @@ namespace Web_Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RoleId");
+
                     b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "123 Main St",
+                            CVId = 1,
+                            Description = "Software Developer",
+                            Email = "john@example.com",
+                            FullName = "John Doe",
+                            Image = "test",
+                            Password = "hashedpassword",
+                            PhoneNumber = "1234567890",
+                            RoleId = 1,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "456 Elm St",
+                            CVId = 2,
+                            Description = "Data Analyst",
+                            Email = "jane@example.com",
+                            FullName = "Jane Smith",
+                            Image = "test",
+                            Password = "hashedpassword",
+                            PhoneNumber = "9876543210",
+                            RoleId = 2,
+                            Status = 1
+                        });
                 });
 
             modelBuilder.Entity("Web_Server.Models.ApplyPost", b =>
@@ -416,6 +617,17 @@ namespace Web_Server.Migrations
                     b.Navigation("Company");
                 });
 
+            modelBuilder.Entity("Web_Server.Models.User", b =>
+                {
+                    b.HasOne("Web_Server.Models.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("Web_Server.Models.Category", b =>
                 {
                     b.Navigation("Recruitments");
@@ -424,6 +636,11 @@ namespace Web_Server.Migrations
             modelBuilder.Entity("Web_Server.Models.Company", b =>
                 {
                     b.Navigation("Recruitments");
+                });
+
+            modelBuilder.Entity("Web_Server.Models.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Web_Server.Models.User", b =>
