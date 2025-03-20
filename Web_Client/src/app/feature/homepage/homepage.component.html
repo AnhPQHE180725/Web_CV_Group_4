@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top CV</title>
+    <link rel="stylesheet" href="homepage.component.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Top Danh Mục</h2>
+        <div class="categories">
+            <div class="category" *ngFor="let category of categories"
+                [routerLink]="['/recruitment','category', category.id]" class="clickable">
+                {{ category.name }}
+            </div>
+        </div>
+
+        <h2>Top Doanh Nghiệp</h2>
+        <div class="companies">
+            <div class="company" *ngFor="let company of companies" [routerLink]="['/recruitment','company', company.id]"
+                class="clickable">
+                {{ company.name }}
+            </div>
+        </div>
+
+
+        <h2>Top Bài Đăng</h2>
+        <div class="posts">
+            <div class="post" *ngFor="let post of recruitments ">
+                <strong>{{post.type}}</strong>
+                <p>{{post.title}}</p>
+                <small>{{post.description}}</small>
+                <a href="#" class="apply-btn">Apply job</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
