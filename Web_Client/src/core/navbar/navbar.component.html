@@ -12,15 +12,23 @@
     <nav class="navbar">
         <div class="nav-left">
             <a href="home" class="nav-item">Home</a>
-
             <div class="dropdown">
                 <button class="nav-item dropbtn">Category ▼</button>
                 <div class="dropdown-content">
-                    <a href="#">Category 1</a>
-                    <a href="#">Category 2</a>
-                    <a href="#">Category 3</a>
+                    <table>
+                        <tr *ngFor="let i of [0,1,2,3,4]"> <!-- Max 5 rows -->
+                            <td *ngFor="let col of columns">
+                                <a *ngIf="col[i]" [routerLink]="'/recruitment/category/' + col[i].id">
+                                    {{ col[i].name }}
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+
+
+
 
             <a href="#" class="nav-item">Company</a>
             <a href="#" class="nav-item">Job Post</a>

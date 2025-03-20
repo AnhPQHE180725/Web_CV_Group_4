@@ -8,6 +8,16 @@
 </head>
 
 <body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img *ngFor="let image of images; let i = index" [src]="image" class="slide"
+                [class.active]="i === currentIndex" alt="Image slide {{ i + 1 }}" title="Image slide {{ i + 1 }}">
+        </div>
+        <button class="prev" (click)="prevSlide()">&#10094;</button>
+        <button class="next" (click)="nextSlide()">&#10095;</button>
+    </div>
+
     <div class="container">
 
         <h2>Top Danh Mục</h2>
