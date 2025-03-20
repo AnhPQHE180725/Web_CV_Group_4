@@ -5,7 +5,7 @@ namespace Web_Server.Models
     public class User 
     {
         public int Id { get; set; } 
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         public string FullName { get; set; }
 
@@ -13,14 +13,14 @@ namespace Web_Server.Models
 
         public string Password { get; set; }
 
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
         public int Status {  get; set; }
 
-        public string Description { get; set; }
-        public int CVId { get; set; }
+        public string? Description { get; set; }
+        public int? CVId { get; set; }
         public CV CV { get; set; }
 
         public int RoleId { get; set; }
