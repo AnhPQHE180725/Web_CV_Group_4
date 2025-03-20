@@ -12,7 +12,7 @@ using Web_Server.Data;
 namespace Web_Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250318034730_InitialDb")]
+    [Migration("20250318072722_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
