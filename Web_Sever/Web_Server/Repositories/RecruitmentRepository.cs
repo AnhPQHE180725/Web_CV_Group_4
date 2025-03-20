@@ -21,12 +21,20 @@ namespace Web_Server.Repositories
 
         public async Task<List<Recruitment>> GetRecruitmentsByCategory(int id)
         {
-            return await _context.Recruitments.Where(c=>c.CategoryId == id).ToListAsync();
+            return await _context.Recruitments
+          .Where(r => r.CategoryId == id)
+          .Include(r => r.Company) 
+          .Include(r => r.Category) 
+          .ToListAsync();
         }
 
         public async Task<List<Recruitment>> GetRecruitmentsByCompany(int id)
         {
-            return await _context.Recruitments.Where(c=>c.CompanyId ==id).ToListAsync();
+            return await _context.Recruitments
+          .Where(r => r.CompanyId == id)
+          .Include(r => r.Company)
+          .Include(r => r.Category)
+          .ToListAsync();
         }
 
         public async Task<List<Recruitment>> GetTop2Recruitments()

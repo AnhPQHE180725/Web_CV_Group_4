@@ -1,0 +1,28 @@
+<h2>{{pageTitle}}</h2>
+
+
+<div *ngIf="paginatedRecruitments.length > 0; else noResults">
+    <div class="post" *ngFor="let post of paginatedRecruitments">
+        <strong>{{ post.type }}</strong>
+        <p>{{ post.title }}</p>
+        <small>{{ post.description }}</small>
+        <a href="#" class="apply-btn">Apply job</a>
+    </div>
+
+
+    <div class="pagination">
+        <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+
+        <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+            [class.active]="currentPage === i + 1">
+            {{ i + 1 }}
+        </button>
+
+        <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+</div>
+
+
+<ng-template #noResults>
+    <p>Không có tuyển dụng phù hợp.</p>
+</ng-template>
