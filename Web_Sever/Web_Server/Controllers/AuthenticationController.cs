@@ -44,6 +44,26 @@ namespace Web_Server.Controllers
             var token = GenerateJwtToken(user);
             return Ok(new { token });
         }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterVm registerVm)
+        {
+            if(registerVm.Password != registerVm.ConfirmPassword)
+            {
+                return BadRequest("Password and Confirm Password do not match");
+            }
+            var result = await _userService.RegisterAysnc(registerVm);
+
+            if (!result)
+            {
+                return BadRequest();
+            }
+            return Ok();
+        }
+
+
+
+
         private async Task<string> GenerateJwtToken(User user)
         {
             var authClaims = new List<Claim>
