@@ -23,7 +23,7 @@ export class LoginpageComponent {
       next: response => {
         this.authService.setToken(response.token);
         alert('Đăng nhập thành công!');
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('login/confirm');
       },
       error: () => {
         alert('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!');
