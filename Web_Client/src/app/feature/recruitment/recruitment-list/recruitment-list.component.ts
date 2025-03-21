@@ -3,10 +3,11 @@ import { Recruitment } from '../../../models/Recruitment';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RecruitmentService } from '../../../services/Recruitment.service';
+import { FormsModule } from '@angular/forms'; 
 @Component({
   selector: 'app-recruitment-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './recruitment-list.component.html',
   styleUrl: './recruitment-list.component.css'
 })
@@ -17,6 +18,8 @@ export class RecruitmentListComponent {
   recordsPerPage: number = 5;
   totalPages: number = 1;
   pageTitle: string = 'Danh Sách Tuyển Dụng';
+  activeTab: string = 'title';
+  searchQuery : string = "";
   constructor(private route: ActivatedRoute, private recruitmentService: RecruitmentService) { }
 
   ngOnInit() {
@@ -92,5 +95,33 @@ export class RecruitmentListComponent {
     this.currentPage = page;
     const startIndex = (this.currentPage - 1) * this.recordsPerPage;
     this.paginatedRecruitments = this.recruitments.slice(startIndex, startIndex + this.recordsPerPage);
+  }
+
+  setActiveTab(tabName: string) {
+    this.activeTab = tabName;
+  }
+
+  search(){
+    if(!this.searchQuery) return;
+    switch(this.activeTab){
+      case 'company': 
+      this.recruitmentService.getRecruitmentsByCompanyName(this.searchQuery).subscribe(data => {
+        this.recruitments = data;
+        this.updatePagination();
+      });
+      break;
+      case 'title': 
+      this.recruitmentService.getRecruitmentsByTitle(this.searchQuery).subscribe(data => {
+        this.recruitments = data;
+        this.updatePagination();
+      });
+      break;
+      case 'location': 
+      this.recruitmentService.getRecruitmentsByLocation(this.searchQuery).subscribe(data => {
+        this.recruitments = data;
+        this.updatePagination();
+      });
+      break;
+    }
   }
 }

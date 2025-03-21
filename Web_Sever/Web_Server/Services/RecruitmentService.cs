@@ -1,4 +1,5 @@
-﻿using Web_Server.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
 
@@ -70,6 +71,19 @@ namespace Web_Server.Services
         public async Task<List<Recruitment>> GetTop2Recruitments()
         {
             return await _repository.GetTop2Recruitments();
+        }
+
+        public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
+        {
+            return await _repository.GetRecruitmentsByCompanyName(company);
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByTitle(string title)
+        {
+            return await _repository.GetRecruitmentsByTitle(title);
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByLocation(string location)
+        {
+            return await _repository.GetRecruitmentsByLocation(location);
         }
     }
 }

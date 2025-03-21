@@ -79,6 +79,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.CompanyController",
+    "Method": "GetCompaniesByName",
+    "RelativePath": "api/Company/get-companies-by-name/{company}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "company",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CompanyController",
     "Method": "GetTopCompanies",
     "RelativePath": "api/Company/get-top-companies",
     "HttpMethod": "GET",
@@ -131,12 +147,92 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetRecruitmentsByCompanyName",
+    "RelativePath": "api/Recruitment/get-recruitments-by-company-name/{company}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "company",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetRecruitmentsByLocation",
+    "RelativePath": "api/Recruitment/get-recruitments-by-location/{location}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "location",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetRecruitmentsByTitle",
+    "RelativePath": "api/Recruitment/get-recruitments-by-title/{title}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "GetTopRecruitments",
     "RelativePath": "api/Recruitment/get-top-recruitments",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.UserController",
+    "Method": "GetCVByUserId",
+    "RelativePath": "api/User/get-cv-by-user-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.UserController",
+    "Method": "GetUserByPostId",
+    "RelativePath": "api/User/get-user-by-post-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

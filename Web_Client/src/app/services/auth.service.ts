@@ -17,8 +17,7 @@ export class AuthService {
   constructor(private http: HttpClient, private cookieService: CookieService) {
 
    }
-     // Phương thức gọi API đăng nhập
-
+  // Phương thức gọi API đăng nhập
   login(request: LoginRequest): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.baseUrl}/Authentication/login`, request);
   }

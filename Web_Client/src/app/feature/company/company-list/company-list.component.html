@@ -1,9 +1,17 @@
 <h2>{{pageTitle}}</h2>
 
+<div class="search-container">
+    <input type="text" [(ngModel)]="search" placeholder="Tìm kiếm tên công ty">
+    <button class="search-btn" (click)="companySearch()">Tìm kiếm</button>
+  </div>
 
 <div *ngIf="paginatedCompanies.length > 0; else noResults">
-    <div class="post" *ngFor="let company of paginatedCompanies">
-        {{ company.name }}
+    <div class="companies">
+        <div class="company clickable" *ngFor="let company of companies"
+            [routerLink]="['/recruitment', 'company', company.id]">
+            <img [src]="'assets/images/slide1.jpg'" alt="{{ company.name }}" class="company-logo" />
+            <span class="company-name">{{ company.name }}</span>
+        </div>
     </div>
 
 

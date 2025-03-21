@@ -19,4 +19,7 @@ export class CompanyService {
     getAllCompanies(): Observable<Company[]> {
         return this.http.get<Company[]>(`${this.baseUrl}/Company/get-all-companies`)
     }
+    getCompaniesByName(name : string): Observable<Company[]>{
+        return this.http.get<Company[]>(`${this.baseUrl}/Company/get-companies-by-name/${name}`)
+    }
 }
