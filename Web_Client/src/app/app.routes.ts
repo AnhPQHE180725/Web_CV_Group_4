@@ -5,6 +5,7 @@ import { CompanyListComponent } from './feature/company/company-list/company-lis
 import { SignuppageComponent } from './feature/signuppage/signuppage.component';
 import { LoginpageComponent } from './feature/loginpage/loginpage.component';
 import { RecruiterHomepageComponent } from './feature/recruiter/recruiter-homepage/recruiter-homepage.component';
+import { ConfirmloginComponent } from './feature/confirmlogin/confirmlogin.component';
 
 export const routes: Routes = [
     { path: 'recruitment/category/:id', component: RecruitmentListComponent },
@@ -20,5 +21,8 @@ export const routes: Routes = [
     },
     {
         path: 'login', component: LoginpageComponent
+    },
+    {
+        path:'login/confirm',component: ConfirmloginComponent
     }
 ];
