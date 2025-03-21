@@ -37,6 +37,7 @@ export class CompanyListComponent {
       this.companyService.getAllCompanies().subscribe(
         (data) => {
           this.companies = data;
+          this.unsearch = [...data];
           if (this.companies.length > 0) {
             this.pageTitle = 'Danh Sách Tất Cả Doanh Nghiệp';
           } else {
@@ -59,7 +60,11 @@ export class CompanyListComponent {
   }
 
   companySearch(){
-    if(!this.search) return;
+    if(!this.search){  
+      this.companies = [...this.unsearch];
+      this.updatePagination();
+      return;
+    }
     this.companyService.getCompaniesByName(this.search).subscribe(data => {
       this.companies = data;
       this.updatePagination();
