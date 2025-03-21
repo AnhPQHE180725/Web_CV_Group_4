@@ -2,8 +2,12 @@
 
 
 <div *ngIf="paginatedCompanies.length > 0; else noResults">
-    <div class="post" *ngFor="let company of paginatedCompanies">
-        {{ company.name }}
+    <div class="companies">
+        <div class="company clickable" *ngFor="let company of companies"
+            [routerLink]="['/recruitment', 'company', company.id]">
+            <img [src]="'assets/images/slide1.jpg'" alt="{{ company.name }}" class="company-logo" />
+            <span class="company-name">{{ company.name }}</span>
+        </div>
     </div>
 
 

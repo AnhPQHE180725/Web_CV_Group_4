@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,7 +65,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,7 +93,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
+              "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:10:59.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "20250320074600_InitialDb_Ver0.2.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320074600_InitialDb_Ver0.2.cs",
               "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250320074600_InitialDb_Ver0.2.cs",
@@ -97,12 +114,11 @@
               "RelativeToolTip": "Web_Server\\Migrations\\20250320074600_InitialDb_Ver0.2.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T07:46:01.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T07:46:01.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
               "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
@@ -114,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
               "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
@@ -126,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
               "RelativeDocumentMoniker": "Web_Server\\Program.cs",
@@ -138,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\CategoryController.cs",
@@ -150,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "dbo.Users.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/MSI/TopCVWeb/sa/SqlTable/dbo.Users.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/MSI/TopCVWeb/sa/SqlTable/dbo.Users.sql",
@@ -159,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RecruitmentController.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
@@ -171,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RecruitmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
@@ -183,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RecruitmentService.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
@@ -191,12 +207,11 @@
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:50:13.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T07:50:13.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "20250320022946_InitialDb_Ver0.1.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
               "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
@@ -208,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Web_Server\\Data\\AppDbContext.cs",
@@ -220,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IRecruitmentService.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
@@ -228,12 +243,11 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:49:14.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T07:49:14.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "IRecruitmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
