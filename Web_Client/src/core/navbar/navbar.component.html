@@ -11,24 +11,33 @@
 <body>
     <nav class="navbar">
         <div class="nav-left">
-            <a href="home" class="nav-item">Home</a>
-
+            <a href="home" class="nav-item">Trang chủ</a>
             <div class="dropdown">
-                <button class="nav-item dropbtn">Category ▼</button>
+                <button class="nav-item dropbtn">Danh mục ▼</button>
                 <div class="dropdown-content">
-                    <a href="#">Category 1</a>
-                    <a href="#">Category 2</a>
-                    <a href="#">Category 3</a>
+                    <table>
+                        <tr *ngFor="let i of [0,1,2,3,4]"> <!-- Max 5 rows -->
+                            <td *ngFor="let col of columns">
+                                <a *ngIf="col[i]" [routerLink]="'/recruitment/category/' + col[i].id">
+                                    {{ col[i].name }}
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
-            <a href="#" class="nav-item">Company</a>
-            <a href="#" class="nav-item">Job Post</a>
+
+
+
+            <a href="company" class="nav-item">Doanh nghiệp</a>
+            <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
+            <a href="recruiter" class="nav-item">Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a>
         </div>
 
         <div class="nav-right">
-            <a href="#" class="nav-item">Register</a>
-            <a href="#" class="nav-item">Log In</a>
+            <a href="register" class="nav-item">Đăng ký</a>
+            <a href="login" class="nav-item">Đăng nhập</a>
         </div>
     </nav>
 </body>

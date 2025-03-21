@@ -1,0 +1,47 @@
+.companies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 15px;
+    /* Space between companies */
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.company:hover {
+    background: #f5f5f5;
+}
+
+.company-logo {
+    width: 50px;
+    /* Adjust as needed */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Make it circular */
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.apply-btn {
+    display: block;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
