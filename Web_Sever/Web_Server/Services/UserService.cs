@@ -27,6 +27,16 @@ namespace Web_Server.Services
             return await _repository.FindEmailExists(email);
         }
 
+        public async Task<List<CandidateVm>> GetCandidateByPostId(int id)
+        {
+            return await _repository.GetCandidateByPostId(id);
+        }
+
+        public Task<CV> GetCVByUserId(int id)
+        {
+            return _repository.GetCVByUserId(id);
+        }
+
         public async Task<bool> RegisterAysnc(RegisterVm registerVm)
         {
             var User = await FindEmailExists(registerVm.Email);
