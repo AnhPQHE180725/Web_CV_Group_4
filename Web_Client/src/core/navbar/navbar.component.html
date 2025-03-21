@@ -16,7 +16,7 @@
                 <button class="nav-item dropbtn">Category ▼</button>
                 <div class="dropdown-content">
                     <table>
-                        <tr *ngFor="let i of [0,1,2,3,4]"> <!-- Max 5 rows -->
+                        <tr *ngFor="let i of [0,1,2,3,4]">
                             <td *ngFor="let col of columns">
                                 <a *ngIf="col[i]" [routerLink]="'/recruitment/category/' + col[i].id">
                                     {{ col[i].name }}
@@ -26,17 +26,20 @@
                     </table>
                 </div>
             </div>
-
-
-
-
             <a href="company" class="nav-item">Company</a>
             <a href="recruitment" class="nav-item">Job Post</a>
         </div>
 
         <div class="nav-right">
-            <a href="register" class="nav-item">Register</a>
-            <a href="login" class="nav-item">Log In</a>
+            <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
+            <ng-container *ngIf="!isLoggedIn()">
+                <a href="register" class="nav-item">Register</a>
+                <a href="login" class="nav-item">Log In</a>
+            </ng-container>
+            <!-- Hiển thị Log Out khi đã đăng nhập -->
+            <ng-container *ngIf="isLoggedIn()">
+                <a href="#" class="nav-item" (click)="logout()">Log Out</a>
+            </ng-container>
         </div>
     </nav>
 </body>

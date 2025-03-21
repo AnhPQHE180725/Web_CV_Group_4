@@ -8,11 +8,16 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './confirmlogin.component.css'
 })
 export class ConfirmloginComponent {
-  userEmail: string | undefined;
+
+email: string | undefined;
+  role: string | undefined;
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.userEmail = this.authService.getToken();
+    this.email = this.authService.getEmailFromToken();
+    this.role = this.authService.getRoleFromToken();
+    console.log('Email in component:', this.email); // Debug
+    console.log('Role in component:', this.role);   // Debug
   }
 }

@@ -41,14 +41,9 @@ namespace Web_Server.Controllers
             {
                 return NotFound();
             }
-            var (token, expiresAt) = await GenerateJwtToken(user);
 
-            return Ok(new
-            {
-                token,
-                expiresAt = expiresAt.ToString("yyyy-MM-ddTHH:mm:ssZ") 
-            });
-
+            var token = await GenerateJwtToken(user);
+            return Ok(new { token });
         }
 
         [HttpPost("register")]
@@ -68,36 +63,34 @@ namespace Web_Server.Controllers
         }
 
 
-        private async Task<(string token, DateTime expiresAt)> GenerateJwtToken(User user)
+        private async Task<string> GenerateJwtToken(User user)
         {
             var authClaims = new List<Claim>
             {
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            new Claim("email", user.Email),
+            new Claim("id", user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
             var userWithRole = await _userService.TakeRoleAsync(user);
             if (userWithRole != null && userWithRole.Role != null)
             {
-                authClaims.Add(new Claim(ClaimTypes.Role, userWithRole.Role.Name));
+                authClaims.Add(new Claim("role", userWithRole.Role.Name));
             }
 
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
 
-            var expiresAt = DateTime.UtcNow.AddHours(3);
-
             var token = new JwtSecurityToken(
                 issuer: _configuration["JWT:Issuer"],
                 audience: _configuration["JWT:Audience"],
-                expires: expiresAt,
+                expires: DateTime.UtcNow.AddHours(3),
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
             );
 
-            return (new JwtSecurityTokenHandler().WriteToken(token), expiresAt);
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
-    }
 
+    }
 }
 
