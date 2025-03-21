@@ -79,6 +79,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.CompanyController",
+    "Method": "GetCompaniesByName",
+    "RelativePath": "api/Company/get-companies-by-name/{company}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "company",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CompanyController",
     "Method": "GetTopCompanies",
     "RelativePath": "api/Company/get-top-companies",
     "HttpMethod": "GET",

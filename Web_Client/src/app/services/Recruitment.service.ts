@@ -28,4 +28,15 @@ export class RecruitmentService {
     getAllRecruitments(): Observable<Recruitment[]> {
         return this.http.get<Recruitment[]>(`${this.baseUrl}/Recruitment/get-all-recruitments`)
     }
+    getRecruitmentsByCompanyName(company: string): Observable<any> {
+        return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-company-name/${company}`);
+      }
+    
+      getRecruitmentsByTitle(title: string): Observable<any> {
+        return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-title/${title}`);
+      }
+    
+      getRecruitmentsByLocation(location: string): Observable<any> {
+        return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-location/${location}`);
+      }
 }

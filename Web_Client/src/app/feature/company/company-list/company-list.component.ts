@@ -4,10 +4,11 @@ import { CompanyService } from '../../../services/Company.service';
 import { CommonModule } from '@angular/common';
 import { Company } from '../../../models/Company';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-company-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './company-list.component.html',
   styleUrl: './company-list.component.css'
 })
@@ -18,6 +19,8 @@ export class CompanyListComponent {
   recordsPerPage: number = 15;
   totalPages: number = 1;
   pageTitle: string = 'Danh Sách Doanh Nghiệp';
+  search : string = "";
+  unsearch : Company[] = [];
   constructor(private route: ActivatedRoute, private companyService: CompanyService) { }
 
   ngOnInit() {
@@ -53,5 +56,13 @@ export class CompanyListComponent {
     this.currentPage = page;
     const startIndex = (this.currentPage - 1) * this.recordsPerPage;
     this.paginatedCompanies = this.companies.slice(startIndex, startIndex + this.recordsPerPage);
+  }
+
+  companySearch(){
+    if(!this.search) return;
+    this.companyService.getCompaniesByName(this.search).subscribe(data => {
+      this.companies = data;
+      this.updatePagination();
+    });
   }
 }

@@ -6,5 +6,6 @@ namespace Web_Server.Interfaces
     {
         Task<List<Company>> GetAllCompanies();
         Task<List<Company>> GetTop4Companies();
+        Task<List<Company>> GetCompaniesByName(string companyName);
     }
 }

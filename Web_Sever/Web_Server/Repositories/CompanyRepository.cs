@@ -22,5 +22,9 @@ namespace Web_Server.Repositories
         {
             return await _context.Companies.OrderByDescending(c=>c.Recruitments.Count).Take(4).ToListAsync();
         }
+        public async Task<List<Company>> GetCompaniesByName(string name)
+        {
+            return await _context.Companies.Where(c => c.Name.Contains(name)).ToListAsync();
+        }
     }
 }
