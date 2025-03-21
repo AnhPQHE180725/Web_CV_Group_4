@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\migrations\\20250320022946_initialdb_ver0.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\migrations\\20250320022946_initialdb_ver0.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\migrations\\20250320022946_initialdb_ver0.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,35 +42,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "20250320022946_InitialDb_Ver0.1.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
               "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
               "RelativeToolTip": "Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
               "ViewState": "AgIAAJcAAAAAAAAAAAAAwMsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -80,11 +60,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Web_Server\\Data\\AppDbContext.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Web_Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T02:27:13.283Z",
               "EditorCaption": ""
@@ -93,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
               "RelativeDocumentMoniker": "Web_Server\\Program.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
               "RelativeToolTip": "Web_Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -105,9 +85,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "RecruitmentController.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
               "RelativeToolTip": "Web_Server\\Controllers\\RecruitmentController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -117,9 +97,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "RecruitmentService.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBUAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -129,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "IRecruitmentService.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -141,9 +121,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "IRecruitmentRepository.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -153,33 +133,13 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "RecruitmentRepository.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
               "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T07:47:37.353Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 188,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 155,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
