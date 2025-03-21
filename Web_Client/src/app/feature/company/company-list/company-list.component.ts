@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { CompanyService } from '../../../services/Company.service';
 import { CommonModule } from '@angular/common';
 import { Company } from '../../../models/Company';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-company-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './company-list.component.html',
   styleUrl: './company-list.component.css'
 })
@@ -14,7 +15,7 @@ export class CompanyListComponent {
   companies: Company[] = [];
   paginatedCompanies: Company[] = [];
   currentPage: number = 1;
-  recordsPerPage: number = 5;
+  recordsPerPage: number = 15;
   totalPages: number = 1;
   pageTitle: string = 'Danh Sách Doanh Nghiệp';
   constructor(private route: ActivatedRoute, private companyService: CompanyService) { }

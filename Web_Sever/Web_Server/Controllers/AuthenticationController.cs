@@ -41,14 +41,15 @@ namespace Web_Server.Controllers
             {
                 return NotFound();
             }
-            var token = GenerateJwtToken(user);
+
+            var token = await GenerateJwtToken(user);
             return Ok(new { token });
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterVm registerVm)
         {
-            if(registerVm.Password != registerVm.ConfirmPassword)
+            if (registerVm.Password != registerVm.ConfirmPassword)
             {
                 return BadRequest("Password and Confirm Password do not match");
             }
@@ -62,23 +63,20 @@ namespace Web_Server.Controllers
         }
 
 
-
-
         private async Task<string> GenerateJwtToken(User user)
         {
             var authClaims = new List<Claim>
             {
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-                
+            new Claim("email", user.Email),
+            new Claim("id", user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
+
             var userWithRole = await _userService.TakeRoleAsync(user);
             if (userWithRole != null && userWithRole.Role != null)
             {
-                authClaims.Add(new Claim(ClaimTypes.Role, userWithRole.Role.Name));
+                authClaims.Add(new Claim("role", userWithRole.Role.Name));
             }
-
 
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
 
@@ -92,7 +90,7 @@ namespace Web_Server.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-    }
 
+    }
 }
 
