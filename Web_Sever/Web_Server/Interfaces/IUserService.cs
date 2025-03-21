@@ -10,5 +10,7 @@ namespace Web_Server.Interfaces
         Task<bool> RegisterAysnc(RegisterVm registerVm);
         Task<User> TakeRoleAsync(User user);
 
+        Task<List<CandidateVm>> GetCandidateByPostId(int id);
+        Task<CV> GetCVByUserId(int id);
     }
 }

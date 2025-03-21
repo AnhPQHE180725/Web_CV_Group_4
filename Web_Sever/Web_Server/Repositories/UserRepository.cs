@@ -52,5 +52,28 @@ namespace Web_Server.Repositories
             return result > 0;
         }
 
+        public async Task<List<CandidateVm>> GetCandidateByPostId(int id)
+        {
+            return await _context.ApplyPosts
+        .Where(a => a.RecruitmentId == id)
+        .Select(a => new CandidateVm
+        {
+            
+            Address = a.User.Address,
+            FullName = a.User.FullName,
+            Email = a.User.Email,
+            PhoneNumber = a.User.PhoneNumber,
+            Image = a.User.Image,
+            Description = a.User.Description,
+
+            CVStatus = a.Status
+        })
+        .ToListAsync();
+        }
+
+        public async Task<CV> GetCVByUserId(int id)
+        {
+            return await _context.CVs.FirstOrDefaultAsync(c=>c.UserId == id);    
+        }
     }
 }
