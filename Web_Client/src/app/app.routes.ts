@@ -4,19 +4,21 @@ import { HomepageComponent } from './feature/homepage/homepage.component';
 import { CompanyListComponent } from './feature/company/company-list/company-list.component';
 import { SignuppageComponent } from './feature/signuppage/signuppage.component';
 import { LoginpageComponent } from './feature/loginpage/loginpage.component';
+import { RecruiterHomepageComponent } from './feature/recruiter/recruiter-homepage/recruiter-homepage.component';
 
 export const routes: Routes = [
     { path: 'recruitment/category/:id', component: RecruitmentListComponent },
     { path: 'recruitment/company/:id', component: RecruitmentListComponent },
     { path: 'recruitment', component: RecruitmentListComponent },
     { path: 'company', component: CompanyListComponent },
+    { path: 'recruiter', component: RecruiterHomepageComponent },
     {
         path: 'home', component: HomepageComponent
     },
     {
-        path:'register',component: SignuppageComponent
+        path: 'register', component: SignuppageComponent
     },
     {
-        path:'login', component: LoginpageComponent
+        path: 'login', component: LoginpageComponent
     }
 ];
