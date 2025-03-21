@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginRequest } from '../models/login-request';
 import { LoginResponse } from '../models/login-response';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { User } from '../models/User';
 
 
 @Injectable({
@@ -39,4 +40,11 @@ export class AuthService {
   getToken(): string {
     return this.cookieService.get('Authentication');
   }
+
+
+
+
+
+
+
 }
