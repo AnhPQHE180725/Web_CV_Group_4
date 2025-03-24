@@ -38,8 +38,12 @@ namespace Web_Server.Services
                 Type = r.Type,
                 View = r.View,
                 Deadline = r.Deadline,
-                CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown"
+
+                CompanyName = r.Company?.Name ?? "Unknown", 
+                CategoryName = r.Category?.Name ?? "Unknown" 
+
+
+
             }).ToList();
         }
 
@@ -73,7 +77,6 @@ namespace Web_Server.Services
             return await _repository.GetTop2Recruitments();
         }
 
-
         public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
         {
             return await _repository.GetRecruitmentsByCompanyName(company);
@@ -86,6 +89,7 @@ namespace Web_Server.Services
         {
             return await _repository.GetRecruitmentsByLocation(location);
         }
+
 
         public async Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm)
         {
@@ -133,7 +137,6 @@ namespace Web_Server.Services
         {
             return await _repository.DeleteRecruitmentAsync(id);
         }
-
 
     }
 }

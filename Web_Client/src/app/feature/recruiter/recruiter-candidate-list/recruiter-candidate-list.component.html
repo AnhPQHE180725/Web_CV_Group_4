@@ -30,7 +30,15 @@
                 <td>{{ candidate.fullName }}</td>
                 <td>{{ candidate.email }}</td>
                 <td>{{ candidate.phoneNumber }}</td>
-                <td>{{candidate.cvStatus}}</td>
+                <td>
+                    {{ candidate.cvStatus === 0 ? 'Reject' : candidate.cvStatus === 1 ? 'Pending' : candidate.cvStatus
+                    === 2 ? 'Applied' : 'Unknown' }}
+                </td>
+                <td>
+                    <div class="cv-button" [routerLink]="['/recruiter', 'candidate', 'apply', candidate.id]">
+                        View CV
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>

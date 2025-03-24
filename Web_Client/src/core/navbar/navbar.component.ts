@@ -4,8 +4,10 @@ import { CommonModule } from '@angular/common';
 import { CategoryService } from '../../app/services/Category.service';
 import { Route, Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../app/services/auth.service';
+
 @Component({
   selector: 'app-navbar',
+  standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
@@ -14,11 +16,12 @@ export class NavbarComponent {
   categories: Category[] = [];
   columns: Category[][] = [];
 
+
   constructor(
     private categoryService: CategoryService,
-    private authService: AuthService, 
-    private router: Router 
-  ) {}
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.categoryService.getAllCategories().subscribe({

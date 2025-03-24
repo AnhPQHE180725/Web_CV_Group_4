@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { User } from '../../../models/User';
 import { UserService } from '../../../services/User.service';
-import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-recruiter-candidate-list',
   imports: [CommonModule, RouterLink],
+
+
   templateUrl: './recruiter-candidate-list.component.html',
   styleUrl: './recruiter-candidate-list.component.css'
 })

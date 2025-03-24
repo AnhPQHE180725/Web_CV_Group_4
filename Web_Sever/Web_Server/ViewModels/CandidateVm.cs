@@ -4,6 +4,7 @@ namespace Web_Server.ViewModels
 {
     public class CandidateVm
     {
+        public int id { get; set; }
         public string? Address { get; set; }
 
         public string FullName { get; set; }

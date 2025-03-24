@@ -15,5 +15,7 @@ namespace Web_Server.Interfaces
         Task<bool> ForgotPasswordAsync(string email);
         Task<bool> ResetPasswordAsync(string token, string newPassword);
 
+        Task<ApplyPost> ApplyCV(int id);
+        Task<ApplyPost> RejectCV(int id);
     }
 }

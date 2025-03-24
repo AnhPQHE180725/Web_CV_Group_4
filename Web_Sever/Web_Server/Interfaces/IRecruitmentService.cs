@@ -15,9 +15,11 @@ namespace Web_Server.Interfaces
         Task<List<Recruitment>> GetRecruitmentsByTitle(string title);
         Task<List<Recruitment>> GetRecruitmentsByLocation(string location);
 
+
         Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm);
         Task<bool> EditRecruitmentAsync(int id, RecruitmentVm recruitmentVm);
         Task<bool> DeleteRecruitmentAsync(int id);
+
 
     }
 }

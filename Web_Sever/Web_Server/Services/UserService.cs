@@ -88,6 +88,13 @@ namespace Web_Server.Services
             _cache.Remove(token);
 
             return true;
+        public async Task<ApplyPost> ApplyCV(int id)
+        {
+            return await _repository.ApplyCV(id);
+        }
+        public async Task<ApplyPost> RejectCV(int id)
+        {
+            return await _repository.RejectCV(id);
         }
     }
 

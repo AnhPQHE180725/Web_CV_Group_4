@@ -58,7 +58,7 @@ namespace Web_Server.Repositories
         .Where(a => a.RecruitmentId == id)
         .Select(a => new CandidateVm
         {
-            
+            id = a.Id,
             Address = a.User.Address,
             FullName = a.User.FullName,
             Email = a.User.Email,
@@ -84,6 +84,50 @@ namespace Web_Server.Repositories
                 user.Password = newPassword;
                 await _context.SaveChangesAsync();
             }
+
+        public async Task<ApplyPost> ApplyCV(int id)
+        {
+            var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
+
+            if (applyPost == null)
+            {
+                throw new Exception("ApplyPost not found.");
+            }
+
+           
+            applyPost.Status = 2;
+
+       
+            await _context.SaveChangesAsync();
+
+            return applyPost;
+        }
+
+        public async Task<ApplyPost> RejectCV(int id)
+        {
+            var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
+
+            if (applyPost == null)
+            {
+                throw new Exception("ApplyPost not found.");
+            }
+
+
+            applyPost.Status = 0;
+
+
+            await _context.SaveChangesAsync();
+
+            return applyPost;
+        }
+
+
+        public async Task<User> GetByIdAsync(int id)
+        {
+            return await _context.Users
+                .Include(u => u.Role)
+                .Include(u => u.CV)
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
 
     }

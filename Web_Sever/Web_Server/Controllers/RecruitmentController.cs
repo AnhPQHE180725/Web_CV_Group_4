@@ -43,7 +43,6 @@ namespace Web_Server.Controllers
             return Ok(await _recruitmentService.GetRecruitmentsByCategory(id));
         }
 
-
         [HttpGet("get-recruitments-by-company-name/{company}")]
         public async Task<IActionResult> GetRecruitmentsByCompanyName(string company)
         {
@@ -59,6 +58,8 @@ namespace Web_Server.Controllers
         {
             return Ok(await _recruitmentService.GetRecruitmentsByLocation(location));
         }
+
+
         [HttpPost("add-recruitment")]
         public async Task<IActionResult> AddRecruitment([FromBody] RecruitmentVm recruitmentVm)
         {
@@ -92,5 +93,6 @@ namespace Web_Server.Controllers
             return Ok("Recruitment deleted successfully");
 
         }
+
     }
 }
