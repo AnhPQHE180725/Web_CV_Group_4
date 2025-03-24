@@ -76,6 +76,14 @@ namespace Web_Server.Repositories
             return await _context.CVs.FirstOrDefaultAsync(c=>c.UserId == id);    
         }
 
+        public async Task UpdatePasswordAsync(int userId, string newPassword)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user != null)
+            {
+                user.Password = newPassword;
+                await _context.SaveChangesAsync();
+            }
 
         public async Task<ApplyPost> ApplyCV(int id)
         {
