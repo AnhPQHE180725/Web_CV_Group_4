@@ -75,5 +75,15 @@ namespace Web_Server.Repositories
         {
             return await _context.CVs.FirstOrDefaultAsync(c=>c.UserId == id);    
         }
+
+
+        public async Task<User> GetByIdAsync(int id)
+        {
+            return await _context.Users
+                .Include(u => u.Role)
+                .Include(u => u.CV)
+                .FirstOrDefaultAsync(u => u.Id == id);
+        }
+
     }
 }

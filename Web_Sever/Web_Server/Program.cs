@@ -12,7 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -55,6 +59,12 @@ builder.Services.AddScoped<IRecruitmentService, RecruitmentService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddScoped<ICVRepository, CVRepository>();
+builder.Services.AddScoped<ICVService, CVService>();
+builder.Services.AddScoped<IApplyPostRepository, ApplyPostRepository>();
+builder.Services.AddScoped<IApplyPostService, ApplyPostService>();
+builder.Services.AddHttpContextAccessor();
+
 
 builder.Services
         .AddAuthentication(config =>
@@ -96,6 +106,11 @@ app.UseCors(option =>
     option.AllowAnyMethod();
     option.AllowAnyOrigin();
 });
+
+// Add static files middleware
+app.UseStaticFiles();
+
+
 app.UseAuthorization();
 
 app.MapControllers();
