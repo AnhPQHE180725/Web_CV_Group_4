@@ -1,5 +1,9 @@
 <h2>{{pageTitle}}</h2>
 
+<div class="search-container">
+    <input type="text" [(ngModel)]="search" placeholder="Tìm kiếm tên công ty">
+    <button class="search-btn" (click)="companySearch()">Tìm kiếm</button>
+  </div>
 
 <div *ngIf="paginatedCompanies.length > 0; else noResults">
     <div class="companies">

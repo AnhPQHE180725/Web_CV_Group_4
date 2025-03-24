@@ -52,5 +52,83 @@ namespace Web_Server.Repositories
             return result > 0;
         }
 
+        public async Task<List<CandidateVm>> GetCandidateByPostId(int id)
+        {
+            return await _context.ApplyPosts
+        .Where(a => a.RecruitmentId == id)
+        .Select(a => new CandidateVm
+        {
+            id = a.User.Id,
+            Address = a.User.Address,
+            FullName = a.User.FullName,
+            Email = a.User.Email,
+            PhoneNumber = a.User.PhoneNumber,
+            Image = a.User.Image,
+            Description = a.User.Description,
+
+            CVStatus = a.Status
+        })
+        .ToListAsync();
+        }
+
+        public async Task<CV> GetCVByUserId(int id)
+        {
+            return await _context.CVs.FirstOrDefaultAsync(c=>c.UserId == id);    
+        }
+
+        public async Task UpdatePasswordAsync(int userId, string newPassword)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user != null)
+            {
+                user.Password = newPassword;
+                await _context.SaveChangesAsync();
+            }
+        }
+        public async Task<ApplyPost> ApplyCV(int id)
+        {
+            var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
+
+            if (applyPost == null)
+            {
+                throw new Exception("ApplyPost not found.");
+            }
+
+           
+            applyPost.Status = 2;
+
+       
+            await _context.SaveChangesAsync();
+
+            return applyPost;
+        }
+
+        public async Task<ApplyPost> RejectCV(int id)
+        {
+            var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
+
+            if (applyPost == null)
+            {
+                throw new Exception("ApplyPost not found.");
+            }
+
+
+            applyPost.Status = 0;
+
+
+            await _context.SaveChangesAsync();
+
+            return applyPost;
+        }
+
+
+        public async Task<User> GetByIdAsync(int id)
+        {
+            return await _context.Users
+                .Include(u => u.Role)
+                .Include(u => u.CV)
+                .FirstOrDefaultAsync(u => u.Id == id);
+        }
+
     }
 }

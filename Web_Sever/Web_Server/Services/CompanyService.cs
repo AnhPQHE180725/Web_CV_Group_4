@@ -20,5 +20,9 @@ namespace Web_Server.Services
         {
             return await _companyRepository.GetTop4Companies();
         }
+        public async Task<List<Company>> GetCompaniesByName(string name)
+        {
+            return await _companyRepository.GetCompaniesByName(name);
+        }
     }
 }

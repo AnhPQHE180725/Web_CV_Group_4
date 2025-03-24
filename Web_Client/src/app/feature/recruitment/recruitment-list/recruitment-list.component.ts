@@ -3,10 +3,18 @@ import { Recruitment } from '../../../models/Recruitment';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RecruitmentService } from '../../../services/Recruitment.service';
+
+
+import { FormsModule } from '@angular/forms';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
+import { AuthService } from '../../../services/auth.service';
+
 @Component({
   selector: 'app-recruitment-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, MatDialogModule],
+
   templateUrl: './recruitment-list.component.html',
   styleUrl: './recruitment-list.component.css'
 })
@@ -14,10 +22,21 @@ export class RecruitmentListComponent {
   recruitments: Recruitment[] = [];
   paginatedRecruitments: Recruitment[] = [];
   currentPage: number = 1;
+
   recordsPerPage: number = 5;
+
   totalPages: number = 1;
   pageTitle: string = 'Danh Sách Tuyển Dụng';
-  constructor(private route: ActivatedRoute, private recruitmentService: RecruitmentService) { }
+  activeTab: string = 'title';
+  searchQuery: string = "";
+  unsearch: Recruitment[] = [];
+  constructor(
+    private route: ActivatedRoute,
+    private recruitmentService: RecruitmentService,
+    private dialog: MatDialog,
+    private authService: AuthService
+  ) { }
+
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -73,6 +92,7 @@ export class RecruitmentListComponent {
     this.recruitmentService.getAllRecruitments().subscribe(
       (data) => {
         this.recruitments = data;
+        this.unsearch = data;
         if (this.recruitments.length > 0) {
           this.pageTitle = 'Danh Sách Tất Cả Tuyển Dụng';
         } else {
@@ -92,5 +112,50 @@ export class RecruitmentListComponent {
     this.currentPage = page;
     const startIndex = (this.currentPage - 1) * this.recordsPerPage;
     this.paginatedRecruitments = this.recruitments.slice(startIndex, startIndex + this.recordsPerPage);
+  }
+
+  setActiveTab(tabName: string) {
+    this.activeTab = tabName;
+  }
+
+  search() {
+    if (!this.searchQuery) {
+      this.recruitments = [...this.unsearch];
+      return;
+    }
+    switch (this.activeTab) {
+      case 'company':
+        this.recruitmentService.getRecruitmentsByCompanyName(this.searchQuery).subscribe(data => {
+          this.recruitments = data;
+          this.updatePagination();
+        });
+        break;
+      case 'title':
+        this.recruitmentService.getRecruitmentsByTitle(this.searchQuery).subscribe(data => {
+          this.recruitments = data;
+          this.updatePagination();
+        });
+        break;
+      case 'location':
+        this.recruitmentService.getRecruitmentsByLocation(this.searchQuery).subscribe(data => {
+          this.recruitments = data;
+          this.updatePagination();
+        });
+        break;
+    }
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.isAuthenticated();
+  }
+
+  onApply(recruitment: Recruitment) {
+    this.dialog.open(ApplyDialogComponent, {
+      width: '500px',
+      data: {
+        jobTitle: recruitment.title,
+        recruitmentId: recruitment.id
+      }
+    });
   }
 }

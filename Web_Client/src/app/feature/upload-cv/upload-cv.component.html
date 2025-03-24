@@ -1,0 +1,26 @@
+<div class="upload-container">
+  <div class="upload-box">
+    <h2>Tạo CV mới</h2>
+    <div class="upload-area">
+      <p>Kéo thả file PDF vào đây</p>
+      <p>Hoặc</p>
+      <div class="file-input-container">
+        <input
+          type="file"
+          id="cv-file"
+          accept=".pdf"
+          (change)="onFileSelected($event)"
+          class="file-input"
+        />
+        <label for="cv-file" class="choose-file-btn">Chọn file</label>
+      </div>
+      <p *ngIf="selectedFile" class="selected-file">
+        File đã chọn: {{ selectedFile.name }}
+      </p>
+    </div>
+    <button class="upload-btn" (click)="onUpload()" [disabled]="!selectedFile">
+      Upload
+    </button>
+    <p class="file-support">Định dạng hỗ trợ: PDF</p>
+  </div>
+</div>

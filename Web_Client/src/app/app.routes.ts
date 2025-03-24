@@ -6,6 +6,15 @@ import { SignuppageComponent } from './feature/signuppage/signuppage.component';
 import { LoginpageComponent } from './feature/loginpage/loginpage.component';
 import { RecruiterHomepageComponent } from './feature/recruiter/recruiter-homepage/recruiter-homepage.component';
 
+import { ConfirmloginComponent } from './feature/confirmlogin/confirmlogin.component';
+
+import { RecruiterCandidateListComponent } from './feature/recruiter/recruiter-candidate-list/recruiter-candidate-list.component';
+
+import { ApplyCVComponent } from './feature/recruiter/apply-cv/apply-cv.component';
+
+import { UploadCvComponent } from './feature/upload-cv/upload-cv.component';
+
+
 export const routes: Routes = [
     { path: 'recruitment/category/:id', component: RecruitmentListComponent },
     { path: 'recruitment/company/:id', component: RecruitmentListComponent },
@@ -20,5 +29,21 @@ export const routes: Routes = [
     },
     {
         path: 'login', component: LoginpageComponent
-    }
+    },
+    {
+
+        path: 'login/confirm', component: ConfirmloginComponent
+    },
+    {
+        path: 'recruiter/candidate/:id', component: RecruiterCandidateListComponent
+    },
+    {
+
+        path: 'recruiter/candidate/apply/:id', component: ApplyCVComponent
+    },
+    {
+        path: 'upload-cv', component: UploadCvComponent
+    },
+    { path: '**', redirectTo: 'home' }
+
 ];

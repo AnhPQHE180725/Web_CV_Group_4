@@ -1,4 +1,5 @@
-﻿using Web_Server.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
 
@@ -37,8 +38,12 @@ namespace Web_Server.Services
                 Type = r.Type,
                 View = r.View,
                 Deadline = r.Deadline,
-                CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown"
+
+                CompanyName = r.Company?.Name ?? "Unknown", 
+                CategoryName = r.Category?.Name ?? "Unknown" 
+
+
+
             }).ToList();
         }
 
@@ -71,6 +76,21 @@ namespace Web_Server.Services
         {
             return await _repository.GetTop2Recruitments();
         }
+
+        public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
+        {
+            return await _repository.GetRecruitmentsByCompanyName(company);
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByTitle(string title)
+        {
+            return await _repository.GetRecruitmentsByTitle(title);
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByLocation(string location)
+        {
+            return await _repository.GetRecruitmentsByLocation(location);
+        }
+
+
         public async Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm)
         {
             var recruitment = new Recruitment
