@@ -12,6 +12,10 @@ import { AuthService } from '../../services/auth.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../recruitment/apply-dialog/apply-dialog.component';
 
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -31,15 +35,18 @@ export class HomepageComponent {
     'assets/images/slide5.jpg'
   ];
   currentIndex: number = 0;
+
   constructor(
     private categoryService: CategoryService,
     private companyService: CompanyService,
     private recruitmentService: RecruitmentService,
     private route: ActivatedRoute,
+
     private router: Router,
     private dialog: MatDialog,
     private authService: AuthService
   ) { }
+
 
   ngOnInit(): void {
     this.categoryService.getTopCategories().subscribe({
@@ -97,3 +104,4 @@ export class HomepageComponent {
     });
   }
 }
+

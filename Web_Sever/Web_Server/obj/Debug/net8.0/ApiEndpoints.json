@@ -197,6 +197,103 @@
     "Method": "GetCVById",
     "RelativePath": "api/CV/{id}",
     "HttpMethod": "GET",
+<<<<<<< HEAD
+=======
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Web_Server.Models.CV",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "DeleteCV",
+    "RelativePath": "api/CV/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "UploadCV",
+    "RelativePath": "api/CV/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Web_Server.Models.CV",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "GetCVByUserId",
+    "RelativePath": "api/CV/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Web_Server.Models.CV",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "AddRecruitment",
+    "RelativePath": "api/Recruitment/add-recruitment",
+    "HttpMethod": "POST",
+>>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
     "IsController": true,
     "Order": 0,
     "Parameters": [

@@ -3,6 +3,8 @@ import { Recruitment } from '../../../models/Recruitment';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RecruitmentService } from '../../../services/Recruitment.service';
+
+
 import { FormsModule } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
@@ -12,6 +14,7 @@ import { AuthService } from '../../../services/auth.service';
   selector: 'app-recruitment-list',
   standalone: true,
   imports: [CommonModule, FormsModule, MatDialogModule],
+
   templateUrl: './recruitment-list.component.html',
   styleUrl: './recruitment-list.component.css'
 })
@@ -19,7 +22,9 @@ export class RecruitmentListComponent {
   recruitments: Recruitment[] = [];
   paginatedRecruitments: Recruitment[] = [];
   currentPage: number = 1;
-  recordsPerPage: number = 9;
+
+  recordsPerPage: number = 5;
+
   totalPages: number = 1;
   pageTitle: string = 'Danh Sách Tuyển Dụng';
   activeTab: string = 'title';
@@ -32,10 +37,12 @@ export class RecruitmentListComponent {
     private authService: AuthService
   ) { }
 
+
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const filterId = Number(params.get('id'));
       const urlPath = this.route.snapshot.url.map(segment => segment.path).join('/');
+
 
       this.recruitments = [];
       this.paginatedRecruitments = [];

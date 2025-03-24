@@ -3,9 +3,12 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { User } from '../../../models/User';
 import { UserService } from '../../../services/User.service';
+
 @Component({
   selector: 'app-recruiter-candidate-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
+
+
   templateUrl: './recruiter-candidate-list.component.html',
   styleUrl: './recruiter-candidate-list.component.css'
 })

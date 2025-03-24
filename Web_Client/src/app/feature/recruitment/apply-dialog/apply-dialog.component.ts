@@ -74,7 +74,7 @@ import { UploadCvComponent } from '../../upload-cv/upload-cv.component';
       box-sizing: border-box;
     }
 
-    for,form-group textarea {
+    form-group textarea {
       width: 100%;
     }
     textarea {

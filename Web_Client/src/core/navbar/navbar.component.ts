@@ -16,6 +16,7 @@ export class NavbarComponent {
   categories: Category[] = [];
   columns: Category[][] = [];
 
+
   constructor(
     private categoryService: CategoryService,
     private authService: AuthService,
@@ -56,4 +57,5 @@ export class NavbarComponent {
   isLoggedIn(): boolean {
     return this.authService.isAuthenticated();
   }
+
 }

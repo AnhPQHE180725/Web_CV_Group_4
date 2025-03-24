@@ -58,11 +58,13 @@ builder.Services.AddScoped<IRecruitmentRepository, RecruitmentRepository>();
 builder.Services.AddScoped<IRecruitmentService, RecruitmentService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddScoped<ICVRepository, CVRepository>();
 builder.Services.AddScoped<ICVService, CVService>();
 builder.Services.AddScoped<IApplyPostRepository, ApplyPostRepository>();
 builder.Services.AddScoped<IApplyPostService, ApplyPostService>();
 builder.Services.AddHttpContextAccessor();
+
 
 builder.Services
         .AddAuthentication(config =>
@@ -107,6 +109,7 @@ app.UseCors(option =>
 
 // Add static files middleware
 app.UseStaticFiles();
+
 
 app.UseAuthorization();
 

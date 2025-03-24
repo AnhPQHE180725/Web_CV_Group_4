@@ -47,12 +47,14 @@
                 <div class="salary-box">
                     <small>{{ post.salary }} triệu</small>
                 </div>
+
                 <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn()">
                     Ứng tuyển ngay
                 </button>
                 <p class="login-message" *ngIf="!isLoggedIn()">
                     Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
                 </p>
+
             </div>
         </div>
 

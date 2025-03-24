@@ -137,4 +137,5 @@ export class UploadCvComponent {
       alert('Vui lòng chọn file PDF trước khi upload!');
     }
   }
+
 } 
