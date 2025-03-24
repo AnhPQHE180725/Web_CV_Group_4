@@ -37,21 +37,27 @@
             </div>
         </div>
 
-
         <h2>Top Bài Đăng</h2>
         <div class="posts">
-            <div class="post" *ngFor="let post of recruitments ">
+            <div class="post" *ngFor="let post of recruitments">
                 <img [src]="'assets/images/slide1.jpg'" alt="{{ post.companyName }}" class="company-logo" />
-                <strong>{{post.type}}</strong>
-                <p>{{post.title}}</p>
-                <small>{{post.description}}</small>
+                <strong>{{ post.type }}</strong>
+                <p>{{ post.title }}</p>
+                <small>{{ post.description }}</small>
                 <div class="salary-box">
                     <small>{{ post.salary }} triệu</small>
                 </div>
-                <a href="#" class="apply-btn">Apply job</a>
-            </div>
 
+                <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn()">
+                    Ứng tuyển ngay
+                </button>
+                <p class="login-message" *ngIf="!isLoggedIn()">
+                    Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
+                </p>
+
+            </div>
         </div>
+
     </div>
 </body>
 

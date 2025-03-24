@@ -38,8 +38,12 @@ namespace Web_Server.Services
                 Type = r.Type,
                 View = r.View,
                 Deadline = r.Deadline,
+
                 CompanyName = r.Company?.Name ?? "Unknown", 
                 CategoryName = r.Category?.Name ?? "Unknown" 
+
+
+
             }).ToList();
         }
 
@@ -85,5 +89,54 @@ namespace Web_Server.Services
         {
             return await _repository.GetRecruitmentsByLocation(location);
         }
+
+
+        public async Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm)
+        {
+            var recruitment = new Recruitment
+            {
+                Title = recruitmentVm.Title,
+                Description = recruitmentVm.Description,
+                Salary = recruitmentVm.Salary,
+                Status = recruitmentVm.Status,
+                Type = recruitmentVm.Type,
+                Experience = recruitmentVm.Experience,
+                CompanyId = recruitmentVm.CompanyId,
+                CategoryId = recruitmentVm.CategoryId,
+                CreatedAt = DateTime.Now,
+                Quantity = recruitmentVm.Quantity,
+                Deadline = recruitmentVm.Deadline,
+                Address = recruitmentVm.Address,
+                Rank = recruitmentVm.Rank,
+                View = 0
+            };
+
+            return await _repository.AddRecruitmentAsync(recruitment);
+        }
+        public async Task<bool> EditRecruitmentAsync(int id, RecruitmentVm recruitmentVm)
+        {
+            var existingRecruitment = await _repository.GetRecruitmentByIdAsync(id);
+            if (existingRecruitment == null) return false;
+
+            existingRecruitment.Title = recruitmentVm.Title;
+            existingRecruitment.Description = recruitmentVm.Description;
+            existingRecruitment.Salary = recruitmentVm.Salary;
+            existingRecruitment.Status = recruitmentVm.Status;
+            existingRecruitment.Type = recruitmentVm.Type;
+            existingRecruitment.Experience = recruitmentVm.Experience;
+            existingRecruitment.CompanyId = recruitmentVm.CompanyId;
+            existingRecruitment.CategoryId = recruitmentVm.CategoryId;
+            existingRecruitment.Quantity = recruitmentVm.Quantity;
+            existingRecruitment.Deadline = recruitmentVm.Deadline;
+            existingRecruitment.Address = recruitmentVm.Address;
+            existingRecruitment.Rank = recruitmentVm.Rank;
+
+            return await _repository.EditRecruitmentAsync(existingRecruitment);
+        }
+        public async Task<bool> DeleteRecruitmentAsync(int id)
+        {
+            return await _repository.DeleteRecruitmentAsync(id);
+        }
+
     }
 }

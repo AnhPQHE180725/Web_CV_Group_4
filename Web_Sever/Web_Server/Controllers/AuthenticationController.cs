@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -16,12 +17,69 @@ namespace Web_Server.Controllers
     public class AuthenticationController : ControllerBase
     {
         public readonly IUserService _userService;
+        private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
-        public AuthenticationController(IUserService userService, IConfiguration configuration)
+
+        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService)
         {
             _userService = userService;
             _configuration = configuration;
+            _emailService = emailService;
         }
+
+
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest request)
+        {
+            if (string.IsNullOrEmpty(request.Email))
+                return BadRequest("Email không được để trống.");
+
+            var result = await _userService.ForgotPasswordAsync(request.Email);
+            if (!result) return BadRequest("Email không tồn tại.");
+
+            return Ok("Email đặt lại mật khẩu đã được gửi thành công.");
+        }
+
+        [HttpGet("reset-password")]
+        public IActionResult ResetPassword([FromQuery] string token)
+        {
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("Token không hợp lệ.");
+
+            var htmlContent = $@"
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Reset password</title>
+        </head>
+        <body>
+            <h2>Reset password</h2>
+            <form method='POST' action='/api/Authentication/reset-password'>
+                <input type='hidden' name='token' value='{token}' />
+                <label for='newPassword'>New password:</label>
+                <input type='password' id='newPassword' name='newPassword' required />
+                <button type='submit'>Submit</button>
+            </form>
+        </body>
+        </html>";
+
+            return Content(htmlContent, "text/html"); // Thêm Content-Type để trình duyệt hiển thị HTML
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPasswordPost([FromForm] string token, [FromForm] string newPassword)
+        {
+            if (string.IsNullOrEmpty(token) || string.IsNullOrEmpty(newPassword))
+                return BadRequest("Token và mật khẩu không được để trống.");
+
+            var result = await _userService.ResetPasswordAsync(token, newPassword);
+            if (!result) return BadRequest("Token không hợp lệ hoặc đã hết hạn.");
+
+            return Ok("Mật khẩu đã được cập nhật thành công.");
+        }
+
+
 
         [HttpPost("check-email-exists")]
         public async Task<IActionResult> CheckEmailExists([FromBody] string email)
@@ -93,4 +151,6 @@ namespace Web_Server.Controllers
 
     }
 }
+
+
 

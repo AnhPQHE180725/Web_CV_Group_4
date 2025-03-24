@@ -7,12 +7,17 @@ import { Company } from '../../models/Company';
 import { CompanyService } from '../../services/Company.service';
 import { Recruitment } from '../../models/Recruitment';
 import { RecruitmentService } from '../../services/Recruitment.service';
-import { ActivatedRoute } from '@angular/router';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ApplyDialogComponent } from '../recruitment/apply-dialog/apply-dialog.component';
+
+
 
 @Component({
   selector: 'app-homepage',
-  imports: [CommonModule, RouterLink],
+  standalone: true,
+  imports: [CommonModule, RouterLink, MatDialogModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
@@ -28,7 +33,18 @@ export class HomepageComponent {
     'assets/images/slide5.jpg'
   ];
   currentIndex: number = 0;
-  constructor(private categoryService: CategoryService, private companyService: CompanyService, private recruitmentService: RecruitmentService, private route: ActivatedRoute) { }
+
+  constructor(
+    private categoryService: CategoryService,
+    private companyService: CompanyService,
+    private recruitmentService: RecruitmentService,
+    private route: ActivatedRoute,
+
+    private router: Router,
+    private dialog: MatDialog,
+    private authService: AuthService
+  ) { }
+
 
   ngOnInit(): void {
     this.categoryService.getTopCategories().subscribe({
@@ -66,4 +82,24 @@ export class HomepageComponent {
   nextSlide() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
+
+  isLoggedIn(): boolean {
+    return this.authService.isAuthenticated();
+  }
+
+  onApply(recruitment: Recruitment) {
+    if (!this.isLoggedIn()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    this.dialog.open(ApplyDialogComponent, {
+      width: '500px',
+      data: {
+        jobTitle: recruitment.title,
+        recruitmentId: recruitment.id
+      }
+    });
+  }
 }
+
