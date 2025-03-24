@@ -84,7 +84,7 @@ namespace Web_Server.Repositories
                 user.Password = newPassword;
                 await _context.SaveChangesAsync();
             }
-
+        }
         public async Task<ApplyPost> ApplyCV(int id)
         {
             var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
