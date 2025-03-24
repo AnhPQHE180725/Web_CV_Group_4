@@ -41,13 +41,39 @@ namespace Web_Server.Controllers
             return Ok("Email đặt lại mật khẩu đã được gửi thành công.");
         }
 
-        [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
+        [HttpGet("reset-password")]
+        public IActionResult ResetPassword([FromQuery] string token)
         {
-            if (string.IsNullOrEmpty(request.Token) || string.IsNullOrEmpty(request.NewPassword))
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("Token không hợp lệ.");
+
+            var htmlContent = $@"
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Reset password</title>
+        </head>
+        <body>
+            <h2>Reset password</h2>
+            <form method='POST' action='/api/Authentication/reset-password'>
+                <input type='hidden' name='token' value='{token}' />
+                <label for='newPassword'>New password:</label>
+                <input type='password' id='newPassword' name='newPassword' required />
+                <button type='submit'>Submit</button>
+            </form>
+        </body>
+        </html>";
+
+            return Content(htmlContent, "text/html"); // Thêm Content-Type để trình duyệt hiển thị HTML
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPasswordPost([FromForm] string token, [FromForm] string newPassword)
+        {
+            if (string.IsNullOrEmpty(token) || string.IsNullOrEmpty(newPassword))
                 return BadRequest("Token và mật khẩu không được để trống.");
 
-            var result = await _userService.ResetPasswordAsync(request.Token, request.NewPassword);
+            var result = await _userService.ResetPasswordAsync(token, newPassword);
             if (!result) return BadRequest("Token không hợp lệ hoặc đã hết hạn.");
 
             return Ok("Mật khẩu đã được cập nhật thành công.");
@@ -123,11 +149,6 @@ namespace Web_Server.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-    }
-    public class ResetPasswordRequest
-    {
-        public string Token { get; set; }
-        public string NewPassword { get; set; }
     }
 }
 
