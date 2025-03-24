@@ -5,6 +5,7 @@ import { LoginRequest } from '../models/login-request';
 import { LoginResponse } from '../models/login-response';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
+import { RegisterRequest } from '../models/RegisterRequest';
 
 
 @Injectable({
@@ -71,4 +72,8 @@ getRoleFromToken(): string | undefined {
 }
 
 
+// đăng kí tài khoản
+register(request: RegisterRequest): Observable<any> {
+    return this.http.post(`${this.baseUrl}/Authentication/register`, request);
+}
 }

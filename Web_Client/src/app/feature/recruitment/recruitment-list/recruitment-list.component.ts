@@ -20,6 +20,7 @@ export class RecruitmentListComponent {
   pageTitle: string = 'Danh Sách Tuyển Dụng';
   activeTab: string = 'title';
   searchQuery : string = "";
+  unsearch : Recruitment[] = [];
   constructor(private route: ActivatedRoute, private recruitmentService: RecruitmentService) { }
 
   ngOnInit() {
@@ -76,6 +77,7 @@ export class RecruitmentListComponent {
     this.recruitmentService.getAllRecruitments().subscribe(
       (data) => {
         this.recruitments = data;
+        this.unsearch = data;
         if (this.recruitments.length > 0) {
           this.pageTitle = 'Danh Sách Tất Cả Tuyển Dụng';
         } else {
@@ -102,7 +104,10 @@ export class RecruitmentListComponent {
   }
 
   search(){
-    if(!this.searchQuery) return;
+    if(!this.searchQuery){
+      this.recruitments = [...this.unsearch];
+      return;
+    } 
     switch(this.activeTab){
       case 'company': 
       this.recruitmentService.getRecruitmentsByCompanyName(this.searchQuery).subscribe(data => {
