@@ -10,7 +10,7 @@
 
 <body>
   <nav class="navbar">
-    <<<<<<< HEAD <div class="nav-left">
+    <div class="nav-left">
       <a href="home" class="nav-item">Trang chủ</a>
       <div class="dropdown">
         <button class="nav-item dropbtn">Danh mục ▼</button>
@@ -30,27 +30,25 @@
       <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
       <a href="recruiter" class="nav-item">Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a>
 
-      </div>
-      <a href="company" class="nav-item">Doanh nghiệp</a>
-      <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
-      <a href="recruiter" class="nav-item">Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a>
-      </div>
+    </div>
 
 
-      <div class="nav-right">
-        <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
-        <ng-container *ngIf="!isLoggedIn()">
-          <a href="register" class="nav-item">Đăng ký</a>
-          <a href="login" class="nav-item">Đăng nhập</a>
-        </ng-container>
-        <!-- Hiển thị Upload CV và Log Out khi đã đăng nhập -->
-        <ng-container *ngIf="isLoggedIn()">
-          <a routerLink="/upload-cv" class="nav-item">
-            <i class="fas fa-upload"></i> Upload CV
-          </a>
-          <a href="#" class="nav-item" (click)="logout()">Log Out</a>
-        </ng-container>
-      </div>
+
+
+    <div class="nav-right">
+      <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
+      <ng-container *ngIf="!isLoggedIn()">
+        <a href="register" class="nav-item">Đăng ký</a>
+        <a href="login" class="nav-item">Đăng nhập</a>
+      </ng-container>
+      <!-- Hiển thị Upload CV và Log Out khi đã đăng nhập -->
+      <ng-container *ngIf="isLoggedIn()">
+        <a routerLink="/upload-cv" class="nav-item">
+          <i class="fas fa-upload"></i> Upload CV
+        </a>
+        <a href="#" class="nav-item" (click)="logout()">Log Out</a>
+      </ng-container>
+    </div>
 
   </nav>
 </body>
