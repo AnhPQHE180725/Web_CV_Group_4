@@ -9,5 +9,7 @@ namespace Web_Server.Interfaces
         Task<CV> CreateAsync(CV cv);
         Task<CV> UpdateAsync(CV cv);
         Task<bool> DeleteAsync(int id);
+
+        Task
     }
 } 
