@@ -1,5 +1,94 @@
 [
   {
+    "ContainingType": "Web_Server.Controllers.ApplyPostController",
+    "Method": "ApplyWithExistingCV",
+    "RelativePath": "api/ApplyPost/apply-with-existing-cv",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "applyVm",
+        "Type": "Web_Server.ViewModels.ApplyWithExistingCVVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.ApplyPostController",
+    "Method": "ApplyWithNewCV",
+    "RelativePath": "api/ApplyPost/apply-with-new-cv",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PostId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CVFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Text",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.ApplyPostController",
+    "Method": "GetPostApplications",
+    "RelativePath": "api/ApplyPost/post-applications/{postId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.ApplyPostController",
+    "Method": "UpdateApplicationStatus",
+    "RelativePath": "api/ApplyPost/status/{applicationId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "applicationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.ApplyPostController",
+    "Method": "GetUserApplications",
+    "RelativePath": "api/ApplyPost/user-applications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "CheckEmailExists",
     "RelativePath": "api/Authentication/check-email-exists",
@@ -102,6 +191,100 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "GetCVById",
+    "RelativePath": "api/CV/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Web_Server.Models.CV",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "DeleteCV",
+    "RelativePath": "api/CV/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "UploadCV",
+    "RelativePath": "api/CV/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Web_Server.Models.CV",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "GetCVByUserId",
+    "RelativePath": "api/CV/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Web_Server.Models.CV",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",

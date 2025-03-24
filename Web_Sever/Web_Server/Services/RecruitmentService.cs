@@ -38,8 +38,10 @@ namespace Web_Server.Services
                 Type = r.Type,
                 View = r.View,
                 Deadline = r.Deadline,
-                CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown"
+
+                CompanyName = r.Company?.Name ?? "Unknown", 
+                CategoryName = r.Category?.Name ?? "Unknown" 
+
             }).ToList();
         }
 
@@ -87,6 +89,7 @@ namespace Web_Server.Services
             return await _repository.GetRecruitmentsByLocation(location);
         }
 
+
         public async Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm)
         {
             var recruitment = new Recruitment
@@ -133,6 +136,7 @@ namespace Web_Server.Services
         {
             return await _repository.DeleteRecruitmentAsync(id);
         }
+
 
 
     }

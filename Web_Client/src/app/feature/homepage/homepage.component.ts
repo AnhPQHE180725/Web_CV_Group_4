@@ -10,6 +10,10 @@ import { RecruitmentService } from '../../services/Recruitment.service';
 import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
 
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-homepage',
   imports: [CommonModule, RouterLink],
@@ -28,7 +32,17 @@ export class HomepageComponent {
     'assets/images/slide5.jpg'
   ];
   currentIndex: number = 0;
-  constructor(private categoryService: CategoryService, private companyService: CompanyService, private recruitmentService: RecruitmentService, private route: ActivatedRoute) { }
+
+
+  constructor(
+    private categoryService: CategoryService,
+    private companyService: CompanyService,
+    private recruitmentService: RecruitmentService,
+    private route: ActivatedRoute,
+    private authService: AuthService,
+    private router: Router
+  ) { }
+
 
   ngOnInit(): void {
     this.categoryService.getTopCategories().subscribe({
@@ -66,4 +80,15 @@ export class HomepageComponent {
   nextSlide() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
+
+
+  onApplyClick(recruitment: Recruitment) {
+    if (!this.authService.isAuthenticated()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+    // Xử lý logic apply job
+  }
+
+
 }

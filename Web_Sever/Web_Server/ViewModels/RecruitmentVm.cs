@@ -18,11 +18,13 @@
         public int View { get; set; }
         public string Deadline { get; set; }
 
+
         public string CompanyName { get; set; }
         public string CategoryName { get; set; }
 
         // Add these properties to support Add and Edit
         public int CompanyId { get; set; }
         public int CategoryId { get; set; }
+
     }
 }

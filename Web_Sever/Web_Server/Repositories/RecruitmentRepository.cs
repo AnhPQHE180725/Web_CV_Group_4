@@ -76,5 +76,14 @@ namespace Web_Server.Repositories
         {
             return await _context.Recruitments.Where(t => t.Address.Contains(location)).ToListAsync();
         }
+       
+
+        public async Task<Recruitment> GetByIdAsync(int id)
+        {
+            return await _context.Recruitments
+                .Include(r => r.Company)
+                .Include(r => r.Category)
+                .FirstOrDefaultAsync(r => r.Id == id);
+        }
     }
 }

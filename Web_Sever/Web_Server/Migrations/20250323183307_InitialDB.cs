@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Web_Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDb : Migration
+    public partial class InitialDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -40,27 +40,27 @@ namespace Web_Server.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CVId = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CVId = table.Column<int>(type: "int", nullable: true),
                     RoleId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_User_Roles_RoleId",
+                        name: "FK_Users_Roles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "Roles",
                         principalColumn: "Id",
@@ -86,9 +86,9 @@ namespace Web_Server.Migrations
                 {
                     table.PrimaryKey("PK_Companies", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Companies_User_UserId",
+                        name: "FK_Companies_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -106,9 +106,9 @@ namespace Web_Server.Migrations
                 {
                     table.PrimaryKey("PK_CVs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CVs_User_UserId",
+                        name: "FK_CVs_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -131,9 +131,9 @@ namespace Web_Server.Migrations
                         principalTable: "Companies",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_FollowCompanies_User_UserId",
+                        name: "FK_FollowCompanies_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -176,9 +176,9 @@ namespace Web_Server.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Recruitments_User_UserId",
+                        name: "FK_Recruitments_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id");
                 });
 
@@ -205,9 +205,9 @@ namespace Web_Server.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ApplyPosts_User_UserId",
+                        name: "FK_ApplyPosts_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id");
                 });
 
@@ -230,9 +230,9 @@ namespace Web_Server.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_FollowJobs_User_UserId",
+                        name: "FK_FollowJobs_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id");
                 });
 
@@ -255,7 +255,7 @@ namespace Web_Server.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "User",
+                table: "Users",
                 columns: new[] { "Id", "Address", "CVId", "Description", "Email", "FullName", "Image", "Password", "PhoneNumber", "RoleId", "Status" },
                 values: new object[,]
                 {
@@ -374,8 +374,8 @@ namespace Web_Server.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_User_RoleId",
-                table: "User",
+                name: "IX_Users_RoleId",
+                table: "Users",
                 column: "RoleId");
         }
 
@@ -404,7 +404,7 @@ namespace Web_Server.Migrations
                 name: "Companies");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Roles");
