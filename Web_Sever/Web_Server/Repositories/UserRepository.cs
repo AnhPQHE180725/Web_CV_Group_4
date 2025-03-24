@@ -130,5 +130,31 @@ namespace Web_Server.Repositories
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
 
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+            return await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
+        public async Task<bool> UpdateProfileAsync(User user)
+        {
+            _context.Users.Update(user);
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<bool> UpdateEmailAsync(int userId, string newEmail)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null) return false;
+
+            user.Email = newEmail;
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<bool> IsTakenEmailAsync(string email)
+        {
+            return await _context.Users.AnyAsync(u => u.Email == email);
+        }
     }
 }

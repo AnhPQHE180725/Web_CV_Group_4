@@ -138,6 +138,16 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Authentication/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "Register",
     "RelativePath": "api/Authentication/register",
     "HttpMethod": "POST",
@@ -185,6 +195,38 @@
         "Name": "newPassword",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "UpdateEmail",
+    "RelativePath": "api/Authentication/update-email",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Web_Server.ViewModels.UpdateEmailVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Authentication/update-profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Web_Server.ViewModels.UserVm",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
