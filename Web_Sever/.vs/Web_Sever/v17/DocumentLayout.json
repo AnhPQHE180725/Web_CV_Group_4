@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\updateemailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\controllers\\cvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\cvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 27,
           "Children": [
             {
               "$type": "Bookmark",
@@ -197,12 +197,8 @@
               "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UpdateEmailVm.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\UpdateEmailVm.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\UpdateEmailVm.cs",
@@ -210,12 +206,11 @@
               "RelativeToolTip": "Web_Server\\ViewModels\\UpdateEmailVm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:28:54.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T18:28:54.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\UserController.cs",
@@ -223,12 +218,11 @@
               "RelativeToolTip": "Web_Server\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAIAwwBYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T15:47:02.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T15:47:02.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CVController.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CVController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\CVController.cs",
@@ -236,25 +230,24 @@
               "RelativeToolTip": "Web_Server\\Controllers\\CVController.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T15:46:20.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T15:46:20.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UserVm.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\UserVm.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\UserVm.cs",
               "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\UserVm.cs",
               "RelativeToolTip": "Web_Server\\ViewModels\\UserVm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T15:41:16.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",
@@ -267,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\UserRepository.cs",
@@ -275,12 +268,11 @@
               "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAIsAAAAAAAAAAAAuwJ0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:56:53.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T14:56:53.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\UserService.cs",
@@ -288,38 +280,11 @@
               "RelativeToolTip": "Web_Server\\Services\\UserService.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAwwIQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:57:41.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T14:57:41.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "Web_Server\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA5wB0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:56:31.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Web_Server\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA7wBYAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T14:55:41.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
               "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
@@ -331,6 +296,34 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wB0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T14:56:31.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA7wBYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T14:55:41.373Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "User.cs",
@@ -340,8 +333,7 @@
               "RelativeToolTip": "Web_Server\\Models\\User.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T08:31:21.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T08:31:21.413Z"
             },
             {
               "$type": "Document",
@@ -353,8 +345,7 @@
               "RelativeToolTip": "Web_Server\\Program.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:53:45.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T07:53:45.717Z"
             },
             {
               "$type": "Document",

@@ -389,37 +389,6 @@
         }
       }
     },
-    "/api/Authentication/update-email": {
-      "put": {
-        "tags": [
-          "Authentication"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateEmailVm"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateEmailVm"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateEmailVm"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/Category/get-all-categories": {
       "get": {
         "tags": [
@@ -648,6 +617,146 @@
         "parameters": [
           {
             "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/toggle/{companyId}": {
+      "post": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/user-follows": {
+      "get": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/check/{companyId}": {
+      "get": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/followed-ids": {
+      "get": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/toggle/{recruitmentId}": {
+      "post": {
+        "tags": [
+          "FollowJob"
+        ],
+        "parameters": [
+          {
+            "name": "recruitmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/user-follows": {
+      "get": {
+        "tags": [
+          "FollowJob"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/followed-ids": {
+      "get": {
+        "tags": [
+          "FollowJob"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/check/{recruitmentId}": {
+      "get": {
+        "tags": [
+          "FollowJob"
+        ],
+        "parameters": [
+          {
+            "name": "recruitmentId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1450,20 +1559,6 @@
               "$ref": "#/components/schemas/User"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateEmailVm": {
-        "required": [
-          "newEmail"
-        ],
-        "type": "object",
-        "properties": {
-          "newEmail": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
           }
         },
         "additionalProperties": false
