@@ -18,5 +18,8 @@ namespace Web_Server.Interfaces
 
         Task<CV> GetCVByUserId(int id);
 
+        Task<ApplyPost> ApplyCV(int id);
+        Task<ApplyPost> RejectCV(int id);   
+
     }
 }

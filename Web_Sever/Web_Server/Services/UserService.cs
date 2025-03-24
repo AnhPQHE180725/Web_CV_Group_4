@@ -53,5 +53,14 @@ namespace Web_Server.Services
         {
             return await _repository.TakeRoleAsync(user);
         }
+
+        public async Task<ApplyPost> ApplyCV(int id)
+        {
+            return await _repository.ApplyCV(id);
+        }
+        public async Task<ApplyPost> RejectCV(int id)
+        {
+            return await _repository.RejectCV(id);
+        }
     }
 }

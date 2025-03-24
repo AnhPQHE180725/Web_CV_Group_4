@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\RecruitmentVm.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
               "RelativeToolTip": "Web_Server\\ViewModels\\RecruitmentVm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T06:49:54.949Z",
               "EditorCaption": ""
@@ -107,8 +107,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:48:08.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:48:08.01Z"
             },
             {
               "$type": "Document",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "Web_Server\\Program.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAEgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:46:28.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:46:28.027Z"
             },
             {
               "$type": "Document",
@@ -133,8 +131,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:44:48.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:44:48.432Z"
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:42:10.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:42:10.709Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T03:47:09.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T03:47:09.602Z"
             },
             {
               "$type": "Document",
@@ -172,8 +167,7 @@
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T07:48:20.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T07:48:20.071Z"
             },
             {
               "$type": "Document",
@@ -185,8 +179,7 @@
               "RelativeToolTip": "Web_Server\\Controllers\\RecruitmentController.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAIwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:40:25.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:40:25.495Z"
             },
             {
               "$type": "Document",
@@ -198,8 +191,7 @@
               "RelativeToolTip": "Web_Server\\Migrations\\20250324055113_InitialDB.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T06:39:29.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:39:29.15Z"
             },
             {
               "$type": "Document",
@@ -223,8 +215,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T03:30:34.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T03:30:34.456Z"
             },
             {
               "$type": "Document",

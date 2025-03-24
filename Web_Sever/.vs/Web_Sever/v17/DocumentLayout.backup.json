@@ -1,11 +1,46 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250324055113_InitialDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250324055113_InitialDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\recruitmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\recruitmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\migrations\\20250324055113_initialdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\migrations\\20250324055113_initialdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -20,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\candidatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,61 +67,11 @@
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-  "WorkspaceRootPath": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\candidatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\candidatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\cc\\web_cv_group_4\\web_sever\\web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -106,44 +87,115 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
+              "Title": "RecruitmentVm.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "RelativeToolTip": "Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:49:54.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecruitmentRepository.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:48:08.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Program.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "RelativeToolTip": "Web_Server\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:46:28.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRecruitmentService.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:44:48.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IRecruitmentRepository.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:42:10.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:47:09.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecruitmentService.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T07:48:20.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RecruitmentController.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
+              "RelativeToolTip": "Web_Server\\Controllers\\RecruitmentController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAIwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:40:25.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "20250324055113_InitialDB.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250324055113_InitialDB.cs",
               "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250324055113_InitialDB.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250324055113_InitialDB.cs",
               "RelativeToolTip": "Web_Server\\Migrations\\20250324055113_InitialDB.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T05:51:13.773Z",
-=======
-              "Title": "RecruitmentRepository.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAtwE4AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T04:17:10.876Z",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T06:39:29.15Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
-              "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
-              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
-              "RelativeToolTip": "Web_Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T03:48:44.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "20250324034805_InitialDB.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250324034805_InitialDB.cs",
               "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250324034805_InitialDB.cs",
@@ -155,38 +207,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RecruitmentService.cs",
-              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
-              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-=======
-              "DocumentIndex": 6,
-              "Title": "RecruitmentService.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
-              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T07:48:20.071Z"
+              "WhenOpened": "2025-03-21T03:30:34.456Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
+              "RelativeToolTip": "Web_Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T03:48:44.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "CandidateVm.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CandidateVm.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\CandidateVm.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CandidateVm.cs",
-=======
-              "DocumentIndex": 1,
-              "Title": "CandidateVm.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CandidateVm.cs",
-              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\CandidateVm.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CandidateVm.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
               "RelativeToolTip": "Web_Server\\ViewModels\\CandidateVm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -194,19 +243,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\UserController.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
-=======
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
               "RelativeToolTip": "Web_Server\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -214,19 +255,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\UserService.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
-=======
-              "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\UserService.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
               "RelativeToolTip": "Web_Server\\Services\\UserService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -234,19 +267,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
               "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
-=======
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
               "RelativeToolTip": "Web_Server\\Models\\User.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -254,39 +279,11 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 4,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
-=======
-              "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
-              "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T03:47:09.602Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "ApplyPost.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
               "RelativeDocumentMoniker": "Web_Server\\Models\\ApplyPost.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
-=======
-              "DocumentIndex": 9,
-              "Title": "ApplyPost.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\ApplyPost.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
               "RelativeToolTip": "Web_Server\\Models\\ApplyPost.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -294,43 +291,15 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserService.cs",
               "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
-=======
-              "DocumentIndex": 7,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
               "RelativeToolTip": "Web_Server\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T03:30:37.459Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 10,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
-=======
-              "DocumentIndex": 8,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
->>>>>>> 0745456d14e1b1477620ccb13f3c1cff2deb1ae0
-              "RelativeToolTip": "Web_Server\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T03:30:34.456Z"
             }
           ]
         }

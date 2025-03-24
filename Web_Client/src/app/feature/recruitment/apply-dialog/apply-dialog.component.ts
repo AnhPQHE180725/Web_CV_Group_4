@@ -133,6 +133,7 @@ export class ApplyDialogComponent {
   showIntroductionError = false;
 
   private dialogRef = inject(MatDialogRef<ApplyDialogComponent>);
+
   private applicationService = inject(ApplicationService);
   data: { jobTitle: string, recruitmentId: number } = inject(MAT_DIALOG_DATA);
 
