@@ -10,5 +10,8 @@ namespace Web_Server.Interfaces
         Task<List<Recruitment>> GetTop2Recruitments();
         Task<List<RecruitmentVm>> GetRecruitmentsByCompany(int id);
         Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id);
+        Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm);
+        Task<bool> EditRecruitmentAsync(int id, RecruitmentVm recruitmentVm);
+        Task<bool> DeleteRecruitmentAsync(int id);
     }
 }
