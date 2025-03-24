@@ -62,5 +62,25 @@ namespace Web_Server.Repositories
                 .Include(r => r.Category)
                 .FirstOrDefaultAsync(r => r.Id == id);
         }
+
+        public Task<bool> AddRecruitmentAsync(Recruitment recruitment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Recruitment> GetRecruitmentByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> EditRecruitmentAsync(Recruitment recruitment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteRecruitmentAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

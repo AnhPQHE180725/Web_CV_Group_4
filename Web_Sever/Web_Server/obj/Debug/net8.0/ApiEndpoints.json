@@ -288,6 +288,59 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "AddRecruitment",
+    "RelativePath": "api/Recruitment/add-recruitment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recruitmentVm",
+        "Type": "Web_Server.ViewModels.RecruitmentVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "DeleteRecruitment",
+    "RelativePath": "api/Recruitment/delete-recruitment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "EditRecruitment",
+    "RelativePath": "api/Recruitment/edit-recruitment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "recruitmentVm",
+        "Type": "Web_Server.ViewModels.RecruitmentVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "GetAllRecruitments",
     "RelativePath": "api/Recruitment/get-all-recruitments",
     "HttpMethod": "GET",
@@ -388,6 +441,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.UserController",
+    "Method": "ApplyCV",
+    "RelativePath": "api/User/apply-cv/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.UserController",
     "Method": "GetCVByUserId",
     "RelativePath": "api/User/get-cv-by-user-id/{id}",
     "HttpMethod": "GET",
@@ -407,6 +476,22 @@
     "Method": "GetUserByPostId",
     "RelativePath": "api/User/get-user-by-post-id/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.UserController",
+    "Method": "RejectCV",
+    "RelativePath": "api/User/reject-cv/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

@@ -16,4 +16,7 @@ export class CvService {
 
         return this.http.post(`${this.baseUrl}/CV/upload`, formData);
     }
+    getCVUrl(userId: number) {
+        return this.http.get<string>(`${this.baseUrl}/user/${userId}`);
+    }
 } 

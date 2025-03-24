@@ -12,8 +12,6 @@ import { AuthService } from '../../services/auth.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../recruitment/apply-dialog/apply-dialog.component';
 
-import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
 
 
 @Component({
