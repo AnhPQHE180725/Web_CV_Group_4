@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="signup-box">
+        <h2>Welcome !</h2>
+        <h1>Sign up to Top-CV Web</h1>
+        <form (ngSubmit)="onFormSubmit()">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" [(ngModel)]="fullName" name="fullName"
+                    placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" [(ngModel)]="password" name="password"
+                    placeholder="Enter your Password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" [(ngModel)]="confirmPassword" name="confirmPassword"
+                    placeholder="Confirm your Password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Choose your role</label>
+                <select id="role" [(ngModel)]="role" name="role" required>
+                    <option value="" disabled selected>Choose your role</option>
+                    <option value="candidate">Candidate</option>
+                    <option value="recruiter">Recruiter</option>
+                </select>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+    </div>
+    <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/Shy9VB3CKUYUzyzcuJwmDiYZElFJsKYwj5v5X2s3fGfIlL6SzkbAz_sMX6ZX9Sk8JQ"
+            alt="Web-CV Logo" class="logo-img">
+        <h2>WEB-CV</h2>
+    </div>
+</div>

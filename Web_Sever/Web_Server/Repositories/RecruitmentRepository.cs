@@ -21,17 +21,45 @@ namespace Web_Server.Repositories
 
         public async Task<List<Recruitment>> GetRecruitmentsByCategory(int id)
         {
-            return await _context.Recruitments.Where(c=>c.CategoryId == id).ToListAsync();
+            return await _context.Recruitments
+          .Where(r => r.CategoryId == id)
+          .Include(r => r.Company) 
+          .Include(r => r.Category) 
+          .ToListAsync();
         }
 
         public async Task<List<Recruitment>> GetRecruitmentsByCompany(int id)
         {
-            return await _context.Recruitments.Where(c=>c.CompanyId ==id).ToListAsync();
+            return await _context.Recruitments
+          .Where(r => r.CompanyId == id)
+          .Include(r => r.Company)
+          .Include(r => r.Category)
+          .ToListAsync();
         }
 
         public async Task<List<Recruitment>> GetTop2Recruitments()
         {
             return await _context.Recruitments.OrderByDescending(c=>c.View).Take(2).ToListAsync();
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
+        {
+            return await _context.Recruitments.Where(c => c.Company.Name.Contains(company)).ToListAsync();
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByTitle(string title)
+        {
+            return await _context.Recruitments.Where(t => t.Title.Contains(title)).ToListAsync();
+        }
+        public async Task<List<Recruitment>> GetRecruitmentsByLocation(string location)
+        {
+            return await _context.Recruitments.Where(t => t.Address.Contains(location)).ToListAsync();
+        }
+
+        public async Task<Recruitment> GetByIdAsync(int id)
+        {
+            return await _context.Recruitments
+                .Include(r => r.Company)
+                .Include(r => r.Category)
+                .FirstOrDefaultAsync(r => r.Id == id);
         }
     }
 }

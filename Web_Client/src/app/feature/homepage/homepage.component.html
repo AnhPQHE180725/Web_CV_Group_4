@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top CV</title>
+    <link rel="stylesheet" href="homepage.component.css">
+</head>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img *ngFor="let image of images; let i = index" [src]="image" class="slide"
+                [class.active]="i === currentIndex" alt="Image slide {{ i + 1 }}" title="Image slide {{ i + 1 }}">
+        </div>
+        <button class="prev" (click)="prevSlide()">&#10094;</button>
+        <button class="next" (click)="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="container">
+
+        <h2>Top Danh Mục</h2>
+        <div class="categories">
+            <div class="category" *ngFor="let category of categories"
+                [routerLink]="['/recruitment','category', category.id]" class="clickable">
+                {{ category.name }}
+            </div>
+        </div>
+
+        <h2>Top Doanh Nghiệp</h2>
+        <div class="companies">
+            <div class="company clickable" *ngFor="let company of companies"
+                [routerLink]="['/recruitment', 'company', company.id]">
+                <img [src]="'assets/images/slide1.jpg'" alt="{{ company.name }}" class="company-logo" />
+                <span class="company-name">{{ company.name }}</span>
+            </div>
+        </div>
+
+
+        <h2>Top Bài Đăng</h2>
+        <div class="posts">
+            <div class="post" *ngFor="let post of recruitments ">
+                <img [src]="'assets/images/slide1.jpg'" alt="{{ post.companyName }}" class="company-logo" />
+                <strong>{{post.type}}</strong>
+                <p>{{post.title}}</p>
+                <small>{{post.description}}</small>
+                <div class="salary-box">
+                    <small>{{ post.salary }} triệu</small>
+                </div>
+                <a href="#" class="apply-btn">Apply job</a>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

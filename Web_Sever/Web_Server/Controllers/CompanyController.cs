@@ -26,6 +26,10 @@ namespace Web_Server.Controllers
         {
             return Ok(await _companyService.GetTop4Companies());
         }
-
+        [HttpGet("get-companies-by-name/{company}")]
+        public async Task<IActionResult> GetCompaniesByName(string company)
+        {
+            return Ok(await _companyService.GetCompaniesByName(company));
+        }
     }
 }

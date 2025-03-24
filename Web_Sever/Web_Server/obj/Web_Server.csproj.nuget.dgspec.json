@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj": {}
+    "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj": {
+    "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj",
+        "projectUniqueName": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj",
         "projectName": "Web_Server",
-        "projectPath": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj",
-        "packagesPath": "C:\\Users\\trong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\obj\\",
+        "projectPath": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Web_Server.csproj",
+        "packagesPath": "C:\\Users\\he173\\.nuget\\packages\\",
+        "outputPath": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\trong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\he173\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\trong\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -89,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

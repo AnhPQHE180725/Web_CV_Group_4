@@ -1,30 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
+  "WorkspaceRootPath": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\recruitmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250323183307_InitialDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Web_Server\\Migrations\\20250323183307_InitialDB.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\candidatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\candidatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\mockproject\\web_cv_group_4\\web_sever\\web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,129 +58,155 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Program.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
-              "RelativeToolTip": "Web_Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:53:45.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RecruitmentController.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
-              "RelativeToolTip": "Web_Server\\Controllers\\RecruitmentController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAAAJAAAAAAAAAA==",
+              "Title": "20250323183307_InitialDB.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250323183307_InitialDB.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250323183307_InitialDB.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250323183307_InitialDB.cs",
+              "RelativeToolTip": "Web_Server\\Migrations\\20250323183307_InitialDB.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:51:07.907Z",
+              "WhenOpened": "2025-03-23T18:33:08.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RecruitmentService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBUAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:50:13.801Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
+              "RelativeToolTip": "Web_Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T18:30:37.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IRecruitmentService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
-              "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Program.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
+              "RelativeToolTip": "Web_Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:49:14.374Z",
+              "WhenOpened": "2025-03-23T18:30:35.444Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RecruitmentService.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T07:48:20.071Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IRecruitmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
-              "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Title": "CandidateVm.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CandidateVm.cs",
+              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\CandidateVm.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CandidateVm.cs",
+              "RelativeToolTip": "Web_Server\\ViewModels\\CandidateVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:48:15.285Z",
+              "WhenOpened": "2025-03-21T07:46:47.987Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Web_Server\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:54:54.629Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\UserService.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\UserService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwB0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:52:08.711Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
+              "RelativeToolTip": "Web_Server\\Models\\User.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:47:46.184Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RecruitmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAABaAAAAAAAAAA==",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T07:47:37.353Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 188,
-          "SelectedChildIndex": -1,
-          "Children": [
+              "WhenOpened": "2025-03-21T03:47:09.602Z"
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 155,
-          "SelectedChildIndex": -1,
-          "Children": [
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplyPost.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Models\\ApplyPost.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
+              "RelativeToolTip": "Web_Server\\Models\\ApplyPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:31:17.252Z"
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:30:37.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T03:30:34.456Z"
             }
           ]
         }

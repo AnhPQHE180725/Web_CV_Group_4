@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="login-box">
+        <h2>Welcome!</h2>
+        <h1>Sign in to Top-CV Web</h1>
+        <form (ngSubmit)="onFormSubmit()">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" [(ngModel)]="model.email" name="email" placeholder="Enter your email"
+                    required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" [(ngModel)]="model.password" name="password"
+                    placeholder="Enter your Password" required>
+            </div>
+            <div class="options">
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <p class="register-link">Don't have an Account? <a href="register">Sign up</a></p>
+        </form>
+    </div>
+    <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/Shy9VB3CKUYUzyzcuJwmDiYZElFJsKYwj5v5X2s3fGfIlL6SzkbAz_sMX6ZX9Sk8JQ"
+            alt="Web-CV Logo" class="logo-img">
+        <h2>WEB-CV</h2>
+    </div>
+</div>

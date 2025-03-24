@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách ứng viên</title>
+    <link rel="stylesheet" href="recruiter-candidate-list.component.css">
+
+</head>
+
+<body>
+    <h1>Danh sách ứng viên</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Ảnh bìa</th>
+
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Số ĐT</th>
+                <th>Trạng thái CV</th>
+                <th>CV</th>
+
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <tr *ngFor="let candidate of paginatedCandidates">
+                <td><img [src]="'assets/images/slide1.jpg'" alt="User Image"></td>
+
+                <td>{{ candidate.fullName }}</td>
+                <td>{{ candidate.email }}</td>
+                <td>{{ candidate.phoneNumber }}</td>
+                <td>{{candidate.cvStatus}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+
+        <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+            [class.active]="currentPage === i + 1">
+            {{ i + 1 }}
+        </button>
+
+        <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

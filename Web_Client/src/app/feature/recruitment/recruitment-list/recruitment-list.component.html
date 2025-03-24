@@ -1,0 +1,90 @@
+<h2>{{ pageTitle }}</h2>
+
+<div class="wrapper">
+  <div class="tab-container">
+    <button
+      class="tab"
+      (click)="setActiveTab('title')"
+      [ngClass]="{ active: activeTab === 'title' }"
+    >
+      Tìm công việc
+    </button>
+
+    <button
+      class="tab"
+      (click)="setActiveTab('company')"
+      [ngClass]="{ active: activeTab === 'company' }"
+    >
+      Tìm theo công ty
+    </button>
+
+    <button
+      class="tab"
+      (click)="setActiveTab('location')"
+      [ngClass]="{ active: activeTab === 'location' }"
+    >
+      Tìm theo địa điểm
+    </button>
+  </div>
+
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Tìm kiếm theo tên công ty, công việc, địa điểm,..."
+    />
+    <button class="search-btn" (click)="search()">Tìm kiếm</button>
+  </div>
+</div>
+
+<div *ngIf="paginatedRecruitments.length > 0; else noResults">
+  <div class="post" *ngFor="let post of recruitments">
+    <img
+      [src]="'assets/images/slide1.jpg'"
+      alt="{{ post.companyName }}"
+      class="company-logo"
+    />
+    <strong>{{ post.type }}</strong>
+    <p>{{ post.title }}</p>
+    <small>{{ post.description }}</small>
+    <div class="salary-box">
+      <small>{{ post.salary }} triệu</small>
+    </div>
+    <a
+      class="apply-btn"
+      style="cursor: pointer"
+      (click)="onApply(post)"
+      *ngIf="isLoggedIn()"
+    >
+      Ứng tuyển ngay
+    </a>
+    <p class="login-message" *ngIf="!isLoggedIn()">
+      Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
+    </p>
+  </div>
+
+  <div class="pagination">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      Previous
+    </button>
+
+    <button
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1"
+    >
+      {{ i + 1 }}
+    </button>
+
+    <button
+      (click)="goToPage(currentPage + 1)"
+      [disabled]="currentPage === totalPages"
+    >
+      Next
+    </button>
+  </div>
+</div>
+
+<ng-template #noResults>
+  <p>Không có tuyển dụng phù hợp.</p>
+</ng-template>
