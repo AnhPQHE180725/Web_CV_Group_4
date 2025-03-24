@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\nghie\\onedrive\\m\u00E1y t\u00EDnh\\project_fa\\web_cv_group_4\\web_sever\\web_server\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -74,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -157,12 +165,33 @@
               "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Web_Server\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAIwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:31:37.509Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\User.cs",
+              "RelativeToolTip": "Web_Server\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:31:21.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CompanyService.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CompanyService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\CompanyService.cs",
@@ -174,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ICompanyRepository.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICompanyRepository.cs",
@@ -186,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ICompanyService.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICompanyService.cs",
@@ -198,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CompanyRepository.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\CompanyRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\CompanyRepository.cs",
@@ -210,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CompanyController.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CompanyController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\CompanyController.cs",
@@ -218,12 +247,11 @@
               "RelativeToolTip": "Web_Server\\Controllers\\CompanyController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwB8AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T07:47:57.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T07:47:57.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RecruitmentController.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
@@ -235,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "RecruitmentService.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
@@ -247,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RecruitmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
@@ -259,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "IRecruitmentService.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
@@ -271,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "IRecruitmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
@@ -283,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Recruitment.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\Recruitment.cs",
               "RelativeDocumentMoniker": "Web_Server\\Models\\Recruitment.cs",
@@ -295,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Program.cs",
               "RelativeDocumentMoniker": "Web_Server\\Program.cs",
@@ -307,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Web_Server\\Data\\AppDbContext.cs",
@@ -319,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
@@ -331,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\appsettings.json",
               "RelativeDocumentMoniker": "Web_Server\\appsettings.json",
@@ -343,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "20250320022946_InitialDb_Ver0.1.cs",
               "DocumentMoniker": "C:\\Users\\nghie\\OneDrive\\M\u00E1y t\u00EDnh\\Project_FA\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
               "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250320022946_InitialDb_Ver0.1.cs",
@@ -352,6 +380,10 @@
               "ViewState": "AgIAAJcAAAAAAAAAAAAAwMsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T02:29:47.324Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         },
