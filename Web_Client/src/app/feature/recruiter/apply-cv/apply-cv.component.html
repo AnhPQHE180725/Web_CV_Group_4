@@ -1,2 +1,7 @@
-<iframe *ngIf="pdfUrl" [src]="pdfUrl" width="100%" height="600px" title="Candidate's CV">
-</iframe>
+<div *ngIf="cvUrl; else noCv">
+    <iframe [src]="cvUrl " width="100%" height="600px" title="Candidate's CV"></iframe>
+</div>
+
+<ng-template #noCv>
+    <p>No CV uploaded.</p>
+</ng-template>

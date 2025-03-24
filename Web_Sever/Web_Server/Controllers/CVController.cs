@@ -8,7 +8,7 @@ namespace Web_Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    
     public class CVController : ControllerBase
     {
         private readonly ICVService _cvService;
@@ -61,7 +61,16 @@ namespace Web_Server.Controllers
 
             return NoContent();
         }
-        
+        [HttpGet("view/{userId}")]
+        public async Task<IActionResult> ViewCV(int userId)
+        {
+            var filePath = await _cvService.GetCVFilePathByUserIdAsync(userId);
+            if (filePath == null)
+                return NotFound("CV file not found.");
+
+            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            return File(fileStream, "application/pdf");
+        }
 
     }
 } 

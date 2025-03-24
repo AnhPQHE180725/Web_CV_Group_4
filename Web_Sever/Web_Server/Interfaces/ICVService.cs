@@ -8,5 +8,6 @@ namespace Web_Server.Interfaces
         Task<CV> GetCVByUserIdAsync(int userId);
         Task<CV> UploadCVAsync(IFormFile file);
         Task<bool> DeleteCVAsync(int id);
+        Task<string?> GetCVFilePathByUserIdAsync(int userId);
     }
 } 

@@ -58,7 +58,7 @@ namespace Web_Server.Repositories
         .Where(a => a.RecruitmentId == id)
         .Select(a => new CandidateVm
         {
-            id = a.Id,
+            id = a.User.Id,
             Address = a.User.Address,
             FullName = a.User.FullName,
             Email = a.User.Email,

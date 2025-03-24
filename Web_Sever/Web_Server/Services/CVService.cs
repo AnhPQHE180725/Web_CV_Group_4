@@ -115,5 +115,17 @@ namespace Web_Server.Services
 
             return await _cvRepository.DeleteAsync(id);
         }
+
+        public async Task<string?> GetCVFilePathByUserIdAsync(int userId)
+        {
+            var cv = await _cvRepository.GetByUserIdAsync(userId);
+            if (cv == null)
+                return null;
+
+            var cvFolderPath = Path.Combine(_environment.WebRootPath, CV_FOLDER);
+            var filePath = Path.Combine(cvFolderPath, cv.Name);
+
+            return File.Exists(filePath) ? filePath : null;
+        }
     }
 } 

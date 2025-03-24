@@ -287,6 +287,22 @@
     ]
   },
   {
+    "ContainingType": "Web_Server.Controllers.CVController",
+    "Method": "ViewCV",
+    "RelativePath": "api/CV/view/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "AddRecruitment",
     "RelativePath": "api/Recruitment/add-recruitment",

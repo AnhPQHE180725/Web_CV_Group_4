@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { map } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
@@ -16,7 +16,10 @@ export class CvService {
 
         return this.http.post(`${this.baseUrl}/CV/upload`, formData);
     }
-    getCVUrl(userId: number) {
-        return this.http.get<string>(`${this.baseUrl}/user/${userId}`);
+    getCVUrl(userId: number): Observable<string> {
+        return this.http.get<{ id: number, name: string, userId: number }>(`${this.baseUrl}/CV/user/${userId}`)
+            .pipe(
+                map(response => `${this.baseUrl}/CV/view/${response.id}`)
+            );
     }
 } 
