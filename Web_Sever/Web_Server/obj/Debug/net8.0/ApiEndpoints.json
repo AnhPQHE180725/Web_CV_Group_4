@@ -398,6 +398,110 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web_Server.Controllers.FollowCompanyController",
+    "Method": "CheckFollowingCompany",
+    "RelativePath": "api/FollowCompany/check/{companyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowCompanyController",
+    "Method": "GetFollowedCompanyIds",
+    "RelativePath": "api/FollowCompany/followed-ids",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowCompanyController",
+    "Method": "ToggleFollowCompany",
+    "RelativePath": "api/FollowCompany/toggle/{companyId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowCompanyController",
+    "Method": "GetUserFollowCompanies",
+    "RelativePath": "api/FollowCompany/user-follows",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowJobController",
+    "Method": "CheckFollowingJob",
+    "RelativePath": "api/FollowJob/check/{recruitmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recruitmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowJobController",
+    "Method": "GetFollowedJobIds",
+    "RelativePath": "api/FollowJob/followed-ids",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowJobController",
+    "Method": "ToggleFollowJob",
+    "RelativePath": "api/FollowJob/toggle/{recruitmentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recruitmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.FollowJobController",
+    "Method": "GetUserFollowJobs",
+    "RelativePath": "api/FollowJob/user-follows",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "AddRecruitment",
     "RelativePath": "api/Recruitment/add-recruitment",

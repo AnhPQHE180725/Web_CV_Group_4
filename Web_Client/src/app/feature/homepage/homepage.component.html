@@ -1,29 +1,25 @@
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top CV</title>
-    <link rel="stylesheet" href="homepage.component.css">
+    <link rel="stylesheet" href="homepage.component.css" />
 </head>
 
 <body>
-
     <div class="slider-container">
         <div class="slider">
             <img *ngFor="let image of images; let i = index" [src]="image" class="slide"
-                [class.active]="i === currentIndex" alt="Image slide {{ i + 1 }}" title="Image slide {{ i + 1 }}">
+                [class.active]="i === currentIndex" alt="Image slide {{ i + 1 }}" title="Image slide {{ i + 1 }}" />
         </div>
         <button class="prev" (click)="prevSlide()">&#10094;</button>
         <button class="next" (click)="nextSlide()">&#10095;</button>
     </div>
 
     <div class="container">
-
         <h2>Top Danh Mục</h2>
         <div class="categories">
             <div class="category" *ngFor="let category of categories"
-                [routerLink]="['/recruitment','category', category.id]" class="clickable">
+                [routerLink]="['/recruitment', 'category', category.id]" class="clickable">
                 {{ category.name }}
             </div>
         </div>
@@ -47,18 +43,16 @@
                 <div class="salary-box">
                     <small>{{ post.salary }} triệu</small>
                 </div>
-
-                <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn()">
-                    Ứng tuyển ngay
-                </button>
-                <p class="login-message" *ngIf="!isLoggedIn()">
-                    Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
-                </p>
-
+                <div class="action-buttons">
+                    <button class="favorite-btn" (click)="toggleJobFollow($event, post.id)" *ngIf="isLoggedIn()"
+                        [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'">
+                        {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
+                    </button>
+                    <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)" *ngIf="isLoggedIn()">
+                        Ứng tuyển ngay
+                    </a>
+                </div>
             </div>
         </div>
-
     </div>
 </body>
-
-</html>

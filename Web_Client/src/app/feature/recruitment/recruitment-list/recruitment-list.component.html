@@ -36,10 +36,16 @@
       <small>{{ post.salary }} triệu</small>
     </div>
 
-    <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)" *ngIf="isLoggedIn()">
+    <div class="action-buttons">
+      <button class="favorite-btn" (click)="toggleJobFollow($event, post.id)" *ngIf="isLoggedIn()"
+        [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'">
+        {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
+      </button>
+      <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)" *ngIf="isLoggedIn()">
+        Ứng tuyển ngay
+      </a>
+    </div>
 
-      Ứng tuyển ngay
-    </a>
     <p class="login-message" *ngIf="!isLoggedIn()">
       Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
     </p>

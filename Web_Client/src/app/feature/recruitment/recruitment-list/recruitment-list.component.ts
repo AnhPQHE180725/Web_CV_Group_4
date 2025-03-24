@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 import { AuthService } from '../../../services/auth.service';
+import { JobFollowService } from '../../../services/job-follow.service';
 
 @Component({
   selector: 'app-recruitment-list',
@@ -30,11 +31,13 @@ export class RecruitmentListComponent {
   activeTab: string = 'title';
   searchQuery: string = "";
   unsearch: Recruitment[] = [];
+  followedJobs: number[] = [];
   constructor(
     private route: ActivatedRoute,
     private recruitmentService: RecruitmentService,
     private dialog: MatDialog,
-    private authService: AuthService
+    private authService: AuthService,
+    private jobFollowService: JobFollowService
   ) { }
 
 
@@ -157,5 +160,24 @@ export class RecruitmentListComponent {
         recruitmentId: recruitment.id
       }
     });
+  }
+
+  loadFollowedJobs() {
+    this.jobFollowService.getFollowedJobs()
+      .subscribe(follows => {
+        this.followedJobs = follows.map(follow => follow.recruitmentId);
+      });
+  }
+
+  toggleJobFollow(event: Event, jobId: number) {
+    event.stopPropagation();
+    this.jobFollowService.toggleFollow(jobId)
+      .subscribe(response => {
+        this.loadFollowedJobs();
+      });
+  }
+
+  isJobFollowed(jobId: number): boolean {
+    return this.followedJobs.includes(jobId);
   }
 }
