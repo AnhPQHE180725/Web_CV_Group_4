@@ -50,3 +50,22 @@ img {
         padding: 8px;
     }
 }
+
+.cv-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    /* Blue color */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cv-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
