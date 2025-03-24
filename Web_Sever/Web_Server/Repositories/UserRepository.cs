@@ -129,6 +129,6 @@ namespace Web_Server.Repositories
                 .Include(u => u.CV)
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
-
+      
     }
 }
