@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Web_Server.Interfaces;
-using Web_Server.ViewModels;
 
 namespace Web_Server.Controllers
 {
@@ -43,7 +42,6 @@ namespace Web_Server.Controllers
             return Ok(await _recruitmentService.GetRecruitmentsByCategory(id));
         }
 
-
         [HttpGet("get-recruitments-by-company-name/{company}")]
         public async Task<IActionResult> GetRecruitmentsByCompanyName(string company)
         {
@@ -59,6 +57,7 @@ namespace Web_Server.Controllers
         {
             return Ok(await _recruitmentService.GetRecruitmentsByLocation(location));
         }
+
 
         [HttpPost("add-recruitment")]
         public async Task<IActionResult> AddRecruitment([FromBody] RecruitmentVm recruitmentVm)

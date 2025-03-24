@@ -7,9 +7,7 @@ import { AuthService } from '../../app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
-
-
-
+  standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
@@ -59,6 +57,5 @@ export class NavbarComponent {
   isLoggedIn(): boolean {
     return this.authService.isAuthenticated();
   }
-
 
 }

@@ -120,24 +120,22 @@ export class UploadCvComponent {
   }
 
   onUpload() {
-    if (!this.selectedFile) {
+    if (this.selectedFile) {
+      this.cvService.uploadCV(this.selectedFile).subscribe({
+        next: () => {
+          alert('Upload CV thành công!');
+          this.selectedFile = null;
+          const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+          if (fileInput) fileInput.value = '';
+        },
+        error: (error) => {
+          console.error('Upload error:', error);
+          alert('Upload CV thất bại. Vui lòng thử lại!');
+        }
+      });
+    } else {
       alert('Vui lòng chọn file PDF trước khi upload!');
-      return;  // Prevent further execution if no file is selected
     }
-
-    this.cvService.uploadCV(this.selectedFile).subscribe({
-      next: () => {
-        alert('Upload CV thành công!');
-        this.selectedFile = null;
-        const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
-        if (fileInput) fileInput.value = '';
-      },
-      error: (error) => {
-        console.error('Upload error:', error);
-        alert('Upload CV thất bại. Vui lòng thử lại!');
-      }
-    });
   }
-
 
 } 

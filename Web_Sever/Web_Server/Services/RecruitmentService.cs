@@ -42,6 +42,8 @@ namespace Web_Server.Services
                 CompanyName = r.Company?.Name ?? "Unknown", 
                 CategoryName = r.Category?.Name ?? "Unknown" 
 
+
+
             }).ToList();
         }
 
@@ -74,7 +76,6 @@ namespace Web_Server.Services
         {
             return await _repository.GetTop2Recruitments();
         }
-
 
         public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
         {
@@ -136,8 +137,6 @@ namespace Web_Server.Services
         {
             return await _repository.DeleteRecruitmentAsync(id);
         }
-
-
 
     }
 }

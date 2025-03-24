@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 
+
 import { FormsModule } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
@@ -23,6 +24,7 @@ export class RecruitmentListComponent {
   currentPage: number = 1;
 
   recordsPerPage: number = 5;
+
   totalPages: number = 1;
   pageTitle: string = 'Danh Sách Tuyển Dụng';
   activeTab: string = 'title';
@@ -40,7 +42,6 @@ export class RecruitmentListComponent {
     this.route.paramMap.subscribe(params => {
       const filterId = Number(params.get('id'));
       const urlPath = this.route.snapshot.url.map(segment => segment.path).join('/');
-
 
 
       this.recruitments = [];
@@ -117,7 +118,6 @@ export class RecruitmentListComponent {
     this.activeTab = tabName;
   }
 
-
   search() {
     if (!this.searchQuery) {
       this.recruitments = [...this.unsearch];
@@ -158,5 +158,4 @@ export class RecruitmentListComponent {
       }
     });
   }
-
 }

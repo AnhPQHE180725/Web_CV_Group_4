@@ -9,7 +9,9 @@ import { RecruiterHomepageComponent } from './feature/recruiter/recruiter-homepa
 import { ConfirmloginComponent } from './feature/confirmlogin/confirmlogin.component';
 
 import { RecruiterCandidateListComponent } from './feature/recruiter/recruiter-candidate-list/recruiter-candidate-list.component';
+
 import { ApplyCVComponent } from './feature/recruiter/apply-cv/apply-cv.component';
+
 import { UploadCvComponent } from './feature/upload-cv/upload-cv.component';
 
 
@@ -36,6 +38,7 @@ export const routes: Routes = [
         path: 'recruiter/candidate/:id', component: RecruiterCandidateListComponent
     },
     {
+
         path: 'recruiter/candidate/apply/:id', component: ApplyCVComponent
     },
     {
