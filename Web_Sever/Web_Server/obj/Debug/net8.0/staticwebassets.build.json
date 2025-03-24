@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "zpO9wqLuW+QvG9S+ro5vX+lTo+1/io+5BTuEHrcCsrE=",
+  "Source": "Web_Server",
+  "BasePath": "_content/Web_Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Web_Server\\wwwroot",
+      "Source": "Web_Server",
+      "ContentRoot": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5hzxo5d2su",
+      "Integrity": "JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "CVs/25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.5hzxo5d2su.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 18:20:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5hzxo5d2su"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 18:20:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    }
+  ]
+}

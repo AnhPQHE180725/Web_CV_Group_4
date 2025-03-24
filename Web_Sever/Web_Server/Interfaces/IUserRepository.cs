@@ -5,6 +5,7 @@ namespace Web_Server.Interfaces
 {
     public interface IUserRepository
     {
+        Task<User> GetByIdAsync(int id);
         Task<User> FindEmailExists(string email);
         Task<User> CheckLoginAsync(LoginVm loginVm);
         Task<bool> RegisterAysnc(RegisterVm registerVm);

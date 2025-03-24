@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Web_Server.Interfaces;
-using Web_Server.ViewModels;
 
 namespace Web_Server.Controllers
 {
@@ -43,7 +42,6 @@ namespace Web_Server.Controllers
             return Ok(await _recruitmentService.GetRecruitmentsByCategory(id));
         }
 
-
         [HttpGet("get-recruitments-by-company-name/{company}")]
         public async Task<IActionResult> GetRecruitmentsByCompanyName(string company)
         {
@@ -58,39 +56,6 @@ namespace Web_Server.Controllers
         public async Task<IActionResult> GetRecruitmentsByLocation(string location)
         {
             return Ok(await _recruitmentService.GetRecruitmentsByLocation(location));
-        }
-        [HttpPost("add-recruitment")]
-        public async Task<IActionResult> AddRecruitment([FromBody] RecruitmentVm recruitmentVm)
-        {
-            var result = await _recruitmentService.AddRecruitmentAsync(recruitmentVm);
-            if (!result)
-            {
-                return BadRequest("Failed to add recruitment");
-            }
-            return Ok("Recruitment added successfully");
-        }
-
-        [HttpPut("edit-recruitment/{id}")]
-        public async Task<IActionResult> EditRecruitment(int id, [FromBody] RecruitmentVm recruitmentVm)
-        {
-            var result = await _recruitmentService.EditRecruitmentAsync(id, recruitmentVm);
-            if (!result)
-            {
-                return NotFound("Recruitment not found");
-            }
-            return Ok("Recruitment updated successfully");
-        }
-
-        [HttpDelete("delete-recruitment/{id}")]
-        public async Task<IActionResult> DeleteRecruitment(int id)
-        {
-            var result = await _recruitmentService.DeleteRecruitmentAsync(id);
-            if (!result)
-            {
-                return NotFound("Recruitment not found");
-            }
-            return Ok("Recruitment deleted successfully");
-
         }
     }
 }
