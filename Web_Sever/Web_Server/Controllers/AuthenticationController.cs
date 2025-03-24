@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -16,12 +17,43 @@ namespace Web_Server.Controllers
     public class AuthenticationController : ControllerBase
     {
         public readonly IUserService _userService;
+        private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
-        public AuthenticationController(IUserService userService, IConfiguration configuration)
+
+        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService)
         {
             _userService = userService;
             _configuration = configuration;
+            _emailService = emailService;
         }
+
+
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest request)
+        {
+            if (string.IsNullOrEmpty(request.Email))
+                return BadRequest("Email không được để trống.");
+
+            var result = await _userService.ForgotPasswordAsync(request.Email);
+            if (!result) return BadRequest("Email không tồn tại.");
+
+            return Ok("Email đặt lại mật khẩu đã được gửi thành công.");
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
+        {
+            if (string.IsNullOrEmpty(request.Token) || string.IsNullOrEmpty(request.NewPassword))
+                return BadRequest("Token và mật khẩu không được để trống.");
+
+            var result = await _userService.ResetPasswordAsync(request.Token, request.NewPassword);
+            if (!result) return BadRequest("Token không hợp lệ hoặc đã hết hạn.");
+
+            return Ok("Mật khẩu đã được cập nhật thành công.");
+        }
+
+
 
         [HttpPost("check-email-exists")]
         public async Task<IActionResult> CheckEmailExists([FromBody] string email)
@@ -92,5 +124,12 @@ namespace Web_Server.Controllers
         }
 
     }
+    public class ResetPasswordRequest
+    {
+        public string Token { get; set; }
+        public string NewPassword { get; set; }
+    }
 }
+
+
 

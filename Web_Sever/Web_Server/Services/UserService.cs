@@ -1,15 +1,23 @@
-﻿using Web_Server.Interfaces;
+﻿using Microsoft.Extensions.Caching.Memory;
+using Web_Server.Interfaces;
 using Web_Server.Models;
+using Web_Server.Repositories;
 using Web_Server.ViewModels;
 
 namespace Web_Server.Services
 {
     public class UserService : IUserService
     {
-        public IUserRepository _repository;
-        public UserService(IUserRepository repository)
+        private IUserRepository _repository;
+        private readonly IMemoryCache _cache;
+        private readonly IEmailService _emailService;
+
+
+        public UserService(IUserRepository repository, IMemoryCache cache, IEmailService emailService)
         {
             _repository = repository;
+            _cache = cache;
+            _emailService = emailService;
         }
 
         public async Task<User> CheckLoginAsync(LoginVm loginVm)
@@ -53,5 +61,35 @@ namespace Web_Server.Services
         {
             return await _repository.TakeRoleAsync(user);
         }
+
+        public async Task<bool> ForgotPasswordAsync(string email)
+        {
+            var user = await _repository.FindEmailExists(email);
+            if (user == null) return false;
+
+            // Tạo GUID Token và lưu vào cache với thời gian hết hạn là 1 giờ
+            var token = Guid.NewGuid().ToString();
+            _cache.Set(token, user.Id, TimeSpan.FromHours(1));
+
+            var resetLink = $"https://localhost:7247/api/Authentication/reset-password?token={token}";
+
+            await _emailService.SendPasswordResetEmailAsync(email, resetLink);
+
+            return true;
+        }
+
+        public async Task<bool> ResetPasswordAsync(string token, string newPassword)
+        {
+            if (!_cache.TryGetValue(token, out int userId)) return false;
+
+            await _repository.UpdatePasswordAsync(userId, newPassword);
+
+            // Xóa token khỏi cache sau khi đặt lại mật khẩu thành công
+            _cache.Remove(token);
+
+            return true;
+        }
     }
+
 }
+

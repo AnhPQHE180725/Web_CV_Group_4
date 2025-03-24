@@ -13,6 +13,6 @@ namespace Web_Server.Interfaces
         Task<List<CandidateVm>> GetCandidateByPostId(int id);
 
         Task<CV> GetCVByUserId(int id);
-
+        Task UpdatePasswordAsync(int userId, string newPassword);
     }
 }

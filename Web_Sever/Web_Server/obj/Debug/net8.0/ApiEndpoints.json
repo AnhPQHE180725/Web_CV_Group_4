@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Authentication/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Microsoft.AspNetCore.Identity.Data.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "Login",
     "RelativePath": "api/Authentication/login",
     "HttpMethod": "POST",
@@ -42,6 +58,22 @@
       {
         "Name": "registerVm",
         "Type": "Web_Server.ViewModels.RegisterVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Authentication/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web_Server.Controllers.ResetPasswordRequest",
         "IsRequired": true
       }
     ],
