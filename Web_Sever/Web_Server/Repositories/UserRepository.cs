@@ -113,7 +113,7 @@ namespace Web_Server.Repositories
             }
 
 
-            applyPost.Status = 0;
+            applyPost.Status = 1;
 
 
             await _context.SaveChangesAsync();
