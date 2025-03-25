@@ -1,31 +1,44 @@
-<html lang="en">
+<h2>Recruitments Management</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruiter Homepage</title>
-    <link rel="stylesheet" href="recruiter-homepage.component.css">
-</head>
+<!-- Form for Add/Edit -->
+<form [formGroup]="recruitmentForm" (ngSubmit)="onAddRecruitment()">
+    <label>Title:</label>
+    <input formControlName="title" placeholder="Enter title" />
 
-<body>
-    <h1>Quản lý bài đăng</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Tiêu đề</th>
-                <th>Lương</th>
-                <th>Cập nhật</th>
-                <th>Xóa</th>
-                <th>Đăng bài</th>
-                <th>DS Ứng viên</th>
-            </tr>
-        </thead>
-        <tbody id="jobTableBody">
-            <!-- Dữ liệu sẽ được chèn vào đây từ API -->
+    <label>Description:</label>
+    <textarea formControlName="description" placeholder="Enter description"></textarea>
 
-        </tbody>
-    </table>
-    <script src="script.js"></script>
-</body>
+    <label>Salary:</label>
+    <input type="number" formControlName="salary" />
 
-</html>
+    <label>Address:</label>
+    <input formControlName="address" placeholder="Enter address" />
+
+    <label>Deadline:</label>
+    <input type="date" formControlName="deadline" />
+
+    <button type="submit" [disabled]="recruitmentForm.invalid">Add Recruitment</button>
+</form>
+
+<!-- Display List of Recruitments -->
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let recruitment of recruitments">
+            <td>{{ recruitment.title }}</td>
+            <td>{{ recruitment.description }}</td>
+            <td>{{ recruitment.salary | currency }}</td>
+            <td>
+                <button (click)="onEditRecruitment(recruitment.id)">Edit</button>
+                <button (click)="onDeleteRecruitment(recruitment.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

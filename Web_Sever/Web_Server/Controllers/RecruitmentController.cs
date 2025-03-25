@@ -85,14 +85,17 @@ namespace Web_Server.Controllers
         [HttpDelete("delete-recruitment/{id}")]
         public async Task<IActionResult> DeleteRecruitment(int id)
         {
-            var result = await _recruitmentService.DeleteRecruitmentAsync(id);
-            if (!result)
+            var recruitment = await _recruitmentService.GetRecruitmentsByid(id);
+
+            if (recruitment == null)
             {
-                return NotFound("Recruitment not found");
+                return NotFound(new { message = "Recruitment not found" });
             }
-            return Ok("Recruitment deleted successfully");
 
+            await _recruitmentService.DeleteRecruitmentAsync(id);
+
+            // ✅ Thêm phản hồi rõ ràng sau khi xóa thành công
+            return Ok(new { message = "Recruitment deleted successfully" });
         }
-
     }
 }
