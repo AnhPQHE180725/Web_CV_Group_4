@@ -1,5 +1,5 @@
 export interface User {
-
+    postId: number;
     id: number;
     address: string;
     fullName: string;

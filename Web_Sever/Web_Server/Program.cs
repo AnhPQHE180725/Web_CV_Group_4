@@ -116,7 +116,7 @@ app.UseCors(option =>
 // Add static files middleware
 app.UseStaticFiles();
 
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

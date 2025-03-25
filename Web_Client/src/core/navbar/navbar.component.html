@@ -11,7 +11,12 @@
 <body>
   <nav class="navbar">
     <div class="nav-left">
-      <a href="home" class="nav-item">Trang chủ</a>
+      <div class="logo-container">
+        <img
+          src="https://play-lh.googleusercontent.com/Shy9VB3CKUYUzyzcuJwmDiYZElFJsKYwj5v5X2s3fGfIlL6SzkbAz_sMX6ZX9Sk8JQ"
+          alt="WEB-CV Logo" class="logo-img">
+        <a href="home" class="nav-item logo-text">Trang chủ</a>
+      </div>
       <div class="dropdown">
         <button class="nav-item dropbtn">Danh mục ▼</button>
         <div class="dropdown-content">
@@ -41,6 +46,7 @@
       </ng-container>
       <!-- Hiển thị Upload CV và Log Out khi đã đăng nhập -->
       <ng-container *ngIf="isLoggedIn()">
+        <a href="/profile" class="nav-item">Profile</a>
         <a routerLink="/upload-cv" class="nav-item">
           <i class="fas fa-upload"></i> Upload CV
         </a>
