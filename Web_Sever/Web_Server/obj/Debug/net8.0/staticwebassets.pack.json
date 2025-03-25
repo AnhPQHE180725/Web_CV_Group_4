@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf",
+      "PackagePath": "staticwebassets\\CVs\\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf",
+      "PackagePath": "staticwebassets\\CVs\\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\328b6c80-8ade-4a09-984b-afdc094ea5fd_DSA_Assignment2_Opt01 - Linked List.pdf",
+      "PackagePath": "staticwebassets\\CVs\\328b6c80-8ade-4a09-984b-afdc094ea5fd_DSA_Assignment2_Opt01 - Linked List.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf",
+      "PackagePath": "staticwebassets\\CVs\\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\5c358c02-a6b7-43f1-b12e-50807f2a1eb3_[FPTU] CV Intern C#_Net - Nguyen Tran Trong Hieu.pdf",
+      "PackagePath": "staticwebassets\\CVs\\5c358c02-a6b7-43f1-b12e-50807f2a1eb3_[FPTU] CV Intern C#_Net - Nguyen Tran Trong Hieu.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\70cb141e-849e-4d9f-9a75-e628c51e7935_GuideToInstallAngular.pdf",
+      "PackagePath": "staticwebassets\\CVs\\70cb141e-849e-4d9f-9a75-e628c51e7935_GuideToInstallAngular.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf",
+      "PackagePath": "staticwebassets\\CVs\\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf"
+    },
+    {
+      "Id": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\ebd3d876-722d-4db3-8a09-c2db32e40b2c_Assignment.pdf",
+      "PackagePath": "staticwebassets\\CVs\\ebd3d876-722d-4db3-8a09-c2db32e40b2c_Assignment.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Web_Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Web_Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Web_Server.props",
+      "PackagePath": "build\\Web_Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Web_Server.props",
+      "PackagePath": "buildMultiTargeting\\Web_Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Web_Server.props",
+      "PackagePath": "buildTransitive\\Web_Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
