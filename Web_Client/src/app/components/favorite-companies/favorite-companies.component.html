@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2>Công ty đã theo dõi</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="favoriteCompanies.length === 0" class="alert alert-info">
+        Bạn chưa theo dõi công ty nào.
+      </div>
+      <div class="companies">
+        <div class="company" *ngFor="let company of favoriteCompanies">
+          <div
+            class="company-content clickable"
+            [routerLink]="['/recruitment', 'company', company.companyId]"
+          >
+            <img
+              [src]="'assets/images/slide1.jpg'"
+              alt="{{ company.name }}"
+              class="company-logo"
+            />
+            <span class="company-name">{{ company.name }}</span>
+          </div>
+          <button
+            class="follow-btn followed"
+            (click)="toggleFollow($event, company.companyId)"
+          >
+            Bỏ theo dõi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

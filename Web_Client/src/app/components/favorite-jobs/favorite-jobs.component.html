@@ -1,0 +1,40 @@
+<div class="container mt-4">
+  <h2>Công việc đã yêu thích</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="favoriteJobs.length === 0" class="alert alert-info">
+        Bạn chưa có công việc nào trong danh sách yêu thích.
+      </div>
+      <div *ngFor="let job of favoriteJobs" class="post">
+        <img
+          [src]="'assets/images/slide1.jpg'"
+          alt="{{ job.recruitment.title }}"
+          class="company-logo"
+        />
+        <strong>{{ job.recruitment.type }}</strong>
+        <div class="action-buttons">
+          <button
+            class="favorite-btn"
+            (click)="toggleJobFollow($event, job.recruitment.id)"
+            *ngIf="isLoggedIn()"
+          >
+            Bỏ yêu thích
+          </button>
+          <a
+            class="apply-btn"
+            style="cursor: pointer"
+            (click)="onApply(job.recruitment)"
+            *ngIf="isLoggedIn()"
+          >
+            Ứng tuyển ngay
+          </a>
+        </div>
+        <p>{{ job.recruitment.title }}</p>
+        <small>{{ job.recruitment.description }}</small>
+        <div class="salary-box">
+          <small>{{ job.recruitment.salary }} triệu</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
 import { User } from '../models/User';
 
 
@@ -23,5 +22,13 @@ export class UserService {
 
     rejectCV(userId: number): Observable<void> {
         return this.http.put<void>(`${this.baseUrl}/User/reject-cv/${userId}`, {});
+    }
+
+    getFavoriteJobs(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.baseUrl}/FollowJob/user-follows`);
+    }
+
+    getFavoriteCompanies(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.baseUrl}/FollowCompany/user-follows`);
     }
 }
