@@ -13,8 +13,6 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../recruitment/apply-dialog/apply-dialog.component';
 import { JobFollowService } from '../../services/job-follow.service';
 
-
-
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -41,13 +39,11 @@ export class HomepageComponent {
     private companyService: CompanyService,
     private recruitmentService: RecruitmentService,
     private route: ActivatedRoute,
-
     private router: Router,
     private dialog: MatDialog,
     private authService: AuthService,
     private jobFollowService: JobFollowService
   ) { }
-
 
   ngOnInit(): void {
     this.categoryService.getTopCategories().subscribe({
@@ -77,7 +73,12 @@ export class HomepageComponent {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
     }, 15000);
+
+    if (this.authService.isLoggedIn()) {
+      this.loadFollowedJobs();
+    }
   }
+
   prevSlide() {
     this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;
   }
@@ -87,7 +88,7 @@ export class HomepageComponent {
   }
 
   isLoggedIn(): boolean {
-    return this.authService.isAuthenticated();
+    return this.authService.isLoggedIn();
   }
 
   onApply(recruitment: Recruitment) {
@@ -127,4 +128,3 @@ export class HomepageComponent {
     return this.followedJobs.includes(jobId);
   }
 }
-

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qED2MlfhZWD0am3IiDR+0yrJLh+Dlinshj1bS5sd5Dc=",
+  "Hash": "vc7B0MKctKFP04uPf2uTcns1REbtHEN9rb7FNanosHU=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "katg7nylh5",
+      "Integrity": "tITrjPOZ4kT+tX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf"
+    },
     {
       "Identity": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf",
       "SourceId": "Web_Server",
@@ -186,6 +207,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.katg7nylh5.pdf",
+      "AssetFile": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "219931"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tITrjPOZ4kT+tX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 07:13:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "katg7nylh5"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tITrjPOZ4kT+tX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf",
+      "AssetFile": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "219931"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tITrjPOZ4kT+tX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 07:13:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tITrjPOZ4kT+tX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4="
+        }
+      ]
+    },
     {
       "Route": "CVs/18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.katg7nylh5.pdf",
       "AssetFile": "D:\\MockProject\\cc\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf",

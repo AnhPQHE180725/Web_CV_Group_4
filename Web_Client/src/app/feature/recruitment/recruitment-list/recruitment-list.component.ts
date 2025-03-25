@@ -60,6 +60,7 @@ export class RecruitmentListComponent {
         this.fetchAllRecruitments();
       }
     });
+    this.loadFollowedJobs();
   }
 
   fetchRecruitmentsByCategory(categoryId: number) {

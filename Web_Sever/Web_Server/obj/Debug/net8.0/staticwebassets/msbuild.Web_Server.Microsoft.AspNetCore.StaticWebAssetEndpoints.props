@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Web_Server/CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.katg7nylh5.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"katg7nylh5"},{"Name":"integrity","Value":"sha256-tITrjPOZ4kT\u002BtX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4="},{"Name":"label","Value":"_content/Web_Server/CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"219931"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022tITrjPOZ4kT\u002BtX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 07:13:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web_Server/CVs/0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tITrjPOZ4kT\u002BtX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"219931"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022tITrjPOZ4kT\u002BtX/LxYyBQAgUOTHmR4EUsB/xdp5KrB4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 07:13:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web_Server/CVs/18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.katg7nylh5.pdf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
