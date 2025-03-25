@@ -43,7 +43,7 @@ export const routes: Routes = [
     },
     {
 
-        path: 'recruiter/candidate/apply/:id', component: ApplyCVComponent
+        path: 'recruiter/candidate/apply/:postid/:userid', component: ApplyCVComponent
     },
     {
         path: 'upload-cv', component: UploadCvComponent
