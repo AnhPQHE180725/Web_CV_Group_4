@@ -51,6 +51,7 @@ export class CompanyListComponent {
             this.pageTitle = 'Không có doanh nghiệp nào.';
           }
           this.updatePagination();
+          this.loadFollowedCompanies();
         },
         (error) => console.error('Error fetching all recruitments:', error)
       );
