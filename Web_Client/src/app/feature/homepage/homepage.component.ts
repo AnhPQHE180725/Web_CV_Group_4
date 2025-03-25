@@ -11,6 +11,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../recruitment/apply-dialog/apply-dialog.component';
+import { JobFollowService } from '../../services/job-follow.service';
 
 
 
@@ -33,6 +34,7 @@ export class HomepageComponent {
     'assets/images/slide5.jpg'
   ];
   currentIndex: number = 0;
+  followedJobs: number[] = [];
 
   constructor(
     private categoryService: CategoryService,
@@ -42,7 +44,8 @@ export class HomepageComponent {
 
     private router: Router,
     private dialog: MatDialog,
-    private authService: AuthService
+    private authService: AuthService,
+    private jobFollowService: JobFollowService
   ) { }
 
 
@@ -100,6 +103,28 @@ export class HomepageComponent {
         recruitmentId: recruitment.id
       }
     });
+  }
+
+  loadFollowedJobs() {
+    this.jobFollowService.getFollowedJobs()
+      .subscribe(follows => {
+        this.followedJobs = follows.map(follow => follow.recruitmentId);
+      });
+  }
+
+  toggleJobFollow(event: Event, jobId: number) {
+    event.stopPropagation();
+    if (!this.authService.isLoggedIn()) {
+      return;
+    }
+    this.jobFollowService.toggleFollow(jobId)
+      .subscribe(response => {
+        this.loadFollowedJobs();
+      });
+  }
+
+  isJobFollowed(jobId: number): boolean {
+    return this.followedJobs.includes(jobId);
   }
 }
 

@@ -16,7 +16,7 @@ export class AuthService {
 
   constructor(private http: HttpClient, private cookieService: CookieService) {
 
-   }
+  }
   // Phương thức gọi API đăng nhập
   login(request: LoginRequest): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.baseUrl}/Authentication/login`, request);
@@ -41,39 +41,42 @@ export class AuthService {
     return this.cookieService.get('Authentication');
   }
 
-getEmailFromToken(): string | undefined {
-  const token = this.getToken();
-  if (token) {
-    try {
-      const decodedToken: any = jwtDecode(token);
-      console.log('Full decoded token:', decodedToken); // Giữ log để kiểm tra
-      return decodedToken.email; // Chỉ giữ "email", bỏ "sub" vì backend dùng "email"
-    } catch (error) {
-      console.error('Token không hợp lệ:', error);
-      return undefined;
+  getEmailFromToken(): string | undefined {
+    const token = this.getToken();
+    if (token) {
+      try {
+        const decodedToken: any = jwtDecode(token);
+        console.log('Full decoded token:', decodedToken); // Giữ log để kiểm tra
+        return decodedToken.email; // Chỉ giữ "email", bỏ "sub" vì backend dùng "email"
+      } catch (error) {
+        console.error('Token không hợp lệ:', error);
+        return undefined;
+      }
     }
+    return undefined;
   }
-  return undefined;
-}
 
-getRoleFromToken(): string | undefined {
-  const token = this.getToken();
-  if (token) {
-    try {
-      const decodedToken: any = jwtDecode(token);
-      console.log('Decoded Token:', decodedToken); // Giữ log để kiểm tra
-      return decodedToken.role; // Đã đúng với "role" từ backend, không cần sửa
-    } catch (error) {
-      console.error('Token không hợp lệ:', error);
-      return undefined;
+  getRoleFromToken(): string | undefined {
+    const token = this.getToken();
+    if (token) {
+      try {
+        const decodedToken: any = jwtDecode(token);
+        console.log('Decoded Token:', decodedToken); // Giữ log để kiểm tra
+        return decodedToken.role; // Đã đúng với "role" từ backend, không cần sửa
+      } catch (error) {
+        console.error('Token không hợp lệ:', error);
+        return undefined;
+      }
     }
+    return undefined;
   }
-  return undefined;
-}
 
 
-// đăng kí tài khoản
-register(request: RegisterRequest): Observable<any> {
+  // đăng kí tài khoản
+  register(request: RegisterRequest): Observable<any> {
     return this.http.post(`${this.baseUrl}/Authentication/register`, request);
-}
+  }
+  isLoggedIn(): boolean {
+    return this.isAuthenticated();
+  }
 }

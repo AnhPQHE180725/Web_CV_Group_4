@@ -41,6 +41,7 @@
       </ng-container>
       <!-- Hiển thị Upload CV và Log Out khi đã đăng nhập -->
       <ng-container *ngIf="isLoggedIn()">
+        <a href="/profile" class="nav-item">Profile</a>
         <a routerLink="/upload-cv" class="nav-item">
           <i class="fas fa-upload"></i> Upload CV
         </a>

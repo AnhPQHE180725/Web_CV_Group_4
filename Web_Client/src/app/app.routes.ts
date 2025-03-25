@@ -14,6 +14,8 @@ import { ApplyCVComponent } from './feature/recruiter/apply-cv/apply-cv.componen
 
 import { UploadCvComponent } from './feature/upload-cv/upload-cv.component';
 
+import { ProfileComponent } from './feature/profile/profile.component';
+
 
 export const routes: Routes = [
     { path: 'recruitment/category/:id', component: RecruitmentListComponent },
@@ -43,6 +45,9 @@ export const routes: Routes = [
     },
     {
         path: 'upload-cv', component: UploadCvComponent
+    },
+    {
+        path: 'profile', component: ProfileComponent
     },
     { path: '**', redirectTo: 'home' }
 

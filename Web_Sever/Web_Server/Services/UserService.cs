@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.Repositories;
@@ -96,6 +97,40 @@ namespace Web_Server.Services
         public async Task<ApplyPost> RejectCV(int id)
         {
             return await _repository.RejectCV(id);
+        }
+
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+            return await _repository.GetUserByIdAsync(userId);
+        }
+        public async Task<bool> UpdateProfileAsync(int userId, UserVm model)
+        {
+            var user = await _repository.GetByIdAsync(userId);
+            if (user == null) return false;
+
+            user.FullName = model.FullName;
+            user.PhoneNumber = model.PhoneNumber;
+            user.Address = model.Address;
+            user.Description = model.Description;
+            user.Image = model.Image;
+            user.Email = model.Email;
+
+            return await _repository.UpdateProfileAsync(user);
+        }
+
+        public async Task<bool> UpdateEmailAsync(int userId, string newEmail)
+        {
+            if (await _repository.IsTakenEmailAsync(newEmail))
+            {
+                return false;
+            }
+
+            return await _repository.UpdateEmailAsync(userId, newEmail);
+        }
+
+        public async Task<bool> IsTakenEmailAsync(string email)
+        {
+            return await _repository.IsTakenEmailAsync(email);
         }
     }
 
