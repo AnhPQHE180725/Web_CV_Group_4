@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "Web_Server\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T03:03:48.151Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -63,6 +50,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Web_Server\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAiwDgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T03:03:48.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
@@ -71,8 +71,7 @@
               "RelativeToolTip": "Web_Server\\Services\\UserService.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAWwEsAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:50:03.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T02:50:03.156Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAmwHMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:08:25.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T02:08:25.943Z"
             }
           ]
         },
