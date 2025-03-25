@@ -50,6 +50,9 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddMemoryCache();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
@@ -58,13 +61,14 @@ builder.Services.AddScoped<IRecruitmentRepository, RecruitmentRepository>();
 builder.Services.AddScoped<IRecruitmentService, RecruitmentService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddMemoryCache();
-
 builder.Services.AddScoped<ICVRepository, CVRepository>();
 builder.Services.AddScoped<ICVService, CVService>();
 builder.Services.AddScoped<IApplyPostRepository, ApplyPostRepository>();
 builder.Services.AddScoped<IApplyPostService, ApplyPostService>();
+builder.Services.AddScoped<IFollowJobRepository, FollowJobRepository>();
+builder.Services.AddScoped<IFollowJobService, FollowJobService>();
+builder.Services.AddScoped<IFollowCompanyRepository, FollowCompanyRepository>();
+builder.Services.AddScoped<IFollowCompanyService, FollowCompanyService>();
 builder.Services.AddHttpContextAccessor();
 
 
@@ -112,7 +116,7 @@ app.UseCors(option =>
 // Add static files middleware
 app.UseStaticFiles();
 
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

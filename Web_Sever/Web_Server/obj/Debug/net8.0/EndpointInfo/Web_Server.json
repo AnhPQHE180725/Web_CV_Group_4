@@ -346,6 +346,49 @@
         }
       }
     },
+    "/api/Authentication/profile": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Authentication/update-profile": {
+      "put": {
+        "tags": [
+          "Authentication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Category/get-all-categories": {
       "get": {
         "tags": [
@@ -574,6 +617,146 @@
         "parameters": [
           {
             "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/toggle/{companyId}": {
+      "post": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/user-follows": {
+      "get": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/check/{companyId}": {
+      "get": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowCompany/followed-ids": {
+      "get": {
+        "tags": [
+          "FollowCompany"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/toggle/{recruitmentId}": {
+      "post": {
+        "tags": [
+          "FollowJob"
+        ],
+        "parameters": [
+          {
+            "name": "recruitmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/user-follows": {
+      "get": {
+        "tags": [
+          "FollowJob"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/followed-ids": {
+      "get": {
+        "tags": [
+          "FollowJob"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FollowJob/check/{recruitmentId}": {
+      "get": {
+        "tags": [
+          "FollowJob"
+        ],
+        "parameters": [
+          {
+            "name": "recruitmentId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1453,6 +1636,36 @@
             "items": {
               "$ref": "#/components/schemas/FollowCompany"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserVm": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
             "nullable": true
           }
         },

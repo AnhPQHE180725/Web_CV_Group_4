@@ -1,0 +1,66 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", "Arial", sans-serif; /* Cute, playful font */
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(
+    180deg,
+    #f8e1e9 0%,
+    #e9d8f4 100%
+  ); /* Soft pastel gradient */
+  color: #5c4b6e; /* Muted purple text */
+  margin: 0;
+}
+
+/* Navbar container */
+.navbar-container {
+  margin-bottom: 40px; /* Gap between navbar and main content */
+  position: relative;
+}
+
+/* Sticky navbar styling */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure navbar stays above other content */
+  transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
+}
+
+/* Hide navbar when scrolling down */
+.sticky-navbar.hidden {
+  transform: translateY(-100%); /* Move navbar up and out of view */
+}
+
+/* Specific styling for the main content container */
+.main-content {
+  padding-bottom: 20px; /* Adds padding to the bottom of the main content */
+}
+
+/* Specific styling for the footer container to create a gap above */
+.footer-container {
+  margin-top: 40px; /* Gap between main content and footer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px; /* Smaller padding on mobile */
+  }
+
+  .navbar-container {
+    margin-bottom: 30px; /* Slightly smaller gap on mobile */
+  }
+
+  .footer-container {
+    margin-top: 30px; /* Slightly smaller gap on mobile */
+  }
+
+  .main-content {
+    padding-bottom: 15px; /* Smaller padding on mobile */
+  }
+}

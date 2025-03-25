@@ -31,12 +31,14 @@
                 <td>{{ candidate.email }}</td>
                 <td>{{ candidate.phoneNumber }}</td>
                 <td>
-                    {{ candidate.cvStatus === 0 ? 'Reject' : candidate.cvStatus === 1 ? 'Pending' : candidate.cvStatus
-                    === 2 ? 'Applied' : 'Unknown' }}
+                    {{ candidate.cvStatus === 0 ? 'Chờ xử lý' : candidate.cvStatus === 1 ? 'Từ chối' :
+                    candidate.cvStatus
+                    === 2 ? 'Chấp thuận' : 'Unknown' }}
                 </td>
                 <td>
-                    <div class="cv-button" [routerLink]="['/recruiter', 'candidate', 'apply', candidate.id]">
-                        View CV
+                    <div class="cv-button"
+                        [routerLink]="['/recruiter', 'candidate', 'apply',candidate.applyPostId, candidate.id]">
+                        Xem CV
                     </div>
                 </td>
             </tr>

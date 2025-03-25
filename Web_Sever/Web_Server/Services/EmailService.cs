@@ -1,5 +1,5 @@
-﻿using MailKit.Net.Smtp;
-using MimeKit;
+﻿using MailKit.Net.Smtp; // Thư viện hỗ trợ gửi email
+using MimeKit;          // Thư viện hỗ trợ tạo email
 using Web_Server.Interfaces;
 
 namespace Web_Server.Services
@@ -19,11 +19,11 @@ namespace Web_Server.Services
         private MimeMessage CreateEmail(string toEmail, string subject, string body)
         {
             var email = new MimeMessage();
-            email.From.Add(new MailboxAddress("CV_Web_Email_Sender",
-                _configuration["EmailSettings:SenderEmail"]));
-            email.To.Add(new MailboxAddress("", toEmail));
-            email.Subject = subject;
-            email.Body = new TextPart("html") { Text = body };
+            email.From.Add(new MailboxAddress("CV_Web_Email_Sender", 
+                _configuration["EmailSettings:SenderEmail"]));  // Tên người gửi
+            email.To.Add(new MailboxAddress("", toEmail));      // Tên người nhận
+            email.Subject = subject;                            // Tiêu đề email
+            email.Body = new TextPart("html") { Text = body };  // Nội dung email
             return email;
         }
 
@@ -44,7 +44,7 @@ namespace Web_Server.Services
                     _configuration["EmailSettings:SenderEmail"],
                     _configuration["EmailSettings:SenderPassword"]
                 );
-
+                // Gửi email
                 await smtp.SendAsync(email);
             }
             catch (Exception ex)
@@ -53,15 +53,17 @@ namespace Web_Server.Services
             }
             finally
             {
+                // Đóng kết nối
                 if (smtp.IsConnected)
                 {
                     await smtp.DisconnectAsync(true);
                 }
             }
         }
-
+        // Phương thức gửi email reset password
         public async Task SendPasswordResetEmailAsync(string toEmail, string resetLink)
         {
+            // Nội dung email
             var email = CreateEmail(toEmail
                 , "Reset Your Password"
                 , $@"
@@ -87,7 +89,8 @@ namespace Web_Server.Services
             </body>
             </html>");
 
-            await SendEmailAsync(email);
+            await SendEmailAsync(email);                // Gửi email
+
         }
 
     }

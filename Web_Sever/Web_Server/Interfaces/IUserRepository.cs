@@ -22,5 +22,11 @@ namespace Web_Server.Interfaces
         Task<ApplyPost> ApplyCV(int id);
         Task<ApplyPost> RejectCV(int id);   
 
+
+        Task<User> GetUserByIdAsync(int id);
+
+        Task<bool> UpdateProfileAsync(User user);
+        Task<bool> UpdateEmailAsync(int userId, string email);
+        Task<bool> IsTakenEmailAsync(string email);
     }
 }

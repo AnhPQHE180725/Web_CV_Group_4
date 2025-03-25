@@ -16,4 +16,12 @@ export class UserService {
     getUserByPostId(id: number): Observable<User[]> {
         return this.http.get<User[]>(`${this.baseUrl}/User/get-user-by-post-id/${id}`)
     }
+
+    applyCV(userId: number): Observable<void> {
+        return this.http.put<void>(`${this.baseUrl}/User/apply-cv/${userId}`, {});
+    }
+
+    rejectCV(userId: number): Observable<void> {
+        return this.http.put<void>(`${this.baseUrl}/User/reject-cv/${userId}`, {});
+    }
 }
