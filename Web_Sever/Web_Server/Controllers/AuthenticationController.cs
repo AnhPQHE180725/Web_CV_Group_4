@@ -39,7 +39,7 @@ namespace Web_Server.Controllers
             var result = await _userService.ForgotPasswordAsync(request.Email); // Gọi phương thức ForgotPasswordAsync
             if (!result) return BadRequest("Email không tồn tại.");
 
-            return Ok("Email đặt lại mật khẩu đã được gửi thành công.");
+            return Ok(new { message = "Email đặt lại mật khẩu đã được gửi thành công." });
         }
 
         [HttpGet("reset-password")]

@@ -15,6 +15,8 @@ import { ApplyCVComponent } from './feature/recruiter/apply-cv/apply-cv.componen
 import { UploadCvComponent } from './feature/upload-cv/upload-cv.component';
 
 import { ProfileComponent } from './feature/profile/profile.component';
+import { ForgotpasswordComponent } from './feature/forgotpassword/forgotpassword.component';
+import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.component';
 
 
 export const routes: Routes = [
@@ -49,6 +51,13 @@ export const routes: Routes = [
     {
         path: 'profile', component: ProfileComponent
     },
+        {
+        path: 'forgot-password', component: ForgotpasswordComponent
+    },
+    {
+        path: 'reset-password', component: ResetpasswordComponent
+    },
     { path: '**', redirectTo: 'home' }
+
 
 ];

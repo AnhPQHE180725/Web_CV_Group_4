@@ -72,8 +72,8 @@ namespace Web_Server.Services
             var token = Guid.NewGuid().ToString();
             _cache.Set(token, user.Id, TimeSpan.FromHours(1));
 
-            // Remind: Đường dẫn reset password sẽ được gửi qua email
-            var resetLink = $"https://localhost:7247/api/Authentication/reset-password?token={token}";
+            // Remind: Đường dẫn reset password sẽ được gửi qua email 
+            var resetLink = $"https://localhost:7247/api/Authentication/reset-password?token={token}"; // Đường dẫn reset password (Swagger)
 
             await _emailService.SendPasswordResetEmailAsync(email, resetLink); 
 
