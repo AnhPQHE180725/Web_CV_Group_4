@@ -17,6 +17,8 @@ import { UploadCvComponent } from './feature/upload-cv/upload-cv.component';
 import { ProfileComponent } from './feature/profile/profile.component';
 import { ForgotpasswordComponent } from './feature/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.component';
+import { FavoriteJobsComponent } from './components/favorite-jobs/favorite-jobs.component';
+import { FavoriteCompaniesComponent } from './components/favorite-companies/favorite-companies.component';
 
 
 export const routes: Routes = [
@@ -51,11 +53,17 @@ export const routes: Routes = [
     {
         path: 'profile', component: ProfileComponent
     },
-        {
+    {
         path: 'forgot-password', component: ForgotpasswordComponent
     },
     {
         path: 'reset-password', component: ResetpasswordComponent
+    },
+    {
+        path: 'favorite-jobs', component: FavoriteJobsComponent
+    },
+    {
+        path: 'favorite-companies', component: FavoriteCompaniesComponent
     },
     { path: '**', redirectTo: 'home' }
 

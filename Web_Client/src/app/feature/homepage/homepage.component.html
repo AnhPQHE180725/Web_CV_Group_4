@@ -36,28 +36,39 @@
 
     <h2>Top Doanh Nghiệp</h2>
     <div class="companies">
-      <div
-        class="company clickable"
-        *ngFor="let company of companies"
-        [routerLink]="['/recruitment', 'company', company.id]"
-      >
-        <img
-          [src]="'assets/images/slide1.jpg'"
-          alt="{{ company.name }}"
-          class="company-logo"
-        />
-        <span class="company-name">{{ company.name }}</span>
+      <div class="company" *ngFor="let company of companies">
+        <div
+          class="company-content clickable"
+          [routerLink]="['/recruitment', 'company', company.id]"
+        >
+          <img
+            [src]="'assets/images/slide1.jpg'"
+            alt="{{ company.name }}"
+            class="company-logo"
+          />
+          <span class="company-name">{{ company.name }}</span>
+        </div>
+        <button
+          class="follow-btn"
+          (click)="toggleCompanyFollow($event, company.id)"
+          *ngIf="isLoggedIn()"
+          [class.followed]="isCompanyFollowed(company.id)"
+        >
+          {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
+        </button>
       </div>
     </div>
 
     <h2>Top Bài Đăng</h2>
     <div class="posts">
       <div class="post" *ngFor="let post of recruitments">
-        <img
-          [src]="'assets/images/slide1.jpg'"
-          alt="{{ post.companyName }}"
-          class="company-logo"
-        />
+        <div>
+          <img
+            [src]="'assets/images/slide1.jpg'"
+            alt="{{ post.companyName }}"
+            class="company-logo"
+          />
+        </div>
         <strong>{{ post.type }}</strong>
         <p>{{ post.title }}</p>
         <div class="action-buttons">
@@ -69,14 +80,13 @@
           >
             {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
           </button>
-          <a
+          <button
             class="apply-btn"
-            style="cursor: pointer"
             (click)="onApply(post)"
             *ngIf="isLoggedIn()"
           >
             Ứng tuyển ngay
-          </a>
+          </button>
         </div>
         <small>{{ post.description }}</small>
         <div class="salary-box">
