@@ -8,14 +8,8 @@
 <body>
   <div class="slider-container">
     <div class="slider">
-      <img
-        *ngFor="let image of images; let i = index"
-        [src]="image"
-        class="slide"
-        [class.active]="i === currentIndex"
-        alt="Image slide {{ i + 1 }}"
-        title="Image slide {{ i + 1 }}"
-      />
+      <img *ngFor="let image of images; let i = index" [src]="image" class="slide" [class.active]="i === currentIndex"
+        alt="Image slide {{ i + 1 }}" title="Image slide {{ i + 1 }}" />
     </div>
     <button class="prev" (click)="prevSlide()">&#10094;</button>
     <button class="next" (click)="nextSlide()">&#10095;</button>
@@ -24,12 +18,8 @@
   <div class="container">
     <h2>Top Danh Mục</h2>
     <div class="categories">
-      <div
-        class="category"
-        *ngFor="let category of categories"
-        [routerLink]="['/recruitment', 'category', category.id]"
-        class="clickable"
-      >
+      <div class="category" *ngFor="let category of categories" [routerLink]="['/recruitment', 'category', category.id]"
+        class="clickable">
         {{ category.name }}
       </div>
     </div>
@@ -37,23 +27,12 @@
     <h2>Top Doanh Nghiệp</h2>
     <div class="companies">
       <div class="company" *ngFor="let company of companies">
-        <div
-          class="company-content clickable"
-          [routerLink]="['/recruitment', 'company', company.id]"
-        >
-          <img
-            [src]="'assets/images/slide1.jpg'"
-            alt="{{ company.name }}"
-            class="company-logo"
-          />
+        <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.id]">
+          <img [src]="'assets/images/slide1.jpg'" alt="{{ company.name }}" class="company-logo" />
           <span class="company-name">{{ company.name }}</span>
         </div>
-        <button
-          class="follow-btn"
-          (click)="toggleCompanyFollow($event, company.id)"
-          *ngIf="isLoggedIn()"
-          [class.followed]="isCompanyFollowed(company.id)"
-        >
+        <button class="follow-btn" (click)="toggleCompanyFollow($event, company.id)" *ngIf="isLoggedIn()"
+          [class.followed]="isCompanyFollowed(company.id)">
           {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
         </button>
       </div>
@@ -63,30 +42,22 @@
     <div class="posts">
       <div class="post" *ngFor="let post of recruitments">
         <div>
-          <img
-            [src]="'assets/images/slide1.jpg'"
-            alt="{{ post.companyName }}"
-            class="company-logo"
-          />
+          <img [src]="'assets/images/slide1.jpg'" alt="{{ post.companyName }}" class="company-logo" />
         </div>
         <strong>{{ post.type }}</strong>
         <p>{{ post.title }}</p>
+        <p class="login-message" *ngIf="!isLoggedIn()">
+          Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
+        </p>
         <div class="action-buttons">
-          <button
-            class="favorite-btn"
-            (click)="toggleJobFollow($event, post.id)"
-            *ngIf="isLoggedIn()"
-            [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'"
-          >
+          <button class="favorite-btn" (click)="toggleJobFollow($event, post.id)" *ngIf="isLoggedIn()"
+            [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'">
             {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
           </button>
-          <button
-            class="apply-btn"
-            (click)="onApply(post)"
-            *ngIf="isLoggedIn()"
-          >
+          <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn()">
             Ứng tuyển ngay
           </button>
+          
         </div>
         <small>{{ post.description }}</small>
         <div class="salary-box">

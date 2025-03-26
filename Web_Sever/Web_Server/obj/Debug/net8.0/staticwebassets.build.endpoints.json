@@ -823,6 +823,88 @@
       ]
     },
     {
+      "Route": "CVs/d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.86ecjpiua8.pdf",
+      "AssetFile": "CVs/d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "903186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 14:29:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "86ecjpiua8"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY="
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "CVs/d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.pdf",
+      "AssetFile": "CVs/d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "903186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 14:29:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY="
+        }
+      ]
+    },
+    {
       "Route": "CVs/ebd3d876-722d-4db3-8a09-c2db32e40b2c_Assignment.fm2508h6fj.pdf",
       "AssetFile": "CVs/ebd3d876-722d-4db3-8a09-c2db32e40b2c_Assignment.pdf",
       "Selectors": [],
