@@ -84,4 +84,12 @@ export class AuthService {
   forgotPassword(email: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/Authentication/forgot-password`, { email });
   }
+  //Reset mật khẩu
+resetPassword(token: string, newPassword: string): Observable<any> {
+  const formData = new FormData();
+  formData.append('token', token);
+  formData.append('newPassword', newPassword);
+
+return this.http.post(`${this.baseUrl}/Authentication/reset-password`, formData);
+}
 }
