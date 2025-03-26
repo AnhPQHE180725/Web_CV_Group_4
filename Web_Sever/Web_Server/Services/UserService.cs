@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Web_Server.Interfaces;
 using Web_Server.Models;
@@ -23,12 +24,20 @@ namespace Web_Server.Services
 
         public async Task<User> CheckLoginAsync(LoginVm loginVm)
         {
-            var User = await FindEmailExists(loginVm.Email);
-            if (User == null)
+            var user = await FindEmailExists(loginVm.Email);
+            if (user == null)
             {
                 return null;
             }
-            return await _repository.CheckLoginAsync(loginVm);
+            var passwordHasher = new PasswordHasher<User>();
+            var result = passwordHasher.VerifyHashedPassword(user, user.Password, loginVm.Password);
+
+            if (result == PasswordVerificationResult.Success)
+            {
+                return user; // Đăng nhập thành công
+            }
+
+            return null;
         }
 
         public async Task<User> FindEmailExists(string email)
@@ -53,6 +62,10 @@ namespace Web_Server.Services
             {
                 return false;
             }
+            // Mã hóa mật khẩu trước khi lưu
+            var passwordHasher = new PasswordHasher<RegisterVm>();
+            registerVm.Password = passwordHasher.HashPassword(registerVm, registerVm.Password);
+
             var result = await _repository.RegisterAysnc(registerVm);
             return result;
 
@@ -73,7 +86,8 @@ namespace Web_Server.Services
             _cache.Set(token, user.Id, TimeSpan.FromHours(1));
 
             // Remind: Đường dẫn reset password sẽ được gửi qua email 
-            var resetLink = $"https://localhost:7247/api/Authentication/reset-password?token={token}"; // Đường dẫn reset password (Swagger)
+            //var resetLink = $"https://localhost:7247/api/Authentication/reset-password?token={token}"; // Đường dẫn reset password (Swagger)
+            var resetLink = $"http://localhost:4200/reset-password/{token}";
 
             await _emailService.SendPasswordResetEmailAsync(email, resetLink); 
 

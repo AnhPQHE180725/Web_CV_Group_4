@@ -60,12 +60,14 @@ export class RecruitmentListComponent {
         this.fetchAllRecruitments();
       }
     });
+    this.loadFollowedJobs();
   }
 
   fetchRecruitmentsByCategory(categoryId: number) {
     this.recruitmentService.getRecruitmentsByCategory(categoryId).subscribe(
       (data) => {
         this.recruitments = data;
+        this.unsearch = data;
         if (this.recruitments.length > 0) {
           this.pageTitle = `Danh Sách Tuyển Dụng - ${this.recruitments[0].categoryName}`;
         } else {
@@ -81,6 +83,7 @@ export class RecruitmentListComponent {
     this.recruitmentService.getRecruitmentsByCompany(companyId).subscribe(
       (data) => {
         this.recruitments = data;
+        this.unsearch = data;
         if (this.recruitments.length > 0) {
           this.pageTitle = `Danh Sách Tuyển Dụng - ${this.recruitments[0].companyName}`;
         } else {

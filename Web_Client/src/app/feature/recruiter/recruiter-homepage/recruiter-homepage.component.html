@@ -9,13 +9,13 @@
     <textarea formControlName="description" placeholder="Enter description"></textarea>
 
     <label>Salary:</label>
-    <input type="number" formControlName="salary" />
+    <input type="number" formControlName="salary" title="salary" />
 
     <label>Address:</label>
     <input formControlName="address" placeholder="Enter address" />
 
     <label>Deadline:</label>
-    <input type="date" formControlName="deadline" />
+    <input type="date" formControlName="deadline" title="deadline" />
 
     <button type="submit" [disabled]="recruitmentForm.invalid">Add Recruitment</button>
 </form>
@@ -28,6 +28,7 @@
             <th>Description</th>
             <th>Salary</th>
             <th>Actions</th>
+            <th>View Candidate List</th>
         </tr>
     </thead>
     <tbody>
@@ -38,6 +39,11 @@
             <td>
                 <button (click)="onEditRecruitment(recruitment.id)">Edit</button>
                 <button (click)="onDeleteRecruitment(recruitment.id)">Delete</button>
+            </td>
+            <td>
+                <div class="cv-button" [routerLink]="['/recruiter', 'candidate', recruitment.id]">
+                    View
+                </div>
             </td>
         </tr>
     </tbody>

@@ -96,84 +96,70 @@ body {
   box-shadow: 0 0 8px rgba(255, 133, 162, 0.5);
 }
 
-/* Dropdown menu */
+/* Dropdown container */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
+/* Dropdown button */
 .dropbtn {
-  background: linear-gradient(
-    90deg,
-    #ffb6c1,
-    #d8bfd8
-  ); /* Pink to lavender gradient */
-  color: #5c4b6e;
-  padding: 10px 15px;
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  font-weight: 600;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(92, 75, 110, 0.2);
-  transition: all 0.3s ease;
+  padding: 10px 15px;
 }
 
-.dropbtn:hover {
-  background: linear-gradient(90deg, #ff85a2, #b19cd9);
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(255, 133, 162, 0.4);
-}
-
+/* Dropdown content (ẩn mặc định) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background: rgba(255, 245, 250, 0.95); /* Light pink */
-  min-width: 250px;
-  border: 2px solid #d8bfd8; /* Soft lavender border */
+  right: 0; /* Căn phải cho dropdown ở nav-right */
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(92, 75, 110, 0.2);
-  animation: dropIn 0.3s ease-out;
+  border-radius: 4px;
 }
 
-.dropdown-content table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.dropdown-content td {
-  padding: 8px;
-  text-align: left;
-}
-
+/* Links trong dropdown */
 .dropdown-content a {
-  color: #5c4b6e;
+  color: #333;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  display: block;
+  transition: background-color 0.2s;
 }
 
+/* Hover effect cho links */
 .dropdown-content a:hover {
-  color: #ff85a2;
-  background: rgba(255, 182, 193, 0.5);
-  border-radius: 5px;
+  background-color: #f1f1f1;
 }
 
+/* Hiển thị dropdown khi hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Animation for dropdown */
-@keyframes dropIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Hiệu ứng hover cho nút dropdown */
+.dropdown:hover .dropbtn {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Style cho icons */
+.dropdown-content i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+/* Đảm bảo dropdown ở nav-right không bị tràn ra ngoài màn hình */
+.nav-right .dropdown-content {
+  right: 0;
+}
+
+/* Thêm đường kẻ phân cách giữa các mục */
+.dropdown-content a:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
 
 /* Responsive */

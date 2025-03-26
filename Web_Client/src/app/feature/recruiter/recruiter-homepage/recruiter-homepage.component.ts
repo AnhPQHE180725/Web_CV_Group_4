@@ -4,11 +4,11 @@ import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 import { Recruitment } from '../../../models/Recruitment';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-recruiter-homepage',
   standalone: true,
-  imports: [NgFor, CurrencyPipe, ReactiveFormsModule],
+  imports: [NgFor, CurrencyPipe, ReactiveFormsModule, RouterLink],
   templateUrl: './recruiter-homepage.component.html',
   styleUrl: './recruiter-homepage.component.css'
 })
