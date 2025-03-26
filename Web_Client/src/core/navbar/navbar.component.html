@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Dropdown</title>
+    <link rel="stylesheet" href="navbar.component.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar with Dropdown</title>
-  <link rel="stylesheet" href="navbar.component.css" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="nav-left">
-      <div class="logo-container">
-        <img
-          src="https://play-lh.googleusercontent.com/Shy9VB3CKUYUzyzcuJwmDiYZElFJsKYwj5v5X2s3fGfIlL6SzkbAz_sMX6ZX9Sk8JQ"
-          alt="WEB-CV Logo" class="logo-img">
-        <a href="home" class="nav-item logo-text">Trang chủ</a>
-      </div>
-      <div class="dropdown">
-        <button class="nav-item dropbtn">Danh mục ▼</button>
-        <div class="dropdown-content">
-          <table>
-            <tr *ngFor="let i of [0, 1, 2, 3, 4]">
-              <td *ngFor="let col of columns">
-                <a *ngIf="col[i]" [routerLink]="'/recruitment/category/' + col[i].id">
-                  {{ col[i].name }}
-                </a>
-              </td>
-            </tr>
-          </table>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo-container">
+          <img
+            src="https://play-lh.googleusercontent.com/Shy9VB3CKUYUzyzcuJwmDiYZElFJsKYwj5v5X2s3fGfIlL6SzkbAz_sMX6ZX9Sk8JQ"
+            alt="WEB-CV Logo"
+            class="logo-img"
+          />
+          <a href="home" class="nav-item logo-text">Trang chủ</a>
         </div>
+        <div class="dropdown">
+          <button class="nav-item dropbtn">Danh mục ▼</button>
+          <div class="dropdown-content">
+            <table>
+              <tr *ngFor="let i of [0, 1, 2, 3, 4]">
+                <td *ngFor="let col of columns">
+                  <a
+                    *ngIf="col[i]"
+                    [routerLink]="'/recruitment/category/' + col[i].id"
+                  >
+                    {{ col[i].name }}
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a href="company" class="nav-item">Doanh nghiệp</a>
+        <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
+        <a href="recruiter" class="nav-item"
+          >Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a
+        >
       </div>
-      <a href="company" class="nav-item">Doanh nghiệp</a>
-      <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
-      <a href="recruiter" class="nav-item">Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a>
 
-    </div>
+      <div class="nav-right">
+        <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
+        <ng-container *ngIf="!isLoggedIn()">
+          <div class="dropdown">
+            <button class="nav-item dropbtn">Tài khoản ▼</button>
+            <div class="dropdown-content">
+              <a href="register">Đăng ký</a>
+              <a href="login">Đăng nhập</a>
+            </div>
+          </div>
+        </ng-container>
 
-
-    <div class="nav-right">
-      <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
-      <ng-container *ngIf="!isLoggedIn()">
-        <a href="register" class="nav-item">Đăng ký</a>
-        <a href="login" class="nav-item">Đăng nhập</a>
-      </ng-container>
-      <!-- Hiển thị Upload CV và Log Out khi đã đăng nhập -->
-      <ng-container *ngIf="isLoggedIn()">
-        <a href="/profile" class="nav-item">Profile</a>
-        <a routerLink="/upload-cv" class="nav-item">
-          <i class="fas fa-upload"></i> Upload CV
-        </a>
-        <a href="#" class="nav-item" (click)="logout()">Log Out</a>
-      </ng-container>
-    </div>
-
-  </nav>
-</body>
-
+        <!-- Hiển thị Upload CV và Log Out khi đã đăng nhập -->
+        <ng-container *ngIf="isLoggedIn()">
+          <div class="dropdown">
+            <button class="nav-item dropbtn">Tài khoản ▼</button>
+            <div class="dropdown-content">
+              <a href="/profile">Profile</a>
+              <a routerLink="/favorite-jobs"> Công việc yêu thích </a>
+              <a routerLink="/favorite-companies"> Công ty theo dõi </a>
+              <a routerLink="/upload-cv">Upload CV </a>
+              <a routerLink="/upload-cv">Công ty của tôi </a>
+              <a href="#" (click)="logout()">Log Out</a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </nav>
+  </body>
 </html>

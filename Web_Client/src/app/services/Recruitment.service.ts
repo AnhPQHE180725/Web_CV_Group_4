@@ -30,13 +30,24 @@ export class RecruitmentService {
     }
     getRecruitmentsByCompanyName(company: string): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-company-name/${company}`);
-      }
-    
-      getRecruitmentsByTitle(title: string): Observable<any> {
+    }
+
+    getRecruitmentsByTitle(title: string): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-title/${title}`);
-      }
-    
-      getRecruitmentsByLocation(location: string): Observable<any> {
+    }
+
+    getRecruitmentsByLocation(location: string): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-location/${location}`);
-      }
+    }
+    addRecruitment(recruitment: Partial<Recruitment>): Observable<any> {
+        return this.http.post(`${this.baseUrl}/Recruitment/add-recruitment`, recruitment);
+    }
+
+    editRecruitment(id: number, recruitment: Partial<Recruitment>): Observable<any> {
+        return this.http.put(`${this.baseUrl}/Recruitment/edit-recruitment/${id}`, recruitment);
+    }
+
+    deleteRecruitment(id: number): Observable<any> {
+        return this.http.delete(`${this.baseUrl}/Recruitment/delete-recruitment/${id}`);
+    }
 }
