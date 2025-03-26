@@ -19,6 +19,7 @@ import { ForgotpasswordComponent } from './feature/forgotpassword/forgotpassword
 import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.component';
 import { FavoriteJobsComponent } from './components/favorite-jobs/favorite-jobs.component';
 import { FavoriteCompaniesComponent } from './components/favorite-companies/favorite-companies.component';
+import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.component';
 
 
 export const routes: Routes = [
@@ -64,6 +65,9 @@ export const routes: Routes = [
     },
     {
         path: 'favorite-companies', component: FavoriteCompaniesComponent
+    },
+    {
+        path: 'applied-jobs', component: AppliedJobsComponent
     },
     { path: '**', redirectTo: 'home' }
 
