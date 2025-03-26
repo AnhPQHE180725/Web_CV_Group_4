@@ -20,6 +20,8 @@ import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.co
 import { FavoriteJobsComponent } from './components/favorite-jobs/favorite-jobs.component';
 import { FavoriteCompaniesComponent } from './components/favorite-companies/favorite-companies.component';
 import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.component';
+import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
+import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
 
 
 export const routes: Routes = [
@@ -27,6 +29,7 @@ export const routes: Routes = [
     { path: 'recruitment/company/:id', component: RecruitmentListComponent },
     { path: 'recruitment', component: RecruitmentListComponent },
     { path: 'company', component: CompanyListComponent },
+    { path: 'company/:id', component: CompanyDetailComponent },
     { path: 'recruiter', component: RecruiterHomepageComponent },
     {
         path: 'home', component: HomepageComponent
@@ -68,6 +71,9 @@ export const routes: Routes = [
     },
     {
         path: 'applied-jobs', component: AppliedJobsComponent
+    },
+    {
+        path: 'user-companies', component: UserCompaniesComponent
     },
     { path: '**', redirectTo: 'home' }
 

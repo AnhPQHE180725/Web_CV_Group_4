@@ -68,5 +68,12 @@ namespace Web_Server.Repositories
             return await _context.Companies.Where(c => c.Name.Contains(name)).ToListAsync();
         }
 
+        public async Task<List<Company>> GetCompaniesByUserIdAsync(int userId)
+        {
+            return await _context.Companies
+                .Where(c => c.UserId == userId)
+                .Include(c => c.Recruitments)
+                .ToListAsync();
+        }
     }
 }
