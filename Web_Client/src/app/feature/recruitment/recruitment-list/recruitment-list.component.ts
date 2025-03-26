@@ -183,4 +183,9 @@ export class RecruitmentListComponent {
   isJobFollowed(jobId: number): boolean {
     return this.followedJobs.includes(jobId);
   }
+
+  // Kiểm tra nếu người dùng đã đăng nhập và có role là candidate
+  isCandidate(): boolean {
+    return this.authService.isLoggedIn() && this.authService.getRoleFromToken() === 'Candidate';
+  }
 }

@@ -95,6 +95,11 @@ export class HomepageComponent {
     return this.authService.isLoggedIn();
   }
 
+  // Kiểm tra nếu người dùng đã đăng nhập và có role là Candidate
+  isCandidate(): boolean {
+    return this.authService.isLoggedIn() && this.authService.getRoleFromToken() === 'Candidate';
+  }
+
   onApply(recruitment: Recruitment) {
     if (!this.isLoggedIn()) {
       this.router.navigate(['/login']);
