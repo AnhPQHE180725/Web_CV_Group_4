@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Recruitment } from '../../../models/Recruitment';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 
 
@@ -14,7 +14,7 @@ import { JobFollowService } from '../../../services/job-follow.service';
 @Component({
   selector: 'app-recruitment-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatDialogModule],
+  imports: [CommonModule, FormsModule, MatDialogModule, RouterModule],
 
   templateUrl: './recruitment-list.component.html',
   styleUrl: './recruitment-list.component.css'
