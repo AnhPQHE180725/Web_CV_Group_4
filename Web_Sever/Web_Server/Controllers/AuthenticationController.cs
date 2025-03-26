@@ -78,7 +78,7 @@ namespace Web_Server.Controllers
             var result = await _userService.ResetPasswordAsync(token, newPassword); // Gọi phương thức ResetPasswordAsync
             if (!result) return BadRequest("Token không hợp lệ hoặc đã hết hạn.");
 
-            return Ok("Mật khẩu đã được cập nhật thành công.");
+            return Ok(new { message = "Mật khẩu đã được cập nhật thành công." });
         }
 
 

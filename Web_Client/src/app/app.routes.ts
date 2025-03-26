@@ -57,7 +57,7 @@ export const routes: Routes = [
         path: 'forgot-password', component: ForgotpasswordComponent
     },
     {
-        path: 'reset-password', component: ResetpasswordComponent
+        path: 'reset-password/:token', component: ResetpasswordComponent
     },
     {
         path: 'favorite-jobs', component: FavoriteJobsComponent
