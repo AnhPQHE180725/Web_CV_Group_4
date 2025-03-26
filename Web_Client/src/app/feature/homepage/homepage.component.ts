@@ -12,8 +12,7 @@ import { AuthService } from '../../services/auth.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../recruitment/apply-dialog/apply-dialog.component';
 import { JobFollowService } from '../../services/job-follow.service';
-
-
+import { CompanyFollowService } from '../../services/company-follow.service';
 
 @Component({
   selector: 'app-homepage',
@@ -35,19 +34,19 @@ export class HomepageComponent {
   ];
   currentIndex: number = 0;
   followedJobs: number[] = [];
+  followedCompanies: number[] = [];
 
   constructor(
     private categoryService: CategoryService,
     private companyService: CompanyService,
     private recruitmentService: RecruitmentService,
     private route: ActivatedRoute,
-
     private router: Router,
     private dialog: MatDialog,
     private authService: AuthService,
-    private jobFollowService: JobFollowService
+    private jobFollowService: JobFollowService,
+    private companyFollowService: CompanyFollowService
   ) { }
-
 
   ngOnInit(): void {
     this.categoryService.getTopCategories().subscribe({
@@ -77,7 +76,13 @@ export class HomepageComponent {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
     }, 15000);
+
+    if (this.authService.isLoggedIn()) {
+      this.loadFollowedJobs();
+      this.loadFollowedCompanies();
+    }
   }
+
   prevSlide() {
     this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;
   }
@@ -87,7 +92,7 @@ export class HomepageComponent {
   }
 
   isLoggedIn(): boolean {
-    return this.authService.isAuthenticated();
+    return this.authService.isLoggedIn();
   }
 
   onApply(recruitment: Recruitment) {
@@ -126,5 +131,32 @@ export class HomepageComponent {
   isJobFollowed(jobId: number): boolean {
     return this.followedJobs.includes(jobId);
   }
-}
 
+  loadFollowedCompanies() {
+    if (this.isLoggedIn()) {
+      this.companyFollowService.getFollowedCompanies()
+        .subscribe(follows => {
+          this.followedCompanies = follows.map(follow => follow.companyId);
+        });
+    }
+  }
+
+  toggleCompanyFollow(event: Event, companyId: number) {
+    event.stopPropagation();
+
+    if (!this.isLoggedIn()) {
+      alert('Vui lòng đăng nhập để theo dõi công ty');
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    this.companyFollowService.toggleFollow(companyId)
+      .subscribe(response => {
+        this.loadFollowedCompanies();
+      });
+  }
+
+  isCompanyFollowed(companyId: number): boolean {
+    return this.followedCompanies.includes(companyId);
+  }
+}

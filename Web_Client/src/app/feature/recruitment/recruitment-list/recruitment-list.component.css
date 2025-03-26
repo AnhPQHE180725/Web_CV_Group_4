@@ -1,112 +1,187 @@
 .post {
-    background: #e0e0e0;
-    padding: 15px;
-    border-radius: 8px;
-    flex: 1;
-    min-width: 150px;
-    text-align: left;
+  background: #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 150px;
+  text-align: left;
 }
 
 .post {
-    background: white;
-    padding: 15px;
-    border: 1px solid #ddd;
-}
-
-.apply-btn {
-    display: block;
-    text-decoration: none;
-    background: #007bff;
-    color: white;
-    padding: 5px;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 5px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
 }
 
 .company-logo {
-    width: 100px;
-    /* Adjust as needed */
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    /* Make it circular */
-    margin-right: 10px;
+  width: 100px;
+  /* Adjust as needed */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* Make it circular */
+  margin-right: 10px;
 }
 
 .salary-box {
-    background: #ffcc00;
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    white-space: nowrap;
+  background: #ffcc00;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
-
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  margin: 20px 0;
+}
 
-  .tab-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
+.tab-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-  .tab {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px 5px 0 0;
-    cursor: pointer;
-    background-color: #f5a623;
-    color: white;
-    transition: 0.3s;
-  }
-  
-  .tab.active {
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-bottom: none;
-  }
-  
-  .search-container {
-    display: flex;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .search-container input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-  }
-  
-  .search-btn {
-    padding: 10px 20px;
-    background-color: #3f51b5;
-    color: white;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  
-  .search-btn:hover {
-    background-color: #2c387e;
-  }
-  
+.tab {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #0056b3;
+}
+
+.post {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.action-buttons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.favorite-btn {
+  background: none;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.apply-btn {
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: #218838;
+}
+
+.salary-box {
+  display: inline-block;
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination button:disabled {
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.login-message {
+  margin-top: 10px;
+  color: #666;
+}
+
+.login-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-message a:hover {
+  text-decoration: underline;
+}

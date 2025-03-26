@@ -63,24 +63,30 @@ namespace Web_Server.Repositories
                 .FirstOrDefaultAsync(r => r.Id == id);
         }
 
-        public Task<bool> AddRecruitmentAsync(Recruitment recruitment)
+        public async Task<bool> AddRecruitmentAsync(Recruitment recruitment)
         {
-            throw new NotImplementedException();
+            await _context.Recruitments.AddAsync(recruitment);
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<Recruitment> GetRecruitmentByIdAsync(int id)
+        public async Task<Recruitment> GetRecruitmentByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Recruitments.FindAsync(id);
         }
 
-        public Task<bool> EditRecruitmentAsync(Recruitment recruitment)
+        public async Task<bool> EditRecruitmentAsync(Recruitment recruitment)
         {
-            throw new NotImplementedException();
+            _context.Recruitments.Update(recruitment);  // Cập nhật đối tượng
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<bool> DeleteRecruitmentAsync(int id)
+        public async Task<bool> DeleteRecruitmentAsync(int id)
         {
-            throw new NotImplementedException();
+            var recruitment = await _context.Recruitments.FindAsync(id);
+            if (recruitment == null) return false;
+
+            _context.Recruitments.Remove(recruitment);
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Web_Server.Data;
 using Web_Server.Interfaces;
 using Web_Server.Models;
@@ -82,7 +83,8 @@ namespace Web_Server.Repositories
             var user = await _context.Users.FindAsync(userId);
             if (user != null)
             {
-                user.Password = newPassword;
+                var passwordHasher = new PasswordHasher<User>();
+                user.Password = passwordHasher.HashPassword(user, newPassword);
                 await _context.SaveChangesAsync();
             }
         }

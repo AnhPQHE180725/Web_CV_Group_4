@@ -20,13 +20,20 @@ export class SignuppageComponent {
   constructor(private authService: AuthService, private route : Router) {}
 
   onFormSubmit() {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailPattern.test(this.email)) {
+      alert('Email không đúng định dạng!');
+      return;
+    }
+
     if (this.password !== this.confirmPassword) {
       alert('Passwords do not match!');
       return;
     }
 
-    if(this.role == ''){
-      alert('Role must not empty')
+    if (this.role == '') {
+      alert('Role must not be empty!');
       return;
     }
 
@@ -49,5 +56,5 @@ export class SignuppageComponent {
         console.error('Lỗi đăng ký:', error);
       }
     });
-  }
+}
 }

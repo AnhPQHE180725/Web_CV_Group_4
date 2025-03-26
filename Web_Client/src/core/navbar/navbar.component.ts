@@ -58,4 +58,21 @@ export class NavbarComponent {
     return this.authService.isAuthenticated();
   }
 
+  // Kiểm tra nếu người dùng là nhà tuyển dụng
+  isRecruiter(): boolean {
+    const role = this.authService.getRoleFromToken();
+    return role === 'Recruiter';
+  }
+
+  // Kiểm tra nếu người dùng là ứng viên
+  isCandidate(): boolean {
+    const role = this.authService.getRoleFromToken();
+    return role === 'Candidate';
+  }
+
+  // Kiểm tra nếu người dùng là admin
+  isAdmin(): boolean {
+    const role = this.authService.getRoleFromToken();
+    return role === 'Admin';
+  }
 }
