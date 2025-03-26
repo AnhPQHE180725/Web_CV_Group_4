@@ -1,26 +1,29 @@
-<h2>{{ pageTitle }}</h2>
-
-<div class="post" *ngFor="let post of appliedJobs">
-  <div>
-    <img
-      [src]="'assets/images/slide1.jpg'"
-      alt="{{ post.recruitment.companyName }}"
-      class="company-logo"
-    />
-  </div>
-  <strong>{{ post.recruitment.type }}</strong>
-  <div class="action-buttons">
-    <span class="status-badge">Đã ứng tuyển</span>
-  </div>
-  <p>{{ post.recruitment.title }}</p>
-  <div>
-    <small>{{ post.recruitment.description }}</small>
-  </div>
-  <div class="salary-box">
-    <small>{{ post.recruitment.salary }} triệu</small>
+<div class="container mt-4">
+  <h2>Công việc đã ứng tuyển</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="appliedJobs.length === 0" class="alert alert-info">
+        Bạn chưa ứng tuyển công việc nào.
+      </div>
+      <div *ngFor="let post of appliedJobs" class="post">
+        <img
+          [src]="'assets/images/slide1.jpg'"
+          alt="{{ post.recruitment.title }}"
+          class="company-logo"
+        />
+        <strong>{{ post.recruitment.type }}</strong>
+        <div class="action-buttons">
+          <span class="status-badge">Đã ứng tuyển</span>
+        </div>
+        <p>{{ post.recruitment.title }}</p>
+        <div>
+          <small>{{ post.recruitment.description }}</small>
+        </div>
+        <div class="salary-box">
+          <small>{{ post.recruitment.salary }} triệu</small>
+        </div>
+        
+      </div>
+    </div>
   </div>
 </div>
-
-<ng-template #noResults>
-  <p>Bạn chưa ứng tuyển công việc nào.</p>
-</ng-template>

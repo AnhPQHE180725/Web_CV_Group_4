@@ -12,8 +12,8 @@ using Web_Server.Data;
 namespace Web_Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250324174328_DB")]
-    partial class DB
+    [Migration("20250326135004_db")]
+    partial class db
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

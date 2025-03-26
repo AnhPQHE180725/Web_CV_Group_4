@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class AppliedJobsComponent {
   appliedJobs: any[] = [];
-  pageTitle: string = 'Danh Sách Công Việc Đã Ứng Tuyển';
+  pageTitle: string = 'Công việc đã ứng tuyển';
 
   constructor(
     private applicationService: ApplicationService,
