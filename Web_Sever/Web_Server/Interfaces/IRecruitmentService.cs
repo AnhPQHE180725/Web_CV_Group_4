@@ -20,6 +20,6 @@ namespace Web_Server.Interfaces
         Task<bool> EditRecruitmentAsync(int id, RecruitmentVm recruitmentVm);
         Task<bool> DeleteRecruitmentAsync(int id);
 
-
+        Task<Recruitment> GetRecruitmentById(int id);
     }
 }

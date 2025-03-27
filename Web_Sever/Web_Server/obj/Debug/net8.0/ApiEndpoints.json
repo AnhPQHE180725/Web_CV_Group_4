@@ -624,6 +624,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetRecruitmentById",
+    "RelativePath": "api/Recruitment/get-recruitment-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "GetRecruitmentsByCategoryId",
     "RelativePath": "api/Recruitment/get-recruitments-by-category-id/{id}",
     "HttpMethod": "GET",

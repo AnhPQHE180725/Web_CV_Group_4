@@ -3,17 +3,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comic Neue", "Arial", sans-serif; /* Cute, playful font */
+  font-family: "Comic Neue", "Arial", sans-serif;
+  /* Cute, playful font */
 }
 
 /* Body styling */
 body {
-  background: linear-gradient(
-    180deg,
-    #f8e1e9 0%,
-    #e9d8f4 100%
-  ); /* Soft pastel gradient */
-  color: #5c4b6e; /* Muted purple text */
+  background: linear-gradient(180deg,
+      #f8e1e9 0%,
+      #e9d8f4 100%);
+  /* Soft pastel gradient */
+  color: #5c4b6e;
+  /* Muted purple text */
 }
 
 /* Navbar styling */
@@ -21,11 +22,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 245, 250, 0.9); /* Light pink with transparency */
+  background: rgba(255, 245, 250, 0.9);
+  /* Light pink with transparency */
   padding: 15px 20px;
-  box-shadow: 0 4px 10px rgba(92, 75, 110, 0.2); /* Soft shadow */
-  border-bottom: 3px solid #ffb6c1; /* Cute pink border */
-  border-radius: 0 0 15px 15px; /* Rounded bottom */
+  box-shadow: 0 4px 10px rgba(92, 75, 110, 0.2);
+  /* Soft shadow */
+  border-bottom: 3px solid #ffb6c1;
+  /* Cute pink border */
+  border-radius: 0 0 15px 15px;
+  /* Rounded bottom */
 }
 
 /* Logo and Trang chủ container */
@@ -37,27 +42,33 @@ body {
 }
 
 .logo-img {
-  width: 50px; /* Small, cute size */
+  width: 50px;
+  /* Small, cute size */
   height: 50px;
-  border-radius: 50%; /* Circular for cuteness */
-  border: 2px solid #ffb6c1; /* Pink border */
-  box-shadow: 0 0 8px rgba(255, 182, 193, 0.5); /* Subtle glow */
+  border-radius: 50%;
+  /* Circular for cuteness */
+  border: 2px solid #ffb6c1;
+  /* Pink border */
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+  /* Subtle glow */
   transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-  transform: scale(1.1); /* Slight bounce on hover */
+  transform: scale(1.1);
+  /* Slight bounce on hover */
 }
 
 .logo-text {
-  background: linear-gradient(
-    90deg,
-    #ffb6c1,
-    #ff85a2
-  ); /* Gradient for Trang chủ */
-  color: #ffffff; /* White text for contrast */
+  background: linear-gradient(90deg,
+      #ffb6c1,
+      #ff85a2);
+  /* Gradient for Trang chủ */
+  color: #ffffff;
+  /* White text for contrast */
   padding: 8px 15px;
-  border-radius: 15px; /* Extra rounded */
+  border-radius: 15px;
+  /* Extra rounded */
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -66,7 +77,8 @@ body {
 }
 
 .logo-text:hover {
-  background: linear-gradient(90deg, #ff85a2, #d8bfd8); /* Shift to purple */
+  background: linear-gradient(90deg, #ff85a2, #d8bfd8);
+  /* Shift to purple */
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(255, 133, 162, 0.4);
 }
@@ -79,20 +91,24 @@ body {
 }
 
 .nav-item {
-  color: #5c4b6e; /* Muted purple */
+  color: #5c4b6e;
+  /* Muted purple */
   text-decoration: none;
   padding: 10px 15px;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
   border-radius: 10px;
-  background: rgba(255, 182, 193, 0.3); /* Light pink background */
+  background: rgba(255, 182, 193, 0.3);
+  /* Light pink background */
 }
 
 .nav-item:hover {
-  color: #ff85a2; /* Soft pink hover */
+  color: #ff85a2;
+  /* Soft pink hover */
   background: rgba(255, 182, 193, 0.7);
-  transform: scale(1.05); /* Slight grow */
+  transform: scale(1.05);
+  /* Slight grow */
   box-shadow: 0 0 8px rgba(255, 133, 162, 0.5);
 }
 
@@ -114,7 +130,10 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0; /* Căn phải cho dropdown ở nav-right */
+  left: 0;
+  /* Aligns dropdown to the left */
+  right: auto;
+  /* Căn phải cho dropdown ở nav-right */
   background-color: #f9f9f9;
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -208,4 +227,19 @@ body {
     box-shadow: none;
     background: rgba(255, 245, 250, 0.9);
   }
+}
+
+.category-column {
+  width: 250px;
+  /* Adjust for a wider column */
+  min-width: 250px;
+  text-align: center;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  /* Takes full width of the page */
+  max-width: none;
+
 }
