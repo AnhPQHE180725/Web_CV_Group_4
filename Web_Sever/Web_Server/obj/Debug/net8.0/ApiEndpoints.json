@@ -248,6 +248,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "VerifySignup",
+    "RelativePath": "api/Authentication/verify-signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web_Server.ViewModels.VerifyOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.CategoryController",
     "Method": "GetAllCategories",
     "RelativePath": "api/Category/get-all-categories",
