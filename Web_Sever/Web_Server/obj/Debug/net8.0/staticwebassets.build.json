@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XRzcawls3J85YeAKofrt+MYiWkKqzu3udwApdKNu+pE=",
+  "Hash": "NqTXeARY62m7bqBej7a403MmFVQMiGHlSbcDAHAlcZo=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CompanyLogos/728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "njyljulehi",
+      "Integrity": "I50i0X1fgegDK8gRUS/pxnF69gFrqqvMGgH77Er229Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CompanyLogos\\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg"
+    },
     {
       "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg",
       "SourceId": "Web_Server",
@@ -36,6 +57,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg"
+    },
+    {
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CompanyLogos/d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wdmxlvkngm",
+      "Integrity": "lADJlN1HfAIjWiv20SRdZ2IDdk5riQsoKW1PReDJbqs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CompanyLogos\\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg"
+    },
+    {
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CompanyLogos/da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eu75gu2eav",
+      "Integrity": "9p64ug3xyChIAMFsm9L2ktFxfKz4VZKdhHT7XsT/wS0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CompanyLogos\\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg"
     },
     {
       "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf",
@@ -334,6 +397,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "CompanyLogos/728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116371"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I50i0X1fgegDK8gRUS/pxnF69gFrqqvMGgH77Er229Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I50i0X1fgegDK8gRUS/pxnF69gFrqqvMGgH77Er229Q="
+        }
+      ]
+    },
+    {
+      "Route": "CompanyLogos/728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.njyljulehi.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "116371"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I50i0X1fgegDK8gRUS/pxnF69gFrqqvMGgH77Er229Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "njyljulehi"
+        },
+        {
+          "Name": "label",
+          "Value": "CompanyLogos/728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I50i0X1fgegDK8gRUS/pxnF69gFrqqvMGgH77Er229Q="
+        }
+      ]
+    },
+    {
       "Route": "CompanyLogos/9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg",
       "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg",
       "Selectors": [],
@@ -412,6 +557,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-XH+xxzGCUori+yk/qmD2pLFirMNTVul3SR2rpg+tBw4="
+        }
+      ]
+    },
+    {
+      "Route": "CompanyLogos/d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "306873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lADJlN1HfAIjWiv20SRdZ2IDdk5riQsoKW1PReDJbqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lADJlN1HfAIjWiv20SRdZ2IDdk5riQsoKW1PReDJbqs="
+        }
+      ]
+    },
+    {
+      "Route": "CompanyLogos/d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.wdmxlvkngm.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "306873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lADJlN1HfAIjWiv20SRdZ2IDdk5riQsoKW1PReDJbqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wdmxlvkngm"
+        },
+        {
+          "Name": "label",
+          "Value": "CompanyLogos/d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lADJlN1HfAIjWiv20SRdZ2IDdk5riQsoKW1PReDJbqs="
+        }
+      ]
+    },
+    {
+      "Route": "CompanyLogos/da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.eu75gu2eav.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "112343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9p64ug3xyChIAMFsm9L2ktFxfKz4VZKdhHT7XsT/wS0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:29:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eu75gu2eav"
+        },
+        {
+          "Name": "label",
+          "Value": "CompanyLogos/da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9p64ug3xyChIAMFsm9L2ktFxfKz4VZKdhHT7XsT/wS0="
+        }
+      ]
+    },
+    {
+      "Route": "CompanyLogos/da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "112343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9p64ug3xyChIAMFsm9L2ktFxfKz4VZKdhHT7XsT/wS0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 18:29:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9p64ug3xyChIAMFsm9L2ktFxfKz4VZKdhHT7XsT/wS0="
         }
       ]
     },

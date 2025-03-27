@@ -1,27 +1,68 @@
 <div class="container mt-4">
   <h2>Công ty đã theo dõi</h2>
 
-  <!-- Ô tìm kiếm -->
-  <div class="search-box">
-    <input type="text" [(ngModel)]="searchQuery" (input)="searchCompanies()" placeholder="Tìm kiếm theo tên công ty"
-      class="search-input" />
+  <!-- Search Box -->
+  <input
+  type="text"
+  [(ngModel)]="searchQuery"
+  (input)="searchCompanies()"
+  placeholder="Tìm kiếm theo tên, email hoặc SĐT"
+  class="search-input"
+/>
+
+  <!-- Companies List -->
+  <div *ngIf="paginatedCompanies.length === 0" class="alert alert-info">
+    Không có công ty nào.
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <div *ngIf="paginatedCompanies.length === 0" class="alert alert-info">
-        Không có công ty phù hợp.
+  <div class="companies">
+    <div class="company" *ngFor="let company of paginatedCompanies">
+      <div class="company-content">
+        <img
+          [src]="
+            company.company.logo
+              ? 'https://localhost:7247/api/Company/logo/' + company.company.logo
+              : 'assets/images/slide1.jpg'
+          "
+          alt="{{ company.company.name }}"
+          class="company-logo"
+        />
+
+        <div class="company-details">
+          <strong>Tên công ty:</strong>
+          <p class="company-description">{{ company.company.name }}</p>
+
+          <strong>Mô tả:</strong>
+          <p class="company-description">{{ company.company.description }}</p>
+
+          <strong>Địa chỉ:</strong>
+          <p class="company-description">{{ company.company.address }}</p>
+
+          <strong>Email:</strong>
+          <p class="company-description">{{ company.company.email }}</p>
+
+          <strong>Số điện thoại:</strong>
+          <p class="company-description">{{ company.company.phoneNumber }}</p>
+
+          <!-- Status -->
+          <div class="company-status">
+            <span
+              class="status-badge"
+              [ngClass]="{
+                active: company.company.status === 1,
+                paused: company.company.status === 0
+              }"
+            >
+              {{ company.company.status === 1 ? 'Hoạt động' : 'Tạm ngưng' }}
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div class="company" *ngFor="let company of paginatedCompanies">
-        <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.companyId]">
-          <img [src]="'assets/images/slide1.jpg'" alt="{{ company.company.name }}" class="company-logo" />
-          <span class="company-name">{{ company.company.name }}</span>
-        </div>
-        <button class="follow-btn followed" (click)="toggleFollow($event, company.companyId)">
-          Bỏ theo dõi
-        </button>
-      </div>
+      <!-- Follow Button -->
+      <button class="follow-btn followed" (click)="toggleFollow($event, company.companyId)">
+        Bỏ theo dõi
+      </button>
     </div>
   </div>
 

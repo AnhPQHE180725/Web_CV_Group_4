@@ -57,8 +57,20 @@
       "PackagePath": "staticwebassets\\CVs\\ebd3d876-722d-4db3-8a09-c2db32e40b2c_Assignment.pdf"
     },
     {
+      "Id": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg",
+      "PackagePath": "staticwebassets\\CompanyLogos\\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg"
+    },
+    {
       "Id": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg",
       "PackagePath": "staticwebassets\\CompanyLogos\\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg"
+    },
+    {
+      "Id": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg",
+      "PackagePath": "staticwebassets\\CompanyLogos\\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg"
+    },
+    {
+      "Id": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg",
+      "PackagePath": "staticwebassets\\CompanyLogos\\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Web_Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
