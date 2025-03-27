@@ -24,6 +24,8 @@
         id="companyName"
         [(ngModel)]="currentCompany.name"
         required
+        minlength="1"
+        pattern="[^\\s].*"
       />
     </div>
 
@@ -51,6 +53,7 @@
         type="email"
         id="companyEmail"
         [(ngModel)]="currentCompany.email"
+        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
       />
     </div>
 
@@ -60,6 +63,9 @@
         type="tel"
         id="companyPhone"
         [(ngModel)]="currentCompany.phoneNumber"
+        pattern="[0-9]{10}"
+        maxlength="10"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
       />
     </div>
 

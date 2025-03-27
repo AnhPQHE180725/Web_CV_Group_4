@@ -116,8 +116,37 @@ export class UserCompaniesComponent implements OnInit {
         this.showForm = true;
     }
 
+    // Validation methods
+    isValidEmail(email: string): boolean {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    isValidPhoneNumber(phone: string): boolean {
+        const phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+    }
+
     // Save company (create or update)
     saveCompany() {
+        // Validate required fields
+        if (!this.currentCompany.name.trim()) {
+            alert('Vui lòng nhập tên công ty!');
+            return;
+        }
+
+        // Validate email if provided
+        if (this.currentCompany.email && !this.isValidEmail(this.currentCompany.email)) {
+            alert('Email không đúng định dạng!');
+            return;
+        }
+
+        // Validate phone number if provided
+        if (this.currentCompany.phoneNumber && !this.isValidPhoneNumber(this.currentCompany.phoneNumber)) {
+            alert('Số điện thoại phải có 10 chữ số!');
+            return;
+        }
+
         if (this.isEditing) {
             this.companyService.updateCompany(this.currentCompany).subscribe(
                 (response) => {
