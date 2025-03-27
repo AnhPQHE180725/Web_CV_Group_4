@@ -42,12 +42,16 @@
 }
 
 .follow-btn {
-  width: 100%;
+  width: 10%;
   padding: 8px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
+  /* Đảm bảo nút chiếm toàn bộ hàng */
+  margin: 0 auto;
+  /* Căn giữa */
 }
 
 .follow-btn.followed {
@@ -77,4 +81,43 @@
   background-color: #d1ecf1;
   border-color: #bee5eb;
   color: #0c5460;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
