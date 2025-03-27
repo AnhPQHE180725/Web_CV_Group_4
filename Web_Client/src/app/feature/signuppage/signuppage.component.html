@@ -5,30 +5,31 @@
         <form (ngSubmit)="onFormSubmit()">
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" [(ngModel)]="model.email" name="email" placeholder="Enter your email"
+                    required>
             </div>
 
             <div class="input-group">
                 <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" [(ngModel)]="fullName" name="fullName"
+                <input type="text" id="full-name" [(ngModel)]="model.fullName" name="fullName"
                     placeholder="Enter your full name" required>
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" [(ngModel)]="password" name="password"
+                <input type="password" id="password" [(ngModel)]="model.password" name="password"
                     placeholder="Enter your Password" required>
             </div>
 
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" [(ngModel)]="confirmPassword" name="confirmPassword"
+                <input type="password" id="confirm-password" [(ngModel)]="model.confirmPassword" name="confirmPassword"
                     placeholder="Confirm your Password" required>
             </div>
 
             <div class="input-group">
                 <label for="role">Choose your role</label>
-                <select id="role" [(ngModel)]="role" name="role" required>
+                <select id="role" [(ngModel)]="model.roleName" name="role" required>
                     <option value="" disabled selected>Choose your role</option>
                     <option value="candidate">Candidate</option>
                     <option value="recruiter">Recruiter</option>

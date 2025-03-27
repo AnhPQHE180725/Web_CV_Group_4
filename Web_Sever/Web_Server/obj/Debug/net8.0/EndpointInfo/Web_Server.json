@@ -417,17 +417,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
+                "$ref": "#/components/schemas/VerifyRegisterVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
+                "$ref": "#/components/schemas/VerifyRegisterVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
+                "$ref": "#/components/schemas/VerifyRegisterVm"
               }
             }
           }
@@ -1217,6 +1217,29 @@
         }
       }
     },
+    "/api/Recruitment/get-recruitment-by-id/{id}": {
+      "get": {
+        "tags": [
+          "Recruitment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/User/get-user-by-post-id/{id}": {
       "get": {
         "tags": [
@@ -1967,6 +1990,20 @@
         "additionalProperties": false
       },
       "VerifyOtpRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "otp": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerifyRegisterVm": {
         "type": "object",
         "properties": {
           "email": {
