@@ -63,7 +63,7 @@ namespace Web_Server.Services
                 Title = r.Title,
                 Type = r.Type,
                 View = r.View,
-                Deadline = r.Deadline,
+                Deadline =  r.Deadline,
                 CompanyName = r.Company?.Name ?? "Unknown",
                 CategoryName = r.Category?.Name ?? "Unknown"
             }).ToList();
