@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Recruitment } from '../../models/Recruitment';
@@ -13,9 +13,15 @@ import { Router } from '@angular/router';
   templateUrl: './applied-jobs.component.html',
   styleUrl: './applied-jobs.component.css'
 })
-export class AppliedJobsComponent {
+export class AppliedJobsComponent implements OnInit {
+  favoriteJobs: any[] = [];
+  paginatedJobs: any[] = [];
+  currentPage: number = 1;
+  recordsPerPage: number = 5;  // Số công việc mỗi trang
+  totalPages: number = 1;
+
   appliedJobs: any[] = [];
-  pageTitle: string = 'Danh Sách Công Việc Đã Ứng Tuyển';
+  pageTitle: string = 'Công việc đã ứng tuyển';
 
   constructor(
     private applicationService: ApplicationService,
@@ -39,5 +45,26 @@ export class AppliedJobsComponent {
       },
       (error) => console.error('Error fetching applied jobs:', error)
     );
+  }
+
+  // Phân trang
+  updatePagination() {
+    this.totalPages = Math.ceil(this.favoriteJobs.length / this.recordsPerPage);
+    this.paginateJobs();
+  }
+
+  // Cập nhật các công việc theo trang
+  paginateJobs() {
+    const startIndex = (this.currentPage - 1) * this.recordsPerPage;
+    const endIndex = startIndex + this.recordsPerPage;
+    this.paginatedJobs = this.favoriteJobs.slice(startIndex, endIndex);
+  }
+
+  // Chuyển sang trang kế tiếp
+  goToPage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.paginateJobs();
+    }
   }
 }

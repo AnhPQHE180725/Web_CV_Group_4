@@ -328,3 +328,18 @@ h2 {
 .clickable:hover {
   opacity: 0.9;
 }
+
+.login-message {
+  margin-top: 10px;
+  color: #666;
+}
+
+.login-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-message a:hover {
+  text-decoration: underline;
+}
+
