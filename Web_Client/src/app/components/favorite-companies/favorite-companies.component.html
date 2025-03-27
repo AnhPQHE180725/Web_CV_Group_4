@@ -1,9 +1,16 @@
 <div class="container mt-4">
   <h2>Công ty đã theo dõi</h2>
+
+  <!-- Ô tìm kiếm -->
+  <div class="search-box">
+    <input type="text" [(ngModel)]="searchQuery" (input)="searchCompanies()" placeholder="Tìm kiếm theo tên công ty"
+      class="search-input" />
+  </div>
+
   <div class="row">
     <div class="col-md-12">
-      <div *ngIf="favoriteCompanies.length === 0" class="alert alert-info">
-        Bạn chưa theo dõi công ty nào.
+      <div *ngIf="paginatedCompanies.length === 0" class="alert alert-info">
+        Không có công ty phù hợp.
       </div>
 
       <div class="company" *ngFor="let company of paginatedCompanies">
@@ -20,15 +27,11 @@
 
   <!-- Pagination -->
   <div class="pagination">
-    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
-      Previous
-    </button>
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
     <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
       [class.active]="currentPage === i + 1">
       {{ i + 1 }}
     </button>
-    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
-      Next
-    </button>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
   </div>
 </div>

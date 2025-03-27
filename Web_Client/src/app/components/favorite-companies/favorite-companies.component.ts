@@ -5,20 +5,23 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CompanyFollowService } from '../../services/company-follow.service';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-favorite-companies',
   templateUrl: './favorite-companies.component.html',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, FormsModule],
   standalone: true,
   styleUrls: ['./favorite-companies.component.css']
 })
 export class FavoriteCompaniesComponent implements OnInit {
   favoriteCompanies: any[] = [];
+  filteredCompanies: any[] = []; // Danh sách sau khi tìm kiếm
   paginatedCompanies: any[] = [];
   currentPage: number = 1;
-  recordsPerPage: number = 5;  // Số lượng công ty hiển thị mỗi trang
+  recordsPerPage: number = 5;
   totalPages: number = 1;
+  searchQuery: string = ''; // Biến lưu từ khóa tìm kiếm
 
   constructor(
     private userService: UserService,
@@ -39,25 +42,35 @@ export class FavoriteCompaniesComponent implements OnInit {
     this.userService.getFavoriteCompanies().subscribe({
       next: (companies) => {
         this.favoriteCompanies = companies;
+        this.filteredCompanies = [...companies]; // Sao chép danh sách gốc
         this.updatePagination();
       },
       error: (error) => {
-        console.error('Error loading favorite companies:', error);
+        console.error('Lỗi khi tải danh sách công ty đã theo dõi:', error);
       }
     });
   }
 
+  // Hàm tìm kiếm công ty theo tên
+  searchCompanies(): void {
+    const searchText = this.searchQuery.toLowerCase().trim();
+    this.filteredCompanies = this.favoriteCompanies.filter(company =>
+      company.company.name.toLowerCase().includes(searchText)
+    );
+    this.updatePagination();
+  }
+
   // Cập nhật phân trang
   updatePagination() {
-    this.totalPages = Math.ceil(this.favoriteCompanies.length / this.recordsPerPage);
+    this.totalPages = Math.ceil(this.filteredCompanies.length / this.recordsPerPage);
     this.paginateCompanies();
   }
 
-  // Phân trang công ty
+  // Phân trang danh sách
   paginateCompanies() {
     const startIndex = (this.currentPage - 1) * this.recordsPerPage;
     const endIndex = startIndex + this.recordsPerPage;
-    this.paginatedCompanies = this.favoriteCompanies.slice(startIndex, endIndex);
+    this.paginatedCompanies = this.filteredCompanies.slice(startIndex, endIndex);
   }
 
   // Chuyển trang
@@ -68,16 +81,12 @@ export class FavoriteCompaniesComponent implements OnInit {
     }
   }
 
-  // Hàm toggle theo dõi công ty
+  // Toggle theo dõi công ty
   toggleFollow(event: Event, companyId: number) {
     event.stopPropagation();
     this.companyFollowService.toggleFollow(companyId)
       .subscribe(response => {
-        this.loadFavoriteCompanies(); // Reload the list after toggling
+        this.loadFavoriteCompanies(); // Reload danh sách sau khi bỏ theo dõi
       });
-  }
-
-  isFollowing(companyId: number): boolean {
-    return true; // Always true since this is the favorites list
   }
 }
