@@ -21,13 +21,13 @@ export class LoginpageComponent {
   onFormSubmit() {
     this.authService.login(this.model).subscribe({
       next: response => {
-        this.authService.setToken(response.token);
-        alert('Đăng nhập thành công!');
-        this.router.navigateByUrl('login/confirm');
+        localStorage.setItem('email', this.model.email); // Lưu email tạm thời
+        alert('Vui lòng kiểm tra email để nhập mã xác minh.');
+        this.router.navigate(['/login/confirm']);
       },
       error: () => {
         alert('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!');
       }
     });
-  }
+}
 }
