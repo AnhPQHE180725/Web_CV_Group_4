@@ -17,22 +17,15 @@
   <div *ngIf="!isLoading && !errorMessage && company" class="company-detail">
     <div class="company-header">
       <div class="company-logo-container">
-        <img
-          [src]="company.logo || 'assets/images/slide1.jpg'"
-          alt="{{ company.name }}"
-          class="company-logo"
-        />
+        <img [src]="company.logo || 'assets/images/slide1.jpg'" alt="{{ company.name }}" class="company-logo" />
       </div>
       <div class="company-title">
         <h1>{{ company.name }}</h1>
         <div class="status-container">
-          <span
-            class="status-badge"
-            [ngClass]="{
+          <span class="status-badge" [ngClass]="{
               active: company.status === 1,
               paused: company.status === 0
-            }"
-          >
+            }">
             {{ company.status === 1 ? "Hoạt động" : "Tạm ngưng" }}
           </span>
         </div>
@@ -61,10 +54,7 @@
             <div class="info-label">Số điện thoại:</div>
             <div class="info-value">{{ company.phoneNumber }}</div>
           </div>
-          <div
-            class="info-item no-data"
-            *ngIf="!company.address && !company.email && !company.phoneNumber"
-          >
+          <div class="info-item no-data" *ngIf="!company.address && !company.email && !company.phoneNumber">
             <div class="info-value">Không có thông tin liên hệ</div>
           </div>
         </div>
@@ -81,10 +71,7 @@
       </div>
     </div>
 
-    <div
-      class="jobs-section"
-      *ngIf="company.recruitments && company.recruitments.length > 0"
-    >
+    <div class="jobs-section" *ngIf="company.recruitments && company.recruitments.length > 0">
       <h2>Việc làm đang tuyển dụng</h2>
       <div class="jobs-list">
         <div class="job-card" *ngFor="let job of company.recruitments">
@@ -92,17 +79,12 @@
           <div *ngIf="job.salary" class="job-salary">
             <span>Lương: {{ job.salary }}</span>
           </div>
-          <a [routerLink]="['/recruitment', job.id]" class="view-job-btn"
-            >Xem chi tiết</a
-          >
+          <a [routerLink]="['/recruitment','detail', job.id]" class="view-job-btn">Xem chi tiết</a>
         </div>
       </div>
     </div>
 
-    <div
-      class="jobs-section"
-      *ngIf="!company.recruitments || company.recruitments.length === 0"
-    >
+    <div class="jobs-section" *ngIf="!company.recruitments || company.recruitments.length === 0">
       <h2>Việc làm đang tuyển dụng</h2>
       <div class="no-data">Hiện tại không có vị trí nào đang tuyển</div>
     </div>

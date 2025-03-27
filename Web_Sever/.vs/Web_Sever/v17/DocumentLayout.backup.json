@@ -49,19 +49,6 @@
           "SelectedChildIndex": 9,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RecruitmentVm.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
-              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\RecruitmentVm.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
-              "RelativeToolTip": "Web_Server\\ViewModels\\RecruitmentVm.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T03:13:22.706Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
@@ -87,6 +74,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecruitmentVm.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "RelativeToolTip": "Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:13:22.706Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "RecruitmentService.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAkwIMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T03:08:28.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T03:08:28.868Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "Web_Server\\Models\\Recruitment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T03:01:42.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T03:01:42.554Z"
             },
             {
               "$type": "Document",
@@ -134,8 +131,7 @@
               "RelativeToolTip": "Web_Server\\Controllers\\CVController.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAkwD8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:48:59.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T08:48:59.725Z"
             },
             {
               "$type": "Document",

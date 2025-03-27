@@ -22,12 +22,14 @@ import { FavoriteCompaniesComponent } from './components/favorite-companies/favo
 import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.component';
 import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
 import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
+import { RecruitmentDetailComponent } from './feature/recruitment/recruitment-detail/recruitment-detail.component';
 
 
 export const routes: Routes = [
     { path: 'recruitment/category/:id', component: RecruitmentListComponent },
     { path: 'recruitment/company/:id', component: RecruitmentListComponent },
     { path: 'recruitment', component: RecruitmentListComponent },
+    { path: 'recruitment/detail/:id', component: RecruitmentDetailComponent },
     { path: 'company', component: CompanyListComponent },
     { path: 'company/:id', component: CompanyDetailComponent },
     { path: 'recruiter', component: RecruiterHomepageComponent },
