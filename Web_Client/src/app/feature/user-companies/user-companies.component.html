@@ -1,0 +1,159 @@
+<h2>{{ pageTitle }}</h2>
+
+<div class="actions">
+  <button class="create-btn" (click)="showCreateForm()">Tạo công ty mới</button>
+</div>
+
+<div class="search-container">
+  <input type="text" [(ngModel)]="search" placeholder="Tìm kiếm tên công ty" />
+  <button class="search-btn" (click)="searchCompanies()">Tìm kiếm</button>
+</div>
+
+<!-- Form for creating/editing company -->
+<div class="form-container" *ngIf="showForm">
+  <div class="form-backdrop" (click)="cancelForm()"></div>
+  <div class="form-content">
+    <h3>{{ isEditing ? "Chỉnh sửa công ty" : "Tạo công ty mới" }}</h3>
+
+    <div class="form-group">
+      <label for="companyName"
+        >Tên công ty: <span class="required">*</span></label
+      >
+      <input
+        type="text"
+        id="companyName"
+        [(ngModel)]="currentCompany.name"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="companyDescription">Mô tả:</label>
+      <textarea
+        id="companyDescription"
+        [(ngModel)]="currentCompany.description"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="companyAddress">Địa chỉ:</label>
+      <input
+        type="text"
+        id="companyAddress"
+        [(ngModel)]="currentCompany.address"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="companyEmail">Email:</label>
+      <input
+        type="email"
+        id="companyEmail"
+        [(ngModel)]="currentCompany.email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="companyPhone">Số điện thoại:</label>
+      <input
+        type="tel"
+        id="companyPhone"
+        [(ngModel)]="currentCompany.phoneNumber"
+      />
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="companyLogo">Logo URL:</label>
+      <input type="text" id="companyLogo" [(ngModel)]="currentCompany.logo" />
+    </div> -->
+
+    <div class="form-group">
+      <label for="companyStatus">Trạng thái:</label>
+      <select id="companyStatus" [(ngModel)]="currentCompany.status">
+        <option [value]="1">Hoạt động</option>
+        <option [value]="0">Tạm ngưng</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <button class="cancel-btn" (click)="cancelForm()">Hủy</button>
+      <button class="save-btn" (click)="saveCompany()">
+        {{ isEditing ? "Cập nhật" : "Tạo mới" }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="paginatedCompanies.length > 0; else noResults">
+  <div class="companies">
+    <div class="company" *ngFor="let company of paginatedCompanies">
+      <div class="company-content">
+        <img
+          [src]="company.logo || 'assets/images/slide1.jpg'"
+          alt="{{ company.name }}"
+          class="company-logo clickable"
+          [routerLink]="['/company', company.id]"
+        />
+        <span class="company-name">{{ company.name }}</span>
+        <div class="company-details" *ngIf="company.description">
+          <p class="company-description">{{ company.description }}</p>
+        </div>
+        <div
+          class="company-contact"
+          *ngIf="company.address || company.email || company.phoneNumber"
+        >
+          <p *ngIf="company.address">
+            <strong>Địa chỉ:</strong> {{ company.address }}
+          </p>
+          <p *ngIf="company.email">
+            <strong>Email:</strong> {{ company.email }}
+          </p>
+          <p *ngIf="company.phoneNumber">
+            <strong>SĐT:</strong> {{ company.phoneNumber }}
+          </p>
+        </div>
+        <div class="company-status">
+          <span
+            class="status-badge"
+            [ngClass]="{
+              active: company.status === 1,
+              paused: company.status === 0
+            }"
+          >
+            {{ company.status === 1 ? "Hoạt động" : "Tạm ngưng" }}
+          </span>
+        </div>
+      </div>
+      <div class="company-actions">
+        <button class="edit-btn" (click)="editCompany(company)">Sửa</button>
+        <button class="delete-btn" (click)="deleteCompany(company.id)">
+          Xóa
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <button
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1"
+    >
+      {{ i + 1 }}
+    </button>
+    <button
+      (click)="goToPage(currentPage + 1)"
+      [disabled]="currentPage === totalPages"
+    >
+      Next
+    </button>
+  </div>
+</div>
+
+<ng-template #noResults>
+  <p>Bạn chưa có công ty nào. Hãy tạo công ty mới!</p>
+</ng-template>
