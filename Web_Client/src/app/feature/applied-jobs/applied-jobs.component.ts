@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Recruitment } from '../../models/Recruitment';
 import { ApplicationService } from '../../services/application.service';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
@@ -14,14 +13,16 @@ import { Router } from '@angular/router';
   styleUrl: './applied-jobs.component.css'
 })
 export class AppliedJobsComponent implements OnInit {
-  favoriteJobs: any[] = [];
+  appliedJobs: any[] = [];
+  filteredJobs: any[] = []; // Danh sách sau khi tìm kiếm
   paginatedJobs: any[] = [];
   currentPage: number = 1;
-  recordsPerPage: number = 5;  // Số công việc mỗi trang
+  recordsPerPage: number = 5;
   totalPages: number = 1;
 
-  appliedJobs: any[] = [];
-  pageTitle: string = 'Công việc đã ứng tuyển';
+  // Biến tìm kiếm
+  searchQuery: string = '';
+  salaryQuery: string = '';
 
   constructor(
     private applicationService: ApplicationService,
@@ -37,31 +38,46 @@ export class AppliedJobsComponent implements OnInit {
     this.loadAppliedJobs();
   }
 
-  loadAppliedJobs() {
+  private loadAppliedJobs() {
     this.applicationService.getAppliedJobs().subscribe(
       (data) => {
         this.appliedJobs = data;
-        console.log(this.appliedJobs);
+        this.filteredJobs = [...data]; // Sao chép danh sách gốc
+        this.updatePagination();
       },
-      (error) => console.error('Error fetching applied jobs:', error)
+      (error) => console.error('Lỗi khi tải danh sách công việc đã ứng tuyển:', error)
     );
   }
 
-  // Phân trang
-  updatePagination() {
-    this.totalPages = Math.ceil(this.favoriteJobs.length / this.recordsPerPage);
+  // Hàm tìm kiếm theo tên hoặc lương
+  searchJobs(): void {
+    const searchSalary = this.salaryQuery ? parseFloat(this.salaryQuery) : null;
+    const searchText = this.searchQuery.toLowerCase().trim();
+
+    this.filteredJobs = this.appliedJobs.filter(job => {
+      const matchesTitle = searchText ? job.recruitment.title.toLowerCase().includes(searchText) : true;
+      const matchesSalary = searchSalary !== null ? parseFloat(job.recruitment.salary) === searchSalary : true;
+      return matchesTitle && matchesSalary;
+    });
+
+    this.updatePagination();
+  }
+
+  // Cập nhật phân trang
+  updatePagination(): void {
+    this.totalPages = Math.ceil(this.filteredJobs.length / this.recordsPerPage);
     this.paginateJobs();
   }
 
-  // Cập nhật các công việc theo trang
-  paginateJobs() {
+  // Cập nhật danh sách theo trang
+  paginateJobs(): void {
     const startIndex = (this.currentPage - 1) * this.recordsPerPage;
     const endIndex = startIndex + this.recordsPerPage;
-    this.paginatedJobs = this.favoriteJobs.slice(startIndex, endIndex);
+    this.paginatedJobs = this.filteredJobs.slice(startIndex, endIndex);
   }
 
-  // Chuyển sang trang kế tiếp
-  goToPage(page: number) {
+  // Chuyển trang
+  goToPage(page: number): void {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
       this.paginateJobs();
