@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G/hijLfvZhYMzw4lz0tLurf41sw1s5qav4yCm04oFyA=",
+  "Hash": "qD8o2xruTQPG1guUX4V34+BpnGfDtffBRWhBJE9ZCws=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -120,6 +120,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CVs\\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf"
+    },
+    {
+      "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5hzxo5d2su",
+      "Integrity": "JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf"
     },
     {
       "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf",
@@ -702,6 +723,88 @@
       ]
     },
     {
+      "Route": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.5hzxo5d2su.pdf",
+      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5hzxo5d2su"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    },
+    {
       "Route": "CVs/4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.odferd1ui5.pdf",
       "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf",
       "Selectors": [],
@@ -806,7 +909,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 04:06:21 GMT"
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -851,7 +954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 04:06:21 GMT"
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
         },
         {
           "Name": "Cache-Control",

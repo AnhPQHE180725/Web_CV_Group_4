@@ -3,6 +3,7 @@ wwwroot\CVs\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf
 wwwroot\CVs\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf
 wwwroot\CVs\328b6c80-8ade-4a09-984b-afdc094ea5fd_DSA_Assignment2_Opt01 - Linked List.pdf
 wwwroot\CVs\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf
+wwwroot\CVs\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf
 wwwroot\CVs\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf
 wwwroot\CVs\53150e0c-904a-4bda-9718-05bd580c9102_GuideToInstallAngular.pdf
 wwwroot\CVs\5c358c02-a6b7-43f1-b12e-50807f2a1eb3_[FPTU] CV Intern C#_Net - Nguyen Tran Trong Hieu.pdf

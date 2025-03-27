@@ -413,6 +413,88 @@
       ]
     },
     {
+      "Route": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.5hzxo5d2su.pdf",
+      "AssetFile": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5hzxo5d2su"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "AssetFile": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    },
+    {
       "Route": "CVs/4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.odferd1ui5.pdf",
       "AssetFile": "CVs/4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf",
       "Selectors": [],
@@ -521,7 +603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 04:06:21 GMT"
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
         }
       ],
       "EndpointProperties": [
@@ -566,7 +648,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 04:06:21 GMT"
+          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
         }
       ],
       "EndpointProperties": [

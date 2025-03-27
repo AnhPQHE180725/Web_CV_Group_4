@@ -23,6 +23,11 @@ export class UserCompaniesComponent implements OnInit {
     search: string = '';
     filteredCompanies: Company[] = [];
 
+    // Biến lưu giá trị tìm kiếm
+    searchName: string = '';
+    searchAddress: string = '';
+    searchPhone: string = '';
+
     // For creating/editing company
     isEditing: boolean = false;
     showForm: boolean = false;
@@ -46,6 +51,7 @@ export class UserCompaniesComponent implements OnInit {
     ngOnInit() {
         this.loadUserCompanies();
     }
+
 
     loadUserCompanies() {
         this.companyService.getUserCompanies().subscribe(
@@ -74,14 +80,22 @@ export class UserCompaniesComponent implements OnInit {
         this.paginatedCompanies = this.filteredCompanies.slice(startIndex, startIndex + this.recordsPerPage);
     }
 
+
+    searchTerm: string = '';
+
     searchCompanies() {
-        if (!this.search) {
+        if (!this.searchTerm.trim()) {
             this.filteredCompanies = [...this.companies];
         } else {
+            const searchLower = this.searchTerm.toLowerCase();
+
             this.filteredCompanies = this.companies.filter(company =>
-                company.name.toLowerCase().includes(this.search.toLowerCase())
+                company.name.toLowerCase().includes(searchLower) ||
+                (company.address && company.address.toLowerCase().includes(searchLower)) ||
+                (company.phoneNumber && company.phoneNumber.includes(searchLower))
             );
         }
+
         this.updatePagination();
     }
 
