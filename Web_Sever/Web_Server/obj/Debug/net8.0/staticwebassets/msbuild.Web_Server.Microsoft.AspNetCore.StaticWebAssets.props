@@ -1,5 +1,77 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Web_Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Web_Server</BasePath>
+      <RelativePath>CompanyLogos/728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>njyljulehi</Fingerprint>
+      <Integrity>I50i0X1fgegDK8gRUS/pxnF69gFrqqvMGgH77Er229Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Web_Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Web_Server</BasePath>
+      <RelativePath>CompanyLogos/9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>w1yp0ed93k</Fingerprint>
+      <Integrity>XH+xxzGCUori+yk/qmD2pLFirMNTVul3SR2rpg+tBw4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Web_Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Web_Server</BasePath>
+      <RelativePath>CompanyLogos/d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wdmxlvkngm</Fingerprint>
+      <Integrity>lADJlN1HfAIjWiv20SRdZ2IDdk5riQsoKW1PReDJbqs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Web_Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Web_Server</BasePath>
+      <RelativePath>CompanyLogos/da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>eu75gu2eav</Fingerprint>
+      <Integrity>9p64ug3xyChIAMFsm9L2ktFxfKz4VZKdhHT7XsT/wS0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>Web_Server</SourceId>

@@ -170,12 +170,12 @@ export class ApplyDialogComponent {
         this.introduction
       ).subscribe({
         next: () => {
-          alert('Ứng tuyển thành công!');
+          alert('Bạn đã ứng tuyển thành công!');
           this.dialogRef.close(true);
         },
         error: (error) => {
           console.error('Lỗi khi ứng tuyển:', error);
-          alert('Ứng tuyển thất bại. ' + error.error.message);
+          alert(error.error.message);
         }
       });
     } else if (this.selectedOption === 'new' && this.newCvFile) {
@@ -190,7 +190,7 @@ export class ApplyDialogComponent {
         },
         error: (error) => {
           console.error('Lỗi khi ứng tuyển:', error);
-          alert('Ứng tuyển thất bại. ' + error.error.message);
+          alert(error.error.message);
         }
       });
     }

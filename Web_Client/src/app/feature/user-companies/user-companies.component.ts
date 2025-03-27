@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Company } from '../../models/Company';
@@ -14,6 +14,10 @@ import { AuthService } from '../../services/auth.service';
     styleUrl: './user-companies.component.css'
 })
 export class UserCompaniesComponent implements OnInit {
+    // New properties for logo preview
+    logoPreviewUrl: string | ArrayBuffer | null = null;
+    @ViewChild('logoFileInput') logoFileInput!: ElementRef<HTMLInputElement>;
+
     companies: Company[] = [];
     paginatedCompanies: Company[] = [];
     currentPage: number = 1;
@@ -52,86 +56,54 @@ export class UserCompaniesComponent implements OnInit {
     ngOnInit() {
         this.loadUserCompanies();
     }
-
-
-    loadUserCompanies() {
-        this.companyService.getUserCompanies().subscribe(
-            (data) => {
-                this.companies = data;
-                this.filteredCompanies = [...data];
-                this.updatePagination();
-            },
-            (error) => {
-                console.error('Error fetching user companies:', error);
-                if (error.status === 401) {
-                    alert('Please log in to view your companies');
-                }
+    // Logo preview methods
+    onLogoSelected(event: any) {
+        const file = event.target.files[0];
+        if (file) {
+            // Validate file type
+            if (!this.isValidImageFile(file)) {
+                alert('Chỉ chấp nhận file ảnh (JPEG, PNG, GIF, JPG)');
+                this.resetLogoPreview();
+                return;
             }
-        );
-    }
 
-    updatePagination() {
-        this.totalPages = Math.ceil(this.filteredCompanies.length / this.recordsPerPage);
-        this.goToPage(1);
-    }
+            // Create file reader for preview
+            const reader = new FileReader();
+            reader.onload = (e: any) => {
+                // Set preview URL
+                this.logoPreviewUrl = e.target.result;
+            };
 
-    goToPage(page: number) {
-        this.currentPage = page;
-        const startIndex = (this.currentPage - 1) * this.recordsPerPage;
-        this.paginatedCompanies = this.filteredCompanies.slice(startIndex, startIndex + this.recordsPerPage);
-    }
+            // Read the file as data URL
+            reader.readAsDataURL(file);
 
-
-    searchTerm: string = '';
-
-    searchCompanies() {
-        if (!this.searchTerm.trim()) {
-            this.filteredCompanies = [...this.companies];
-        } else {
-            const searchLower = this.searchTerm.toLowerCase();
-
-            this.filteredCompanies = this.companies.filter(company =>
-                company.name.toLowerCase().includes(searchLower) ||
-                (company.address && company.address.toLowerCase().includes(searchLower)) ||
-                (company.phoneNumber && company.phoneNumber.includes(searchLower))
-            );
+            // Store the file for upload
+            this.selectedLogoFile = file;
         }
-
-        this.updatePagination();
     }
 
-    // Validation methods
-    isValidEmail(email: string): boolean {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+    // Reset logo preview and file input
+    resetLogoPreview() {
+        // Reset preview
+        this.logoPreviewUrl = null;
+        this.selectedLogoFile = null;
+
+        // Reset file input using ViewChild
+        if (this.logoFileInput) {
+            this.logoFileInput.nativeElement.value = '';
+        }
     }
 
-    isValidPhoneNumber(phone: string): boolean {
-        const phoneRegex = /^\d{10}$/;
-        return phoneRegex.test(phone);
-    }
-
+    // Validate image file
     isValidImageFile(file: File): boolean {
         const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/jpg'];
         return validTypes.includes(file.type);
     }
 
-    onLogoSelected(event: any) {
-        const file = event.target.files[0];
-        if (file) {
-            if (!this.isValidImageFile(file)) {
-                alert('Chỉ chấp nhận file ảnh (JPEG, PNG, GIF, JPG)');
-                event.target.value = '';
-                return;
-            }
-            this.selectedLogoFile = file;
-        }
-    }
-
     // Create new company form
     showCreateForm() {
         this.isEditing = false;
-        this.selectedLogoFile = null;
+        this.resetLogoPreview();
         this.currentCompany = {
             id: 0,
             name: '',
@@ -149,8 +121,9 @@ export class UserCompaniesComponent implements OnInit {
     // Edit existing company
     editCompany(company: Company) {
         this.isEditing = true;
-        this.selectedLogoFile = null;
+        this.resetLogoPreview();
         this.currentCompany = { ...company };
+
         // If the existing company doesn't have the new fields, initialize them
         if (!this.currentCompany.description) this.currentCompany.description = '';
         if (!this.currentCompany.address) this.currentCompany.address = '';
@@ -161,8 +134,15 @@ export class UserCompaniesComponent implements OnInit {
         this.showForm = true;
     }
 
-    // Save company (create or update)
+    // Cancel form
+    cancelForm() {
+        this.showForm = false;
+        this.resetLogoPreview();
+    }
+
+    // Save company method
     saveCompany() {
+       
         // Validate required fields
         if (!this.currentCompany.name.trim()) {
             alert('Vui lòng nhập tên công ty!');
@@ -186,7 +166,6 @@ export class UserCompaniesComponent implements OnInit {
             alert('Vui lòng chọn logo cho công ty!');
             return;
         }
-
         if (this.isEditing) {
             this.companyService.updateCompany(this.currentCompany, this.selectedLogoFile || undefined).subscribe(
                 (response) => {
@@ -224,6 +203,62 @@ export class UserCompaniesComponent implements OnInit {
         }
     }
 
+    loadUserCompanies() {
+        this.companyService.getUserCompanies().subscribe(
+            (data) => {
+                this.companies = data;
+                this.filteredCompanies = [...data];
+                this.updatePagination();
+            },
+            (error) => {
+                console.error('Error fetching user companies:', error);
+                if (error.status === 401) {
+                    alert('Please log in to view your companies');
+                }
+            }
+        );
+    }
+
+    updatePagination() {
+        this.totalPages = Math.ceil(this.filteredCompanies.length / this.recordsPerPage);
+        this.goToPage(1);
+    }
+
+    goToPage(page: number) {
+        this.currentPage = page;
+        const startIndex = (this.currentPage - 1) * this.recordsPerPage;
+        this.paginatedCompanies = this.filteredCompanies.slice(startIndex, startIndex + this.recordsPerPage);
+    }
+
+    searchTerm: string = '';
+
+    searchCompanies() {
+        if (!this.searchTerm.trim()) {
+            this.filteredCompanies = [...this.companies];
+        } else {
+            const searchLower = this.searchTerm.toLowerCase();
+
+            this.filteredCompanies = this.companies.filter(company =>
+                company.name.toLowerCase().includes(searchLower) ||
+                (company.address && company.address.toLowerCase().includes(searchLower)) ||
+                (company.phoneNumber && company.phoneNumber.includes(searchLower))
+            );
+        }
+
+        this.updatePagination();
+    }
+
+    // Validation methods
+    isValidEmail(email: string): boolean {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    isValidPhoneNumber(phone: string): boolean {
+        const phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+    }
+
     // Delete company
     deleteCompany(id: number) {
         if (confirm('Bạn có chắc chắn muốn xóa công ty này?')) {
@@ -238,11 +273,5 @@ export class UserCompaniesComponent implements OnInit {
                 }
             );
         }
-    }
-
-    // Cancel form
-    cancelForm() {
-        this.showForm = false;
-        this.selectedLogoFile = null;
     }
 } 
