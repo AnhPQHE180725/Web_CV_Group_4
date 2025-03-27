@@ -164,6 +164,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "ResendOtp",
+    "RelativePath": "api/Authentication/resend-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resendOtpVm",
+        "Type": "Web_Server.ViewModels.ResendOtpVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "ResetPassword",
     "RelativePath": "api/Authentication/reset-password",
     "HttpMethod": "GET",
@@ -210,6 +226,22 @@
       {
         "Name": "model",
         "Type": "Web_Server.ViewModels.UserVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/Authentication/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web_Server.ViewModels.VerifyOtpRequest",
         "IsRequired": true
       }
     ],
