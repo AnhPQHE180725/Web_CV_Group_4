@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\migrations\\20250327035631_initaldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\migrations\\20250327035631_initaldb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\migrations\\20250326135004_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\migrations\\20250326135004_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\github\\web_cv_group_4\\web_sever\\web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,19 +74,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ResendOtpVm.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\ResendOtpVm.cs",
-              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\ResendOtpVm.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\ResendOtpVm.cs",
-              "RelativeToolTip": "Web_Server\\ViewModels\\ResendOtpVm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20250327035631_InitalDb.cs",
+              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250327035631_InitalDb.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250327035631_InitalDb.cs",
+              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250327035631_InitalDb.cs",
+              "RelativeToolTip": "Web_Server\\Migrations\\20250327035631_InitalDb.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T03:38:26.695Z"
+              "WhenOpened": "2025-03-27T03:56:31.91Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "VerifyOtpRequest.cs",
               "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\VerifyOtpRequest.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\VerifyOtpRequest.cs",
@@ -98,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IEmailService.cs",
@@ -110,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",
@@ -123,7 +124,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "ResendOtpVm.cs",
+              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\ResendOtpVm.cs",
+              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\ResendOtpVm.cs",
+              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\ResendOtpVm.cs",
+              "RelativeToolTip": "Web_Server\\ViewModels\\ResendOtpVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:38:26.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\UserService.cs",
@@ -135,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EmailService.cs",
               "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\EmailService.cs",
@@ -144,18 +157,6 @@
               "ViewState": "AgIAAFEAAAAAAAAAAAAswGEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T02:26:33.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250326135004_db.cs",
-              "DocumentMoniker": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250326135004_db.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Migrations\\20250326135004_db.cs",
-              "ToolTip": "D:\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Migrations\\20250326135004_db.cs",
-              "RelativeToolTip": "Web_Server\\Migrations\\20250326135004_db.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T13:50:04.698Z"
             },
             {
               "$type": "Document",

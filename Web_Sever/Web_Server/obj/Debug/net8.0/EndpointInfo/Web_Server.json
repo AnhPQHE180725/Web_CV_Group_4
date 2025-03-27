@@ -1677,7 +1677,7 @@
           },
           "deadline": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "company": {
             "$ref": "#/components/schemas/Company"
@@ -1749,7 +1749,7 @@
           },
           "deadline": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "companyName": {
             "type": "string",

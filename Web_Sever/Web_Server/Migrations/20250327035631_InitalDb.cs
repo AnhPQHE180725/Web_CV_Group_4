@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Web_Server.Migrations
 {
     /// <inheritdoc />
-    public partial class db : Migration
+    public partial class InitalDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -155,7 +155,7 @@ namespace Web_Server.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     View = table.Column<int>(type: "int", nullable: false),
-                    Deadline = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Deadline = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CompanyId = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: true)
@@ -241,8 +241,26 @@ namespace Web_Server.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { 1, "Software Engineering" },
-                    { 2, "Data Science" }
+                    { 1, "Công nghệ thông tin (IT)" },
+                    { 2, "Chăm sóc sức khỏe & Y tế" },
+                    { 3, "Giáo dục & Giảng dạy" },
+                    { 4, "Kỹ thuật & Xây dựng" },
+                    { 5, "Tài chính & Kế toán" },
+                    { 6, "Bán hàng & Tiếp thị" },
+                    { 7, "Nhân sự (HR) & Tuyển dụng" },
+                    { 8, "Dịch vụ khách hàng & Hỗ trợ" },
+                    { 9, "Pháp lý & Tuân thủ" },
+                    { 10, "Sáng tạo & Thiết kế" },
+                    { 11, "Sản xuất & Chế tạo" },
+                    { 12, "Logistics & Chuỗi cung ứng" },
+                    { 13, "Bán lẻ & Thương mại điện tử" },
+                    { 14, "Khách sạn & Du lịch" },
+                    { 15, "Khoa học & Nghiên cứu" },
+                    { 16, "Quan hệ công chúng (PR) & Truyền thông" },
+                    { 17, "Công tác xã hội & Phi lợi nhuận" },
+                    { 18, "Bất động sản & Quản lý tài sản" },
+                    { 19, "Truyền thông & Giải trí" },
+                    { 20, "Ô tô & Vận tải" }
                 });
 
             migrationBuilder.InsertData(
@@ -259,17 +277,16 @@ namespace Web_Server.Migrations
                 columns: new[] { "Id", "Address", "CVId", "Description", "Email", "FullName", "Image", "Password", "PhoneNumber", "RoleId", "Status" },
                 values: new object[,]
                 {
-                    { 1, "123 Main St", 1, "Software Developer", "john@example.com", "John Doe", "test", "hashedpassword", "1234567890", 1, 1 },
-                    { 2, "456 Elm St", 2, "Data Analyst", "jane@example.com", "Jane Smith", "test", "hashedpassword", "9876543210", 2, 1 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "CVs",
-                columns: new[] { "Id", "Name", "UserId" },
-                values: new object[,]
-                {
-                    { 1, "John's CV", 1 },
-                    { 2, "Jane's CV", 2 }
+                    { 1, "123 Main St", 1, "A software developer", "alice@example.com", "Alice Johnson", "alice.jpg", "pass123", "0123456789", 1, 1 },
+                    { 2, "456 Elm St", 2, "A data analyst", "bob@example.com", "Bob Smith", "bob.jpg", "pass456", "0987654321", 1, 1 },
+                    { 3, "789 Oak St", 3, "A project manager", "charlie@example.com", "Charlie Brown", "charlie.jpg", "pass789", "0112233445", 1, 1 },
+                    { 4, "321 Pine St", 4, "A system admin", "david@example.com", "David Lee", "david.jpg", "pass101", "0223344556", 2, 1 },
+                    { 5, "654 Maple St", 5, "A marketing specialist", "emma@example.com", "Emma Watson", "emma.jpg", "pass202", "0334455667", 1, 1 },
+                    { 6, "987 Birch St", 6, "A financial advisor", "frank@example.com", "Frank Miller", "frank.jpg", "pass303", "0445566778", 1, 1 },
+                    { 7, "159 Cedar St", 7, "A UI/UX designer", "grace@example.com", "Grace Davis", "grace.jpg", "pass404", "0556677889", 1, 1 },
+                    { 8, "753 Walnut St", 8, "A content writer", "henry@example.com", "Henry Wilson", "henry.jpg", "pass505", "0667788990", 1, 1 },
+                    { 9, "852 Fir St", 9, "A HR manager", "isabella@example.com", "Isabella Thomas", "isabella.jpg", "pass606", "0778899001", 1, 1 },
+                    { 10, "951 Palm St", 10, "A sales executive", "jack@example.com", "Jack Martinez", "jack.jpg", "pass707", "0889900112", 1, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -277,17 +294,16 @@ namespace Web_Server.Migrations
                 columns: new[] { "Id", "Address", "Description", "Email", "Logo", "Name", "PhoneNumber", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "789 Market St", "A leading tech company", "contact@techcorp.com", "a", "Tech Corp", "1112223333", 1, 1 },
-                    { 2, "321 Wall St", "A finance firm", "info@financeinc.com", "a", "Finance Inc", "4445556666", 1, 2 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "FollowCompanies",
-                columns: new[] { "Id", "CompanyId", "UserId" },
-                values: new object[,]
-                {
-                    { 1, 2, 1 },
-                    { 2, 1, 2 }
+                    { 1, "Hà Nội, Việt Nam", "Công ty phần mềm hàng đầu Việt Nam", "contact@fpt.com", "a", "FPT Software", "024-73007300", 1, 4 },
+                    { 2, "Cần Thơ, Việt Nam", "Công ty dược phẩm lớn nhất Việt Nam", "info@dhgpharma.com", "a", "DHG Pharma", "0292-3891433", 1, 4 },
+                    { 3, "Hà Nội, Việt Nam", "Hệ thống giáo dục chất lượng cao", "info@vinschool.edu.vn", "a", "Vinschool", "024-39757483", 1, 4 },
+                    { 4, "TP. Hồ Chí Minh, Việt Nam", "Công ty xây dựng hàng đầu Việt Nam", "contact@coteccons.vn", "a", "Coteccons", "028-38220800", 1, 4 },
+                    { 5, "Hà Nội, Việt Nam", "Ngân hàng thương mại hàng đầu", "support@mbbank.com.vn", "a", "MB Bank", "024-37674050", 1, 4 },
+                    { 6, "TP. Hồ Chí Minh, Việt Nam", "Nền tảng thương mại điện tử lớn", "support@tiki.vn", "a", "Tiki", "1900-6035", 1, 4 },
+                    { 7, "TP. Hồ Chí Minh, Việt Nam", "Công ty logistics hàng đầu", "info@gemadept.com.vn", "a", "Gemadept", "028-39111333", 1, 4 },
+                    { 8, "Nha Trang, Việt Nam", "Chuỗi khách sạn và nghỉ dưỡng cao cấp", "info@vinpearl.com", "a", "Vinpearl", "1900-232389", 1, 4 },
+                    { 9, "Hà Nội, Việt Nam", "Tập đoàn đa ngành lớn nhất Việt Nam", "contact@vingroup.net", "a", "Vingroup", "024-39749999", 1, 4 },
+                    { 10, "Hải Phòng, Việt Nam", "Hãng sản xuất ô tô hàng đầu Việt Nam", "support@vinfast.vn", "a", "VinFast", "1900-232389", 1, 4 }
                 });
 
             migrationBuilder.InsertData(
@@ -295,26 +311,45 @@ namespace Web_Server.Migrations
                 columns: new[] { "Id", "Address", "CategoryId", "CompanyId", "CreatedAt", "Deadline", "Description", "Experience", "Quantity", "Rank", "Salary", "Status", "Title", "Type", "UserId", "View" },
                 values: new object[,]
                 {
-                    { 1, "Hanoi", 1, 1, new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), ".", "Looking for a full-stack developer", "2 years", 10, "S", 80000.0, 1, "Software Developer", "Full-Time", null, 100 },
-                    { 2, "Hanoi", 2, 2, new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), ".", "Seeking an experienced data analyst", "3 years", 10, "S", 75000.0, 1, "Data Analyst", "Full-Time", null, 100 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "ApplyPosts",
-                columns: new[] { "Id", "CVName", "CreatedAt", "RecruitmentId", "Status", "Text", "UserId" },
-                values: new object[,]
-                {
-                    { 1, "Jane's CV", new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 0, "Applying for Software Developer", 2 },
-                    { 2, "John's CV", new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, 0, "Applying for Data Analyst", 1 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "FollowJobs",
-                columns: new[] { "Id", "RecruitmentId", "UserId" },
-                values: new object[,]
-                {
-                    { 1, 2, 1 },
-                    { 2, 1, 2 }
+                    { 1, "Hà Nội", 1, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lập trình viên Java", "Senior", 5, "A", 25.0, 2, "Tuyển lập trình viên Java", "Full-time", null, 150 },
+                    { 2, "TP. HCM", 1, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kỹ sư phần mềm", "Mid", 3, "B", 30.0, 3, "Tuyển kỹ sư phần mềm", "Full-time", null, 2 },
+                    { 3, "Đà Nẵng", 1, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lập trình viên Fresher", "Fresher", 10, "C", 12.0, 0, "Tuyển fresher lập trình", "Intern", null, 50 },
+                    { 4, "Hà Nội", 2, 2, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Bác sĩ đa khoa", "Senior", 2, "A", 35.0, 5, "Tuyển bác sĩ đa khoa", "Full-time", null, 180 },
+                    { 5, "TP. HCM", 2, 2, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Y tá điều dưỡng", "Mid", 5, "B", 18.0, 2, "Tuyển y tá điều dưỡng", "Full-time", null, 90 },
+                    { 6, "Đà Nẵng", 2, 2, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kỹ thuật viên xét nghiệm", "Mid", 4, "B", 22.0, 3, "Tuyển kỹ thuật viên xét nghiệm", "Full-time", null, 120 },
+                    { 7, "Hà Nội", 3, 3, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Giáo viên tiếng Anh", "Senior", 3, "A", 30.0, 2, "Tuyển giáo viên tiếng Anh", "Full-time", null, 220 },
+                    { 8, "TP. HCM", 3, 3, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), "Trợ giảng Toán", "Junior", 4, "C", 15.0, 1, "Tuyển trợ giảng Toán", "Part-time", null, 70 },
+                    { 9, "Đà Nẵng", 3, 3, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Giảng viên Đại học", "Senior", 2, "A", 40.0, 5, "Tuyển giảng viên đại học", "Full-time", null, 3 },
+                    { 10, "Hà Nội", 4, 4, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kỹ sư xây dựng", "Mid", 4, "B", 28.0, 3, "Tuyển kỹ sư xây dựng", "Full-time", null, 175 },
+                    { 11, "TP. HCM", 4, 4, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kiến trúc sư", "Senior", 2, "A", 38.0, 4, "Tuyển kiến trúc sư", "Full-time", null, 240 },
+                    { 12, "Đà Nẵng", 4, 4, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kỹ thuật viên điện", "Junior", 5, "C", 20.0, 2, "Tuyển kỹ thuật viên điện", "Full-time", null, 95 },
+                    { 13, "Hà Nội", 5, 5, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kế toán trưởng", "Senior", 2, "A", 45.0, 5, "Tuyển kế toán trưởng", "Full-time", null, 260 },
+                    { 14, "TP. HCM", 5, 5, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chuyên viên tài chính", "Mid", 4, "B", 30.0, 3, "Tuyển chuyên viên tài chính", "Full-time", null, 180 },
+                    { 15, "Đà Nẵng", 5, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "Nhân viên thuế", "Junior", 6, "C", 22.0, 2, "Tuyển nhân viên thuế", "Full-time", null, 110 },
+                    { 16, "Hà Nội", 6, 6, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chuyên viên marketing", "Mid", 4, "B", 28.0, 3, "Tuyển chuyên viên marketing", "Full-time", null, 150 },
+                    { 17, "TP. HCM", 6, 6, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chuyên gia SEO", "Senior", 3, "A", 35.0, 2, "Tuyển chuyên gia SEO", "Full-time", null, 2 },
+                    { 18, "Đà Nẵng", 6, 6, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), "Thực tập sinh marketing", "Fresher", 6, "C", 12.0, 1, "Tuyển thực tập sinh marketing", "Intern", null, 80 },
+                    { 19, "Hà Nội", 7, 7, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chăm sóc khách hàng", "Junior", 8, "B", 18.0, 2, "Tuyển nhân viên chăm sóc khách hàng", "Full-time", null, 130 },
+                    { 20, "TP. HCM", 7, 7, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Nhân viên telesales", "Junior", 10, "C", 20.0, 3, "Tuyển nhân viên telesales", "Full-time", null, 110 },
+                    { 21, "Đà Nẵng", 7, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Trưởng nhóm CSKH", "Mid", 3, "A", 28.0, 4, "Tuyển trưởng nhóm CSKH", "Full-time", null, 170 },
+                    { 22, "Hà Nội", 8, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "Quản lý kho vận", "Senior", 2, "A", 40.0, 5, "Tuyển quản lý kho vận", "Full-time", null, 250 },
+                    { 23, "TP. HCM", 8, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Nhân viên vận hành logistics", "Mid", 6, "B", 30.0, 2, "Tuyển nhân viên vận hành logistics", "Full-time", null, 180 },
+                    { 24, "Đà Nẵng", 8, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Tài xế giao hàng", "Junior", 10, "C", 22.0, 1, "Tuyển tài xế giao hàng", "Full-time", null, 120 },
+                    { 25, "Hà Nội", 11, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chuyên viên pháp lý", "Mid", 4, "B", 30.0, 3, "Tuyển chuyên viên pháp lý", "Full-time", null, 90 },
+                    { 26, "TP. HCM", 11, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Luật sư doanh nghiệp", "Senior", 2, "A", 50.0, 5, "Tuyển luật sư doanh nghiệp", "Full-time", null, 110 },
+                    { 27, "Đà Nẵng", 11, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Trợ lý luật sư", "Junior", 6, "C", 22.0, 1, "Tuyển trợ lý luật sư", "Full-time", null, 130 },
+                    { 28, "Hà Nội", 12, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Thiết kế đồ họa", "Mid", 4, "B", 25.0, 2, "Tuyển thiết kế đồ họa", "Full-time", null, 150 },
+                    { 29, "TP. HCM", 12, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), "UI/UX Designer", "Mid", 3, "B", 30.0, 3, "Tuyển UI/UX Designer", "Full-time", null, 170 },
+                    { 30, "Đà Nẵng", 12, 9, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Thiết kế nội thất", "Mid", 4, "B", 28.0, 2, "Tuyển nhân viên thiết kế nội thất", "Full-time", null, 190 },
+                    { 31, "Hà Nội", 13, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Công nhân sản xuất", "Junior", 10, "C", 15.0, 1, "Tuyển công nhân sản xuất", "Full-time", null, 210 },
+                    { 32, "TP. HCM", 13, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kỹ sư cơ khí", "Mid", 4, "B", 35.0, 3, "Tuyển kỹ sư cơ khí", "Full-time", null, 230 },
+                    { 33, "Đà Nẵng", 13, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Giám sát sản xuất", "Senior", 3, "A", 40.0, 4, "Tuyển giám sát sản xuất", "Full-time", null, 250 },
+                    { 34, "Hà Nội", 15, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Nhân viên bán hàng online", "Junior", 6, "C", 14.0, 1, "Tuyển nhân viên bán hàng online", "Full-time", null, 30 },
+                    { 35, "TP. HCM", 15, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), "Quản lý cửa hàng", "Mid", 3, "B", 28.0, 3, "Tuyển quản lý cửa hàng", "Full-time", null, 50 },
+                    { 36, "Đà Nẵng", 15, 1, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chuyên viên TMĐT", "Mid", 4, "B", 30.0, 2, "Tuyển chuyên viên TMĐT", "Full-time", null, 70 },
+                    { 37, "Hà Nội", 16, 8, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lễ tân khách sạn", "Junior", 5, "C", 16.0, 1, "Tuyển lễ tân khách sạn", "Full-time", null, 90 },
+                    { 38, "TP. HCM", 16, 8, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Quản lý khách sạn", "Senior", 2, "A", 45.0, 5, "Tuyển quản lý khách sạn", "Full-time", null, 110 },
+                    { 39, "Đà Nẵng", 16, 8, new DateTime(2025, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), "Hướng dẫn viên du lịch", "Mid", 4, "B", 22.0, 2, "Tuyển hướng dẫn viên du lịch", "Full-time", null, 130 }
                 });
 
             migrationBuilder.CreateIndex(
