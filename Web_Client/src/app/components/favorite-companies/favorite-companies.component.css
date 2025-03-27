@@ -42,12 +42,16 @@
 }
 
 .follow-btn {
-  width: 100%;
+  width: 10%;
   padding: 8px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
+  /* Đảm bảo nút chiếm toàn bộ hàng */
+  margin: 0 auto;
+  /* Căn giữa */
 }
 
 .follow-btn.followed {

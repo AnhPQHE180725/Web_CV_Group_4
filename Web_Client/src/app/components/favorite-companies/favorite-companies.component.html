@@ -5,26 +5,15 @@
       <div *ngIf="favoriteCompanies.length === 0" class="alert alert-info">
         Bạn chưa theo dõi công ty nào.
       </div>
-      <div class="companies">
-        <div class="company" *ngFor="let company of paginatedCompanies">
-          <div
-            class="company-content clickable"
-            [routerLink]="['/recruitment', 'company', company.companyId]"
-          >
-            <img
-              [src]="'assets/images/slide1.jpg'"
-              alt="{{ company.name }}"
-              class="company-logo"
-            />
-            <span class="company-name">{{ company.name }}</span>
-          </div>
-          <button
-            class="follow-btn followed"
-            (click)="toggleFollow($event, company.companyId)"
-          >
-            Bỏ theo dõi
-          </button>
+
+      <div class="company" *ngFor="let company of paginatedCompanies">
+        <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.companyId]">
+          <img [src]="'assets/images/slide1.jpg'" alt="{{ company.company.name }}" class="company-logo" />
+          <span class="company-name">{{ company.company.name }}</span>
         </div>
+        <button class="follow-btn followed" (click)="toggleFollow($event, company.companyId)">
+          Bỏ theo dõi
+        </button>
       </div>
     </div>
   </div>
@@ -34,17 +23,11 @@
     <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
       Previous
     </button>
-    <button
-      *ngFor="let page of [].constructor(totalPages); let i = index"
-      (click)="goToPage(i + 1)"
-      [class.active]="currentPage === i + 1"
-    >
+    <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1">
       {{ i + 1 }}
     </button>
-    <button
-      (click)="goToPage(currentPage + 1)"
-      [disabled]="currentPage === totalPages"
-    >
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
       Next
     </button>
   </div>
