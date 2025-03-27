@@ -7,3 +7,17 @@
 <p><strong>Địa điểm làm việc:</strong> {{ recruitment?.address }}</p>
 <p><strong>Hạn nộp hồ sơ:</strong> {{ recruitment?.deadline | date:'dd/MM/yyyy' }}</p>
 <p><strong>Lượt xem:</strong> {{ recruitment?.view }}</p>
+
+<!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
+<!-- <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
+    Ứng tuyển ngay
+</button> -->
+
+<button class="apply-btn" *ngIf="isLoggedIn() && isCandidate()">
+    Ứng tuyển ngay
+</button>
+
+<!-- Hiển thị thông báo yêu cầu đăng nhập khi chưa đăng nhập -->
+<p class="login-message" *ngIf="!isLoggedIn()">
+    Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
+</p>
