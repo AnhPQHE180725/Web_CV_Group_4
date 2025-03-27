@@ -256,8 +256,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Web_Server.ViewModels.VerifyOtpRequest",
+        "Name": "verifyRegisterVm",
+        "Type": "Web_Server.ViewModels.VerifyRegisterVm",
         "IsRequired": true
       }
     ],

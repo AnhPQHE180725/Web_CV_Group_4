@@ -417,17 +417,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
+                "$ref": "#/components/schemas/VerifyRegisterVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
+                "$ref": "#/components/schemas/VerifyRegisterVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
+                "$ref": "#/components/schemas/VerifyRegisterVm"
               }
             }
           }
@@ -1990,6 +1990,20 @@
         "additionalProperties": false
       },
       "VerifyOtpRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "otp": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerifyRegisterVm": {
         "type": "object",
         "properties": {
           "email": {

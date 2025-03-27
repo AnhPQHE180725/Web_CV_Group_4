@@ -23,6 +23,7 @@ import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.compon
 import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
 import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
 import { RecruitmentDetailComponent } from './feature/recruitment/recruitment-detail/recruitment-detail.component';
+import { ConfirmregisterComponent } from './feature/confirmregister/confirmregister.component';
 
 
 export const routes: Routes = [
@@ -39,6 +40,9 @@ export const routes: Routes = [
     {
         path: 'register', component: SignuppageComponent
     },
+    {
+    path: 'register/confirm', component: ConfirmregisterComponent    
+},
     {
         path: 'login', component: LoginpageComponent
     },
