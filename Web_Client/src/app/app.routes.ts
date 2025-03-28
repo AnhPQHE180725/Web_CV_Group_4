@@ -22,6 +22,7 @@ import { FavoriteCompaniesComponent } from './components/favorite-companies/favo
 import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.component';
 import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
 import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
+import { RecruiterEditComponent } from './feature/recruiter/recruiter-edit/recruiter-edit.component';
 
 
 export const routes: Routes = [
@@ -75,7 +76,22 @@ export const routes: Routes = [
     {
         path: 'user-companies', component: UserCompaniesComponent
     },
-    { path: '**', redirectTo: 'home' }
+
+
+    {
+        path: 'recruiter/edit', component: RecruiterEditComponent
+    },
+
+
+
+
+
+
+
+
+
+
+    { path: '**', redirectTo: 'home' },
 
 
 ];

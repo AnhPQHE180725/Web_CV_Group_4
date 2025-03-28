@@ -1,6 +1,8 @@
 <!-- Form for Add/Edit -->
 <h2>Recruitments Management</h2>
-
+<div class="cv-button" [routerLink]="['/recruiter', 'edit']">
+    Add
+</div>
 <!-- Form for Add/Edit -->
 <form [formGroup]="recruitmentForm" (ngSubmit)="isEditMode ? onUpdateRecruitment() : onAddRecruitment()">
 
@@ -82,8 +84,9 @@
             <td>{{ recruitment.salary | currency }}</td>
             <td>{{ recruitment.status === 1 ? 'Active' : 'Inactive' }}</td>
             <td>
-                <button (click)="onEditRecruitment(recruitment.id)">Edit</button>
-                <button (click)="onDeleteRecruitment(recruitment.id)">Delete</button>
+                <div class="cv-button" [routerLink]="['/recruiter', 'edit', recruitment.id]">
+                    Update
+                </div>
             </td>
             <td>
                 <div class="cv-button" [routerLink]="['/recruiter', 'candidate', recruitment.id]">
