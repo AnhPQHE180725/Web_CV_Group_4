@@ -115,6 +115,39 @@ namespace Web_Server.Services
 
             await SendEmailAsync(email);
         }
+        public async Task SendEmailAsync(string toEmail, string subject, string body)
+        {
+            var email = CreateEmail(toEmail, subject, body);
+            using var smtp = new SmtpClient();
 
+            try
+            {
+                await smtp.ConnectAsync(
+                    _configuration["EmailSettings:SmtpServer"],
+                    int.Parse(_configuration["EmailSettings:Port"]),
+                    MailKit.Security.SecureSocketOptions.StartTls
+                );
+
+                await smtp.AuthenticateAsync(
+                    _configuration["EmailSettings:SenderEmail"],
+                    _configuration["EmailSettings:SenderPassword"]
+                );
+
+                // Send email
+                await smtp.SendAsync(email);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi gửi email: {ex.Message}");
+            }
+            finally
+            {
+                // Disconnect SMTP client
+                if (smtp.IsConnected)
+                {
+                    await smtp.DisconnectAsync(true);
+                }
+            }
+        }
     }
 }
