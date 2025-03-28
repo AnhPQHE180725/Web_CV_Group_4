@@ -23,7 +23,8 @@ export class ApplyCVComponent {
     private router: Router,
     private route: ActivatedRoute,
     private userService: UserService,
-    private location: Location
+    private location: Location,
+
   ) { }
 
 
