@@ -13,7 +13,11 @@
         [routerLink]="['/company', company.id]"
       >
         <img
-          [src]="'assets/images/slide1.jpg'"
+          [src]="
+            company.logo
+              ? 'https://localhost:7247/api/Company/logo/' + company.logo
+              : 'assets/images/slide1.jpg'
+          "
           alt="{{ company.name }}"
           class="company-logo"
         />

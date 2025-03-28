@@ -1,3 +1,7 @@
+wwwroot\CompanyLogos\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg
+wwwroot\CompanyLogos\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg
+wwwroot\CompanyLogos\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg
+wwwroot\CompanyLogos\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg
 wwwroot\CVs\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf
 wwwroot\CVs\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf
 wwwroot\CVs\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf
