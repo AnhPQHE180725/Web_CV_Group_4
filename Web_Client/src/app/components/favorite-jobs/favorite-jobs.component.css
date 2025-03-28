@@ -57,13 +57,6 @@
   background: #218838;
 }
 
-.salary-box {
-  display: inline-block;
-  background: #f8f9fa;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-top: 10px;
-}
 
 p {
   margin: 10px 0;
@@ -149,4 +142,16 @@ strong {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
+}
+
+.job-description,
+.job-address,
+.job-experience,
+.job-quantity,
+.job-type,
+.job-salary,
+.job-title {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }

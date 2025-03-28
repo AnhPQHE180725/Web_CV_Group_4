@@ -1,7 +1,8 @@
+wwwroot\CompanyLogos\119dbd65-8030-4cb7-9fd3-8140fd85ce76_465033876_545771988395852_3481360251270567648_n.jpg
+wwwroot\CompanyLogos\678b0aba-ea63-4215-8cc1-4dda1f476643_464910469_122125314602446996_4476879186093997237_n.jpg
 wwwroot\CompanyLogos\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg
 wwwroot\CompanyLogos\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg
 wwwroot\CompanyLogos\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg
-wwwroot\CompanyLogos\da744154-97ac-449d-9da5-e456406de150_464796567_524263080521743_8623867119112199370_n.jpg
 wwwroot\CVs\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf
 wwwroot\CVs\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf
 wwwroot\CVs\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf
@@ -12,6 +13,7 @@ wwwroot\CVs\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf
 wwwroot\CVs\53150e0c-904a-4bda-9718-05bd580c9102_GuideToInstallAngular.pdf
 wwwroot\CVs\5c358c02-a6b7-43f1-b12e-50807f2a1eb3_[FPTU] CV Intern C#_Net - Nguyen Tran Trong Hieu.pdf
 wwwroot\CVs\70cb141e-849e-4d9f-9a75-e628c51e7935_GuideToInstallAngular.pdf
+wwwroot\CVs\9a0dfd4f-66cd-4492-84dd-589d090ca3ad_Assignment 1.pdf
 wwwroot\CVs\9f95fd90-f138-4756-ada9-3714dcbac811_GuideToInstallAngular.pdf
 wwwroot\CVs\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf
 wwwroot\CVs\d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.pdf
