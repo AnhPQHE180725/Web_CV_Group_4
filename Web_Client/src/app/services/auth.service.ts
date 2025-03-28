@@ -6,6 +6,7 @@ import { LoginResponse } from '../models/login-response';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
 import { RegisterRequest } from '../models/RegisterRequest';
+import { VerifyOtpRequest } from '../models/VerifyOtpRequest';
 
 
 @Injectable({
@@ -21,9 +22,11 @@ export class AuthService {
   login(request: LoginRequest): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.baseUrl}/Authentication/login`, request);
   }
-  // Lưu token vào cookie
+  // Lưu token vào cookie với thời gian hết hạn 1 ngày
   setToken(token: string): void {
-    this.cookieService.set('Authentication', token, undefined, '/', undefined, true, 'Strict');
+    const expires = new Date();
+    expires.setDate(expires.getDate() + 1); // Thời gian hết hạn là 1 ngày
+    this.cookieService.set('Authentication', token, expires, '/', undefined, true, 'Strict');
   }
 
   // Xóa token khỏi cookie (logout)
@@ -71,10 +74,7 @@ export class AuthService {
     return undefined;
   }
 
-  // đăng kí tài khoản
-  register(request: RegisterRequest): Observable<any> {
-    return this.http.post(`${this.baseUrl}/Authentication/register`, request);
-  }
+
   // kiểm tra đăng nhập
   isLoggedIn(): boolean {
     return this.isAuthenticated();
@@ -101,4 +101,12 @@ resendOtp(email: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/Authentication/resend-otp`, { email });
 }
 
+  // đăng kí tài khoản
+  register(request: RegisterRequest): Observable<any> {
+    return this.http.post(`${this.baseUrl}/Authentication/register`, request);
+  }
+ // Xác minh OTP
+verifySignup(request: { email: string; otp: string }) {
+    return this.http.post(`${this.baseUrl}/Authentication/verify-signup`, request);
+}
 }

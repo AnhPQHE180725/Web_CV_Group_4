@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { RegisterRequest } from '../../models/RegisterRequest';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-signuppage',
@@ -11,50 +12,50 @@ import { Router } from '@angular/router';
   styleUrl: './signuppage.component.css'
 })
 export class SignuppageComponent {
-  email: string = '';
-  fullName: string = '';
-  password: string = '';
-  confirmPassword: string = '';
-  role: string = '';
+   model: RegisterRequest = {
+    email: '',
+    fullName: '',
+    password: '',
+    confirmPassword: '',
+    roleName: ''
+  };
 
-  constructor(private authService: AuthService, private route : Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private cookieService: CookieService
+  ) {}
 
   onFormSubmit() {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (!emailPattern.test(this.email)) {
+    if (!emailPattern.test(this.model.email)) {
       alert('Email không đúng định dạng!');
       return;
     }
 
-    if (this.password !== this.confirmPassword) {
-      alert('Passwords do not match!');
+    if (this.model.password !== this.model.confirmPassword) {
+      alert('Mật khẩu không khớp!');
       return;
     }
 
-    if (this.role == '') {
-      alert('Role must not be empty!');
+    if (!this.model.roleName) {
+      alert('Vui lòng chọn vai trò!');
       return;
     }
 
-    const request: RegisterRequest = {
-      email: this.email,
-      fullName: this.fullName,
-      password: this.password,
-      confirmPassword: this.confirmPassword,
-      roleName: this.role
-    };
-
-    this.authService.register(request).subscribe({
+    this.authService.register(this.model).subscribe({
       next: (response) => {
-        alert('Đăng ký thành công!');
-        this.route.navigateByUrl('login');
-        console.log(response);
+        // Lưu email vào cookie với thời gian sống 5 phút
+        this.cookieService.set('UserEmail', this.model.email, 5, '/', undefined, true, 'Strict');
+
+        alert('Vui lòng kiểm tra email để nhập mã xác minh.');
+        this.router.navigate(['/register/confirm']);
       },
       error: (error) => {
-        alert('Đăng ký thất bại!');
+        alert('Đăng ký thất bại! Vui lòng thử lại.');
         console.error('Lỗi đăng ký:', error);
       }
     });
-}
+  }
 }
