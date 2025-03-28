@@ -11,7 +11,7 @@ namespace Web_Server.Services
     public class UserService : IUserService
     {
         private IUserRepository _repository;
-        private readonly IMemoryCache _cache; 
+        private readonly IMemoryCache _cache;
         private readonly IEmailService _emailService;
 
 
@@ -58,7 +58,7 @@ namespace Web_Server.Services
         public async Task<bool> RegisterAysnc(RegisterVm registerVm)
         {
             var User = await FindEmailExists(registerVm.Email);
-            if(User != null)
+            if (User != null)
             {
                 return false;
             }
@@ -89,7 +89,7 @@ namespace Web_Server.Services
             //var resetLink = $"https://localhost:7247/api/Authentication/reset-password?token={token}"; // Đường dẫn reset password (Swagger)
             var resetLink = $"http://localhost:4200/reset-password/{token}";
 
-            await _emailService.SendPasswordResetEmailAsync(email, resetLink); 
+            await _emailService.SendPasswordResetEmailAsync(email, resetLink);
 
             return true;
         }
@@ -107,11 +107,45 @@ namespace Web_Server.Services
         }
         public async Task<ApplyPost> ApplyCV(int id)
         {
-            return await _repository.ApplyCV(id);
+            var applyPost = await _repository.ApplyCV(id);
+
+            if (applyPost.User != null && !string.IsNullOrEmpty(applyPost.User.Email))
+            {
+                string companyName = applyPost.Recruitment?.Company?.Name ?? "Our Company";
+
+                string subject = "Cập nhật trạng thái ứng tuyển";
+                string message = $"Chào {applyPost.User.FullName},<br>" +
+                                 $"Hồ sơ của bạn đã được doanh nghiệp <strong>{companyName}</strong> chấp thuận.<br>" +
+                                 $"Chúng tôi sẽ liên hệ với bạn thời gian và địa điểm phỏng vấn sớm nhất có thể.<br><br>" +
+                                 $"Trân trọng,<br>" +
+                                 $"<strong>{companyName}</strong>.";
+
+                await _emailService.SendEmailAsync(applyPost.User.Email, subject, message);
+            }
+
+            return applyPost;
         }
         public async Task<ApplyPost> RejectCV(int id)
         {
-            return await _repository.RejectCV(id);
+            var applyPost = await _repository.RejectCV(id);
+
+            if (applyPost.User != null && !string.IsNullOrEmpty(applyPost.User.Email))
+            {
+                string companyName = applyPost.Recruitment?.Company?.Name ?? "Our Company";
+
+                string subject = "Cập nhật trạng thái ứng tuyển";
+                string message = $@"
+                                Chào {applyPost.User.FullName},<br><br>
+                                Hồ sơ của bạn đã bị doanh nghiệp <strong>{companyName}</strong> từ chối.<br>
+                                Chúng tôi rất tiếc và hẹn gặp lại bạn ở những cơ hội việc làm khác.<br><br>
+                                Trân trọng,<br>
+                                <strong>{companyName}</strong>.
+                            ";
+
+                await _emailService.SendEmailAsync(applyPost.User.Email, subject, message);
+            }
+
+            return applyPost;
         }
 
         public async Task<User> GetUserByIdAsync(int userId)

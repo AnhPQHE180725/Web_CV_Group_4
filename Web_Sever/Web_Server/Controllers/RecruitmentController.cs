@@ -97,5 +97,12 @@ namespace Web_Server.Controllers
             // ✅ Thêm phản hồi rõ ràng sau khi xóa thành công
             return Ok(new { message = "Recruitment deleted successfully" });
         }
+
+        [HttpGet("get-recruitment-by-id/{id}")]
+
+        public async Task<IActionResult> GetRecruitmentById(int id)
+        {
+            return Ok(await _recruitmentService.GetRecruitmentById(id));
+        }
     }
 }

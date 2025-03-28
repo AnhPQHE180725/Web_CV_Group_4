@@ -90,7 +90,12 @@ namespace Web_Server.Repositories
         }
         public async Task<ApplyPost> ApplyCV(int id)
         {
-            var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
+            var applyPost = await _context.ApplyPosts
+         .Include(a => a.User) 
+         .Include(a => a.Recruitment) 
+             
+                 .ThenInclude(u => u.Company) 
+         .FirstOrDefaultAsync(a => a.Id == id);
 
             if (applyPost == null)
             {
@@ -108,7 +113,12 @@ namespace Web_Server.Repositories
 
         public async Task<ApplyPost> RejectCV(int id)
         {
-            var applyPost = await _context.ApplyPosts.FirstOrDefaultAsync(a => a.Id == id);
+            var applyPost = await _context.ApplyPosts
+        .Include(a => a.User)
+        .Include(a => a.Recruitment) 
+
+                .ThenInclude(u => u.Company)
+        .FirstOrDefaultAsync(a => a.Id == id);
 
             if (applyPost == null)
             {

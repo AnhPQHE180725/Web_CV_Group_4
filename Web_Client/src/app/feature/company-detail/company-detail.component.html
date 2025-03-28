@@ -18,7 +18,10 @@
     <div class="company-header">
       <div class="company-logo-container">
         <img
-          [src]="company.logo || 'assets/images/slide1.jpg'"
+          [src]="
+            'https://localhost:7247/api/Company/logo/' + company.logo ||
+            'assets/images/slide1.jpg'
+          "
           alt="{{ company.name }}"
           class="company-logo"
         />
@@ -92,7 +95,9 @@
           <div *ngIf="job.salary" class="job-salary">
             <span>Lương: {{ job.salary }}</span>
           </div>
-          <a [routerLink]="['/recruitment', job.id]" class="view-job-btn"
+          <a
+            [routerLink]="['/recruitment', 'detail', job.id]"
+            class="view-job-btn"
             >Xem chi tiết</a
           >
         </div>

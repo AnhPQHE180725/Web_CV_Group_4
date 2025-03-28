@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿    using Microsoft.EntityFrameworkCore;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
@@ -162,6 +162,11 @@ namespace Web_Server.Services
         public async Task<bool> DeleteRecruitmentAsync(int id)
         {
             return await _repository.DeleteRecruitmentAsync(id);
+        }
+
+        public async Task<Recruitment> GetRecruitmentById(int id)
+        {
+            return await _repository.GetRecruitmentByIdAsync(id);
         }
     }
 }

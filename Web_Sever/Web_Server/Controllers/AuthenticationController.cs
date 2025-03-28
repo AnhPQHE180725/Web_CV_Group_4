@@ -173,23 +173,59 @@ namespace Web_Server.Controllers
             return Ok(new { message = "Mã OTP mới đã được gửi đến email của bạn." });
         }
 
-
-
-
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterVm registerVm)
         {
-            if (registerVm.Password != registerVm.ConfirmPassword)
+            if (await _userService.FindEmailExists(registerVm.Email) != null)
             {
-                return BadRequest("Password and Confirm Password do not match");
+                return BadRequest("Email đã tồn tại trong hệ thống.");
             }
-            var result = await _userService.RegisterAysnc(registerVm);
 
+            // Tạo mã OTP ngẫu nhiên
+            var otpCode = new Random().Next(100000, 999999).ToString();
+
+            // Lưu thông tin đăng ký vào cache (OTP làm key, dữ liệu người dùng làm value)
+            _cache.Set(otpCode, registerVm, new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+            });
+
+            // Gửi mã OTP qua email
+            await _emailService.SendOtpEmailAsync(registerVm.Email, otpCode);
+
+            return Ok(new { message = "Vui lòng kiểm tra email để nhập mã xác minh." });
+        }
+
+        [HttpPost("verify-signup")]
+        public async Task<IActionResult> VerifySignup([FromBody] VerifyRegisterVm verifyRegisterVm)
+        {
+            if (string.IsNullOrEmpty(verifyRegisterVm.Email) || string.IsNullOrEmpty(verifyRegisterVm.Otp))
+            {
+                return BadRequest("Thông tin không đầy đủ.");
+            }
+
+
+            if (!_cache.TryGetValue(verifyRegisterVm.Otp, out RegisterVm? cachedRegisterData))
+            {
+                return BadRequest("Mã xác minh không tồn tại hoặc đã hết hạn.");
+            }
+            // Kiểm tra role
+            if (string.IsNullOrEmpty(cachedRegisterData.RoleName))
+            {
+                return BadRequest("Vai trò không hợp lệ.");
+            }
+
+            // Thêm người dùng vào cơ sở dữ liệu
+            var result = await _userService.RegisterAysnc(cachedRegisterData);
             if (!result)
             {
-                return BadRequest();
+                return BadRequest("Đăng ký thất bại. Vui lòng thử lại.");
             }
-            return Ok();
+
+            // Xóa OTP khỏi cache sau khi thành công
+            _cache.Remove(verifyRegisterVm.Otp);
+
+            return Ok(new { message = "Đăng ký thành công!" });
         }
 
 
@@ -261,6 +297,8 @@ namespace Web_Server.Controllers
 
             return Ok("Update successful");
         }
+
+        
 
     }
 }

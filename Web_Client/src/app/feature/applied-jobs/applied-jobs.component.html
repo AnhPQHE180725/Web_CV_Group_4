@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-md-12">
       <div *ngIf="paginatedJobs.length === 0" class="alert alert-info">
-        Không có công việc phù hợp.
+        Không có công việc nào.
       </div>
 
       <div *ngFor="let job of paginatedJobs" class="post">
@@ -22,11 +22,14 @@
         <div class="action-buttons">
           <span class="status-badge">Đã ứng tuyển</span>
         </div>
-        <p>{{ job.recruitment.title }}</p>
-        <small>{{ job.recruitment.description }}</small>
-        <div class="salary-box">
-          <small>{{ job.recruitment.salary }} triệu</small>
-        </div>
+
+        <p class="job-title"><strong></strong> {{ job.recruitment.title }}</p>
+        <p class="job-description"><strong>Mô tả:</strong> {{ job.recruitment.description }}</p>
+        <p class="job-address"><strong>Địa chỉ:</strong> {{ job.recruitment.address }}</p>
+        <p class="job-experience"><strong>Kinh nghiệm:</strong> {{ job.recruitment.experience }} năm</p>
+        <p class="job-quantity"><strong>Số lượng tuyển:</strong> {{ job.recruitment.quantity }}</p>
+        <p class="job-salary"><strong>Lương tháng:</strong> {{ job.recruitment.salary }} triệu đồng</p>
+
       </div>
     </div>
   </div>

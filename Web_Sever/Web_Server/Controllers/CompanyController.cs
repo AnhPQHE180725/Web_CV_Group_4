@@ -67,15 +67,20 @@ namespace Web_Server.Controllers
         
         [HttpPost("create-company")]
         [Authorize]
-        public async Task<IActionResult> CreateCompany([FromBody] CompanyCreateModel companyModel)
+        public async Task<IActionResult> CreateCompany([FromForm] CompanyCreateModel companyModel)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             
             try
             {
-                var createdCompany = await _companyService.CreateCompanyAsync(companyModel);
+                var logoFile = Request.Form.Files.GetFile("logo");
+                var createdCompany = await _companyService.CreateCompanyAsync(companyModel, logoFile);
                 return CreatedAtAction(nameof(GetCompanyById), new { id = createdCompany.Id }, createdCompany);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
             catch (UnauthorizedAccessException ex)
             {
@@ -89,18 +94,23 @@ namespace Web_Server.Controllers
         
         [HttpPut("update-company")]
         [Authorize]
-        public async Task<IActionResult> UpdateCompany([FromBody] CompanyUpdateModel companyModel)
+        public async Task<IActionResult> UpdateCompany([FromForm] CompanyUpdateModel companyModel)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
                 
             try
             {
-                var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel);
+                var logoFile = Request.Form.Files.GetFile("logo");
+                var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel, logoFile);
                 if (updatedCompany == null)
                     return NotFound();
                     
                 return Ok(updatedCompany);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
             catch (Exception ex)
             {
@@ -124,6 +134,17 @@ namespace Web_Server.Controllers
             {
                 return StatusCode(500, new { message = "An error occurred while deleting the company" });
             }
+        }
+
+        [HttpGet("logo/{logoFileName}")]
+        public async Task<IActionResult> GetCompanyLogo(string logoFileName)
+        {
+            var filePath = await _companyService.GetLogoFilePathAsync(logoFileName);
+            if (filePath == null)
+                return NotFound("Logo file not found.");
+
+            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            return File(fileStream, "image/jpeg");
         }
     }
 }

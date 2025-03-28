@@ -248,6 +248,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "VerifySignup",
+    "RelativePath": "api/Authentication/verify-signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "verifyRegisterVm",
+        "Type": "Web_Server.ViewModels.VerifyRegisterVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.CategoryController",
     "Method": "GetAllCategories",
     "RelativePath": "api/Category/get-all-categories",
@@ -276,9 +292,34 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "companyModel",
-        "Type": "Web_Server.ViewModels.CompanyCreateModel",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -353,6 +394,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.CompanyController",
+    "Method": "GetCompanyLogo",
+    "RelativePath": "api/Company/logo/{logoFileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logoFileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.CompanyController",
     "Method": "GetUserCompanies",
     "RelativePath": "api/Company/my-companies",
     "HttpMethod": "GET",
@@ -370,9 +427,39 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "companyModel",
-        "Type": "Web_Server.ViewModels.CompanyUpdateModel",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -652,6 +739,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetRecruitmentById",
+    "RelativePath": "api/Recruitment/get-recruitment-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
