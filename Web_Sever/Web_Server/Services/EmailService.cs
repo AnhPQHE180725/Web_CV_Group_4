@@ -93,5 +93,28 @@ namespace Web_Server.Services
 
         }
 
+
+        //  Phương thức gửi mã OTP
+        public async Task SendOtpEmailAsync(string toEmail, string otpCode)
+        {
+            var email = CreateEmail(toEmail,
+                "Xác nhận",
+                $@"
+                <html>
+                <body style='font-family: Arial, sans-serif;'>
+                    <h2>Mã xác minh</h2>
+                    <p>
+                        Mã xác minh của bạn là: <strong>{otpCode}</strong>
+                    </p>
+                    <p>
+                        Vui lòng nhập mã này vào trang web để hoàn tất quá trình. 
+                        Mã sẽ hết hạn sau 5 phút.
+                    </p>
+                </body>
+                </html>");
+
+            await SendEmailAsync(email);
+        }
+
     }
 }

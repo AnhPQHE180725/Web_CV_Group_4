@@ -17,9 +17,13 @@ export class CvService {
         return this.http.post(`${this.baseUrl}/CV/upload`, formData);
     }
     getCVUrl(userId: number): Observable<string> {
+        console.log('Fetching CV URL for userId:', userId); // Debug log
         return this.http.get<{ id: number, name: string, userId: number }>(`${this.baseUrl}/CV/user/${userId}`)
             .pipe(
-                map(response => `${this.baseUrl}/CV/view/${response.id}`)
+                map(response => {
+                    console.log('Response from backend:', response); // Debug log
+                    return `${this.baseUrl}/CV/view/${response.userId}`;
+                })
             );
     }
 } 

@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <h2>Xác nhận đăng ký</h2>
+        <p>Một mã OTP đã được gửi tới email của bạn. Vui lòng kiểm tra và nhập mã vào ô dưới đây.</p>
+
+        <form (ngSubmit)="verifyOtp()" #otpForm="ngForm">
+            <div class="form-group">
+                <label for="otp">Mã OTP</label>
+                <input type="text" id="otp" [(ngModel)]="otpCode" name="otpCode" placeholder="Nhập mã OTP" required
+                    class="form-control" />
+            </div>
+
+            <div class="button-group">
+                <button type="submit" [disabled]="otpForm.invalid" class="confirm-btn">
+                    Xác nhận
+                </button>
+
+                <!-- <button type="button" class="resend-btn" (click)="resendOtp()">
+                Gửi lại mã
+            </button> -->
+            </div>
+
+            <div class="back-btn-group">
+                <button type="button" class="back-btn" (click)="goBack()">
+                    Quay lại trang đăng ký
+                </button>
+            </div>
+        </form>
+    </div>
+</body>

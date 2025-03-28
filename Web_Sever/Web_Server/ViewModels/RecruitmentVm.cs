@@ -16,11 +16,11 @@
         public string Title { get; set; }
         public string Type { get; set; }
         public int View { get; set; }
-        public string Deadline { get; set; }
+        public DateTime Deadline { get; set; }
 
-        public string CompanyName {  get; set; }
+        public string? CompanyName {  get; set; }
 
-        public string CategoryName { get; set; }
+        public string? CategoryName { get; set; }
 
 
 

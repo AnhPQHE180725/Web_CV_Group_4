@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,15 +18,18 @@ namespace Web_Server.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        public readonly IUserService _userService;
+        private readonly IUserService _userService;
         private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
+        private readonly IMemoryCache _cache;
 
-        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService)
+
+        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService,IMemoryCache cache)
         {
             _userService = userService;
             _configuration = configuration;
             _emailService = emailService;
+            _cache = cache;
         }
 
 
@@ -93,33 +97,135 @@ namespace Web_Server.Controllers
             }
             return Ok();
         }
+
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginVm loginVm)
         {
-            var user = await _userService.CheckLoginAsync(loginVm);  // Gọi phương thức CheckLoginAsync
+            var user = await _userService.CheckLoginAsync(loginVm);
             if (user == null)
             {
-                return NotFound();
+                return NotFound("Thông tin đăng nhập không chính xác.");
             }
 
-            var token = await GenerateJwtToken(user); // Tạo token
-            return Ok(new { token });
+            // Tạo mã OTP ngẫu nhiên
+            var otpCode = new Random().Next(100000, 999999).ToString();
+
+            // Lưu OTP vào cache với thời gian hết hạn 5 phút (OTP làm key, email làm value)
+            _cache.Set(otpCode, user.Email, new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+            });
+
+            // Gửi mã OTP qua email
+            await _emailService.SendOtpEmailAsync(user.Email, otpCode);
+
+            return Ok(new { message = "Vui lòng kiểm tra email để nhập mã xác minh.", email = user.Email });
+        }
+
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpRequest request)
+        {
+            if (string.IsNullOrEmpty(request.Otp) || string.IsNullOrEmpty(request.Email))
+            {
+                return BadRequest("Thông tin không đầy đủ.");
+            }
+
+            if (!_cache.TryGetValue(request.Otp, out string? cachedEmail) || cachedEmail != request.Email)
+            {
+                return BadRequest("Mã xác minh không tồn tại hoặc đã hết hạn.");
+            }
+
+            var user = await _userService.FindEmailExists(request.Email);
+            if (user == null)
+            {
+                return NotFound("Không tìm thấy người dùng.");
+            }
+
+            var jwtToken = await GenerateJwtToken(user);
+
+            _cache.Remove(request.Otp);  // Xóa OTP sau khi xác minh thành công
+
+            return Ok(new { token = jwtToken });
+        }
+
+        [HttpPost("resend-otp")]
+        public async Task<IActionResult> ResendOtp([FromBody] ResendOtpVm resendOtpVm)
+        {
+            var user = await _userService.FindEmailExists(resendOtpVm.Email);
+            if (user == null)
+            {
+                return NotFound("Không tìm thấy người dùng.");
+            }
+
+            // Tạo mã OTP mới
+            var otpCode = new Random().Next(100000, 999999).ToString();
+
+            // Lưu OTP vào cache với thời gian hết hạn 5 phút
+            _cache.Set(otpCode, user.Email, new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+            });
+
+            // Gửi mã OTP qua email
+            await _emailService.SendOtpEmailAsync(user.Email, otpCode);
+
+            return Ok(new { message = "Mã OTP mới đã được gửi đến email của bạn." });
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterVm registerVm)
         {
-            if (registerVm.Password != registerVm.ConfirmPassword)
+            if (await _userService.FindEmailExists(registerVm.Email) != null)
             {
-                return BadRequest("Password and Confirm Password do not match");
+                return BadRequest("Email đã tồn tại trong hệ thống.");
             }
-            var result = await _userService.RegisterAysnc(registerVm);
 
+            // Tạo mã OTP ngẫu nhiên
+            var otpCode = new Random().Next(100000, 999999).ToString();
+
+            // Lưu thông tin đăng ký vào cache (OTP làm key, dữ liệu người dùng làm value)
+            _cache.Set(otpCode, registerVm, new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+            });
+
+            // Gửi mã OTP qua email
+            await _emailService.SendOtpEmailAsync(registerVm.Email, otpCode);
+
+            return Ok(new { message = "Vui lòng kiểm tra email để nhập mã xác minh." });
+        }
+
+        [HttpPost("verify-signup")]
+        public async Task<IActionResult> VerifySignup([FromBody] VerifyRegisterVm verifyRegisterVm)
+        {
+            if (string.IsNullOrEmpty(verifyRegisterVm.Email) || string.IsNullOrEmpty(verifyRegisterVm.Otp))
+            {
+                return BadRequest("Thông tin không đầy đủ.");
+            }
+
+
+            if (!_cache.TryGetValue(verifyRegisterVm.Otp, out RegisterVm? cachedRegisterData))
+            {
+                return BadRequest("Mã xác minh không tồn tại hoặc đã hết hạn.");
+            }
+            // Kiểm tra role
+            if (string.IsNullOrEmpty(cachedRegisterData.RoleName))
+            {
+                return BadRequest("Vai trò không hợp lệ.");
+            }
+
+            // Thêm người dùng vào cơ sở dữ liệu
+            var result = await _userService.RegisterAysnc(cachedRegisterData);
             if (!result)
             {
-                return BadRequest();
+                return BadRequest("Đăng ký thất bại. Vui lòng thử lại.");
             }
-            return Ok();
+
+            // Xóa OTP khỏi cache sau khi thành công
+            _cache.Remove(verifyRegisterVm.Otp);
+
+            return Ok(new { message = "Đăng ký thành công!" });
         }
 
 

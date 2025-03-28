@@ -50,4 +50,8 @@ export class RecruitmentService {
     deleteRecruitment(id: number): Observable<any> {
         return this.http.delete(`${this.baseUrl}/Recruitment/delete-recruitment/${id}`);
     }
+
+    getRecruitmentById(id: number): Observable<any> {
+        return this.http.get(`${this.baseUrl}/Recruitment/get-recruitment-by-id/${id}`)
+    }
 }

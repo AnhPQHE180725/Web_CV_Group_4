@@ -1,0 +1,115 @@
+<div class="company-detail-container">
+  <div class="back-button-container">
+    <button class="back-btn" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i> Quay lại
+    </button>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">
+    <p>Đang tải thông tin công ty...</p>
+  </div>
+
+  <div *ngIf="!isLoading && errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+    <button class="back-btn" (click)="goBack()">Quay lại</button>
+  </div>
+
+  <div *ngIf="!isLoading && !errorMessage && company" class="company-detail">
+    <div class="company-header">
+      <div class="company-logo-container">
+        <img
+          [src]="
+            'https://localhost:7247/api/Company/logo/' + company.logo ||
+            'assets/images/slide1.jpg'
+          "
+          alt="{{ company.name }}"
+          class="company-logo"
+        />
+      </div>
+      <div class="company-title">
+        <h1>{{ company.name }}</h1>
+        <div class="status-container">
+          <span
+            class="status-badge"
+            [ngClass]="{
+              active: company.status === 1,
+              paused: company.status === 0
+            }"
+          >
+            {{ company.status === 1 ? "Hoạt động" : "Tạm ngưng" }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="company-actions" *ngIf="isOwner">
+      <button class="edit-btn" (click)="editCompany()">
+        Chỉnh sửa thông tin
+      </button>
+    </div>
+
+    <div class="company-info-cards">
+      <div class="info-card">
+        <h2>Thông tin liên hệ</h2>
+        <div class="info-content">
+          <div class="info-item" *ngIf="company.address">
+            <div class="info-label">Địa chỉ:</div>
+            <div class="info-value">{{ company.address }}</div>
+          </div>
+          <div class="info-item" *ngIf="company.email">
+            <div class="info-label">Email:</div>
+            <div class="info-value">{{ company.email }}</div>
+          </div>
+          <div class="info-item" *ngIf="company.phoneNumber">
+            <div class="info-label">Số điện thoại:</div>
+            <div class="info-value">{{ company.phoneNumber }}</div>
+          </div>
+          <div
+            class="info-item no-data"
+            *ngIf="!company.address && !company.email && !company.phoneNumber"
+          >
+            <div class="info-value">Không có thông tin liên hệ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2>Mô tả công ty</h2>
+        <div class="info-content">
+          <div class="description" *ngIf="company.description">
+            {{ company.description }}
+          </div>
+          <div class="no-data" *ngIf="!company.description">Không có mô tả</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="jobs-section"
+      *ngIf="company.recruitments && company.recruitments.length > 0"
+    >
+      <h2>Việc làm đang tuyển dụng</h2>
+      <div class="jobs-list">
+        <div class="job-card" *ngFor="let job of company.recruitments">
+          <h3>{{ job.title }}</h3>
+          <div *ngIf="job.salary" class="job-salary">
+            <span>Lương: {{ job.salary }}</span>
+          </div>
+          <a
+            [routerLink]="['/recruitment', 'detail', job.id]"
+            class="view-job-btn"
+            >Xem chi tiết</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="jobs-section"
+      *ngIf="!company.recruitments || company.recruitments.length === 0"
+    >
+      <h2>Việc làm đang tuyển dụng</h2>
+      <div class="no-data">Hiện tại không có vị trí nào đang tuyển</div>
+    </div>
+  </div>
+</div>

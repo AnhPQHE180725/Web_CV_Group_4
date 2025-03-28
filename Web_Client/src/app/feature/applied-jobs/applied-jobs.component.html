@@ -1,0 +1,47 @@
+<div class="container mt-4">
+  <h2>Công việc đã ứng tuyển</h2>
+
+  <!-- Ô nhập tìm kiếm -->
+  <div class="search-box">
+    <input type="text" [(ngModel)]="searchQuery" (input)="searchJobs()" placeholder="Tìm kiếm theo tên công việc"
+      class="search-input" />
+
+    <input type="number" [(ngModel)]="salaryQuery" (input)="searchJobs()" placeholder="Tìm kiếm theo lương (triệu)"
+      class="search-input" />
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="paginatedJobs.length === 0" class="alert alert-info">
+        Không có công việc nào.
+      </div>
+
+      <div *ngFor="let job of paginatedJobs" class="post">
+        <img [src]="'assets/images/slide1.jpg'" alt="{{ job.recruitment.title }}" class="company-logo" />
+        <strong>{{ job.recruitment.type }}</strong>
+        <div class="action-buttons">
+          <span class="status-badge">Đã ứng tuyển</span>
+        </div>
+        <p>{{ job.recruitment.title }}</p>
+        <small>{{ job.recruitment.description }}</small>
+        <div class="salary-box">
+          <small>{{ job.recruitment.salary }} triệu</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1">
+      {{ i + 1 }}
+    </button>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
+      Next
+    </button>
+  </div>
+</div>

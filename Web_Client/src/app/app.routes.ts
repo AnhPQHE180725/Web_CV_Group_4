@@ -19,13 +19,20 @@ import { ForgotpasswordComponent } from './feature/forgotpassword/forgotpassword
 import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.component';
 import { FavoriteJobsComponent } from './components/favorite-jobs/favorite-jobs.component';
 import { FavoriteCompaniesComponent } from './components/favorite-companies/favorite-companies.component';
+import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.component';
+import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
+import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
+import { RecruitmentDetailComponent } from './feature/recruitment/recruitment-detail/recruitment-detail.component';
+import { ConfirmregisterComponent } from './feature/confirmregister/confirmregister.component';
 
 
 export const routes: Routes = [
     { path: 'recruitment/category/:id', component: RecruitmentListComponent },
     { path: 'recruitment/company/:id', component: RecruitmentListComponent },
     { path: 'recruitment', component: RecruitmentListComponent },
+    { path: 'recruitment/detail/:id', component: RecruitmentDetailComponent },
     { path: 'company', component: CompanyListComponent },
+    { path: 'company/:id', component: CompanyDetailComponent },
     { path: 'recruiter', component: RecruiterHomepageComponent },
     {
         path: 'home', component: HomepageComponent
@@ -33,6 +40,9 @@ export const routes: Routes = [
     {
         path: 'register', component: SignuppageComponent
     },
+    {
+    path: 'register/confirm', component: ConfirmregisterComponent    
+},
     {
         path: 'login', component: LoginpageComponent
     },
@@ -64,6 +74,12 @@ export const routes: Routes = [
     },
     {
         path: 'favorite-companies', component: FavoriteCompaniesComponent
+    },
+    {
+        path: 'applied-jobs', component: AppliedJobsComponent
+    },
+    {
+        path: 'user-companies', component: UserCompaniesComponent
     },
     { path: '**', redirectTo: 'home' }
 

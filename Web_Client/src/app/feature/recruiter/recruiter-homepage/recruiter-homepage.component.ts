@@ -5,10 +5,11 @@ import { RecruitmentService } from '../../../services/Recruitment.service';
 import { Recruitment } from '../../../models/Recruitment';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-recruiter-homepage',
   standalone: true,
-  imports: [NgFor, CurrencyPipe, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, NgFor, CurrencyPipe, ReactiveFormsModule, RouterLink],
   templateUrl: './recruiter-homepage.component.html',
   styleUrl: './recruiter-homepage.component.css'
 })
@@ -17,12 +18,12 @@ export class RecruiterHomepageComponent implements OnInit {
   isEditMode = false;
   selectedRecruitmentId: number | null = null;
   recruitments: Recruitment[] = [];
-
+  apiUrl: string = 'https://localhost:7247/api/Recruitment';
   constructor(
     private recruitmentService: RecruitmentService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private http: HttpClient
   ) {
-    // ✅ Fixed Initialization Issue
     this.recruitmentForm = this.fb.group({
       id: [null],
       title: ['', Validators.required],
@@ -36,7 +37,9 @@ export class RecruiterHomepageComponent implements OnInit {
       rank: ['', Validators.required],
       type: ['', Validators.required],
       companyId: [null, Validators.required],
-      categoryId: [null, Validators.required]
+      categoryId: [null, Validators.required],
+      companyName: ['', Validators.required],
+      categoryName: ['', Validators.required]
     });
   }
 
@@ -51,20 +54,16 @@ export class RecruiterHomepageComponent implements OnInit {
     });
   }
 
-  onAddRecruitment(): void {
-    if (this.recruitmentForm.valid) {
-      const formData = this.recruitmentForm.value;
+  onAddRecruitment() {
+    const { companyName, categoryName, ...recruitmentData } = this.recruitmentForm.value;
+    recruitmentData.salary = parseFloat(recruitmentData.salary); // Đảm bảo salary là kiểu float
+    recruitmentData.id = undefined; // Loại bỏ ID khi thêm mới
 
-      console.log('🟡 Data Sent for Add:', formData);
-      this.recruitmentService.addRecruitment(formData).subscribe({
-        next: () => {
-          alert('Recruitment added successfully!');
-          this.loadRecruitments();
-          this.resetForm();
-        },
-        error: (error) => console.error('🔴 Error adding recruitment:', error)
+    this.http.post(`${this.apiUrl}/add-recruitment`, recruitmentData)
+      .subscribe({
+        next: () => alert('Recruitment added successfully!'),
+        error: (error) => console.error('Error adding recruitment:', error)
       });
-    }
   }
 
   onEditRecruitment(id: number): void {
@@ -79,19 +78,18 @@ export class RecruiterHomepageComponent implements OnInit {
 
   onUpdateRecruitment(): void {
     if (this.recruitmentForm.valid && this.selectedRecruitmentId) {
-      const formData = this.recruitmentForm.value;
+      const formData = {
+        ...this.recruitmentForm.value,
+        deadline: new Date(this.recruitmentForm.value.deadline).toISOString()
+      };
 
-      console.log('🟡 Data Sent for Update:', formData);
+      console.log('🟡 Dữ liệu gửi lên:', formData);
       this.recruitmentService.editRecruitment(this.selectedRecruitmentId, formData).subscribe({
         next: () => {
           alert('Recruitment updated successfully!');
           this.loadRecruitments();
           this.resetForm();
         },
-        error: (error) => {
-          console.error('🔴 Error updating recruitment:', error);
-          alert('Failed to update recruitment. See console for details.');
-        }
       });
     }
   }
@@ -100,7 +98,6 @@ export class RecruiterHomepageComponent implements OnInit {
     if (confirm('Are you sure you want to delete this recruitment?')) {
       this.recruitmentService.deleteRecruitment(id).subscribe({
         next: () => {
-          // ✅ Xóa trực tiếp bản ghi khỏi mảng mà không cần load lại dữ liệu
           this.recruitments = this.recruitments.filter(recruitment => recruitment.id !== id);
           alert('Recruitment deleted successfully!');
         },
@@ -112,9 +109,7 @@ export class RecruiterHomepageComponent implements OnInit {
     }
   }
 
-
-  // ✅ Improved Form Reset for Consistency
-  private resetForm(): void {
+  public resetForm(): void {
     this.recruitmentForm.reset();
     this.isEditMode = false;
     this.selectedRecruitmentId = null;

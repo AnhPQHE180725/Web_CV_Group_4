@@ -29,4 +29,9 @@ export class ApplicationService {
 
         return this.http.post(`${this.baseUrl}/ApplyPost/apply-with-new-cv`, formData);
     }
+
+    // Lấy danh sách công việc đã ứng tuyển
+    getAppliedJobs(): Observable<any> {
+        return this.http.get(`${this.baseUrl}/ApplyPost/user-applications`);
+    }
 } 

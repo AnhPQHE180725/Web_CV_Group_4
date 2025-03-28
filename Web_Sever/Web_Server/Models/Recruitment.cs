@@ -16,7 +16,7 @@
         public string Title { get; set; }
         public string Type {  get; set; }
         public int View {  get; set; }
-        public string Deadline { get; set; }
+        public DateTime Deadline { get; set; }
         public Company Company { get; set; }
         public int CompanyId { get; set; }
         public Category Category { get; set; }
