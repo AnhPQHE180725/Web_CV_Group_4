@@ -408,37 +408,6 @@
         }
       }
     },
-    "/api/Authentication/verify-signup": {
-      "post": {
-        "tags": [
-          "Authentication"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerifyOtpRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/Authentication/profile": {
       "get": {
         "tags": [

@@ -183,46 +183,13 @@ namespace Web_Server.Controllers
             {
                 return BadRequest("Password and Confirm Password do not match");
             }
-
-            // Tạo mã OTP ngẫu nhiên
-            var otpCode = new Random().Next(100000, 999999).ToString();
-
-            // Lưu thông tin đăng ký vào cache với thời gian hết hạn 15 phút (OTP làm key)
-            _cache.Set(otpCode, registerVm, new MemoryCacheEntryOptions
-            {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(15)
-            });
-
-            // Gửi mã OTP qua email
-            await _emailService.SendOtpEmailAsync(registerVm.Email, otpCode);
-
-            return Ok(new { message = "Vui lòng kiểm tra email để nhập mã xác minh." });
-        }
-
-        [HttpPost("verify-signup")]
-        public async Task<IActionResult> VerifySignup([FromBody] VerifyOtpRequest request)
-        {
-            if (string.IsNullOrEmpty(request.Otp) || string.IsNullOrEmpty(request.Email))
-            {
-                return BadRequest("Thông tin không đầy đủ.");
-            }
-
-            // Kiểm tra OTP trong cache
-            if (!_cache.TryGetValue(request.Otp, out RegisterVm? registerVm) || registerVm.Email != request.Email)
-            {
-                return BadRequest("Mã xác minh không tồn tại hoặc đã hết hạn.");
-            }
-
-            // Thêm người dùng vào cơ sở dữ liệu
             var result = await _userService.RegisterAysnc(registerVm);
+
             if (!result)
             {
-                return BadRequest("Đăng ký thất bại. Vui lòng thử lại.");
+                return BadRequest();
             }
-
-            _cache.Remove(request.Otp); // Xóa mã OTP sau khi đăng ký thành công
-
-            return Ok("Đăng ký thành công!");
+            return Ok();
         }
 
 
