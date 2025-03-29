@@ -9,7 +9,7 @@
     type="text"
     [(ngModel)]="searchTerm"
     (ngModelChange)="searchCompanies()"
-    placeholder="Tìm kiếm công ty theo tên, địa chỉ hoặc SĐT"
+    placeholder="Tìm kiếm tên công ty"
   />
 </div>
 
@@ -140,22 +140,7 @@
           [routerLink]="['/company', company.id]"
         />
         <span class="company-name">{{ company.name }}</span>
-        <div class="company-details" *ngIf="company.description">
-          <strong>Mô tả: </strong>
-          <p class="company-description">{{ company.description }}</p>
-        </div>
-        <div class="company-details" *ngIf="company.address">
-          <strong>Địa chỉ: </strong>
-          <p class="company-address">{{ company.address }}</p>
-        </div>
-        <div class="company-details" *ngIf="company.email">
-          <strong>Email: </strong>
-          <p class="company-email">{{ company.email }}</p>
-        </div>
-        <div class="company-details" *ngIf="company.phoneNumber">
-          <strong>SĐT: </strong>
-          <p class="company-phone">{{ company.phoneNumber }}</p>
-        </div>
+
         <div class="company-status">
           <span
             class="status-badge"

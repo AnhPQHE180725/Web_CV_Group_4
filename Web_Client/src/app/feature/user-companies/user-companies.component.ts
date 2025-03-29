@@ -27,7 +27,7 @@ export class UserCompaniesComponent implements OnInit {
     search: string = '';
     filteredCompanies: Company[] = [];
 
-    // Biến lưu giá trị tìm kiếm
+    // Biến lưu giá trị tìm kiếm, đã tắt tìm kiếm đc sđt
     searchName: string = '';
     searchAddress: string = '';
     searchPhone: string = '';
