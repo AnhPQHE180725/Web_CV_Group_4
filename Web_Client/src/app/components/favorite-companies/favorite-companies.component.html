@@ -2,13 +2,8 @@
   <h2>Công ty đã theo dõi</h2>
 
   <!-- Search Box -->
-  <input
-  type="text"
-  [(ngModel)]="searchQuery"
-  (input)="searchCompanies()"
-  placeholder="Tìm kiếm theo tên, email hoặc SĐT"
-  class="search-input"
-/>
+  <input type="text" [(ngModel)]="searchQuery" (input)="searchCompanies()"
+    placeholder="Tìm kiếm theo tên, email hoặc SĐT" class="search-input" />
 
   <!-- Companies List -->
   <div *ngIf="paginatedCompanies.length === 0" class="alert alert-info">
@@ -18,15 +13,12 @@
   <div class="companies">
     <div class="company" *ngFor="let company of paginatedCompanies">
       <div class="company-content">
-        <img
-          [src]="
+        <img [src]="
             company.company.logo
               ? 'https://localhost:7247/api/Company/logo/' + company.company.logo
               : 'assets/images/slide1.jpg'
-          "
-          alt="{{ company.company.name }}"
-          class="company-logo"
-        />
+          " alt="{{ company.company.name }}" class="company-logo" 
+          [routerLink]="['/company', company.id]"/>
 
         <div class="company-details">
           <strong>Tên công ty:</strong>
@@ -46,13 +38,10 @@
 
           <!-- Status -->
           <div class="company-status">
-            <span
-              class="status-badge"
-              [ngClass]="{
+            <span class="status-badge" [ngClass]="{
                 active: company.company.status === 1,
                 paused: company.company.status === 0
-              }"
-            >
+              }">
               {{ company.company.status === 1 ? 'Hoạt động' : 'Tạm ngưng' }}
             </span>
           </div>

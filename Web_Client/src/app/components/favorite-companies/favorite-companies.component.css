@@ -90,11 +90,13 @@ h2 {
 }
 
 .status-badge.active {
-  background-color: #28a745; /* Green for active */
+  background-color: #28a745;
+  /* Green for active */
 }
 
 .status-badge.paused {
-  background-color: #ffc107; /* Yellow for paused */
+  background-color: #ffc107;
+  /* Yellow for paused */
 }
 
 .follow-btn {

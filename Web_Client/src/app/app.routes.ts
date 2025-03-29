@@ -19,11 +19,11 @@ import { ForgotpasswordComponent } from './feature/forgotpassword/forgotpassword
 import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.component';
 import { FavoriteJobsComponent } from './components/favorite-jobs/favorite-jobs.component';
 import { FavoriteCompaniesComponent } from './components/favorite-companies/favorite-companies.component';
-import { AppliedJobsComponent } from './feature/applied-jobs/applied-jobs.component';
 import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
 import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
 import { RecruitmentDetailComponent } from './feature/recruitment/recruitment-detail/recruitment-detail.component';
 import { ConfirmregisterComponent } from './feature/confirmregister/confirmregister.component';
+import { FavoriteAppliedJobsComponent } from './components/favorite-apply-jobs/favorite-apply-jobs.component';
 
 
 export const routes: Routes = [
@@ -76,7 +76,7 @@ export const routes: Routes = [
         path: 'favorite-companies', component: FavoriteCompaniesComponent
     },
     {
-        path: 'applied-jobs', component: AppliedJobsComponent
+        path: 'favorite-applied-jobs', component: FavoriteAppliedJobsComponent
     },
     {
         path: 'user-companies', component: UserCompaniesComponent

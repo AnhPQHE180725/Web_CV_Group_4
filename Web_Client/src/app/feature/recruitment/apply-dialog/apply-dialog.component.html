@@ -1,0 +1,34 @@
+<div class="apply-dialog">
+    <h2>Ứng tuyển vị trí {{data.jobTitle}}</h2>
+    
+    <div class="form-group">
+      <label for="cvOption">Chọn phương thức nộp CV:</label>
+      <select id="cvOption" [(ngModel)]="selectedOption" (change)="onOptionChange()">
+        <option value="existing">Dùng CV đã cập nhật</option>
+        <option value="new">Tải lên CV mới</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="introduction">Giới thiệu (tối thiểu 20 ký tự):</label>
+      <textarea 
+        id="introduction" 
+        [(ngModel)]="introduction" 
+        rows="4" 
+        placeholder="Nhập giới thiệu của bạn"
+        (input)="validateIntroduction()"
+      ></textarea>
+      <span class="error-message" *ngIf="showIntroductionError">
+        Giới thiệu phải có ít nhất 20 ký tự
+      </span>
+    </div>
+
+    <div *ngIf="selectedOption === 'new'" class="upload-section">
+      <app-upload-cv [isDialog]="true" (cvUploaded)="onCvUploaded($event)"></app-upload-cv>
+    </div>
+
+    <div class="dialog-actions">
+      <button class="cancel-btn" (click)="onCancel()">Hủy</button>
+      <button class="apply-btn" (click)="onApply()" [disabled]="!isValid()">Ứng tuyển</button>
+    </div>
+  </div>

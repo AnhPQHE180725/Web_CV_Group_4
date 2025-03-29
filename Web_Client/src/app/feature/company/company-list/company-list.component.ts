@@ -108,4 +108,12 @@ export class CompanyListComponent {
   isFollowing(companyId: number): boolean {
     return this.followedCompanies.includes(companyId);
   }
+
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
+
+  isCandidate(): boolean {
+    return this.authService.isLoggedIn() && this.authService.getRoleFromToken() === 'Candidate';
+  }
 }

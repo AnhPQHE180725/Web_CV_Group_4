@@ -27,6 +27,7 @@
         class="follow-btn"
         (click)="toggleFollow($event, company.id)"
         [class.followed]="isFollowing(company.id)"
+        *ngIf="isLoggedIn() && isCandidate()"
       >
         {{ isFollowing(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
       </button>

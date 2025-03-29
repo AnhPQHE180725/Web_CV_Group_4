@@ -14,7 +14,7 @@ import { AuthService } from '../../services/auth.service';
     styleUrl: './user-companies.component.css'
 })
 export class UserCompaniesComponent implements OnInit {
-    // New properties for logo preview
+    // New properties for logo preview Xem truoc hinh anh logo cty
     logoPreviewUrl: string | ArrayBuffer | null = null;
     @ViewChild('logoFileInput') logoFileInput!: ElementRef<HTMLInputElement>;
 
