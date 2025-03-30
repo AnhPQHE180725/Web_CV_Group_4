@@ -168,5 +168,16 @@ namespace Web_Server.Services
         {
             return await _repository.GetRecruitmentByIdAsync(id);
         }
+
+        public async Task<bool> UpdateRecruitmentView(int id)
+        {
+            var recruitment = await _repository.GetRecruitmentByIdAsync(id);
+            if (recruitment == null) return false;
+
+            recruitment.View += 1;
+
+            return await _repository.EditRecruitmentAsync(recruitment);
+        }
+
     }
 }

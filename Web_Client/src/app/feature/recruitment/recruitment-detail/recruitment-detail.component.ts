@@ -20,23 +20,22 @@ export class RecruitmentDetailComponent implements OnInit {
   recruitment: any;
   id: number = 0;
   followedJobs: number[] = [];
-  
+
   constructor(
-    private recruitmentService: RecruitmentService, 
+    private recruitmentService: RecruitmentService,
     private route: ActivatedRoute,
-    private dialog: MatDialog, 
+    private dialog: MatDialog,
     private authService: AuthService,
-    private location: Location, 
+    private location: Location,
     private jobFollowService: JobFollowService,
   ) { }
 
   ngOnInit() {
-    // Đầu tiên, kiểm tra xem người dùng đã đăng nhập chưa
+    // Nếu là ứng viên đã đăng nhập → tải danh sách công việc đã yêu thích
     if (this.isLoggedIn() && this.isCandidate()) {
-      // Nếu đã đăng nhập, tải danh sách công việc đã yêu thích
       this.loadFollowedJobs();
     }
-    
+
     this.route.paramMap.subscribe(params => {
       this.id = Number(params.get('id'));
 
@@ -50,7 +49,13 @@ export class RecruitmentDetailComponent implements OnInit {
       this.recruitmentService.getRecruitmentById(this.id).subscribe(
         (data) => {
           console.log('Fetched recruitment data:', data);
-          this.recruitment = data; // Assign API response to recruitment
+          this.recruitment = data;
+
+          // ✅ Gọi API tăng lượt xem
+          this.recruitmentService.incrementView(this.id).subscribe({
+            next: () => console.log('View count incremented'),
+            error: (err) => console.error('Failed to increment view:', err)
+          });
         },
         (error) => {
           console.error('Error fetching recruitment details:', error);
@@ -100,7 +105,7 @@ export class RecruitmentDetailComponent implements OnInit {
     if (!this.authService.isLoggedIn()) {
       return;
     }
-    
+
     console.log('Toggling follow for job ID:', jobId);
     this.jobFollowService.toggleFollow(jobId)
       .subscribe({
