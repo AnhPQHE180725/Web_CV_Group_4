@@ -5,15 +5,10 @@ import { CompanyListComponent } from './feature/company/company-list/company-lis
 import { SignuppageComponent } from './feature/signuppage/signuppage.component';
 import { LoginpageComponent } from './feature/loginpage/loginpage.component';
 import { RecruiterHomepageComponent } from './feature/recruiter/recruiter-homepage/recruiter-homepage.component';
-
 import { ConfirmloginComponent } from './feature/confirmlogin/confirmlogin.component';
-
 import { RecruiterCandidateListComponent } from './feature/recruiter/recruiter-candidate-list/recruiter-candidate-list.component';
-
 import { ApplyCVComponent } from './feature/recruiter/apply-cv/apply-cv.component';
-
 import { UploadCvComponent } from './feature/upload-cv/upload-cv.component';
-
 import { ProfileComponent } from './feature/profile/profile.component';
 import { ForgotpasswordComponent } from './feature/forgotpassword/forgotpassword.component';
 import { ResetpasswordComponent } from './feature/resetpassword/resetpassword.component';
@@ -24,16 +19,30 @@ import { CompanyDetailComponent } from './feature/company-detail/company-detail.
 import { RecruitmentDetailComponent } from './feature/recruitment/recruitment-detail/recruitment-detail.component';
 import { ConfirmregisterComponent } from './feature/confirmregister/confirmregister.component';
 import { FavoriteAppliedJobsComponent } from './components/favorite-apply-jobs/favorite-apply-jobs.component';
-
+import { ListJobComponent } from './feature/company-detail/list-job-company/list-job-company.component';
 
 export const routes: Routes = [
-    { path: 'recruitment/category/:id', component: RecruitmentListComponent },
-    { path: 'recruitment/company/:id', component: RecruitmentListComponent },
-    { path: 'recruitment', component: RecruitmentListComponent },
-    { path: 'recruitment/detail/:id', component: RecruitmentDetailComponent },
-    { path: 'company', component: CompanyListComponent },
-    { path: 'company/:id', component: CompanyDetailComponent },
-    { path: 'recruiter', component: RecruiterHomepageComponent },
+    { 
+        path: 'recruitment/category/:id', component: RecruitmentListComponent 
+    },
+    { 
+        path: 'recruitment/company/:id', component: RecruitmentListComponent 
+    },
+    { 
+        path: 'recruitment', component: RecruitmentListComponent 
+    },
+    { 
+        path: 'recruitment/detail/:id', component: RecruitmentDetailComponent 
+    },
+    { 
+        path: 'company', component: CompanyListComponent 
+    },
+    { 
+        path: 'company/:id', component: CompanyDetailComponent 
+    },
+    { 
+        path: 'recruiter', component: RecruiterHomepageComponent 
+    },
     {
         path: 'home', component: HomepageComponent
     },
@@ -41,20 +50,18 @@ export const routes: Routes = [
         path: 'register', component: SignuppageComponent
     },
     {
-    path: 'register/confirm', component: ConfirmregisterComponent    
-},
+        path: 'register/confirm', component: ConfirmregisterComponent
+    },
     {
         path: 'login', component: LoginpageComponent
     },
     {
-
         path: 'login/confirm', component: ConfirmloginComponent
     },
     {
         path: 'recruiter/candidate/:id', component: RecruiterCandidateListComponent
     },
     {
-
         path: 'recruiter/candidate/apply/:postid/:userid', component: ApplyCVComponent
     },
     {
@@ -80,6 +87,9 @@ export const routes: Routes = [
     },
     {
         path: 'user-companies', component: UserCompaniesComponent
+    },
+    {
+        path: 'list-job-company/:id', component: ListJobComponent
     },
     { path: '**', redirectTo: 'home' }
 

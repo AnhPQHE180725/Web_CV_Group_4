@@ -89,7 +89,7 @@
       class="jobs-section"
       *ngIf="company.recruitments && company.recruitments.length > 0"
     >
-      <h3>Việc làm đang tuyển dụng</h3>
+      <h3>Việc làm đã đăng</h3>
       <div class="jobs-list">
         <div class="job-card" *ngFor="let job of company.recruitments">
           <h3>{{ job.title }}</h3>
@@ -109,8 +109,8 @@
       class="jobs-section"
       *ngIf="!company.recruitments || company.recruitments.length === 0"
     >
-      <h3>Việc làm đang tuyển dụng</h3>
-      <div class="no-data">Hiện tại không có vị trí nào đang tuyển</div>
+      <h3>Việc làm đã đăng</h3>
+      <div class="no-data">Hiện tại không có vị trí nào đã đăng</div>
     </div>
   </div>
 </div>
