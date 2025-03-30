@@ -103,20 +103,21 @@ export class UserCompaniesComponent implements OnInit {
     // Create new company form
     showCreateForm() {
         this.isEditing = false;
-        this.resetLogoPreview();
+        this.selectedLogoFile = null;
+        this.logoPreviewUrl = ''; // reset preview nếu có
         this.currentCompany = {
-            id: 0,
-            name: '',
-            description: '',
-            address: '',
-            email: '',
-            phoneNumber: '',
-            logo: '',
-            status: 0,
-            recruitments: []
+          id: 0,
+          name: '',
+          description: '',
+          address: '',
+          email: '',
+          phoneNumber: '',
+          logo: '',
+          status: 1, // ✅ mặc định là Hoạt động
+          recruitments: []
         };
         this.showForm = true;
-    }
+      }
 
     // Edit existing company
     editCompany(company: Company) {
