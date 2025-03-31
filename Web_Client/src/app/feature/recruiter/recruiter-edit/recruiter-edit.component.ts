@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CurrencyPipe, NgFor } from '@angular/common';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 import { Recruitment } from '../../../models/Recruitment';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -12,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-recruiter-edit',
   standalone: true,
-  imports: [CommonModule, NgFor, CurrencyPipe, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './recruiter-edit.component.html',
   styleUrls: ['./recruiter-edit.component.css']
 })
@@ -127,7 +125,7 @@ export class RecruiterEditComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/recruiter']);
   }
 
   onSubmit(): void {

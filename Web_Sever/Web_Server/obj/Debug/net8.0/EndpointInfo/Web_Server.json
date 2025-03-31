@@ -1916,6 +1916,10 @@
           "categoryId": {
             "type": "integer",
             "format": "int32"
+          },
+          "logo": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

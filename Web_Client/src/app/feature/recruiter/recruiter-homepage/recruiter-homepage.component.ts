@@ -54,46 +54,6 @@ export class RecruiterHomepageComponent implements OnInit {
     });
   }
 
-  onAddRecruitment() {
-    const { companyName, categoryName, ...recruitmentData } = this.recruitmentForm.value;
-    recruitmentData.salary = parseFloat(recruitmentData.salary); // Đảm bảo salary là kiểu float
-    recruitmentData.id = undefined; // Loại bỏ ID khi thêm mới
-
-    this.http.post(`${this.apiUrl}/add-recruitment`, recruitmentData)
-      .subscribe({
-        next: () => alert('Recruitment added successfully!'),
-        error: (error) => console.error('Error adding recruitment:', error)
-      });
-  }
-
-  onEditRecruitment(id: number): void {
-    this.isEditMode = true;
-    this.selectedRecruitmentId = id;
-
-    const selectedRecruitment = this.recruitments.find((r) => r.id === id);
-    if (selectedRecruitment) {
-      this.recruitmentForm.patchValue(selectedRecruitment);
-    }
-  }
-
-  onUpdateRecruitment(): void {
-    if (this.recruitmentForm.valid && this.selectedRecruitmentId) {
-      const formData = {
-        ...this.recruitmentForm.value,
-        deadline: new Date(this.recruitmentForm.value.deadline).toISOString()
-      };
-
-      console.log('🟡 Dữ liệu gửi lên:', formData);
-      this.recruitmentService.editRecruitment(this.selectedRecruitmentId, formData).subscribe({
-        next: () => {
-          alert('Recruitment updated successfully!');
-          this.loadRecruitments();
-          this.resetForm();
-        },
-      });
-    }
-  }
-
   onDeleteRecruitment(id: number): void {
     if (confirm('Are you sure you want to delete this recruitment?')) {
       this.recruitmentService.deleteRecruitment(id).subscribe({
