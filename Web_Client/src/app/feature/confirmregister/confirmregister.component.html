@@ -15,9 +15,9 @@
                     Xác nhận
                 </button>
 
-                <!-- <button type="button" class="resend-btn" (click)="resendOtp()">
-                Gửi lại mã
-            </button> -->
+                <button type="button" class="resend-btn" (click)="resendOtp()" [disabled]="isResending">
+                    {{ isResending ? 'Đang gửi...' : 'Gửi lại mã' }}
+                </button>
             </div>
 
             <div class="back-btn-group">

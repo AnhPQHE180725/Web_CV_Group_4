@@ -13,6 +13,8 @@ import { CookieService } from 'ngx-cookie-service';
 export class ConfirmloginComponent {
   email: string = '';
   otpCode: string = '';
+  isResending = false;
+
 
   constructor(
     private authService: AuthService,
@@ -47,14 +49,18 @@ export class ConfirmloginComponent {
     this.router.navigateByUrl('/login');
   }
 
-  resendOtp() {
-    this.authService.resendOtp(this.email).subscribe({
-      next: () => {
-        alert('Mã OTP mới đã được gửi đến email của bạn. Vui lòng kiểm tra hộp thư!');
-      },
-      error: () => {
-        alert('Gửi lại mã OTP thất bại. Vui lòng thử lại!');
-      }
-    });
-  }
+resendOtp() {
+  this.isResending = true; // ✅ Bật trạng thái "đang gửi"
+
+  this.authService.resendOtp(this.email).subscribe({
+    next: () => {
+      alert('Mã OTP mới đã được gửi đến email của bạn. Vui lòng kiểm tra hộp thư!');
+      this.isResending = false; // ✅ Kết thúc trạng thái "đang gửi"
+    },
+    error: () => {
+      alert('Gửi lại mã OTP thất bại. Vui lòng thử lại!');
+      this.isResending = false; 
+    }
+  });
+}
 }
