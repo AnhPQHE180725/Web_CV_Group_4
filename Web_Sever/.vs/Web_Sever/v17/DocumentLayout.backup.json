@@ -94,8 +94,7 @@
               "RelativeToolTip": "Web_Server\\ViewModels\\CompanyResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:47:16.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T11:47:16.06Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "Web_Server\\Repositories\\CompanyRepository.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAmwEEAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:40:09.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:40:09.926Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICompanyRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:38:15.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:38:15.575Z"
             },
             {
               "$type": "Document",
@@ -131,7 +128,7 @@
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICompanyService.cs",
               "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyService.cs",
               "RelativeToolTip": "Web_Server\\Interfaces\\ICompanyService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T10:36:58.015Z",
               "EditorCaption": ""
@@ -144,7 +141,7 @@
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\CompanyController.cs",
               "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CompanyController.cs",
               "RelativeToolTip": "Web_Server\\Controllers\\CompanyController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA5wA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAmwGYAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T10:35:32.438Z",
               "EditorCaption": ""
@@ -159,8 +156,7 @@
               "RelativeToolTip": "Web_Server\\Services\\CompanyService.cs",
               "ViewState": "AgIAAGgAAAAAAAAAAAAIwMUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:33:06.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:33:06.601Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "Web_Server\\ViewModels\\CompanyUpdateModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:32:44.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:32:44.128Z"
             },
             {
               "$type": "Document",
@@ -185,8 +180,7 @@
               "RelativeToolTip": "Web_Server\\ViewModels\\CompanyCreateModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:32:27.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:32:27.882Z"
             },
             {
               "$type": "Document",
@@ -198,8 +192,7 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T11:44:55.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T11:44:55.882Z"
             },
             {
               "$type": "Document",
@@ -211,8 +204,7 @@
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAIwL4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:03:54.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T10:03:54.938Z"
             },
             {
               "$type": "Document",
@@ -260,8 +252,7 @@
               "RelativeToolTip": "Web_Server\\Controllers\\RecruitmentController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAA0wGkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T18:08:13.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T18:08:13.5Z"
             },
             {
               "$type": "Document",
