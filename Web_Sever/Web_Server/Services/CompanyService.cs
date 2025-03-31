@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.IO;
+using System.Net;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
@@ -13,7 +17,7 @@ namespace Web_Server.Services
         private const string LOGO_FOLDER = "CompanyLogos";
 
         public CompanyService(
-            ICompanyRepository companyRepository, 
+            ICompanyRepository companyRepository,
             IHttpContextAccessor httpContextAccessor,
             IWebHostEnvironment environment)
         {
@@ -34,13 +38,20 @@ namespace Web_Server.Services
             return userId;
         }
 
-        private async Task<string> SaveLogoFileAsync(IFormFile logoFile)
+        private async Task<string> SaveLogoFromUrlAsync(string logoUrl)
         {
-            if (logoFile == null || logoFile.Length == 0)
-                throw new ArgumentException("Logo file is required");
+            if (string.IsNullOrEmpty(logoUrl))
+                throw new ArgumentException("Logo URL is required");
 
-            if (!logoFile.ContentType.StartsWith("image/"))
-                throw new ArgumentException("Only image files are allowed");
+            // Validate URL
+            if (!Uri.TryCreate(logoUrl, UriKind.Absolute, out Uri uri) ||
+                (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+                throw new ArgumentException("Invalid logo URL format");
+
+            // Validate file extension
+            string fileExtension = Path.GetExtension(logoUrl).ToLower();
+            if (fileExtension != ".jpg" && fileExtension != ".jpeg" && fileExtension != ".png")
+                throw new ArgumentException("Only .jpg, .jpeg and .png formats are supported");
 
             if (string.IsNullOrEmpty(_environment.WebRootPath))
             {
@@ -59,16 +70,23 @@ namespace Web_Server.Services
                 Directory.CreateDirectory(logoFolderPath);
 
             // Generate unique filename
-            var fileName = $"{Guid.NewGuid()}_{logoFile.FileName}";
+            var fileName = $"{Guid.NewGuid()}{fileExtension}";
             var filePath = Path.Combine(logoFolderPath, fileName);
 
-            // Save file
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            try
             {
-                await logoFile.CopyToAsync(stream);
-            }
+                // Download the image
+                using (WebClient client = new WebClient())
+                {
+                    await client.DownloadFileTaskAsync(new Uri(logoUrl), filePath);
+                }
 
-            return fileName;
+                return fileName;
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException($"Failed to download logo: {ex.Message}");
+            }
         }
 
         private async Task DeleteLogoFileAsync(string fileName)
@@ -95,22 +113,27 @@ namespace Web_Server.Services
         {
             return await _companyRepository.GetTop4Companies();
         }
-        
+
         public async Task<List<Company>> GetCompaniesByName(string name)
         {
             return await _companyRepository.GetCompaniesByName(name);
         }
-        
+
         public async Task<Company> GetCompanyByIdAsync(int id)
         {
             return await _companyRepository.GetByIdAsync(id);
         }
-        
-        public async Task<Company> CreateCompanyAsync(CompanyCreateModel companyModel, IFormFile logoFile)
+
+        public async Task<Company> CreateCompanyAsync(CompanyCreateModel companyModel)
         {
             var userId = await GetCurrentUserIdAsync();
-            var logoFileName = await SaveLogoFileAsync(logoFile);
-            
+
+            // Validate and save logo from URL
+            if (string.IsNullOrEmpty(companyModel.Logo))
+                throw new ArgumentException("Logo URL is required");
+
+            string logoFileName = await SaveLogoFromUrlAsync(companyModel.Logo);
+
             var company = new Company
             {
                 Name = companyModel.Name,
@@ -122,36 +145,36 @@ namespace Web_Server.Services
                 Status = companyModel.Status,
                 UserId = userId
             };
-            
+
             return await _companyRepository.CreateAsync(company);
         }
-        
-        public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel, IFormFile logoFile)
+
+        public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel)
         {
             var existingCompany = await _companyRepository.GetByIdAsync(companyModel.Id);
-            
+
             if (existingCompany == null)
                 return null;
 
-            // Handle logo file
-            if (logoFile != null && logoFile.Length > 0)
+            // Update logo if new URL is provided
+            if (!string.IsNullOrEmpty(companyModel.Logo))
             {
                 // Delete old logo file
                 await DeleteLogoFileAsync(existingCompany.Logo);
-                // Save new logo file
-                existingCompany.Logo = await SaveLogoFileAsync(logoFile);
+                // Save new logo from URL
+                existingCompany.Logo = await SaveLogoFromUrlAsync(companyModel.Logo);
             }
-                
+
             existingCompany.Name = companyModel.Name;
             existingCompany.Description = companyModel.Description;
             existingCompany.Address = companyModel.Address;
             existingCompany.Email = companyModel.Email;
             existingCompany.PhoneNumber = companyModel.PhoneNumber;
             existingCompany.Status = companyModel.Status;
-            
+
             return await _companyRepository.UpdateAsync(existingCompany);
         }
-        
+
         public async Task<bool> DeleteCompanyAsync(int id)
         {
             var company = await _companyRepository.GetByIdAsync(id);
@@ -160,7 +183,7 @@ namespace Web_Server.Services
 
             // Delete logo file
             await DeleteLogoFileAsync(company.Logo);
-            
+
             return await _companyRepository.DeleteAsync(id);
         }
 

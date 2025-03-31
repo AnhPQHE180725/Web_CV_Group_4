@@ -100,24 +100,28 @@ export class UserCompaniesComponent implements OnInit {
         return validTypes.includes(file.type);
     }
 
+    isValidImageUrl(url: string): boolean {
+        return /\.(jpg|jpeg|png)$/i.test(url.trim());
+    }
+
     // Create new company form
     showCreateForm() {
         this.isEditing = false;
         this.selectedLogoFile = null;
         this.logoPreviewUrl = ''; // reset preview nếu có
         this.currentCompany = {
-          id: 0,
-          name: '',
-          description: '',
-          address: '',
-          email: '',
-          phoneNumber: '',
-          logo: '',
-          status: 1, // ✅ mặc định là Hoạt động
-          recruitments: []
+            id: 0,
+            name: '',
+            description: '',
+            address: '',
+            email: '',
+            phoneNumber: '',
+            logo: '',
+            status: 1, // ✅ mặc định là Hoạt động
+            recruitments: []
         };
         this.showForm = true;
-      }
+    }
 
     // Edit existing company
     editCompany(company: Company) {
@@ -143,7 +147,7 @@ export class UserCompaniesComponent implements OnInit {
 
     // Save company method
     saveCompany() {
-       
+
         // Validate required fields
         if (!this.currentCompany.name.trim()) {
             alert('Vui lòng nhập tên công ty!');
@@ -163,12 +167,13 @@ export class UserCompaniesComponent implements OnInit {
         }
 
         // Validate logo for new company
-        if (!this.isEditing && !this.selectedLogoFile) {
-            alert('Vui lòng chọn logo cho công ty!');
+        if (!this.currentCompany.logo || !this.isValidImageUrl(this.currentCompany.logo)) {
+            alert('Vui lòng nhập đường dẫn hợp lệ cho logo (.jpg, .png)!');
             return;
         }
+
         if (this.isEditing) {
-            this.companyService.updateCompany(this.currentCompany, this.selectedLogoFile || undefined).subscribe(
+            this.companyService.updateCompany(this.currentCompany).subscribe(
                 (response) => {
                     alert('Công ty đã được cập nhật thành công!');
                     this.showForm = false;
@@ -186,7 +191,7 @@ export class UserCompaniesComponent implements OnInit {
                 }
             );
         } else {
-            this.companyService.createCompany(this.currentCompany, this.selectedLogoFile!).subscribe(
+            this.companyService.createCompany(this.currentCompany).subscribe(
                 (response) => {
                     alert('Công ty đã được tạo thành công!');
                     this.showForm = false;
