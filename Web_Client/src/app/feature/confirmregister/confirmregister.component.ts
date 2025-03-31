@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class ConfirmregisterComponent {
   email: string = '';
   otpCode: string = '';
+  isResending = false;
+
 
   constructor(
     private authService: AuthService,
@@ -45,14 +47,19 @@ export class ConfirmregisterComponent {
     this.router.navigateByUrl('/register');
   }
 
-  // resendOtp() {
-  //   this.authService.resendOtp(this.email).subscribe({
-  //     next: () => {
-  //       alert('Mã OTP mới đã được gửi đến email của bạn. Vui lòng kiểm tra hộp thư!');
-  //     },
-  //     error: () => {
-  //       alert('Gửi lại mã OTP thất bại. Vui lòng thử lại!');
-  //     }
-  //   });
-  // }
+resendOtp() {
+  this.isResending = true; // Hiển thị trạng thái đang gửi
+
+  this.authService.resendOtpRegister(this.email).subscribe({
+    next: (response) => {
+      alert(response.message);
+      this.isResending = false; // Bật lại nút sau khi gửi xong
+    },
+    error: () => {
+      alert('Gửi lại mã OTP thất bại. Vui lòng thử lại!');
+      this.isResending = false; 
+    }
+  });
+}
+
 }
