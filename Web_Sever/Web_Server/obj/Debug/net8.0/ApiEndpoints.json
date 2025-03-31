@@ -180,6 +180,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "ResendOtpRegister",
+    "RelativePath": "api/Authentication/resend-otp-register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resendOtpVm",
+        "Type": "Web_Server.ViewModels.ResendOtpVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "ResetPassword",
     "RelativePath": "api/Authentication/reset-password",
     "HttpMethod": "GET",
