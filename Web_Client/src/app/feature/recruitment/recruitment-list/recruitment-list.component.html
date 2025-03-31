@@ -24,7 +24,7 @@
 <div *ngIf="paginatedRecruitments.length > 0; else noResults">
   <div class="post" *ngFor="let post of paginatedRecruitments">
     <div>
-      <img [src]="'assets/images/slide1.jpg'" alt="{{ post.companyName }}" class="company-logo" />
+      <img [src]="post.logo" alt="{{ post.companyName }}" class="company-logo" />
     </div>
     <strong>{{ post.type }}</strong>
     <div class="action-buttons">

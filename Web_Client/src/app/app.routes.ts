@@ -16,32 +16,34 @@ import { FavoriteJobsComponent } from './components/favorite-jobs/favorite-jobs.
 import { FavoriteCompaniesComponent } from './components/favorite-companies/favorite-companies.component';
 import { UserCompaniesComponent } from './feature/user-companies/user-companies.component';
 import { CompanyDetailComponent } from './feature/company-detail/company-detail.component';
+import { RecruiterEditComponent } from './feature/recruiter/recruiter-edit/recruiter-edit.component';
 import { RecruitmentDetailComponent } from './feature/recruitment/recruitment-detail/recruitment-detail.component';
 import { ConfirmregisterComponent } from './feature/confirmregister/confirmregister.component';
 import { FavoriteAppliedJobsComponent } from './components/favorite-apply-jobs/favorite-apply-jobs.component';
 import { ListJobComponent } from './feature/company-detail/list-job-company/list-job-company.component';
 
+
 export const routes: Routes = [
-    { 
-        path: 'recruitment/category/:id', component: RecruitmentListComponent 
+    {
+        path: 'recruitment/category/:id', component: RecruitmentListComponent
     },
-    { 
-        path: 'recruitment/company/:id', component: RecruitmentListComponent 
+    {
+        path: 'recruitment/company/:id', component: RecruitmentListComponent
     },
-    { 
-        path: 'recruitment', component: RecruitmentListComponent 
+    {
+        path: 'recruitment', component: RecruitmentListComponent
     },
-    { 
-        path: 'recruitment/detail/:id', component: RecruitmentDetailComponent 
+    {
+        path: 'recruitment/detail/:id', component: RecruitmentDetailComponent
     },
-    { 
-        path: 'company', component: CompanyListComponent 
+    {
+        path: 'company', component: CompanyListComponent
     },
-    { 
-        path: 'company/:id', component: CompanyDetailComponent 
+    {
+        path: 'company/:id', component: CompanyDetailComponent
     },
-    { 
-        path: 'recruiter', component: RecruiterHomepageComponent 
+    {
+        path: 'recruiter', component: RecruiterHomepageComponent
     },
     {
         path: 'home', component: HomepageComponent
@@ -87,6 +89,12 @@ export const routes: Routes = [
     },
     {
         path: 'user-companies', component: UserCompaniesComponent
+    },
+    {
+        path: 'recruiter/edit', component: RecruiterEditComponent
+    },
+    {
+        path: 'recruiter/edit/:id', component: RecruiterEditComponent
     },
     {
         path: 'list-job-company/:id', component: ListJobComponent
