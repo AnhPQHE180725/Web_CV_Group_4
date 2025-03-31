@@ -139,4 +139,9 @@
 .login-message a:hover {
     text-decoration: underline;
 }
-  
+
+h2 {
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
