@@ -30,9 +30,7 @@
         <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.id]">
           <img [src]="
               company.logo
-                ? 'https://localhost:7247/api/Company/logo/' + company.logo
-                : 'assets/images/slide1.jpg'
-            " alt="{{ company.name }}" class="company-logo" />
+                " alt="{{ company.name }}" class="company-logo" />
           <span class="company-name">{{ company.name }}</span>
         </div>
 
@@ -48,7 +46,7 @@
     <div class="posts">
       <div class="post" *ngFor="let post of recruitments">
         <div>
-          <img [src]="'assets/images/slide1.jpg'" alt="{{ post.companyName }}" class="company-logo" />
+          <img [src]="post.logo" alt="{{ post.companyName }}" class="company-logo" />
         </div>
         <strong>{{ post.type }}</strong>
         <p>{{ post.title }}</p>

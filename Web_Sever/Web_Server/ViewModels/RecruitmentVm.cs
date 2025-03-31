@@ -27,6 +27,6 @@
         // Add these properties to support Add and Edit
         public int CompanyId { get; set; }
         public int CategoryId { get; set; }
-
+        public string logo { get; set; }
     }
 }

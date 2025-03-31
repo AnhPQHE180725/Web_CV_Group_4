@@ -5,15 +5,15 @@ namespace Web_Server.Interfaces
 {
     public interface IRecruitmentService
     {
-        Task<List<Recruitment>> GetAllRecruitments();
+        Task<List<RecruitmentVm>> GetAllRecruitments();
 
-        Task<List<Recruitment>> GetTop2Recruitments();
+        Task<List<RecruitmentVm>> GetTop2Recruitments();
         Task<List<RecruitmentVm>> GetRecruitmentsByCompany(int id);
         Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id);
 
-        Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company);
-        Task<List<Recruitment>> GetRecruitmentsByTitle(string title);
-        Task<List<Recruitment>> GetRecruitmentsByLocation(string location);
+        Task<List<RecruitmentVm>> GetRecruitmentsByCompanyName(string company);
+        Task<List<RecruitmentVm>> GetRecruitmentsByTitle(string title);
+        Task<List<RecruitmentVm>> GetRecruitmentsByLocation(string location);
 
         Task<List<RecruitmentVm>> GetRecruitmentsByid (int id);
         Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm);

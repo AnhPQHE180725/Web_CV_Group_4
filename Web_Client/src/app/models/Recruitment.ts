@@ -16,4 +16,5 @@ export interface Recruitment {
     companyId?: number;
     companyName: string;
     categoryName: string;
+    logo: string;
 }
