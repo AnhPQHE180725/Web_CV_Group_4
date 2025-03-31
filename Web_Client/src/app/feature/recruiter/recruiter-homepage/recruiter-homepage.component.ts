@@ -39,7 +39,8 @@ export class RecruiterHomepageComponent implements OnInit {
       companyId: [null, Validators.required],
       categoryId: [null, Validators.required],
       companyName: ['', Validators.required],
-      categoryName: ['', Validators.required]
+      categoryName: ['', Validators.required],
+      logo: ['', Validators.required],
     });
   }
 

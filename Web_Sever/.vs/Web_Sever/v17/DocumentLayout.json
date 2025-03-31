@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\recruitmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\recruitmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\companycreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\companycreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,6 +59,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RecruitmentVm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "RelativeDocumentMoniker": "Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "RelativeToolTip": "Web_Server\\ViewModels\\RecruitmentVm.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wB0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:54:26.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecruitmentService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAADwv7YAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T15:52:39.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CompanyCreateModel.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CompanyCreateModel.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\CompanyCreateModel.cs",
@@ -63,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ICompanyService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICompanyService.cs",
@@ -75,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CompanyController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CompanyController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\CompanyController.cs",
