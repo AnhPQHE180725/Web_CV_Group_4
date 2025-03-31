@@ -1,1 +1,55 @@
-<p>recruiter-edit works!</p>
+<h2>{{ isEditMode ? 'Edit Recruitment' : 'Add Recruitment' }}</h2>
+
+<form [formGroup]="recruitmentForm" (ngSubmit)="onSubmit()">
+
+    <label>Title:</label>
+    <input formControlName="title" placeholder="Enter title" />
+
+    <label>Description:</label>
+    <textarea formControlName="description" placeholder="Enter description"></textarea>
+
+    <label>Experience:</label>
+    <input formControlName="experience" placeholder="Enter required experience" />
+
+    <label>Quantity:</label>
+    <input type="number" formControlName="quantity" min="1" placeholder="Enter number of vacancies" />
+
+    <label>Rank:</label>
+    <input formControlName="rank" placeholder="Enter rank (e.g., Junior, Senior)" />
+
+    <label>Type:</label>
+    <input formControlName="type" placeholder="Enter type (e.g., Full-time, Part-time)" />
+
+    <label>Salary:</label>
+    <input type="number" formControlName="salary" placeholder="Enter salary" />
+
+    <label>Address:</label>
+    <input formControlName="address" placeholder="Enter address" />
+
+    <label>Deadline:</label>
+    <input type="date" formControlName="deadline" />
+
+    <label>Company ID:</label>
+    <input type="number" formControlName="companyId" placeholder="Enter company ID" />
+
+    <label>Company Name:</label>
+    <input formControlName="companyName" placeholder="Enter company name" />
+
+    <label>Category ID:</label>
+    <input type="number" formControlName="categoryId" placeholder="Enter category ID" />
+
+    <label>Category Name:</label>
+    <input formControlName="categoryName" placeholder="Enter category name" />
+
+    <label>Status:</label>
+    <select formControlName="status">
+        <option [value]="0">Inactive</option>
+        <option [value]="1">Active</option>
+    </select>
+
+    <button type="submit" [disabled]="recruitmentForm.invalid">
+        {{ isEditMode ? 'Update Recruitment' : 'Add Recruitment' }}
+    </button>
+
+    <button type="button" (click)="goBack()">Back</button>
+</form>
