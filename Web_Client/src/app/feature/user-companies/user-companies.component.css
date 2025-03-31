@@ -17,7 +17,8 @@
 }
 
 .company:hover {
-  transform: scale(1.03);  /* Hiệu ứng hover khi di chuột vào công ty */
+  transform: scale(1.03);
+  /* Hiệu ứng hover khi di chuột vào công ty */
 }
 
 .company-content {
@@ -38,7 +39,8 @@
 }
 
 .company-logo:hover {
-  transform: scale(1.1);  /* Tăng kích thước logo khi hover */
+  transform: scale(1.1);
+  /* Tăng kích thước logo khi hover */
 }
 
 .company-name {
@@ -54,10 +56,14 @@
   color: #666;
   text-align: left;
   margin: 5px 0;
-  height: auto;  /* Đảm bảo mô tả có thể mở rộng */
-  white-space: normal;  /* Cho phép dòng mô tả xuống dòng */
-  overflow: visible;  /* Hiển thị tất cả mô tả mà không cắt ngắn */
-  word-wrap: break-word;  /* Đảm bảo từ dài sẽ xuống dòng */
+  height: auto;
+  /* Đảm bảo mô tả có thể mở rộng */
+  white-space: normal;
+  /* Cho phép dòng mô tả xuống dòng */
+  overflow: visible;
+  /* Hiển thị tất cả mô tả mà không cắt ngắn */
+  word-wrap: break-word;
+  /* Đảm bảo từ dài sẽ xuống dòng */
 }
 
 .company-details,
