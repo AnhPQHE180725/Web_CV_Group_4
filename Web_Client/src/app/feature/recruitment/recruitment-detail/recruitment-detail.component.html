@@ -1,22 +1,36 @@
-<h1 class="title">Chi tiết tuyển dụng</h1>
-<p><strong>Ngày tạo:</strong> {{ recruitment?.createdAt | date:'dd/MM/yyyy' }}</p>
-<p><strong>Mô tả:</strong> {{ recruitment?.description }}</p>
-<p><strong>Kinh nghiệm:</strong> {{ recruitment?.experience }}</p>
-<p><strong>Số lượng:</strong> {{ recruitment?.quantity }}</p>
-<p><strong>Mức lương:</strong> {{ recruitment?.salary }} triệu VNĐ</p>
-<p><strong>Địa điểm làm việc:</strong> {{ recruitment?.address }}</p>
-<p><strong>Hạn nộp hồ sơ:</strong> {{ recruitment?.deadline | date:'dd/MM/yyyy' }}</p>
-<p><strong>Lượt xem:</strong> {{ recruitment?.view }}</p>
-
-<!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
-<!-- <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
-    Ứng tuyển ngay
-</button> -->
-
-<button class="apply-btn" *ngIf="isLoggedIn() && isCandidate()">
-    Ứng tuyển ngay
+<button class="back-btn" (click)="goBack()">
+    <i class="fas fa-arrow-left"></i>Quay lại
 </button>
+<h2>Chi tiết tuyển dụng</h2>
+<div class="job-detail-container">
+    <div class="job-info">
+        <div class="job-details">
+            <p class="job-type"><strong>Ngày tạo:</strong> {{ recruitment?.createdAt | date:'dd/MM/yyyy' }}</p>
+            <p class="job-type"><strong>Mô tả:</strong>{{ recruitment?.description }}</p>
+            <p class="job-type"><strong>Kinh nghiệm:</strong> {{ recruitment?.experience }}</p>
+            <p class="job-type"><strong>Số lượng:</strong> {{ recruitment?.quantity }}</p>
+            <p class="job-type"><strong>Mức lương:</strong> {{ recruitment?.salary }} triệu</p>
+            <p class="job-type"><strong>Địa chỉ:</strong> {{ recruitment?.address }}</p>
+            <p class="job-type"><strong>Hạn nộp hồ sơ:</strong> {{ recruitment?.deadline | date:'dd/MM/yyyy' }}</p>
+            <p class="job-type"><strong>Lượt xem:</strong> {{ recruitment?.view }}</p>
+        </div>
+    </div>
+    <div class="job-actions">
+        <!-- Nút yêu thích chỉ hiển thị khi đã đăng nhập -->
+        <button class="favorite-btn" *ngIf="isLoggedIn() && isCandidate()" (click)="toggleJobFollow($event, recruitment.id)">
+            <i class="fas"
+                [ngClass]="{'fa-heart': isJobFollowed(recruitment.id), 'fa-heart-o': !isJobFollowed(recruitment.id)}">
+            </i>
+            {{ isJobFollowed(recruitment.id) ? "Bỏ yêu thích" : "Yêu thích" }}
+        </button>
 
+        <!-- Nút Ứng tuyển ngay chỉ hiển thị khi đã đăng nhập -->
+        <button class="apply-btn" *ngIf="isLoggedIn() && isCandidate()" (click)="onApply(recruitment)">
+            <i class="fas fa-paper-plane"></i> Ứng tuyển
+        </button>
+    </div>
+
+</div>
 <!-- Hiển thị thông báo yêu cầu đăng nhập khi chưa đăng nhập -->
 <p class="login-message" *ngIf="!isLoggedIn()">
     Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển

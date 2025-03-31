@@ -1,8 +1,12 @@
-wwwroot\CompanyLogos\119dbd65-8030-4cb7-9fd3-8140fd85ce76_465033876_545771988395852_3481360251270567648_n.jpg
-wwwroot\CompanyLogos\678b0aba-ea63-4215-8cc1-4dda1f476643_464910469_122125314602446996_4476879186093997237_n.jpg
-wwwroot\CompanyLogos\728d3593-54ed-44a9-8c1a-507ce4d37455_462617947_528861886419452_1876416349185202872_n.jpg
+wwwroot\CompanyLogos\05f98768-8cba-40e9-9c88-235837ca64b5_avata5.jpg
+wwwroot\CompanyLogos\12568846-a665-4392-91b4-db53aff904af_avata3.jpg
+wwwroot\CompanyLogos\24c5a83b-53e5-4d71-8b65-ab6fae900199_7UNmqjhF.jpg
+wwwroot\CompanyLogos\61629274-6d58-495a-ad27-ab815eea03a4_avata4.jpg
+wwwroot\CompanyLogos\6beda602-5339-44d2-9ede-5b47b311fd3e_avata3.jpg
 wwwroot\CompanyLogos\9eb3942f-01c9-4390-a17d-62bf8858aa82_logo.jpg
-wwwroot\CompanyLogos\d1f27050-b49e-46a2-9eda-b3896f5fe9da_GbC-_bsaMAAv9NG.jpg
+wwwroot\CompanyLogos\b390780d-c59d-489a-a8f9-767d042c71b2_avata1.jpg
+wwwroot\CompanyLogos\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg
+wwwroot\CompanyLogos\ca6f98ba-5704-4ec6-9898-217a76b710e8_avata4.jpg
 wwwroot\CVs\0d0a72ec-77d0-48f5-bcbc-ab80dd4d3cd1_Assignment 5.pdf
 wwwroot\CVs\18bd94fa-2bc5-4633-96aa-a05b4d7d4f4c_Assignment 5.pdf
 wwwroot\CVs\25af7c56-34ef-48de-a67e-ae6b099af9a6_VoTanTai_Fullstack_ENG.pdf
@@ -13,8 +17,9 @@ wwwroot\CVs\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf
 wwwroot\CVs\53150e0c-904a-4bda-9718-05bd580c9102_GuideToInstallAngular.pdf
 wwwroot\CVs\5c358c02-a6b7-43f1-b12e-50807f2a1eb3_[FPTU] CV Intern C#_Net - Nguyen Tran Trong Hieu.pdf
 wwwroot\CVs\70cb141e-849e-4d9f-9a75-e628c51e7935_GuideToInstallAngular.pdf
-wwwroot\CVs\9a0dfd4f-66cd-4492-84dd-589d090ca3ad_Assignment 1.pdf
 wwwroot\CVs\9f95fd90-f138-4756-ada9-3714dcbac811_GuideToInstallAngular.pdf
 wwwroot\CVs\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf
+wwwroot\CVs\c7235ba7-c850-414c-a47c-f82ded2e69a8_[FPTU] CV Intern C#_Net - Nguyen Tran Trong Hieu.pdf
 wwwroot\CVs\d1fe8c63-a22c-44c6-9ad1-fa867b9b0916_Assignment 2.pdf
 wwwroot\CVs\ebd3d876-722d-4db3-8a09-c2db32e40b2c_Assignment.pdf
+wwwroot\CVs\fdd8135d-b683-43e3-a2cf-10d041fd5277_cvHuy.pdf

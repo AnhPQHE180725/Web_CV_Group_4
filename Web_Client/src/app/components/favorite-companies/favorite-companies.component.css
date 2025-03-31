@@ -90,11 +90,13 @@ h2 {
 }
 
 .status-badge.active {
-  background-color: #28a745; /* Green for active */
+  background-color: #28a745;
+  /* Green for active */
 }
 
 .status-badge.paused {
-  background-color: #ffc107; /* Yellow for paused */
+  background-color: #ffc107;
+  /* Yellow for paused */
 }
 
 .follow-btn {
@@ -152,4 +154,23 @@ h2 {
   background-color: #d1ecf1;
   border-color: #bee5eb;
   color: #0c5460;
+}
+
+.recruitment-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0d0e0f;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.recruitment-link:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.recruitment-link i {
+  margin-right: 6px;
+  color: #007bff;
 }

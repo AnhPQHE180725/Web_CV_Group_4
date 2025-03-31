@@ -848,6 +848,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "IncrementView",
+    "RelativePath": "api/Recruitment/increment-view/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "UpdateView",
+    "RelativePath": "api/Recruitment/update-view/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web_Server.Controllers.UserController",
     "Method": "ApplyCV",
     "RelativePath": "api/User/apply-cv/{id}",

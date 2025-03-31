@@ -1,7 +1,7 @@
 <div class="company-detail-container">
   <div class="back-button-container">
     <button class="back-btn" (click)="goBack()">
-      <i class="fas fa-arrow-left"></i> Quay lại
+      <i class="fas fa-arrow-left"></i>Quay lại
     </button>
   </div>
 
@@ -11,7 +11,8 @@
 
   <div *ngIf="!isLoading && errorMessage" class="error-message">
     <p>{{ errorMessage }}</p>
-    <button class="back-btn" (click)="goBack()">Quay lại</button>
+    <button class="back-btn" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i>Quay lại</button>
   </div>
 
   <div *ngIf="!isLoading && !errorMessage && company" class="company-detail">
@@ -88,7 +89,7 @@
       class="jobs-section"
       *ngIf="company.recruitments && company.recruitments.length > 0"
     >
-      <h2>Việc làm đang tuyển dụng</h2>
+      <h3>Việc làm đã đăng</h3>
       <div class="jobs-list">
         <div class="job-card" *ngFor="let job of company.recruitments">
           <h3>{{ job.title }}</h3>
@@ -108,8 +109,8 @@
       class="jobs-section"
       *ngIf="!company.recruitments || company.recruitments.length === 0"
     >
-      <h2>Việc làm đang tuyển dụng</h2>
-      <div class="no-data">Hiện tại không có vị trí nào đang tuyển</div>
+      <h3>Việc làm đã đăng</h3>
+      <div class="no-data">Hiện tại không có vị trí nào đã đăng</div>
     </div>
   </div>
 </div>
