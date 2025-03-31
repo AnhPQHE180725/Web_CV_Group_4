@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Company } from '../../models/Company';
@@ -14,6 +14,10 @@ import { AuthService } from '../../services/auth.service';
     styleUrl: './user-companies.component.css'
 })
 export class UserCompaniesComponent implements OnInit {
+    // New properties for logo preview Xem truoc hinh anh logo cty
+    logoPreviewUrl: string | ArrayBuffer | null = null;
+    @ViewChild('logoFileInput') logoFileInput!: ElementRef<HTMLInputElement>;
+
     companies: Company[] = [];
     paginatedCompanies: Company[] = [];
     currentPage: number = 1;
@@ -23,7 +27,7 @@ export class UserCompaniesComponent implements OnInit {
     search: string = '';
     filteredCompanies: Company[] = [];
 
-    // Biến lưu giá trị tìm kiếm
+    // Biến lưu giá trị tìm kiếm, đã tắt tìm kiếm đc sđt
     searchName: string = '';
     searchAddress: string = '';
     searchPhone: string = '';
@@ -31,6 +35,7 @@ export class UserCompaniesComponent implements OnInit {
     // For creating/editing company
     isEditing: boolean = false;
     showForm: boolean = false;
+    selectedLogoFile: File | null = null;
     currentCompany: Company = {
         id: 0,
         name: '',
@@ -51,7 +56,153 @@ export class UserCompaniesComponent implements OnInit {
     ngOnInit() {
         this.loadUserCompanies();
     }
+    // Logo preview methods
+    onLogoSelected(event: any) {
+        const file = event.target.files[0];
+        if (file) {
+            // Validate file type
+            if (!this.isValidImageFile(file)) {
+                alert('Chỉ chấp nhận file ảnh (JPEG, PNG, GIF, JPG)');
+                this.resetLogoPreview();
+                return;
+            }
 
+            // Create file reader for preview
+            const reader = new FileReader();
+            reader.onload = (e: any) => {
+                // Set preview URL
+                this.logoPreviewUrl = e.target.result;
+            };
+
+            // Read the file as data URL
+            reader.readAsDataURL(file);
+
+            // Store the file for upload
+            this.selectedLogoFile = file;
+        }
+    }
+
+    // Reset logo preview and file input
+    resetLogoPreview() {
+        // Reset preview
+        this.logoPreviewUrl = null;
+        this.selectedLogoFile = null;
+
+        // Reset file input using ViewChild
+        if (this.logoFileInput) {
+            this.logoFileInput.nativeElement.value = '';
+        }
+    }
+
+    // Validate image file
+    isValidImageFile(file: File): boolean {
+        const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/jpg'];
+        return validTypes.includes(file.type);
+    }
+
+    // Create new company form
+    showCreateForm() {
+        this.isEditing = false;
+        this.selectedLogoFile = null;
+        this.logoPreviewUrl = ''; // reset preview nếu có
+        this.currentCompany = {
+          id: 0,
+          name: '',
+          description: '',
+          address: '',
+          email: '',
+          phoneNumber: '',
+          logo: '',
+          status: 1, // ✅ mặc định là Hoạt động
+          recruitments: []
+        };
+        this.showForm = true;
+      }
+
+    // Edit existing company
+    editCompany(company: Company) {
+        this.isEditing = true;
+        this.resetLogoPreview();
+        this.currentCompany = { ...company };
+
+        // If the existing company doesn't have the new fields, initialize them
+        if (!this.currentCompany.description) this.currentCompany.description = '';
+        if (!this.currentCompany.address) this.currentCompany.address = '';
+        if (!this.currentCompany.email) this.currentCompany.email = '';
+        if (!this.currentCompany.phoneNumber) this.currentCompany.phoneNumber = '';
+        if (this.currentCompany.status === undefined) this.currentCompany.status = 0;
+
+        this.showForm = true;
+    }
+
+    // Cancel form
+    cancelForm() {
+        this.showForm = false;
+        this.resetLogoPreview();
+    }
+
+    // Save company method
+    saveCompany() {
+       
+        // Validate required fields
+        if (!this.currentCompany.name.trim()) {
+            alert('Vui lòng nhập tên công ty!');
+            return;
+        }
+
+        // Validate email if provided
+        if (this.currentCompany.email && !this.isValidEmail(this.currentCompany.email)) {
+            alert('Email không đúng định dạng!');
+            return;
+        }
+
+        // Validate phone number if provided
+        if (this.currentCompany.phoneNumber && !this.isValidPhoneNumber(this.currentCompany.phoneNumber)) {
+            alert('Số điện thoại phải có 10 chữ số!');
+            return;
+        }
+
+        // Validate logo for new company
+        if (!this.isEditing && !this.selectedLogoFile) {
+            alert('Vui lòng chọn logo cho công ty!');
+            return;
+        }
+        if (this.isEditing) {
+            this.companyService.updateCompany(this.currentCompany, this.selectedLogoFile || undefined).subscribe(
+                (response) => {
+                    alert('Công ty đã được cập nhật thành công!');
+                    this.showForm = false;
+                    this.loadUserCompanies();
+                },
+                (error) => {
+                    console.error('Error updating company:', error);
+                    if (error.status === 404) {
+                        alert('Không tìm thấy công ty để cập nhật');
+                    } else if (error.status === 400) {
+                        alert(error.error || 'Dữ liệu không hợp lệ');
+                    } else {
+                        alert('Đã xảy ra lỗi khi cập nhật công ty');
+                    }
+                }
+            );
+        } else {
+            this.companyService.createCompany(this.currentCompany, this.selectedLogoFile!).subscribe(
+                (response) => {
+                    alert('Công ty đã được tạo thành công!');
+                    this.showForm = false;
+                    this.loadUserCompanies();
+                },
+                (error) => {
+                    console.error('Error creating company:', error);
+                    if (error.status === 400) {
+                        alert(error.error || 'Dữ liệu không hợp lệ');
+                    } else {
+                        alert('Đã xảy ra lỗi khi tạo công ty');
+                    }
+                }
+            );
+        }
+    }
 
     loadUserCompanies() {
         this.companyService.getUserCompanies().subscribe(
@@ -80,7 +231,6 @@ export class UserCompaniesComponent implements OnInit {
         this.paginatedCompanies = this.filteredCompanies.slice(startIndex, startIndex + this.recordsPerPage);
     }
 
-
     searchTerm: string = '';
 
     searchCompanies() {
@@ -99,37 +249,6 @@ export class UserCompaniesComponent implements OnInit {
         this.updatePagination();
     }
 
-    // Create new company form
-    showCreateForm() {
-        this.isEditing = false;
-        this.currentCompany = {
-            id: 0,
-            name: '',
-            description: '',
-            address: '',
-            email: '',
-            phoneNumber: '',
-            logo: '',
-            status: 0,
-            recruitments: []
-        };
-        this.showForm = true;
-    }
-
-    // Edit existing company
-    editCompany(company: Company) {
-        this.isEditing = true;
-        this.currentCompany = { ...company };
-        // If the existing company doesn't have the new fields, initialize them
-        if (!this.currentCompany.description) this.currentCompany.description = '';
-        if (!this.currentCompany.address) this.currentCompany.address = '';
-        if (!this.currentCompany.email) this.currentCompany.email = '';
-        if (!this.currentCompany.phoneNumber) this.currentCompany.phoneNumber = '';
-        if (this.currentCompany.status === undefined) this.currentCompany.status = 0;
-
-        this.showForm = true;
-    }
-
     // Validation methods
     isValidEmail(email: string): boolean {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -139,53 +258,6 @@ export class UserCompaniesComponent implements OnInit {
     isValidPhoneNumber(phone: string): boolean {
         const phoneRegex = /^\d{10}$/;
         return phoneRegex.test(phone);
-    }
-
-    // Save company (create or update)
-    saveCompany() {
-        // Validate required fields
-        if (!this.currentCompany.name.trim()) {
-            alert('Vui lòng nhập tên công ty!');
-            return;
-        }
-
-        // Validate email if provided
-        if (this.currentCompany.email && !this.isValidEmail(this.currentCompany.email)) {
-            alert('Email không đúng định dạng!');
-            return;
-        }
-
-        // Validate phone number if provided
-        if (this.currentCompany.phoneNumber && !this.isValidPhoneNumber(this.currentCompany.phoneNumber)) {
-            alert('Số điện thoại phải có 10 chữ số!');
-            return;
-        }
-
-        if (this.isEditing) {
-            this.companyService.updateCompany(this.currentCompany).subscribe(
-                (response) => {
-                    alert('Công ty đã được cập nhật thành công!');
-                    this.showForm = false;
-                    this.loadUserCompanies();
-                },
-                (error) => {
-                    console.error('Error updating company:', error);
-                    alert('Đã xảy ra lỗi khi cập nhật công ty');
-                }
-            );
-        } else {
-            this.companyService.createCompany(this.currentCompany).subscribe(
-                (response) => {
-                    alert('Công ty đã được tạo thành công!');
-                    this.showForm = false;
-                    this.loadUserCompanies();
-                },
-                (error) => {
-                    console.error('Error creating company:', error);
-                    alert('Đã xảy ra lỗi khi tạo công ty');
-                }
-            );
-        }
     }
 
     // Delete company
@@ -202,10 +274,5 @@ export class UserCompaniesComponent implements OnInit {
                 }
             );
         }
-    }
-
-    // Cancel form
-    cancelForm() {
-        this.showForm = false;
     }
 } 

@@ -50,26 +50,19 @@
 
       <!-- Hiển thị các chức năng tùy theo Role khi đã đăng nhập -->
       <ng-container *ngIf="isLoggedIn()">
-        <div class="dropdown">
+        <div class="dropdown account-dropdown">
           <button class="nav-item dropbtn">Tài khoản ▼</button>
-          <div class="dropdown-content">
-            <!-- Common options for all logged in users -->
+          <div class="account-dropdown-content">
             <a href="/profile">Profile</a>
-
-            <!-- Options for candidates only -->
             <ng-container *ngIf="isCandidate()">
               <a routerLink="/favorite-jobs">Công việc yêu thích</a>
-              <a routerLink="/applied-jobs">Công việc ứng tuyển</a>
+              <a routerLink="/favorite-applied-jobs">Công việc ứng tuyển</a>
               <a routerLink="/favorite-companies">Công ty theo dõi</a>
-              <a routerLink="/upload-cv">Upload CV</a>
+              <a routerLink="/upload-cv">Tải CV của bạn</a>
             </ng-container>
-
-            <!-- Options for recruiters only -->
             <ng-container *ngIf="isRecruiter()">
               <a routerLink="/user-companies">Công ty của tôi</a>
             </ng-container>
-
-            <!-- Logout option for all -->
             <a href="#" (click)="logout()">Đăng xuất</a>
           </div>
         </div>

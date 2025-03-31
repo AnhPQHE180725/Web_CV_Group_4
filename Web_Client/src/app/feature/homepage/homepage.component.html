@@ -28,16 +28,17 @@
     <div class="companies">
       <div class="company" *ngFor="let company of companies">
         <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.id]">
-          <img [src]="'assets/images/slide1.jpg'" alt="{{ company.name }}" class="company-logo" />
+          <img [src]="
+              company.logo
+                ? 'https://localhost:7247/api/Company/logo/' + company.logo
+                : 'assets/images/slide1.jpg'
+            " alt="{{ company.name }}" class="company-logo" />
           <span class="company-name">{{ company.name }}</span>
         </div>
-        
+
         <!-- Chỉ hiển thị nút Theo dõi khi người dùng có role là candidate -->
-        <button 
-          class="follow-btn" 
-          (click)="toggleCompanyFollow($event, company.id)" 
-          *ngIf="isLoggedIn() && isCandidate()" 
-          [class.followed]="isCompanyFollowed(company.id)">
+        <button class="follow-btn" (click)="toggleCompanyFollow($event, company.id)"
+          *ngIf="isLoggedIn() && isCandidate()" [class.followed]="isCompanyFollowed(company.id)">
           {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
         </button>
       </div>
@@ -51,38 +52,32 @@
         </div>
         <strong>{{ post.type }}</strong>
         <p>{{ post.title }}</p>
-       
+
         <div class="action-buttons">
           <!-- Hiển thị nút "Yêu thích" và "Bỏ yêu thích" chỉ khi người dùng có role là candidate -->
-          <button 
-            class="favorite-btn" 
-            (click)="toggleJobFollow($event, post.id)" 
-            *ngIf="isLoggedIn() && isCandidate()"
+          <button class="favorite-btn" (click)="toggleJobFollow($event, post.id)" *ngIf="isLoggedIn() && isCandidate()"
             [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'">
+            <i class="fas" [ngClass]="{'fa-heart': isJobFollowed(post.id), 'fa-heart-o': !isJobFollowed(post.id)}"></i>
             {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
           </button>
-    
           <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
-          <button 
-            class="apply-btn" 
-            (click)="onApply(post)" 
-            *ngIf="isLoggedIn() && isCandidate()">
-            Ứng tuyển ngay
+          <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
+            <i class="fas fa-paper-plane"></i>
+            Ứng tuyển
           </button>
         </div>
-        
+
         <small>{{ post.description }}</small>
-        
+
         <div class="salary-box">
           <small>{{ post.salary }} triệu</small>
         </div>
-        
+
         <!-- Hiển thị thông báo yêu cầu đăng nhập khi chưa đăng nhập -->
         <p class="login-message" *ngIf="!isLoggedIn()">
           Vui lòng <a routerLink="/login">đăng nhập</a> để ứng tuyển
         </p>
       </div>
     </div>
-    
   </div>
 </body>

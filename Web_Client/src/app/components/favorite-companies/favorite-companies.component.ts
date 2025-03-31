@@ -54,11 +54,22 @@ export class FavoriteCompaniesComponent implements OnInit {
   // Hàm tìm kiếm công ty theo tên
   searchCompanies(): void {
     const searchText = this.searchQuery.toLowerCase().trim();
-    this.filteredCompanies = this.favoriteCompanies.filter(company =>
-      company.company.name.toLowerCase().includes(searchText)
-    );
+
+    this.filteredCompanies = this.favoriteCompanies.filter(company => {
+      const name = company.company.name?.toLowerCase() || '';
+      const email = company.company.email?.toLowerCase() || '';
+      const phone = company.company.phoneNumber || '';
+
+      return (
+        name.includes(searchText) ||
+        email.includes(searchText) ||
+        phone.includes(searchText)
+      );
+    });
+
     this.updatePagination();
   }
+
 
   // Cập nhật phân trang
   updatePagination() {

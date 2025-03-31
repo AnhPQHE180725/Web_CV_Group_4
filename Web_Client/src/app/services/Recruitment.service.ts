@@ -54,4 +54,13 @@ export class RecruitmentService {
     getRecruitmentById(id: number): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/get-recruitment-by-id/${id}`)
     }
+
+    incrementView(id: number): Observable<any> {
+        return this.http.put(`${this.baseUrl}/Recruitment/increment-view/${id}`, {});
+    }
+
+    updateView(id: number): Observable<any> {
+        return this.http.put(`${this.baseUrl}/Recruitment/update-view/${id}`, {});
+    }
+
 }
