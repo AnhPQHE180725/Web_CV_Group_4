@@ -22,10 +22,6 @@ namespace Web_Server.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<List<Recruitment>> GetAllRecruitments()
-        {
-            return await _repository.GetAllRecruitments();
-        }
 
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id)
         {
@@ -48,7 +44,7 @@ namespace Web_Server.Services
                 Deadline = r.Deadline,
 
                 CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown"
+                CategoryName = r.Category?.Name ?? "Unknown", logo = r.Company?.Logo
 
             }).ToList();
         }
@@ -73,28 +69,50 @@ namespace Web_Server.Services
                 View = r.View,
                 Deadline =  r.Deadline,
                 CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown"
+                CategoryName = r.Category?.Name ?? "Unknown", logo = r.Company?.Logo
             }).ToList();
         }
 
-        public async Task<List<Recruitment>> GetTop2Recruitments()
+        public async Task<List<RecruitmentVm>> GetTop2Recruitments()
         {
-            return await _repository.GetTop2Recruitments();
+            var recruitments = await _repository.GetTop2Recruitments(); // Get raw data
+
+            return recruitments.Select(r => new RecruitmentVm
+            {
+                Id = r.Id,
+                Address = r.Address,
+                CreatedAt = r.CreatedAt,
+                Description = r.Description,
+                Experience = r.Experience,
+                Quantity = r.Quantity,
+                Rank = r.Rank,
+                Salary = r.Salary,
+                Status = r.Status,
+                Title = r.Title,
+                Type = r.Type,
+                View = r.View,
+                Deadline = r.Deadline,
+                CompanyName = r.Company?.Name, // Handle possible null
+                logo = r.Company?.Logo // Ensure logo is valid
+            }).ToList();
         }
 
-        public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
+        public async Task<List<RecruitmentVm>> GetRecruitmentsByCompanyName(string company)
         {
-            return await _repository.GetRecruitmentsByCompanyName(company);
+            var recruitments = await _repository.GetRecruitmentsByCompanyName(company);
+            return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
-        public async Task<List<Recruitment>> GetRecruitmentsByTitle(string title)
+        public async Task<List<RecruitmentVm>> GetRecruitmentsByTitle(string title)
         {
-            return await _repository.GetRecruitmentsByTitle(title);
+            var recruitments = await _repository.GetRecruitmentsByTitle(title);
+            return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
-        public async Task<List<Recruitment>> GetRecruitmentsByLocation(string location)
+        public async Task<List<RecruitmentVm>> GetRecruitmentsByLocation(string location)
         {
-            return await _repository.GetRecruitmentsByLocation(location);
+            var recruitments = await _repository.GetRecruitmentsByLocation(location);
+            return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
         public async Task<List<RecruitmentVm>> GetRecruitmentsByid(int id)
@@ -218,6 +236,52 @@ namespace Web_Server.Services
             recruitment.View += 1;
 
             return await _repository.EditRecruitmentAsync(recruitment);
+        }
+
+
+        public async Task<List<RecruitmentVm>> GetAllRecruitments()
+        {
+            var recruitments = await _repository.GetAllRecruitments(); // Get raw data
+
+            return recruitments.Select(r => new RecruitmentVm
+            {
+                Id = r.Id,
+                Address = r.Address,
+                CreatedAt = r.CreatedAt,
+                Description = r.Description,
+                Experience = r.Experience,
+                Quantity = r.Quantity,
+                Rank = r.Rank,
+                Salary = r.Salary,
+                Status = r.Status,
+                Title = r.Title,
+                Type = r.Type,
+                View = r.View,
+                Deadline = r.Deadline,
+                CompanyName = r.Company?.Name, // Handle possible null
+                logo = r.Company?.Logo // Ensure logo is valid
+            }).ToList();
+        }
+        private RecruitmentVm ToRecruitmentVm(Recruitment r)
+        {
+            return new RecruitmentVm
+            {
+                Id = r.Id,
+                Address = r.Address,
+                CreatedAt = r.CreatedAt,
+                Description = r.Description,
+                Experience = r.Experience,
+                Quantity = r.Quantity,
+                Rank = r.Rank,
+                Salary = r.Salary,
+                Status = r.Status,
+                Title = r.Title,
+                Type = r.Type,
+                View = r.View,
+                Deadline = r.Deadline,
+                CompanyName = r.Company?.Name, // Handle possible null
+                logo = r.Company?.Logo // Ensure logo is valid
+            };
         }
 
     }

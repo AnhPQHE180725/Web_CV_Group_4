@@ -8,27 +8,15 @@
 <div *ngIf="paginatedCompanies.length > 0; else noResults">
   <div class="companies">
     <div class="company" *ngFor="let company of companies">
-      <div
-        class="company-content clickable"
-        [routerLink]="['/company', company.id]"
-      >
-        <img
-          [src]="
+      <div class="company-content clickable" [routerLink]="['/company', company.id]">
+        <img [src]="
             company.logo
-              ? 'https://localhost:7247/api/Company/logo/' + company.logo
-              : 'assets/images/slide1.jpg'
-          "
-          alt="{{ company.name }}"
-          class="company-logo"
-        />
+              
+          " alt="{{ company.name }}" class="company-logo" />
         <span class="company-name">{{ company.name }}</span>
       </div>
-      <button
-        class="follow-btn"
-        (click)="toggleFollow($event, company.id)"
-        [class.followed]="isFollowing(company.id)"
-        *ngIf="isLoggedIn() && isCandidate()"
-      >
+      <button class="follow-btn" (click)="toggleFollow($event, company.id)" [class.followed]="isFollowing(company.id)"
+        *ngIf="isLoggedIn() && isCandidate()">
         {{ isFollowing(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
       </button>
     </div>
@@ -39,18 +27,12 @@
       Previous
     </button>
 
-    <button
-      *ngFor="let page of [].constructor(totalPages); let i = index"
-      (click)="goToPage(i + 1)"
-      [class.active]="currentPage === i + 1"
-    >
+    <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1">
       {{ i + 1 }}
     </button>
 
-    <button
-      (click)="goToPage(currentPage + 1)"
-      [disabled]="currentPage === totalPages"
-    >
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
       Next
     </button>
   </div>
