@@ -1274,7 +1274,7 @@ namespace Web_Server.Migrations
                             Email = "alice@example.com",
                             FullName = "Alice Johnson",
                             Image = "alice.jpg",
-                            Password = "AQAAAAIAAYagAAAAEOAATkX5s0JTY5ekZBASDjyHTIKPNDoucdGaantgdv21Sc6FkJPHcs3nZ5qyr5Zk1g==",
+                            Password = "AQAAAAIAAYagAAAAEOpVeVRmWyyBLJOiCemAK5aE1rpXczyHZhRqKOrAkqeEPIA8PNdXmAL3RDnZ3Kczfg==",
                             PhoneNumber = "0123456789",
                             RoleId = 1,
                             Status = 1
@@ -1288,7 +1288,7 @@ namespace Web_Server.Migrations
                             Email = "bob@example.com",
                             FullName = "Bob Smith",
                             Image = "bob.jpg",
-                            Password = "AQAAAAIAAYagAAAAEOOYrmQCauTwmb9ObuuH/pjFkg+NOEcp2mMCUpVi25xYEuG3oij40nW8NEKQcqjv1w==",
+                            Password = "AQAAAAIAAYagAAAAED49uBUJW/uaJxWW0o5/REhZSiYq9S8ZQp7k1YjaB2T+brkmE73G8EZ6kE48wN8ZGw==",
                             PhoneNumber = "0987654321",
                             RoleId = 1,
                             Status = 1
@@ -1302,7 +1302,7 @@ namespace Web_Server.Migrations
                             Email = "charlie@example.com",
                             FullName = "Charlie Brown",
                             Image = "charlie.jpg",
-                            Password = "AQAAAAIAAYagAAAAEDNJ9zDv/eM64fJRBZkw5uqgf3PlPEAWfmPE9ICZK0FbsscUbOEkDVfltrpLkL28BQ==",
+                            Password = "AQAAAAIAAYagAAAAEKhOV5R+56YqM0lfLwd0pcyQmavua5DfiL5ahq7QL5+S7ycaxVIpnIP6WVzPIqbpoQ==",
                             PhoneNumber = "0112233445",
                             RoleId = 1,
                             Status = 1
@@ -1316,7 +1316,7 @@ namespace Web_Server.Migrations
                             Email = "tronghieutronghieu1510@gmail.com",
                             FullName = "Trong Hieu",
                             Image = "hieu.jpg",
-                            Password = "AQAAAAIAAYagAAAAENHrfsL9K7un8O2qYyxpoPAbziFQhqJeFKKwvsiLWHRwYgt9eJRa+JhDwcyVORXsSA==",
+                            Password = "AQAAAAIAAYagAAAAELYtHoEvP9J1txLtYs35bu/y9MtO3YXrEczQrpRPz3Gdp9IHKPKns9PhzxH/2rlqVg==",
                             PhoneNumber = "0223344556",
                             RoleId = 2,
                             Status = 1
@@ -1330,7 +1330,7 @@ namespace Web_Server.Migrations
                             Email = "emma@example.com",
                             FullName = "Emma Watson",
                             Image = "emma.jpg",
-                            Password = "AQAAAAIAAYagAAAAEMTIQ9kU86NtYHuIIlDifJmGUXqNBik4XmI1EhbQMsOi/GZnd8bPmV7m/eeLui+pXw==",
+                            Password = "AQAAAAIAAYagAAAAEKC+EaVueD3BNc6csceT2Mm1S2LpX2PHIgCPVUUuiQ/FD2TsKd/ZMEPI8V1uwfhw4Q==",
                             PhoneNumber = "0334455667",
                             RoleId = 1,
                             Status = 1
@@ -1344,7 +1344,7 @@ namespace Web_Server.Migrations
                             Email = "frank@example.com",
                             FullName = "Frank Miller",
                             Image = "frank.jpg",
-                            Password = "AQAAAAIAAYagAAAAEEEfWIEMN2n7eQyDh6KudiJxRwkqUA8PszjURBjKjEoh2GLy/Ly5bv7I5rdCvxuLzw==",
+                            Password = "AQAAAAIAAYagAAAAEAIrh+TkbDg2rELemhXXH2DBPl5S3d29mSHH3fySYF9kaCgjVYB9W34PPr19f5ZFDA==",
                             PhoneNumber = "0445566778",
                             RoleId = 1,
                             Status = 1
@@ -1358,7 +1358,7 @@ namespace Web_Server.Migrations
                             Email = "grace@example.com",
                             FullName = "Grace Davis",
                             Image = "grace.jpg",
-                            Password = "AQAAAAIAAYagAAAAECcuSkma0m5OXnwaT8e4uh8iyszNfs3eQurfcCYaMqv5y8oTU/HAei1Nlm8d95RiPA==",
+                            Password = "AQAAAAIAAYagAAAAEHWldhR5S4l/1Fi3Z6oeocztfptCO/AFvSAvA5o+R26iHsU/XwX35c+zW78ZAxCKfg==",
                             PhoneNumber = "0556677889",
                             RoleId = 1,
                             Status = 1
@@ -1372,7 +1372,7 @@ namespace Web_Server.Migrations
                             Email = "henry@example.com",
                             FullName = "Henry Wilson",
                             Image = "henry.jpg",
-                            Password = "AQAAAAIAAYagAAAAEJX/D10a7xMBAiV1jCgGh0jqHKg0fS08I7Gw54+sphwqvH6UHaj5k4vg/Ngbgv/o0w==",
+                            Password = "AQAAAAIAAYagAAAAEKgnPJtttVRNL3iMylTXdbooAkPAuuU4clkxCpS0zdcRBanKIfRfl/+sBDdhC7JzUQ==",
                             PhoneNumber = "0667788990",
                             RoleId = 1,
                             Status = 1
@@ -1386,7 +1386,7 @@ namespace Web_Server.Migrations
                             Email = "isabella@example.com",
                             FullName = "Isabella Thomas",
                             Image = "isabella.jpg",
-                            Password = "AQAAAAIAAYagAAAAEKsT5Thwls5XDvgnqqWlKFNQkxelYKdwLiSmvdxvVvsKOuP857ZO3QV5rUcHIC3KhQ==",
+                            Password = "AQAAAAIAAYagAAAAELmFRVm3UUGfm958SRSsPRxkmy0TK24KEQbe+6SWlUuTL3wCSBoheG0P84Jb/XvvxQ==",
                             PhoneNumber = "0778899001",
                             RoleId = 1,
                             Status = 1
@@ -1400,7 +1400,7 @@ namespace Web_Server.Migrations
                             Email = "jack@example.com",
                             FullName = "Jack Martinez",
                             Image = "jack.jpg",
-                            Password = "AQAAAAIAAYagAAAAECij2Y6ICQFcekoZCOlg5aioF9IodAPZpilOiRQhdmmO+yRp3IUpw0Bvcc+/Wckg0Q==",
+                            Password = "AQAAAAIAAYagAAAAEPRW4PTuuwOM1W8fiLVI907Upo0VUNNgJL8RZYFUfoMjf/C0VrKKOOzLeu4/uNp1Jw==",
                             PhoneNumber = "0889900112",
                             RoleId = 1,
                             Status = 1

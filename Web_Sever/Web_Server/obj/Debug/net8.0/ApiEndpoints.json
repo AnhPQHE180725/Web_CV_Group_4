@@ -180,6 +180,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "ResendOtpRegister",
+    "RelativePath": "api/Authentication/resend-otp-register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resendOtpVm",
+        "Type": "Web_Server.ViewModels.ResendOtpVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "ResetPassword",
     "RelativePath": "api/Authentication/reset-password",
     "HttpMethod": "GET",
@@ -292,39 +308,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Address",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "PhoneNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Logo",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Status",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "companyModel",
+        "Type": "Web_Server.ViewModels.CompanyCreateModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -426,50 +412,20 @@
   {
     "ContainingType": "Web_Server.Controllers.CompanyController",
     "Method": "UpdateCompany",
-    "RelativePath": "api/Company/update-company",
+    "RelativePath": "api/Company/update-company/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Address",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "PhoneNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Logo",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Status",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "companyModel",
+        "Type": "Web_Server.ViewModels.CompanyUpdateModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
