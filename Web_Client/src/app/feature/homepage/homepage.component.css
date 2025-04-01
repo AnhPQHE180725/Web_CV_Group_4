@@ -385,3 +385,27 @@ h2 {
 .favorite-btn i {
   margin-right: 5px;
 }
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.dashboard-item {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 150px;
+  background-color: #f9f9f9;
+}
+
+.dashboard-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.dashboard-item p {
+  font-size: 1.5em;
+  color: #333;
+}

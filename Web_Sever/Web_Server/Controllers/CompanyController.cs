@@ -67,14 +67,14 @@ namespace Web_Server.Controllers
 
         [HttpPost("create-company")]
         [Authorize]
-        public async Task<IActionResult> CreateCompany([FromBody] CompanyCreateModel companyModel)
+        public async Task<IActionResult> CreateCompany([FromBody] CompanyCreateModel companyModel, IFormFile logoFile)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             try
             {
-                var createdCompany = await _companyService.CreateCompanyAsync(companyModel);
+                var createdCompany = await _companyService.CreateCompanyAsync(companyModel, logoFile);
                 return CreatedAtAction(nameof(GetCompanyById), new { id = createdCompany.Id }, createdCompany);
             }
             catch (ArgumentException ex)
@@ -93,14 +93,14 @@ namespace Web_Server.Controllers
 
         [HttpPut("update-company")]
         [Authorize]
-        public async Task<IActionResult> UpdateCompany([FromBody] CompanyUpdateModel companyModel)
+        public async Task<IActionResult> UpdateCompany([FromBody] CompanyUpdateModel companyModel, IFormFile logoFile)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             try
             {
-                var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel);
+                var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel, logoFile);
                 if (updatedCompany == null)
                     return NotFound();
 
