@@ -305,7 +305,9 @@ namespace Web_Server.Services
             return await _companyRepository.UpdateAsync(existingCompany);
         }
 
-
-
+        public Task<Company> UpdateCompanyAsync(int id, CompanyUpdateModel companyModel)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
