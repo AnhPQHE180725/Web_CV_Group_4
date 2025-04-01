@@ -18,7 +18,7 @@
         <a href="home" class="nav-item logo-text">Trang chủ</a>
       </div>
       <div class="dropdown">
-        <button class="nav-item dropbtn">Danh mục ▼</button>
+        <button class="nav-item">Danh mục ▼</button>
         <div class="dropdown-content">
           <table>
             <tr *ngFor="let i of [0, 1, 2, 3, 4]">
@@ -33,10 +33,11 @@
       </div>
       <a href="company" class="nav-item">Doanh nghiệp</a>
       <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
-      <a href="recruiter" class="nav-item">Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a>
+      <a href="recruiter" class="nav-item" *ngIf="isRecruiter()">Trang của nhà tuyển dụng</a>
+
     </div>
 
-    <div class="nav-right">
+    <div class=" nav-right">
       <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
       <ng-container *ngIf="!isLoggedIn()">
         <div class="dropdown">

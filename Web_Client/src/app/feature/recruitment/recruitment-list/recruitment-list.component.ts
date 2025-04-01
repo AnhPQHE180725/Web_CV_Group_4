@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Recruitment } from '../../../models/Recruitment';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 
 
@@ -37,7 +37,8 @@ export class RecruitmentListComponent {
     private recruitmentService: RecruitmentService,
     private dialog: MatDialog,
     private authService: AuthService,
-    private jobFollowService: JobFollowService
+    private jobFollowService: JobFollowService,
+    private router: Router
   ) { }
 
 
@@ -187,5 +188,9 @@ export class RecruitmentListComponent {
   // Kiểm tra nếu người dùng đã đăng nhập và có role là candidate
   isCandidate(): boolean {
     return this.authService.isLoggedIn() && this.authService.getRoleFromToken() === 'Candidate';
+  }
+
+  viewDetail(recruitment: Recruitment) {
+    this.router.navigate(['recruitment/detail', recruitment.id]);
   }
 }
