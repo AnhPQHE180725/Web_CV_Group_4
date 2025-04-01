@@ -35,6 +35,8 @@ export class HomepageComponent {
   currentIndex: number = 0;
   followedJobs: number[] = [];
   followedCompanies: number[] = [];
+  totalCompanies: number = 0;
+  totalRecruitments: number = 0;
 
   constructor(
     private categoryService: CategoryService,
@@ -56,6 +58,25 @@ export class HomepageComponent {
       },
       error: (err) => console.error('Error fetching categories:', err)
     });
+
+    this.companyService.getAllCompanies().subscribe({
+      next: (data) => {
+        this.companies = data;
+        this.totalCompanies = data.length;
+        console.log('Total companies:', this.totalCompanies);
+      },
+      error: (err) => console.error('Error fetching total companies:', err)
+    });
+
+    this.recruitmentService.getAllRecruitments().subscribe({
+      next: (data) => {
+        this.recruitments = data;
+        this.totalRecruitments = data.length;
+        console.log('Total recruitments:', this.totalRecruitments);
+      },
+      error: (err) => console.error('Error fetching total recruitments:', err)
+    });
+
 
     this.companyService.getTopCompanies().subscribe({
       next: (data) => {

@@ -20,6 +20,7 @@ import { JobFollowService } from '../../../services/job-follow.service';
   styleUrl: './recruitment-list.component.css'
 })
 export class RecruitmentListComponent {
+  urlPath: string = '';
   recruitments: Recruitment[] = [];
   paginatedRecruitments: Recruitment[] = [];
   currentPage: number = 1;
@@ -45,7 +46,7 @@ export class RecruitmentListComponent {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const filterId = Number(params.get('id'));
-      const urlPath = this.route.snapshot.url.map(segment => segment.path).join('/');
+      this.urlPath = this.route.snapshot.url.map(segment => segment.path).join('/');
 
 
       this.recruitments = [];
@@ -53,11 +54,11 @@ export class RecruitmentListComponent {
       this.totalPages = 1;
       this.pageTitle = 'Danh Sách Tuyển Dụng';
 
-      if (urlPath.startsWith('recruitment/category/')) {
+      if (this.urlPath.startsWith('recruitment/category/')) {
         this.fetchRecruitmentsByCategory(filterId);
-      } else if (urlPath.startsWith('recruitment/company/')) {
+      } else if (this.urlPath.startsWith('recruitment/company/')) {
         this.fetchRecruitmentsByCompany(filterId);
-      } else if (urlPath === 'recruitment') {
+      } else if (this.urlPath === 'recruitment') {
         this.fetchAllRecruitments();
       }
     });

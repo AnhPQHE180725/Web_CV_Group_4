@@ -16,6 +16,18 @@
   </div>
 
   <div class="container">
+    <h2>Dashboard</h2>
+    <div class="dashboard">
+      <div class="stat-box">
+        <h3>Tổng số Công Ty</h3>
+        <p>{{ totalCompanies }}</p>
+      </div>
+      <div class="stat-box">
+        <h3>Tổng số Bài Đăng</h3>
+        <p>{{ totalRecruitments }}</p>
+      </div>
+    </div>
+
     <h2>Top Danh Mục</h2>
     <div class="categories">
       <div class="category" *ngFor="let category of categories" [routerLink]="['/recruitment', 'category', category.id]"

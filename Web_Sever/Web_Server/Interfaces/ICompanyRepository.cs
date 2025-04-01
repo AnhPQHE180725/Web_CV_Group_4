@@ -1,4 +1,5 @@
 ﻿using Web_Server.Models;
+using Web_Server.ViewModels;
 
 namespace Web_Server.Interfaces
 {
@@ -12,5 +13,6 @@ namespace Web_Server.Interfaces
         Task<Company> UpdateAsync(Company company);
         Task<bool> DeleteAsync(int id);
         Task<List<Company>> GetCompaniesByUserIdAsync(int userId);
+        Task<Company> GetCompanyProfileAsync();
     }
 }

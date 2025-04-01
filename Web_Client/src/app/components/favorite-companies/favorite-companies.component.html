@@ -15,11 +15,7 @@
       <div class="company-content">
         <img [src]="
             company.company.logo
-              ? 'https://localhost:7247/api/Company/logo/' +
-                company.company.logo
-              : 'assets/images/slide1.jpg'
           " alt="{{ company.company.name }}" class="company-logo"/>
-
         <div class="company-details">
           <strong>Tên công ty:</strong>
           <p class="company-description">{{ company.company.name }}</p>

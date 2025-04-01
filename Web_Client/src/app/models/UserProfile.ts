@@ -5,4 +5,5 @@ export interface UserProfile {
     description?: string;
     image?: string;
     email?: string;
+    roleId?: number;
   }

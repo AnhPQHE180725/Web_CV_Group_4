@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Web_Server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDb : Migration
+    public partial class db : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -277,16 +277,16 @@ namespace Web_Server.Migrations
                 columns: new[] { "Id", "Address", "CVId", "Description", "Email", "FullName", "Image", "Password", "PhoneNumber", "RoleId", "Status" },
                 values: new object[,]
                 {
-                    { 1, "123 Main St", 1, "A software developer", "alice@example.com", "Alice Johnson", "alice.jpg", "AQAAAAIAAYagAAAAEOAATkX5s0JTY5ekZBASDjyHTIKPNDoucdGaantgdv21Sc6FkJPHcs3nZ5qyr5Zk1g==", "0123456789", 1, 1 },
-                    { 2, "456 Elm St", 2, "A data analyst", "bob@example.com", "Bob Smith", "bob.jpg", "AQAAAAIAAYagAAAAEOOYrmQCauTwmb9ObuuH/pjFkg+NOEcp2mMCUpVi25xYEuG3oij40nW8NEKQcqjv1w==", "0987654321", 1, 1 },
-                    { 3, "789 Oak St", 3, "A project manager", "charlie@example.com", "Charlie Brown", "charlie.jpg", "AQAAAAIAAYagAAAAEDNJ9zDv/eM64fJRBZkw5uqgf3PlPEAWfmPE9ICZK0FbsscUbOEkDVfltrpLkL28BQ==", "0112233445", 1, 1 },
-                    { 4, "321 Pine St", 4, "A system admin", "tronghieutronghieu1510@gmail.com", "Trong Hieu", "hieu.jpg", "AQAAAAIAAYagAAAAENHrfsL9K7un8O2qYyxpoPAbziFQhqJeFKKwvsiLWHRwYgt9eJRa+JhDwcyVORXsSA==", "0223344556", 2, 1 },
-                    { 5, "654 Maple St", 5, "A marketing specialist", "emma@example.com", "Emma Watson", "emma.jpg", "AQAAAAIAAYagAAAAEMTIQ9kU86NtYHuIIlDifJmGUXqNBik4XmI1EhbQMsOi/GZnd8bPmV7m/eeLui+pXw==", "0334455667", 1, 1 },
-                    { 6, "987 Birch St", 6, "A financial advisor", "frank@example.com", "Frank Miller", "frank.jpg", "AQAAAAIAAYagAAAAEEEfWIEMN2n7eQyDh6KudiJxRwkqUA8PszjURBjKjEoh2GLy/Ly5bv7I5rdCvxuLzw==", "0445566778", 1, 1 },
-                    { 7, "159 Cedar St", 7, "A UI/UX designer", "grace@example.com", "Grace Davis", "grace.jpg", "AQAAAAIAAYagAAAAECcuSkma0m5OXnwaT8e4uh8iyszNfs3eQurfcCYaMqv5y8oTU/HAei1Nlm8d95RiPA==", "0556677889", 1, 1 },
-                    { 8, "753 Walnut St", 8, "A content writer", "henry@example.com", "Henry Wilson", "henry.jpg", "AQAAAAIAAYagAAAAEJX/D10a7xMBAiV1jCgGh0jqHKg0fS08I7Gw54+sphwqvH6UHaj5k4vg/Ngbgv/o0w==", "0667788990", 1, 1 },
-                    { 9, "852 Fir St", 9, "A HR manager", "isabella@example.com", "Isabella Thomas", "isabella.jpg", "AQAAAAIAAYagAAAAEKsT5Thwls5XDvgnqqWlKFNQkxelYKdwLiSmvdxvVvsKOuP857ZO3QV5rUcHIC3KhQ==", "0778899001", 1, 1 },
-                    { 10, "951 Palm St", 10, "A sales executive", "jack@example.com", "Jack Martinez", "jack.jpg", "AQAAAAIAAYagAAAAECij2Y6ICQFcekoZCOlg5aioF9IodAPZpilOiRQhdmmO+yRp3IUpw0Bvcc+/Wckg0Q==", "0889900112", 1, 1 }
+                    { 1, "123 Main St", 1, "A software developer", "alice@example.com", "Alice Johnson", "alice.jpg", "AQAAAAIAAYagAAAAEOg/Juxdc6xvZoZHdQjGOkjb5O2e1JumWSkdW1gfnpZjoOWf+kIcFnN+1ufZsTe7pQ==", "0123456789", 1, 1 },
+                    { 2, "456 Elm St", 2, "A data analyst", "bob@example.com", "Bob Smith", "bob.jpg", "AQAAAAIAAYagAAAAEHUWd8es12JWSYkfK9OjwoFp3YdWmQD/M0IjOmlGIDEe0YPRXR8pD+8nDOilhVoDJw==", "0987654321", 1, 1 },
+                    { 3, "789 Oak St", 3, "A project manager", "charlie@example.com", "Charlie Brown", "charlie.jpg", "AQAAAAIAAYagAAAAEAGA4XC1/WqIjr211cu69d3gHVNE2ThMiKbdDtScGRYY9dXmCUW1Mh7+MWZma69xHg==", "0112233445", 1, 1 },
+                    { 4, "321 Pine St", 4, "A system admin", "tronghieutronghieu1510@gmail.com", "Trong Hieu", "hieu.jpg", "AQAAAAIAAYagAAAAEFRRJM182PnOeW7P90WjqBGeKNWv6ZbkPc/nHFvvH4ypMFexA9+kyjRCIKo83hzu7A==", "0223344556", 2, 1 },
+                    { 5, "654 Maple St", 5, "A marketing specialist", "emma@example.com", "Emma Watson", "emma.jpg", "AQAAAAIAAYagAAAAEKgqe95WJ6OEqaPA4oGhNGq5Lz64iQ0+3BzehUkfQVEmSI+FucykeOKmpg2ViRNQkg==", "0334455667", 1, 1 },
+                    { 6, "987 Birch St", 6, "A financial advisor", "frank@example.com", "Frank Miller", "frank.jpg", "AQAAAAIAAYagAAAAECN60cMDQtnDjcVFz6n6Wr/8B0cksTVdByac0ziEfnwvXfhh7jihduyUy9zl9124zQ==", "0445566778", 1, 1 },
+                    { 7, "159 Cedar St", 7, "A UI/UX designer", "grace@example.com", "Grace Davis", "grace.jpg", "AQAAAAIAAYagAAAAEJiiyk9ardP2YMP/BjjwBjfzwXiDc7mb1PfsfAzWIjDNlr1Xrj01IEtyUAfvjcCx4g==", "0556677889", 1, 1 },
+                    { 8, "753 Walnut St", 8, "A content writer", "henry@example.com", "Henry Wilson", "henry.jpg", "AQAAAAIAAYagAAAAEFE9wmTkez/X1eYvxUQkg1uJ68BSOAB1lG63zAUBRFb/IlfyB8sanzTzPyOYJq1Kdg==", "0667788990", 1, 1 },
+                    { 9, "852 Fir St", 9, "A HR manager", "isabella@example.com", "Isabella Thomas", "isabella.jpg", "AQAAAAIAAYagAAAAEGABPzpmipwS+S4PFs+1xMA9UxUQNkojNDttbACEME8To40tBfklpG4GjUnlAvdu6g==", "0778899001", 1, 1 },
+                    { 10, "951 Palm St", 10, "A sales executive", "jack@example.com", "Jack Martinez", "jack.jpg", "AQAAAAIAAYagAAAAEKIPD3VvFhFOB5BDzvcKuxTOlh9jAmsT4bxWN74+lbSN8v92oi4S61WMFZZRRf9DZA==", "0889900112", 1, 1 }
                 });
 
             migrationBuilder.InsertData(

@@ -74,6 +74,13 @@ namespace Web_Server.Controllers
 
             try
             {
+                // Kiểm tra xem logo có đúng là URL hợp lệ không
+                if (string.IsNullOrEmpty(companyModel.Logo) ||
+                    !Uri.IsWellFormedUriString(companyModel.Logo, UriKind.Absolute))
+                {
+                    return BadRequest(new { message = "Logo phải là đường dẫn URL hợp lệ" });
+                }
+
                 var createdCompany = await _companyService.CreateCompanyAsync(companyModel);
                 return CreatedAtAction(nameof(GetCompanyById), new { id = createdCompany.Id }, createdCompany);
             }
@@ -81,15 +88,12 @@ namespace Web_Server.Controllers
             {
                 return BadRequest(new { message = ex.Message });
             }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(new { message = ex.Message });
-            }
             catch (Exception ex)
             {
-                return StatusCode(500, new { message = "An error occurred while creating the company" });
+                return StatusCode(500, new { message = "Có lỗi xảy ra khi tạo công ty" });
             }
         }
+
 
         [HttpPut("update-company")]
         [Authorize]
@@ -106,15 +110,12 @@ namespace Web_Server.Controllers
 
                 return Ok(updatedCompany);
             }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "An error occurred while updating the company" });
             }
         }
+
 
         [HttpDelete("delete-company/{id}")]
         [Authorize]

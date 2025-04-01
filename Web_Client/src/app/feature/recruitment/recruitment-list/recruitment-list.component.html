@@ -1,6 +1,7 @@
 <h2>{{ pageTitle }}</h2>
 
-<div class="wrapper">
+<div class="wrapper"
+  *ngIf="!(urlPath.startsWith('recruitment/category/') || urlPath.startsWith('recruitment/company/'))">
   <div class="tab-container">
     <button class="tab" (click)="setActiveTab('title')" [ngClass]="{ active: activeTab === 'title' }">
       Tìm công việc
