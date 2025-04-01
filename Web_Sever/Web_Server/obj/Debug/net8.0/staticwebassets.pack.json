@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "PackagePath": "staticwebassets\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Web_Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Web_Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Web_Server.props",
+      "PackagePath": "build\\Web_Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Web_Server.props",
+      "PackagePath": "buildMultiTargeting\\Web_Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Web_Server.props",
+      "PackagePath": "buildTransitive\\Web_Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

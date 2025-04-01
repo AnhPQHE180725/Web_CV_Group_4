@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "wkcTXUCpXMaPKXD+zaASsQiwcmHeOtU8OectVPMm6iI=",
+  "Source": "Web_Server",
+  "BasePath": "_content/Web_Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Web_Server\\wwwroot",
+      "Source": "Web_Server",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hrgzuv399l",
+      "Integrity": "Y5aRaCSnznnwAiLJccWYh1+MBvBDyxtcuG/RZ0/6fMY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.hrgzuv399l.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "825487"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y5aRaCSnznnwAiLJccWYh1+MBvBDyxtcuG/RZ0/6fMY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 12:42:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hrgzuv399l"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y5aRaCSnznnwAiLJccWYh1+MBvBDyxtcuG/RZ0/6fMY="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "825487"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y5aRaCSnznnwAiLJccWYh1+MBvBDyxtcuG/RZ0/6fMY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 12:42:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y5aRaCSnznnwAiLJccWYh1+MBvBDyxtcuG/RZ0/6fMY="
+        }
+      ]
+    }
+  ]
+}

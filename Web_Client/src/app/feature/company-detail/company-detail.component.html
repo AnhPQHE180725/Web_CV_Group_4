@@ -18,9 +18,13 @@
   <div *ngIf="!isLoading && !errorMessage && company" class="company-detail">
     <div class="company-header">
       <div class="company-logo-container">
-        <img [src]="
-            company.logo 
-          " alt="{{ company.name }}" class="company-logo" />
+        <img
+          [src]="
+           company.logo
+          "
+          alt="{{ company.name }}"
+          class="company-logo"
+        />
       </div>
       <div class="company-title">
         <h1>{{ company.name }}</h1>

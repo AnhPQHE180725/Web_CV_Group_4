@@ -1608,13 +1608,13 @@
             "type": "string",
             "nullable": true
           },
-          "status": {
-            "type": "integer",
-            "format": "int32"
-          },
           "logo": {
             "type": "string",
             "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1646,13 +1646,13 @@
             "type": "string",
             "nullable": true
           },
-          "status": {
-            "type": "integer",
-            "format": "int32"
-          },
           "logo": {
             "type": "string",
             "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
