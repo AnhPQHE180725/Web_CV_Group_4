@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Web_Server.Interfaces;
@@ -16,6 +17,7 @@ namespace Web_Server.Controllers
         {
             _recruitmentService = recruitmentService;
         }
+        
         [HttpGet("get-all-recruitments")]
 
         public async Task<IActionResult> GetAllRecruitments()
@@ -59,7 +61,7 @@ namespace Web_Server.Controllers
             return Ok(await _recruitmentService.GetRecruitmentsByLocation(location));
         }
 
-
+        [Authorize(Roles = "Recruiter")]
         [HttpPost("add-recruitment")]
         public async Task<IActionResult> AddRecruitment([FromBody] RecruitmentVm recruitmentVm)
         {
@@ -70,7 +72,7 @@ namespace Web_Server.Controllers
             }
             return Ok("Recruitment added successfully");
         }
-
+        [Authorize(Roles = "Recruiter")]
         [HttpPut("edit-recruitment/{id}")]
         public async Task<IActionResult> EditRecruitment(int id, [FromBody] RecruitmentVm recruitmentVm)
         {
@@ -81,7 +83,7 @@ namespace Web_Server.Controllers
             }
             return Ok("Recruitment updated successfully");
         }
-
+        [Authorize(Roles = "Recruiter")]
         [HttpDelete("delete-recruitment/{id}")]
         public async Task<IActionResult> DeleteRecruitment(int id)
         {

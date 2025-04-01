@@ -115,6 +115,7 @@ export class HomepageComponent {
     });
   }
 
+
   loadFollowedJobs() {
     this.jobFollowService.getFollowedJobs()
       .subscribe(follows => {
@@ -164,4 +165,9 @@ export class HomepageComponent {
   isCompanyFollowed(companyId: number): boolean {
     return this.followedCompanies.includes(companyId);
   }
+
+  viewDetail(recruitment: Recruitment) {
+    this.router.navigate(['recruitment/detail', recruitment.id]);
+  }
 }
+
