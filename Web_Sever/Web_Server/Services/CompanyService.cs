@@ -153,5 +153,10 @@ namespace Web_Server.Services
         {
             throw new NotImplementedException();
         }
+
+        public Task<Company> GetCompanyProfileAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

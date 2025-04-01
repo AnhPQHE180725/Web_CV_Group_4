@@ -497,7 +497,7 @@ namespace Web_Server.Migrations
                             Quantity = 5,
                             Rank = "A",
                             Salary = 25.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển lập trình viên Java",
                             Type = "Full-time",
                             View = 150
@@ -515,7 +515,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "B",
                             Salary = 30.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển kỹ sư phần mềm",
                             Type = "Full-time",
                             View = 2
@@ -533,7 +533,7 @@ namespace Web_Server.Migrations
                             Quantity = 10,
                             Rank = "C",
                             Salary = 12.0,
-                            Status = 0,
+                            Status = 1,
                             Title = "Tuyển fresher lập trình",
                             Type = "Intern",
                             View = 50
@@ -551,7 +551,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 35.0,
-                            Status = 5,
+                            Status = 1,
                             Title = "Tuyển bác sĩ đa khoa",
                             Type = "Full-time",
                             View = 180
@@ -569,7 +569,7 @@ namespace Web_Server.Migrations
                             Quantity = 5,
                             Rank = "B",
                             Salary = 18.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển y tá điều dưỡng",
                             Type = "Full-time",
                             View = 90
@@ -587,7 +587,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 22.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển kỹ thuật viên xét nghiệm",
                             Type = "Full-time",
                             View = 120
@@ -605,7 +605,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "A",
                             Salary = 30.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển giáo viên tiếng Anh",
                             Type = "Full-time",
                             View = 220
@@ -641,7 +641,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 40.0,
-                            Status = 5,
+                            Status = 1,
                             Title = "Tuyển giảng viên đại học",
                             Type = "Full-time",
                             View = 3
@@ -659,7 +659,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 28.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển kỹ sư xây dựng",
                             Type = "Full-time",
                             View = 175
@@ -677,7 +677,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 38.0,
-                            Status = 4,
+                            Status = 1,
                             Title = "Tuyển kiến trúc sư",
                             Type = "Full-time",
                             View = 240
@@ -695,7 +695,7 @@ namespace Web_Server.Migrations
                             Quantity = 5,
                             Rank = "C",
                             Salary = 20.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển kỹ thuật viên điện",
                             Type = "Full-time",
                             View = 95
@@ -713,7 +713,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 45.0,
-                            Status = 5,
+                            Status = 1,
                             Title = "Tuyển kế toán trưởng",
                             Type = "Full-time",
                             View = 260
@@ -731,7 +731,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 30.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển chuyên viên tài chính",
                             Type = "Full-time",
                             View = 180
@@ -749,7 +749,7 @@ namespace Web_Server.Migrations
                             Quantity = 6,
                             Rank = "C",
                             Salary = 22.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển nhân viên thuế",
                             Type = "Full-time",
                             View = 110
@@ -767,7 +767,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 28.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển chuyên viên marketing",
                             Type = "Full-time",
                             View = 150
@@ -785,7 +785,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "A",
                             Salary = 35.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển chuyên gia SEO",
                             Type = "Full-time",
                             View = 2
@@ -821,7 +821,7 @@ namespace Web_Server.Migrations
                             Quantity = 8,
                             Rank = "B",
                             Salary = 18.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển nhân viên chăm sóc khách hàng",
                             Type = "Full-time",
                             View = 130
@@ -839,7 +839,7 @@ namespace Web_Server.Migrations
                             Quantity = 10,
                             Rank = "C",
                             Salary = 20.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển nhân viên telesales",
                             Type = "Full-time",
                             View = 110
@@ -857,7 +857,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "A",
                             Salary = 28.0,
-                            Status = 4,
+                            Status = 1,
                             Title = "Tuyển trưởng nhóm CSKH",
                             Type = "Full-time",
                             View = 170
@@ -875,7 +875,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 40.0,
-                            Status = 5,
+                            Status = 1,
                             Title = "Tuyển quản lý kho vận",
                             Type = "Full-time",
                             View = 250
@@ -893,7 +893,7 @@ namespace Web_Server.Migrations
                             Quantity = 6,
                             Rank = "B",
                             Salary = 30.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển nhân viên vận hành logistics",
                             Type = "Full-time",
                             View = 180
@@ -929,7 +929,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 30.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển chuyên viên pháp lý",
                             Type = "Full-time",
                             View = 90
@@ -947,7 +947,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 50.0,
-                            Status = 5,
+                            Status = 1,
                             Title = "Tuyển luật sư doanh nghiệp",
                             Type = "Full-time",
                             View = 110
@@ -983,7 +983,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 25.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển thiết kế đồ họa",
                             Type = "Full-time",
                             View = 150
@@ -1001,7 +1001,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "B",
                             Salary = 30.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển UI/UX Designer",
                             Type = "Full-time",
                             View = 170
@@ -1019,7 +1019,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 28.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển nhân viên thiết kế nội thất",
                             Type = "Full-time",
                             View = 190
@@ -1055,7 +1055,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 35.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển kỹ sư cơ khí",
                             Type = "Full-time",
                             View = 230
@@ -1073,7 +1073,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "A",
                             Salary = 40.0,
-                            Status = 4,
+                            Status = 1,
                             Title = "Tuyển giám sát sản xuất",
                             Type = "Full-time",
                             View = 250
@@ -1109,7 +1109,7 @@ namespace Web_Server.Migrations
                             Quantity = 3,
                             Rank = "B",
                             Salary = 28.0,
-                            Status = 3,
+                            Status = 1,
                             Title = "Tuyển quản lý cửa hàng",
                             Type = "Full-time",
                             View = 50
@@ -1127,7 +1127,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 30.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển chuyên viên TMĐT",
                             Type = "Full-time",
                             View = 70
@@ -1163,7 +1163,7 @@ namespace Web_Server.Migrations
                             Quantity = 2,
                             Rank = "A",
                             Salary = 45.0,
-                            Status = 5,
+                            Status = 1,
                             Title = "Tuyển quản lý khách sạn",
                             Type = "Full-time",
                             View = 110
@@ -1181,7 +1181,7 @@ namespace Web_Server.Migrations
                             Quantity = 4,
                             Rank = "B",
                             Salary = 22.0,
-                            Status = 2,
+                            Status = 1,
                             Title = "Tuyển hướng dẫn viên du lịch",
                             Type = "Full-time",
                             View = 130
@@ -1274,7 +1274,7 @@ namespace Web_Server.Migrations
                             Email = "alice@example.com",
                             FullName = "Alice Johnson",
                             Image = "alice.jpg",
-                            Password = "AQAAAAIAAYagAAAAEOg/Juxdc6xvZoZHdQjGOkjb5O2e1JumWSkdW1gfnpZjoOWf+kIcFnN+1ufZsTe7pQ==",
+                            Password = "AQAAAAIAAYagAAAAEAOmdx0H1Zd7hJQh5vOmFMahfUICoz7GyinYolpIfwa7gIO+t6GYSbGuDsTICzgShA==",
                             PhoneNumber = "0123456789",
                             RoleId = 1,
                             Status = 1
@@ -1288,7 +1288,7 @@ namespace Web_Server.Migrations
                             Email = "bob@example.com",
                             FullName = "Bob Smith",
                             Image = "bob.jpg",
-                            Password = "AQAAAAIAAYagAAAAEHUWd8es12JWSYkfK9OjwoFp3YdWmQD/M0IjOmlGIDEe0YPRXR8pD+8nDOilhVoDJw==",
+                            Password = "AQAAAAIAAYagAAAAEIr/prwidpppMWMdsKlz9bwRme2igyB5z5m5QT51T6wwBBkq/tEf6GkD8fDidLcjfw==",
                             PhoneNumber = "0987654321",
                             RoleId = 1,
                             Status = 1
@@ -1302,7 +1302,7 @@ namespace Web_Server.Migrations
                             Email = "charlie@example.com",
                             FullName = "Charlie Brown",
                             Image = "charlie.jpg",
-                            Password = "AQAAAAIAAYagAAAAEAGA4XC1/WqIjr211cu69d3gHVNE2ThMiKbdDtScGRYY9dXmCUW1Mh7+MWZma69xHg==",
+                            Password = "AQAAAAIAAYagAAAAELwUi6oNBOnFVEs+1JQ85y2iL8HXmL3LutMXheOm3nHVy1pFZLsvdtnruUA9PoLKRQ==",
                             PhoneNumber = "0112233445",
                             RoleId = 1,
                             Status = 1
@@ -1316,7 +1316,7 @@ namespace Web_Server.Migrations
                             Email = "tronghieutronghieu1510@gmail.com",
                             FullName = "Trong Hieu",
                             Image = "hieu.jpg",
-                            Password = "AQAAAAIAAYagAAAAEFRRJM182PnOeW7P90WjqBGeKNWv6ZbkPc/nHFvvH4ypMFexA9+kyjRCIKo83hzu7A==",
+                            Password = "AQAAAAIAAYagAAAAEH0sUlytn3kDbWx4vMTZE9uu614hQcR5Ln//O/wR1sKKRH5gWkSwnV+dP8W1MBe27A==",
                             PhoneNumber = "0223344556",
                             RoleId = 2,
                             Status = 1
@@ -1330,7 +1330,7 @@ namespace Web_Server.Migrations
                             Email = "emma@example.com",
                             FullName = "Emma Watson",
                             Image = "emma.jpg",
-                            Password = "AQAAAAIAAYagAAAAEKgqe95WJ6OEqaPA4oGhNGq5Lz64iQ0+3BzehUkfQVEmSI+FucykeOKmpg2ViRNQkg==",
+                            Password = "AQAAAAIAAYagAAAAEO4aoXPl4SoZYfgMlfopcKSPPJMj+vA7+57jmFsfa5aDz8wNkk+KXRwdf0wH+XhDUA==",
                             PhoneNumber = "0334455667",
                             RoleId = 1,
                             Status = 1
@@ -1344,7 +1344,7 @@ namespace Web_Server.Migrations
                             Email = "frank@example.com",
                             FullName = "Frank Miller",
                             Image = "frank.jpg",
-                            Password = "AQAAAAIAAYagAAAAECN60cMDQtnDjcVFz6n6Wr/8B0cksTVdByac0ziEfnwvXfhh7jihduyUy9zl9124zQ==",
+                            Password = "AQAAAAIAAYagAAAAEK3A0ot5LgW2KjmSk4iKCrb1xlUpMv+MmLFLZN7TppW9vpHWKPFljZsPeTysmJxOMw==",
                             PhoneNumber = "0445566778",
                             RoleId = 1,
                             Status = 1
@@ -1358,7 +1358,7 @@ namespace Web_Server.Migrations
                             Email = "grace@example.com",
                             FullName = "Grace Davis",
                             Image = "grace.jpg",
-                            Password = "AQAAAAIAAYagAAAAEJiiyk9ardP2YMP/BjjwBjfzwXiDc7mb1PfsfAzWIjDNlr1Xrj01IEtyUAfvjcCx4g==",
+                            Password = "AQAAAAIAAYagAAAAEMbbF/4r8hARhvqXcRvqLTxGTSmP0pP6Bh3x36CjeOIsls3fr4pTOVlOXloFaH5WVg==",
                             PhoneNumber = "0556677889",
                             RoleId = 1,
                             Status = 1
@@ -1372,7 +1372,7 @@ namespace Web_Server.Migrations
                             Email = "henry@example.com",
                             FullName = "Henry Wilson",
                             Image = "henry.jpg",
-                            Password = "AQAAAAIAAYagAAAAEFE9wmTkez/X1eYvxUQkg1uJ68BSOAB1lG63zAUBRFb/IlfyB8sanzTzPyOYJq1Kdg==",
+                            Password = "AQAAAAIAAYagAAAAENeATpzQUmMTtFoB5dGhayO492wH/L6Rr0GzoXQEZD/oqrc1plL5dG3stVbEzb3VZA==",
                             PhoneNumber = "0667788990",
                             RoleId = 1,
                             Status = 1
@@ -1386,7 +1386,7 @@ namespace Web_Server.Migrations
                             Email = "isabella@example.com",
                             FullName = "Isabella Thomas",
                             Image = "isabella.jpg",
-                            Password = "AQAAAAIAAYagAAAAEGABPzpmipwS+S4PFs+1xMA9UxUQNkojNDttbACEME8To40tBfklpG4GjUnlAvdu6g==",
+                            Password = "AQAAAAIAAYagAAAAEEtpdLQdzqHmRKggar/WEcFYp7qboDG7zV9BmQifv8PAb7oZoEGhXMDfUVhQFxRG5Q==",
                             PhoneNumber = "0778899001",
                             RoleId = 1,
                             Status = 1
@@ -1400,7 +1400,7 @@ namespace Web_Server.Migrations
                             Email = "jack@example.com",
                             FullName = "Jack Martinez",
                             Image = "jack.jpg",
-                            Password = "AQAAAAIAAYagAAAAEKIPD3VvFhFOB5BDzvcKuxTOlh9jAmsT4bxWN74+lbSN8v92oi4S61WMFZZRRf9DZA==",
+                            Password = "AQAAAAIAAYagAAAAEJObuAazFrv25nVu7kb2JU7MW92HNWMcmMaScNjNyXcUxz4uTSm9n1kAFmKY9cVINA==",
                             PhoneNumber = "0889900112",
                             RoleId = 1,
                             Status = 1

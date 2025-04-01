@@ -16,13 +16,13 @@ namespace Web_Server.Repositories
 
         public async Task<List<Recruitment>> GetAllRecruitments()
         {
-            return await _context.Recruitments.Include(r => r.Company).ToListAsync();   
+            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).ToListAsync();   
         }
 
         public async Task<List<Recruitment>> GetRecruitmentsByCategory(int id)
         {
             return await _context.Recruitments
-          .Where(r => r.CategoryId == id)
+          .Where(r => r.CategoryId == id && r.Status==1)
           .Include(r => r.Company) 
           .Include(r => r.Category) 
           .ToListAsync();
@@ -31,7 +31,7 @@ namespace Web_Server.Repositories
         public async Task<List<Recruitment>> GetRecruitmentsByCompany(int id)
         {
             return await _context.Recruitments
-          .Where(r => r.CompanyId == id)
+          .Where(r => r.CompanyId == id && r.Status == 1)
           .Include(r => r.Company)
           .Include(r => r.Category)
           .ToListAsync();
@@ -39,19 +39,19 @@ namespace Web_Server.Repositories
 
         public async Task<List<Recruitment>> GetTop2Recruitments()
         {
-            return await _context.Recruitments.Include(r => r.Company).OrderByDescending(c=>c.View).Take(2).ToListAsync();
+            return await _context.Recruitments.Where(r=>r.Status==1).Include(r => r.Company).OrderByDescending(c=>c.View).Take(2).ToListAsync();
         }
         public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
         {
-            return await _context.Recruitments.Include(r => r.Company).Where(c => c.Company.Name.Contains(company)).ToListAsync();
+            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).Where(c => c.Company.Name.Contains(company)).ToListAsync();
         }
         public async Task<List<Recruitment>> GetRecruitmentsByTitle(string title)
         {
-            return await _context.Recruitments.Include(r => r.Company).Where(t => t.Title.Contains(title)).ToListAsync();
+            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).Where(t => t.Title.Contains(title)).ToListAsync();
         }
         public async Task<List<Recruitment>> GetRecruitmentsByLocation(string location)
         {
-            return await _context.Recruitments.Include(r => r.Company).Where(t => t.Address.Contains(location)).ToListAsync();
+            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).Where(t => t.Address.Contains(location)).ToListAsync();
         }
 
 
