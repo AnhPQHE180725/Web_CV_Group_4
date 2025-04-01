@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UserProfile } from '../../models/UserProfile';
 import { UserProfileService } from '../../services/user-profile.service';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-profile',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })

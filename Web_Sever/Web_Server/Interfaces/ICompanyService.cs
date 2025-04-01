@@ -15,5 +15,6 @@ namespace Web_Server.Interfaces
         Task<bool> DeleteCompanyAsync(int id);
         Task<List<Company>> GetUserCompaniesAsync();
         Task<string?> GetLogoFilePathAsync(string logoFileName);
+        Task<Company> GetCompanyProfileAsync();
     }
 }

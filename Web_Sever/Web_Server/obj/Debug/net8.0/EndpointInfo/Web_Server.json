@@ -482,6 +482,18 @@
         }
       }
     },
+    "/api/Authentication/company-profile": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Category/get-all-categories": {
       "get": {
         "tags": [

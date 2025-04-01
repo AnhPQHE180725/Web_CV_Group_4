@@ -2,6 +2,7 @@
 using Web_Server.Data;
 using Web_Server.Interfaces;
 using Web_Server.Models;
+using Web_Server.ViewModels;
 
 namespace Web_Server.Repositories
 {
@@ -74,6 +75,10 @@ namespace Web_Server.Repositories
                 .Where(c => c.UserId == userId)
                 .Include(c => c.Recruitments)
                 .ToListAsync();
+        }
+        public async Task<Company> GetCompanyProfileAsync()
+        {
+            return await _context.Companies.FirstOrDefaultAsync();
         }
     }
 }

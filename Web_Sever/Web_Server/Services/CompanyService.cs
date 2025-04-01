@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
@@ -182,6 +183,11 @@ namespace Web_Server.Services
 
             var filePath = Path.Combine(_environment.WebRootPath, LOGO_FOLDER, logoFileName);
             return File.Exists(filePath) ? filePath : null;
+        }
+
+        public async Task<Company> GetCompanyProfileAsync()
+        {
+            return await _companyRepository.GetCompanyProfileAsync();
         }
     }
 }

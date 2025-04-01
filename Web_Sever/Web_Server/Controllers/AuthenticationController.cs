@@ -22,6 +22,7 @@ namespace Web_Server.Controllers
         private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
         private readonly IMemoryCache _cache;
+        private readonly ICompanyService _companyService;
 
 
         public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService,IMemoryCache cache)
@@ -296,6 +297,44 @@ namespace Web_Server.Controllers
             if (!success) return BadRequest("Update failed");
 
             return Ok("Update successful");
+        }
+
+        [HttpGet("company-profile")]
+        [Authorize]
+        public async Task<IActionResult> GetCompanyProfile()
+        {
+            var userId = User.FindFirst("id")?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            if(user.RoleId != 2)
+            {
+                return Forbid();
+            }
+            var company = await _companyService.GetCompanyProfileAsync();
+            if (company == null)
+            {
+                return NotFound("Company profile not found.");
+            }
+
+            return Ok(new
+            {
+                Id = company.Id,
+                Name = company.Name,
+                Address = company.Address,
+                PhoneNumber = company.PhoneNumber,
+                Email = company.Email,
+                Description = company.Description,
+                Logo = company.Logo
+            });
         }
 
     }
