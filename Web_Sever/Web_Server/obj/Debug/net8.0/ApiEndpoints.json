@@ -317,6 +317,11 @@
         "IsRequired": false
       },
       {
+        "Name": "Logo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "Status",
         "Type": "System.Int32",
         "IsRequired": false
@@ -453,6 +458,11 @@
       },
       {
         "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Logo",
         "Type": "System.String",
         "IsRequired": false
       },

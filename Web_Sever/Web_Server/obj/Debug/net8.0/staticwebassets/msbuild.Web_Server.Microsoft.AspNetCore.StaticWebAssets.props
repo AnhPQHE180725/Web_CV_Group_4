@@ -126,24 +126,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\b390780d-c59d-489a-a8f9-767d042c71b2_avata1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Web_Server</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Web_Server</BasePath>
-      <RelativePath>CompanyLogos/b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3zmzdzp7zu</Fingerprint>
-      <Integrity>D0hyRqqDJNd9mJ5Ia+MUjZaO95eZvhT4nmAfBK1qN48=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\ca6f98ba-5704-4ec6-9898-217a76b710e8_avata4.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Web_Server</SourceId>
@@ -252,24 +234,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Web_Server</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Web_Server</BasePath>
-      <RelativePath>CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5hzxo5d2su</Fingerprint>
-      <Integrity>JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>Web_Server</SourceId>
@@ -359,6 +323,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\9f95fd90-f138-4756-ada9-3714dcbac811_GuideToInstallAngular.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Web_Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Web_Server</BasePath>
+      <RelativePath>CVs/ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>m8v4sh0p98</Fingerprint>
+      <Integrity>JjcTpgYNCPUSOIefL5AGFUnhD+r+tcorJmv8M7RszO8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf'))">
       <SourceType>Package</SourceType>

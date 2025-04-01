@@ -613,6 +613,9 @@
                   "PhoneNumber": {
                     "type": "string"
                   },
+                  "Logo": {
+                    "type": "string"
+                  },
                   "Status": {
                     "type": "integer",
                     "format": "int32"
@@ -633,6 +636,9 @@
                   "style": "form"
                 },
                 "PhoneNumber": {
+                  "style": "form"
+                },
+                "Logo": {
                   "style": "form"
                 },
                 "Status": {
@@ -679,6 +685,9 @@
                   "PhoneNumber": {
                     "type": "string"
                   },
+                  "Logo": {
+                    "type": "string"
+                  },
                   "Status": {
                     "type": "integer",
                     "format": "int32"
@@ -702,6 +711,9 @@
                   "style": "form"
                 },
                 "PhoneNumber": {
+                  "style": "form"
+                },
+                "Logo": {
                   "style": "form"
                 },
                 "Status": {

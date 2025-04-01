@@ -21,10 +21,6 @@
       "PackagePath": "staticwebassets\\CVs\\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf"
     },
     {
-      "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
-      "PackagePath": "staticwebassets\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf"
-    },
-    {
       "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf",
       "PackagePath": "staticwebassets\\CVs\\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf"
     },
@@ -43,6 +39,10 @@
     {
       "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\9f95fd90-f138-4756-ada9-3714dcbac811_GuideToInstallAngular.pdf",
       "PackagePath": "staticwebassets\\CVs\\9f95fd90-f138-4756-ada9-3714dcbac811_GuideToInstallAngular.pdf"
+    },
+    {
+      "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf",
+      "PackagePath": "staticwebassets\\CVs\\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf"
     },
     {
       "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf",
@@ -91,10 +91,6 @@
     {
       "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\b390780d-c59d-489a-a8f9-767d042c71b2_avata1.jpg",
       "PackagePath": "staticwebassets\\CompanyLogos\\b390780d-c59d-489a-a8f9-767d042c71b2_avata1.jpg"
-    },
-    {
-      "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg",
-      "PackagePath": "staticwebassets\\CompanyLogos\\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg"
     },
     {
       "Id": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\ca6f98ba-5704-4ec6-9898-217a76b710e8_avata4.jpg",

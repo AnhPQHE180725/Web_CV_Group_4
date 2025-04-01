@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N2PQ3i2PfFNUn5+dmXTJCUvBXqTjplkIoL6+nvkIJWI=",
+  "Hash": "ELIFnemM7kX8ZxhAmJDEcZLBVSadVlTzNZcC6Oz6Guw=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -164,27 +164,6 @@
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\b390780d-c59d-489a-a8f9-767d042c71b2_avata1.jpg"
     },
     {
-      "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg",
-      "SourceId": "Web_Server",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
-      "BasePath": "_content/Web_Server",
-      "RelativePath": "CompanyLogos/b7083298-4f36-43bb-a475-36a0247c90a9_avata1#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "3zmzdzp7zu",
-      "Integrity": "D0hyRqqDJNd9mJ5Ia+MUjZaO95eZvhT4nmAfBK1qN48=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CompanyLogos\\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg"
-    },
-    {
       "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\ca6f98ba-5704-4ec6-9898-217a76b710e8_avata4.jpg",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
@@ -311,27 +290,6 @@
       "OriginalItemSpec": "wwwroot\\CVs\\424039bb-c441-4f8b-b676-fa00e1bcdd24_GuideToInstallAngular.pdf"
     },
     {
-      "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
-      "SourceId": "Web_Server",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
-      "BasePath": "_content/Web_Server",
-      "RelativePath": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "5hzxo5d2su",
-      "Integrity": "JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf"
-    },
-    {
       "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
@@ -435,6 +393,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CVs\\9f95fd90-f138-4756-ada9-3714dcbac811_GuideToInstallAngular.pdf"
+    },
+    {
+      "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m8v4sh0p98",
+      "Integrity": "JjcTpgYNCPUSOIefL5AGFUnhD+r+tcorJmv8M7RszO8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf"
     },
     {
       "Identity": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\bab263e7-8332-4e78-abd1-27664759457c_De lab 4.pdf",
@@ -1118,88 +1097,6 @@
       ]
     },
     {
-      "Route": "CompanyLogos/b7083298-4f36-43bb-a475-36a0247c90a9_avata1.3zmzdzp7zu.jpg",
-      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "88639"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"D0hyRqqDJNd9mJ5Ia+MUjZaO95eZvhT4nmAfBK1qN48=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 04:04:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3zmzdzp7zu"
-        },
-        {
-          "Name": "label",
-          "Value": "CompanyLogos/b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-D0hyRqqDJNd9mJ5Ia+MUjZaO95eZvhT4nmAfBK1qN48="
-        }
-      ]
-    },
-    {
-      "Route": "CompanyLogos/b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg",
-      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\b7083298-4f36-43bb-a475-36a0247c90a9_avata1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "88639"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"D0hyRqqDJNd9mJ5Ia+MUjZaO95eZvhT4nmAfBK1qN48=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 04:04:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-D0hyRqqDJNd9mJ5Ia+MUjZaO95eZvhT4nmAfBK1qN48="
-        }
-      ]
-    },
-    {
       "Route": "CompanyLogos/ca6f98ba-5704-4ec6-9898-217a76b710e8_avata4.8jg5z5x9h5.jpg",
       "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\ca6f98ba-5704-4ec6-9898-217a76b710e8_avata4.jpg",
       "Selectors": [],
@@ -1692,88 +1589,6 @@
       ]
     },
     {
-      "Route": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.5hzxo5d2su.pdf",
-      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "169206"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5hzxo5d2su"
-        },
-        {
-          "Name": "label",
-          "Value": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
-        }
-      ]
-    },
-    {
-      "Route": "CVs/4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
-      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4c689e8f-ad13-4eab-a6aa-fd81216152e1_cvTuan.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "169206"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 05:07:00 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
-        }
-      ]
-    },
-    {
       "Route": "CVs/4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.odferd1ui5.pdf",
       "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\4d3bb4df-f2b4-4dc0-a671-0469d3b52545_GuideToInstallAngular.pdf",
       "Selectors": [],
@@ -2180,6 +1995,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.m8v4sh0p98.pdf",
+      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "251412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JjcTpgYNCPUSOIefL5AGFUnhD+r+tcorJmv8M7RszO8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 05:41:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m8v4sh0p98"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JjcTpgYNCPUSOIefL5AGFUnhD+r+tcorJmv8M7RszO8="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf",
+      "AssetFile": "D:\\MockProject\\DUAN\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\ae34637d-bdbc-4578-82fe-ae7cdecf7ea7_DSA_Practice_T102.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "251412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JjcTpgYNCPUSOIefL5AGFUnhD+r+tcorJmv8M7RszO8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 05:41:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JjcTpgYNCPUSOIefL5AGFUnhD+r+tcorJmv8M7RszO8="
         }
       ]
     },
