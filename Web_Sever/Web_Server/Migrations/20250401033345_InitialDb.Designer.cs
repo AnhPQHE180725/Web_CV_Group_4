@@ -12,7 +12,7 @@ using Web_Server.Data;
 namespace Web_Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250327071546_InitialDb")]
+    [Migration("20250401033345_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
@@ -255,7 +255,7 @@ namespace Web_Server.Migrations
                             Address = "Hà Nội, Việt Nam",
                             Description = "Công ty phần mềm hàng đầu Việt Nam",
                             Email = "contact@fpt.com",
-                            Logo = "a",
+                            Logo = "https://cdn.ketnoibongda.vn/upload/images/logo-nha-tai-tro-fpt-soft-ware-2020-05-18.png",
                             Name = "FPT Software",
                             PhoneNumber = "024-73007300",
                             Status = 1,
@@ -267,7 +267,7 @@ namespace Web_Server.Migrations
                             Address = "Cần Thơ, Việt Nam",
                             Description = "Công ty dược phẩm lớn nhất Việt Nam",
                             Email = "info@dhgpharma.com",
-                            Logo = "a",
+                            Logo = "https://itppharma.com/wp-content/uploads/2021/03/DHG_Pharma_2.jpg",
                             Name = "DHG Pharma",
                             PhoneNumber = "0292-3891433",
                             Status = 1,
@@ -279,7 +279,7 @@ namespace Web_Server.Migrations
                             Address = "Hà Nội, Việt Nam",
                             Description = "Hệ thống giáo dục chất lượng cao",
                             Email = "info@vinschool.edu.vn",
-                            Logo = "a",
+                            Logo = "https://apartmentvinhomes.com/wp-content/uploads/2023/03/logovins-1024x595.png",
                             Name = "Vinschool",
                             PhoneNumber = "024-39757483",
                             Status = 1,
@@ -291,7 +291,7 @@ namespace Web_Server.Migrations
                             Address = "TP. Hồ Chí Minh, Việt Nam",
                             Description = "Công ty xây dựng hàng đầu Việt Nam",
                             Email = "contact@coteccons.vn",
-                            Logo = "a",
+                            Logo = "https://s3-symbol-logo.tradingview.com/coteccons-construction-joint-stock-company--600.png",
                             Name = "Coteccons",
                             PhoneNumber = "028-38220800",
                             Status = 1,
@@ -303,7 +303,7 @@ namespace Web_Server.Migrations
                             Address = "Hà Nội, Việt Nam",
                             Description = "Ngân hàng thương mại hàng đầu",
                             Email = "support@mbbank.com.vn",
-                            Logo = "a",
+                            Logo = "https://static.wixstatic.com/media/9d8ed5_fc3bb8e4fd18410182baae118781f995~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d8ed5_fc3bb8e4fd18410182baae118781f995~mv2.jpg",
                             Name = "MB Bank",
                             PhoneNumber = "024-37674050",
                             Status = 1,
@@ -315,7 +315,7 @@ namespace Web_Server.Migrations
                             Address = "TP. Hồ Chí Minh, Việt Nam",
                             Description = "Nền tảng thương mại điện tử lớn",
                             Email = "support@tiki.vn",
-                            Logo = "a",
+                            Logo = "http://brandlogos.net/wp-content/uploads/2022/03/tiki-logo-brandlogos.net_-300x300.png",
                             Name = "Tiki",
                             PhoneNumber = "1900-6035",
                             Status = 1,
@@ -327,7 +327,7 @@ namespace Web_Server.Migrations
                             Address = "TP. Hồ Chí Minh, Việt Nam",
                             Description = "Công ty logistics hàng đầu",
                             Email = "info@gemadept.com.vn",
-                            Logo = "a",
+                            Logo = "https://media.vneconomy.vn/w800/images/upload/2021/04/20/3cf770c4-d652-4204-bd86-a08f67114af2.jpg",
                             Name = "Gemadept",
                             PhoneNumber = "028-39111333",
                             Status = 1,
@@ -339,7 +339,7 @@ namespace Web_Server.Migrations
                             Address = "Nha Trang, Việt Nam",
                             Description = "Chuỗi khách sạn và nghỉ dưỡng cao cấp",
                             Email = "info@vinpearl.com",
-                            Logo = "a",
+                            Logo = "https://inkythuatso.com/uploads/images/2021/09/vinpearl-logo-inkythuatso-1-13-10-21-19.jpg",
                             Name = "Vinpearl",
                             PhoneNumber = "1900-232389",
                             Status = 1,
@@ -351,7 +351,7 @@ namespace Web_Server.Migrations
                             Address = "Hà Nội, Việt Nam",
                             Description = "Tập đoàn đa ngành lớn nhất Việt Nam",
                             Email = "contact@vingroup.net",
-                            Logo = "a",
+                            Logo = "https://s3-symbol-logo.tradingview.com/vingroup-joint-stock-company--600.png",
                             Name = "Vingroup",
                             PhoneNumber = "024-39749999",
                             Status = 1,
@@ -363,7 +363,7 @@ namespace Web_Server.Migrations
                             Address = "Hải Phòng, Việt Nam",
                             Description = "Hãng sản xuất ô tô hàng đầu Việt Nam",
                             Email = "support@vinfast.vn",
-                            Logo = "a",
+                            Logo = "https://inkythuatso.com/uploads/images/2021/10/logo-vinfast-inkythuatso-21-11-08-55.jpg",
                             Name = "VinFast",
                             PhoneNumber = "1900-232389",
                             Status = 1,

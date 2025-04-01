@@ -294,16 +294,16 @@ namespace Web_Server.Migrations
                 columns: new[] { "Id", "Address", "Description", "Email", "Logo", "Name", "PhoneNumber", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "Hà Nội, Việt Nam", "Công ty phần mềm hàng đầu Việt Nam", "contact@fpt.com", "a", "FPT Software", "024-73007300", 1, 4 },
-                    { 2, "Cần Thơ, Việt Nam", "Công ty dược phẩm lớn nhất Việt Nam", "info@dhgpharma.com", "a", "DHG Pharma", "0292-3891433", 1, 4 },
-                    { 3, "Hà Nội, Việt Nam", "Hệ thống giáo dục chất lượng cao", "info@vinschool.edu.vn", "a", "Vinschool", "024-39757483", 1, 4 },
-                    { 4, "TP. Hồ Chí Minh, Việt Nam", "Công ty xây dựng hàng đầu Việt Nam", "contact@coteccons.vn", "a", "Coteccons", "028-38220800", 1, 4 },
-                    { 5, "Hà Nội, Việt Nam", "Ngân hàng thương mại hàng đầu", "support@mbbank.com.vn", "a", "MB Bank", "024-37674050", 1, 4 },
-                    { 6, "TP. Hồ Chí Minh, Việt Nam", "Nền tảng thương mại điện tử lớn", "support@tiki.vn", "a", "Tiki", "1900-6035", 1, 4 },
-                    { 7, "TP. Hồ Chí Minh, Việt Nam", "Công ty logistics hàng đầu", "info@gemadept.com.vn", "a", "Gemadept", "028-39111333", 1, 4 },
-                    { 8, "Nha Trang, Việt Nam", "Chuỗi khách sạn và nghỉ dưỡng cao cấp", "info@vinpearl.com", "a", "Vinpearl", "1900-232389", 1, 4 },
-                    { 9, "Hà Nội, Việt Nam", "Tập đoàn đa ngành lớn nhất Việt Nam", "contact@vingroup.net", "a", "Vingroup", "024-39749999", 1, 4 },
-                    { 10, "Hải Phòng, Việt Nam", "Hãng sản xuất ô tô hàng đầu Việt Nam", "support@vinfast.vn", "a", "VinFast", "1900-232389", 1, 4 }
+                    { 1, "Hà Nội, Việt Nam", "Công ty phần mềm hàng đầu Việt Nam", "contact@fpt.com", "https://cdn.ketnoibongda.vn/upload/images/logo-nha-tai-tro-fpt-soft-ware-2020-05-18.png", "FPT Software", "024-73007300", 1, 4 },
+                    { 2, "Cần Thơ, Việt Nam", "Công ty dược phẩm lớn nhất Việt Nam", "info@dhgpharma.com", "https://itppharma.com/wp-content/uploads/2021/03/DHG_Pharma_2.jpg", "DHG Pharma", "0292-3891433", 1, 4 },
+                    { 3, "Hà Nội, Việt Nam", "Hệ thống giáo dục chất lượng cao", "info@vinschool.edu.vn", "https://apartmentvinhomes.com/wp-content/uploads/2023/03/logovins-1024x595.png", "Vinschool", "024-39757483", 1, 4 },
+                    { 4, "TP. Hồ Chí Minh, Việt Nam", "Công ty xây dựng hàng đầu Việt Nam", "contact@coteccons.vn", "https://s3-symbol-logo.tradingview.com/coteccons-construction-joint-stock-company--600.png", "Coteccons", "028-38220800", 1, 4 },
+                    { 5, "Hà Nội, Việt Nam", "Ngân hàng thương mại hàng đầu", "support@mbbank.com.vn", "https://static.wixstatic.com/media/9d8ed5_fc3bb8e4fd18410182baae118781f995~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d8ed5_fc3bb8e4fd18410182baae118781f995~mv2.jpg", "MB Bank", "024-37674050", 1, 4 },
+                    { 6, "TP. Hồ Chí Minh, Việt Nam", "Nền tảng thương mại điện tử lớn", "support@tiki.vn", "http://brandlogos.net/wp-content/uploads/2022/03/tiki-logo-brandlogos.net_-300x300.png", "Tiki", "1900-6035", 1, 4 },
+                    { 7, "TP. Hồ Chí Minh, Việt Nam", "Công ty logistics hàng đầu", "info@gemadept.com.vn", "https://media.vneconomy.vn/w800/images/upload/2021/04/20/3cf770c4-d652-4204-bd86-a08f67114af2.jpg", "Gemadept", "028-39111333", 1, 4 },
+                    { 8, "Nha Trang, Việt Nam", "Chuỗi khách sạn và nghỉ dưỡng cao cấp", "info@vinpearl.com", "https://inkythuatso.com/uploads/images/2021/09/vinpearl-logo-inkythuatso-1-13-10-21-19.jpg", "Vinpearl", "1900-232389", 1, 4 },
+                    { 9, "Hà Nội, Việt Nam", "Tập đoàn đa ngành lớn nhất Việt Nam", "contact@vingroup.net", "https://s3-symbol-logo.tradingview.com/vingroup-joint-stock-company--600.png", "Vingroup", "024-39749999", 1, 4 },
+                    { 10, "Hải Phòng, Việt Nam", "Hãng sản xuất ô tô hàng đầu Việt Nam", "support@vinfast.vn", "https://inkythuatso.com/uploads/images/2021/10/logo-vinfast-inkythuatso-21-11-08-55.jpg", "VinFast", "1900-232389", 1, 4 }
                 });
 
             migrationBuilder.InsertData(

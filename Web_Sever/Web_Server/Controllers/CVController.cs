@@ -37,7 +37,7 @@ namespace Web_Server.Controllers
 
             return Ok(cv);
         }
-
+        [Authorize]
         [HttpPost("upload")]
         public async Task<ActionResult<CV>> UploadCV(IFormFile file)
         {
@@ -51,7 +51,7 @@ namespace Web_Server.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteCV(int id)
         {
@@ -61,6 +61,7 @@ namespace Web_Server.Controllers
 
             return NoContent();
         }
+
         [HttpGet("view/{userId}")]
         public async Task<IActionResult> ViewCV(int userId)
         {

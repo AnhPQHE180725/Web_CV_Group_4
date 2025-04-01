@@ -26,11 +26,11 @@ export class HomepageComponent {
   companies: Company[] = [];
   recruitments: Recruitment[] = [];
   images: string[] = [
-    'assets/images/slide1.jpg',
-    'assets/images/slide2.jpg',
-    'assets/images/slide3.jpg',
-    'assets/images/slide4.jpg',
-    'assets/images/slide5.jpg'
+    'assets/images/slide1.png',
+    'assets/images/slide2.png',
+    'assets/images/slide3.png',
+    'assets/images/slide4.png',
+    'assets/images/slide5.png'
   ];
   currentIndex: number = 0;
   followedJobs: number[] = [];
@@ -115,6 +115,7 @@ export class HomepageComponent {
     });
   }
 
+
   loadFollowedJobs() {
     this.jobFollowService.getFollowedJobs()
       .subscribe(follows => {
@@ -164,4 +165,9 @@ export class HomepageComponent {
   isCompanyFollowed(companyId: number): boolean {
     return this.followedCompanies.includes(companyId);
   }
+
+  viewDetail(recruitment: Recruitment) {
+    this.router.navigate(['recruitment/detail', recruitment.id]);
+  }
 }
+
