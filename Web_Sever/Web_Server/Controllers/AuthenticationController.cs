@@ -18,14 +18,14 @@ namespace Web_Server.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
+        private static Dictionary<string, string> _otpEmailMap = new();
         private readonly IUserService _userService;
         private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
         private readonly IMemoryCache _cache;
-        private readonly ICompanyService _companyService;
 
 
-        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService,IMemoryCache cache)
+        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService, IMemoryCache cache)
         {
             _userService = userService;
             _configuration = configuration;
@@ -109,6 +109,13 @@ namespace Web_Server.Controllers
                 return NotFound("Thông tin đăng nhập không chính xác.");
             }
 
+            // Nếu user có role là "Candidate", bỏ qua xác minh OTP
+            if (user.RoleId == 1)
+            {
+                var jwtToken = await GenerateJwtToken(user);
+                return Ok(new { token = jwtToken });
+            }
+
             // Tạo mã OTP ngẫu nhiên
             var otpCode = new Random().Next(100000, 999999).ToString();
 
@@ -177,24 +184,41 @@ namespace Web_Server.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterVm registerVm)
         {
-            if (await _userService.FindEmailExists(registerVm.Email) != null)
+            try
             {
-                return BadRequest("Email đã tồn tại trong hệ thống.");
+                if (await _userService.FindEmailExists(registerVm.Email) != null)
+                {
+                    return BadRequest("Email đã tồn tại trong hệ thống.");
+                }
+                if (string.IsNullOrWhiteSpace(registerVm.FullName) ||
+                    string.IsNullOrWhiteSpace(registerVm.Password) ||
+                    string.IsNullOrWhiteSpace(registerVm.ConfirmPassword) ||
+                    string.IsNullOrWhiteSpace(registerVm.RoleName))
+                {
+                    return BadRequest("Vui lòng nhập đầy đủ thông tin.");
+                }
+
+                // Tạo mã OTP ngẫu nhiên
+                var otpCode = new Random().Next(100000, 999999).ToString();
+
+                // Lưu thông tin đăng ký vào cache (OTP làm key, dữ liệu người dùng làm value)
+                _cache.Set(otpCode, registerVm, new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+                });
+                // Lưu mapping giữa email và OTP
+                _otpEmailMap[registerVm.Email] = otpCode;
+
+                // Gửi mã OTP qua email
+                await _emailService.SendOtpEmailAsync(registerVm.Email, otpCode);
+
+                return Ok(new { message = "Vui lòng kiểm tra email để nhập mã xác minh." });
             }
-
-            // Tạo mã OTP ngẫu nhiên
-            var otpCode = new Random().Next(100000, 999999).ToString();
-
-            // Lưu thông tin đăng ký vào cache (OTP làm key, dữ liệu người dùng làm value)
-            _cache.Set(otpCode, registerVm, new MemoryCacheEntryOptions
+            catch (Exception ex)
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
-            });
+                return StatusCode(500, new { message = "Đã xảy ra lỗi trong quá trình xử lý.", error = ex.Message, stackTrace = ex.StackTrace });
 
-            // Gửi mã OTP qua email
-            await _emailService.SendOtpEmailAsync(registerVm.Email, otpCode);
-
-            return Ok(new { message = "Vui lòng kiểm tra email để nhập mã xác minh." });
+            }
         }
 
         [HttpPost("verify-signup")]
@@ -227,6 +251,47 @@ namespace Web_Server.Controllers
             _cache.Remove(verifyRegisterVm.Otp);
 
             return Ok(new { message = "Đăng ký thành công!" });
+        }
+
+        [HttpPost("resend-otp-register")]
+        public async Task<IActionResult> ResendOtpRegister([FromBody] ResendOtpVm resendOtpVm)
+        {
+            if (string.IsNullOrEmpty(resendOtpVm.Email))
+            {
+                return BadRequest("Email không được để trống.");
+            }
+
+            // Kiểm tra email có trong Dictionary không
+            if (!_otpEmailMap.TryGetValue(resendOtpVm.Email, out string? oldOtp))
+            {
+                return BadRequest("Không tìm thấy dữ liệu đăng ký. Vui lòng đăng ký lại.");
+            }
+
+            // Lấy dữ liệu đăng ký từ cache
+            if (!_cache.TryGetValue(oldOtp, out RegisterVm? cachedRegisterData))
+            {
+                return BadRequest("Dữ liệu đăng ký không hợp lệ hoặc đã hết hạn.");
+            }
+
+            // Xóa OTP cũ
+            _cache.Remove(oldOtp);
+
+            // Tạo OTP mới
+            var newOtp = new Random().Next(100000, 999999).ToString();
+
+            // Lưu vào cache
+            _cache.Set(newOtp, cachedRegisterData, new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+            });
+
+            // Cập nhật dictionary với OTP mới
+            _otpEmailMap[resendOtpVm.Email] = newOtp;
+
+            // Gửi OTP mới qua email
+            await _emailService.SendOtpEmailAsync(resendOtpVm.Email, newOtp);
+
+            return Ok(new { message = "Mã OTP mới đã được gửi đến email của bạn." });
         }
 
 
@@ -299,46 +364,9 @@ namespace Web_Server.Controllers
             return Ok("Update successful");
         }
 
-        [HttpGet("company-profile")]
-        [Authorize]
-        public async Task<IActionResult> GetCompanyProfile()
-        {
-            var userId = User.FindFirst("id")?.Value;
-            if (string.IsNullOrEmpty(userId))
-            {
-                return Unauthorized();
-            }
 
-            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            if(user.RoleId != 2)
-            {
-                return Forbid();
-            }
-            var company = await _companyService.GetCompanyProfileAsync();
-            if (company == null)
-            {
-                return NotFound("Company profile not found.");
-            }
-
-            return Ok(new
-            {
-                Id = company.Id,
-                Name = company.Name,
-                Address = company.Address,
-                PhoneNumber = company.PhoneNumber,
-                Email = company.Email,
-                Description = company.Description,
-                Logo = company.Logo
-            });
-        }
 
     }
 }
-
 
 
