@@ -1339,6 +1339,28 @@
         }
       }
     },
+    "/api/Recruitment/recruitments/count": {
+      "get": {
+        "tags": [
+          "Recruitment"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/User/get-user-by-post-id/{id}": {
       "get": {
         "tags": [

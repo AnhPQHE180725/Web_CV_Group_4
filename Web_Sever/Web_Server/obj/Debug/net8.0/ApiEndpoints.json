@@ -826,6 +826,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetTotalRecruitments",
+    "RelativePath": "api/Recruitment/recruitments/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "UpdateView",
     "RelativePath": "api/Recruitment/update-view/{id}",
     "HttpMethod": "PUT",

@@ -62,5 +62,7 @@ export class RecruitmentService {
     updateView(id: number): Observable<any> {
         return this.http.put(`${this.baseUrl}/Recruitment/update-view/${id}`, {});
     }
-
+    getRecruitmentByStatus(status: number): Observable<any>{
+        return this.http.get(`${this.baseUrl}/Recruitment/recruitments/count?status=${status}`);
+    }
 }

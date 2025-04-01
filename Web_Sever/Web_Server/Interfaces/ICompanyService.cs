@@ -15,5 +15,6 @@ namespace Web_Server.Interfaces
         Task<List<Company>> GetUserCompaniesAsync();
         Task<string?> GetLogoFilePathAsync(string logoFileName);
         Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel);
+        Task<Company> GetCompanyProfileAsync();
     }
 }

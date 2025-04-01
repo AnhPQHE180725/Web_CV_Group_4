@@ -613,7 +613,6 @@ C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\ne
 C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.pdb
 C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.genruntimeconfig.cache
 C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\ref\Web_Server.dll
-C:\Users\trong\Documents\GitHub\Web_CV_Group_4\Web_Sever\Web_Server\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.csproj.AssemblyReference.cache
 D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.GeneratedMSBuildEditorConfig.editorconfig
 D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.AssemblyInfoInputs.cache
