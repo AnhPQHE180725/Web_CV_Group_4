@@ -1,28 +1,36 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Web_Server.Models;
 
 namespace Web_Server.Data
 {
+
     public class SeedData
     {
+        private static readonly PasswordHasher<object> hasher = new PasswordHasher<object>();
+
+        public static string HashPass(string ps)
+        {
+            return hasher.HashPassword(null, ps);
+        }
         public static void Seed(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Role>().HasData(
             new Role { Id = 1, Name = "Candidate" },
             new Role { Id = 2, Name = "Recruiter" }
             );
-            // Seed Users
+            // Seed Users //Password for all users is "123"
             modelBuilder.Entity<User>().HasData(
-    new User { Id = 1, FullName = "Alice Johnson", Email = "alice@example.com", Password = "pass123", Address = "123 Main St", PhoneNumber = "0123456789", Image = "alice.jpg", Status = 1, Description = "A software developer", CVId = 1, RoleId = 1 },
-    new User { Id = 2, FullName = "Bob Smith", Email = "bob@example.com", Password = "pass456", Address = "456 Elm St", PhoneNumber = "0987654321", Image = "bob.jpg", Status = 1, Description = "A data analyst", CVId = 2, RoleId = 1 },
-    new User { Id = 3, FullName = "Charlie Brown", Email = "charlie@example.com", Password = "pass789", Address = "789 Oak St", PhoneNumber = "0112233445", Image = "charlie.jpg", Status = 1, Description = "A project manager", CVId = 3, RoleId = 1 },
-    new User { Id = 4, FullName = "David Lee", Email = "david@example.com", Password = "pass101", Address = "321 Pine St", PhoneNumber = "0223344556", Image = "david.jpg", Status = 1, Description = "A system admin", CVId = 4, RoleId = 2 }, // RoleId = 2
-    new User { Id = 5, FullName = "Emma Watson", Email = "emma@example.com", Password = "pass202", Address = "654 Maple St", PhoneNumber = "0334455667", Image = "emma.jpg", Status = 1, Description = "A marketing specialist", CVId = 5, RoleId = 1 },
-    new User { Id = 6, FullName = "Frank Miller", Email = "frank@example.com", Password = "pass303", Address = "987 Birch St", PhoneNumber = "0445566778", Image = "frank.jpg", Status = 1, Description = "A financial advisor", CVId = 6, RoleId = 1 },
-    new User { Id = 7, FullName = "Grace Davis", Email = "grace@example.com", Password = "pass404", Address = "159 Cedar St", PhoneNumber = "0556677889", Image = "grace.jpg", Status = 1, Description = "A UI/UX designer", CVId = 7, RoleId = 1 },
-    new User { Id = 8, FullName = "Henry Wilson", Email = "henry@example.com", Password = "pass505", Address = "753 Walnut St", PhoneNumber = "0667788990", Image = "henry.jpg", Status = 1, Description = "A content writer", CVId = 8, RoleId = 1 },
-    new User { Id = 9, FullName = "Isabella Thomas", Email = "isabella@example.com", Password = "pass606", Address = "852 Fir St", PhoneNumber = "0778899001", Image = "isabella.jpg", Status = 1, Description = "A HR manager", CVId = 9, RoleId = 1 },
-    new User { Id = 10, FullName = "Jack Martinez", Email = "jack@example.com", Password = "pass707", Address = "951 Palm St", PhoneNumber = "0889900112", Image = "jack.jpg", Status = 1, Description = "A sales executive", CVId = 10, RoleId = 1 }
+    new User { Id = 1, FullName = "Alice Johnson", Email = "alice@example.com", Password = HashPass("123"), Address = "123 Main St", PhoneNumber = "0123456789", Image = "alice.jpg", Status = 1, Description = "A software developer", CVId = 1, RoleId = 1 },
+    new User { Id = 2, FullName = "Bob Smith", Email = "bob@example.com", Password = HashPass("123"), Address = "456 Elm St", PhoneNumber = "0987654321", Image = "bob.jpg", Status = 1, Description = "A data analyst", CVId = 2, RoleId = 1 },
+    new User { Id = 3, FullName = "Charlie Brown", Email = "charlie@example.com", Password = HashPass("123"), Address = "789 Oak St", PhoneNumber = "0112233445", Image = "charlie.jpg", Status = 1, Description = "A project manager", CVId = 3, RoleId = 1 },
+    new User { Id = 4, FullName = "Trong Hieu", Email = "tronghieutronghieu1510@gmail.com", Password = HashPass("123"), Address = "321 Pine St", PhoneNumber = "0223344556", Image = "hieu.jpg", Status = 1, Description = "A system admin", CVId = 4, RoleId = 2 }, // RoleId = 2
+    new User { Id = 5, FullName = "Emma Watson", Email = "emma@example.com", Password = HashPass("123"), Address = "654 Maple St", PhoneNumber = "0334455667", Image = "emma.jpg", Status = 1, Description = "A marketing specialist", CVId = 5, RoleId = 1 },
+    new User { Id = 6, FullName = "Frank Miller", Email = "frank@example.com", Password = HashPass("123"), Address = "987 Birch St", PhoneNumber = "0445566778", Image = "frank.jpg", Status = 1, Description = "A financial advisor", CVId = 6, RoleId = 1 },
+    new User { Id = 7, FullName = "Grace Davis", Email = "grace@example.com", Password = HashPass("123"), Address = "159 Cedar St", PhoneNumber = "0556677889", Image = "grace.jpg", Status = 1, Description = "A UI/UX designer", CVId = 7, RoleId = 1 },
+    new User { Id = 8, FullName = "Henry Wilson", Email = "henry@example.com", Password = HashPass("123"), Address = "753 Walnut St", PhoneNumber = "0667788990", Image = "henry.jpg", Status = 1, Description = "A content writer", CVId = 8, RoleId = 1 },
+    new User { Id = 9, FullName = "Isabella Thomas", Email = "isabella@example.com", Password = HashPass("123"), Address = "852 Fir St", PhoneNumber = "0778899001", Image = "isabella.jpg", Status = 1, Description = "A HR manager", CVId = 9, RoleId = 1 },
+    new User { Id = 10, FullName = "Jack Martinez", Email = "jack@example.com", Password = HashPass("123"), Address = "951 Palm St", PhoneNumber = "0889900112", Image = "jack.jpg", Status = 1, Description = "A sales executive", CVId = 10, RoleId = 1 }
 );
 
 
