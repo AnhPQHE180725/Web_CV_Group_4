@@ -52,6 +52,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCompany(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCompany(id);
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with company id={id}");
+            }
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -118,7 +122,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByid(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
-
+            if(recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with id={id}");
+            }
             return recruitments.Select(r => new RecruitmentVm
             {
                 Id = r.Id,
