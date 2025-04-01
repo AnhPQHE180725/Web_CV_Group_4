@@ -2,13 +2,8 @@
   <h2>Công ty đã theo dõi</h2>
 
   <!-- Search Box -->
-  <input
-  type="text"
-  [(ngModel)]="searchQuery"
-  (input)="searchCompanies()"
-  placeholder="Tìm kiếm theo tên, email hoặc SĐT"
-  class="search-input"
-/>
+  <input type="text" [(ngModel)]="searchQuery" (input)="searchCompanies()"
+    placeholder="Tìm kiếm theo tên, email hoặc SĐT" class="search-input" />
 
   <!-- Companies List -->
   <div *ngIf="paginatedCompanies.length === 0" class="alert alert-info">
@@ -18,15 +13,12 @@
   <div class="companies">
     <div class="company" *ngFor="let company of paginatedCompanies">
       <div class="company-content">
-        <img
-          [src]="
+        <img [src]="
             company.company.logo
-              ? 'https://localhost:7247/api/Company/logo/' + company.company.logo
+              ? 'https://localhost:7247/api/Company/logo/' +
+                company.company.logo
               : 'assets/images/slide1.jpg'
-          "
-          alt="{{ company.company.name }}"
-          class="company-logo"
-        />
+          " alt="{{ company.company.name }}" class="company-logo"/>
 
         <div class="company-details">
           <strong>Tên công ty:</strong>
@@ -44,16 +36,19 @@
           <strong>Số điện thoại:</strong>
           <p class="company-description">{{ company.company.phoneNumber }}</p>
 
+          <a [routerLink]="['/list-job-company', company.company.id]" class="recruitment-link">
+            <i class="fas fa-hand-point-right"></i>
+            <strong>Danh sách Việc làm</strong>
+          </a>
+
+
           <!-- Status -->
           <div class="company-status">
-            <span
-              class="status-badge"
-              [ngClass]="{
+            <span class="status-badge" [ngClass]="{
                 active: company.company.status === 1,
                 paused: company.company.status === 0
-              }"
-            >
-              {{ company.company.status === 1 ? 'Hoạt động' : 'Tạm ngưng' }}
+              }">
+              {{ company.company.status === 1 ? "Hoạt động" : "Tạm ngưng" }}
             </span>
           </div>
         </div>
@@ -68,11 +63,15 @@
 
   <!-- Pagination -->
   <div class="pagination">
-    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      Previous
+    </button>
     <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
       [class.active]="currentPage === i + 1">
       {{ i + 1 }}
     </button>
-    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
+      Next
+    </button>
   </div>
 </div>

@@ -21,17 +21,21 @@
         <strong>{{ job.recruitment.type }}</strong>
         <div class="action-buttons">
           <button class="favorite-btn" (click)="toggleJobFollow($event, job.recruitment.id)" *ngIf="isLoggedIn()">
+            <i class="fa fa-heart"></i>
             Bỏ yêu thích
           </button>
           <a class="apply-btn" style="cursor: pointer" (click)="onApply(job.recruitment)" *ngIf="isLoggedIn()">
-            Ứng tuyển ngay
+            <i class="fas fa-paper-plane"></i>
+            Ứng tuyển
           </a>
         </div>
-        <p>{{ job.recruitment.title }}</p>
-        <small>{{ job.recruitment.description }}</small>
-        <div class="salary-box">
-          <small>{{ job.recruitment.salary }} triệu</small>
-        </div>
+        <!-- Thêm các trường mới -->
+        <p class="job-title"><strong></strong> {{ job.recruitment.title }}</p>
+        <p class="job-description"><strong>Mô tả:</strong> {{ job.recruitment.description }}</p>
+        <p class="job-address"><strong>Địa chỉ:</strong> {{ job.recruitment.address }}</p>
+        <p class="job-experience"><strong>Kinh nghiệm:</strong> {{ job.recruitment.experience }} năm</p>
+        <p class="job-quantity"><strong>Số lượng tuyển:</strong> {{ job.recruitment.quantity }}</p>
+        <p class="job-salary"><strong>Lương tháng:</strong> {{ job.recruitment.salary }} triệu đồng</p>
       </div>
     </div>
   </div>

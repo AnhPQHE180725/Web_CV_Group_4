@@ -126,7 +126,6 @@ body {
   padding: 10px 15px;
 }
 
-/* Dropdown content (ẩn mặc định) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -135,7 +134,8 @@ body {
   right: auto;
   /* Căn phải cho dropdown ở nav-right */
   background-color: #f9f9f9;
-  min-width: 200px;
+  min-width: 250px;
+  padding: 5px 0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 4px;
@@ -149,6 +149,57 @@ body {
   display: block;
   transition: background-color 0.2s;
 }
+
+/* Dropdown cho Tài khoản */
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Nội dung dropdown riêng cho Tài khoản */
+.account-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 320px;
+  /* Tăng độ rộng */
+  padding: 10px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 6px;
+}
+
+/* Các mục bên trong dropdown */
+.account-dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Hover vào mỗi mục */
+.account-dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+/* Hiển thị dropdown khi hover */
+.account-dropdown:hover .account-dropdown-content {
+  display: block;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hiển thị dropdown khi hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 /* Hover effect cho links */
 .dropdown-content a:hover {

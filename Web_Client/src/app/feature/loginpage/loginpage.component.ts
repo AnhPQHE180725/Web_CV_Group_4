@@ -19,18 +19,24 @@ export class LoginpageComponent {
 
   constructor(private authService: AuthService, private router: Router, private cookieService: CookieService) {}
 
-  onFormSubmit() {
-    this.authService.login(this.model).subscribe({
-      next: response => {
-        // Lưu email vào cookie với thời gian sống 5 phút
+onFormSubmit() {
+  this.authService.login(this.model).subscribe({
+    next: response => {
+      if (response.token) {
+        // Nếu có token => user có role "Candidate" => đăng nhập ngay
+        this.authService.setToken(response.token);
+        alert('Đăng nhập thành công!');
+        this.router.navigate(['/home']);
+      } else {
+        // Nếu không có token => cần xác minh OTP
         this.cookieService.set('UserEmail', this.model.email, 5, '/', undefined, true, 'Strict');
-
         alert('Vui lòng kiểm tra email để nhập mã xác minh.');
         this.router.navigate(['/login/confirm']);
-      },
-      error: () => {
-        alert('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!');
       }
-    });
-  }
+    },
+    error: () => {
+      alert('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!');
+    }
+  });
+}
 }

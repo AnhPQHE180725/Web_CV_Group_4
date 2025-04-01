@@ -141,6 +141,7 @@ body {
 .prev {
   left: 10px;
 }
+
 .next {
   right: 10px;
 }
@@ -296,16 +297,29 @@ body {
 }
 
 .apply-btn {
-  background: #28a745;
-  border: 1px solid #28a745;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   color: white;
-  text-decoration: none;
-  min-width: 90px;
 }
 
 .apply-btn:hover {
-  background: #218838;
-  border-color: #218838;
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.apply-btn:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.apply-btn i {
+  margin-right: 5px;
 }
 
 .salary-box {
@@ -343,3 +357,31 @@ h2 {
   text-decoration: underline;
 }
 
+.favorite-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn.favorited {
+  background-color: #ffebee;
+  color: #e53935;
+  border-color: #e53935;
+}
+
+.favorite-btn:hover {
+  background-color: #e9ecef;
+}
+
+.favorite-btn.favorited:hover {
+  background-color: #ffcdd2;
+}
+
+/* Nếu bạn sử dụng FontAwesome icons */
+.favorite-btn i {
+  margin-right: 5px;
+}

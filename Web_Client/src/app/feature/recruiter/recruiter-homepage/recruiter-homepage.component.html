@@ -1,75 +1,21 @@
-<!-- Form for Add/Edit -->
-<h2>Recruitments Management</h2>
+<h2 class="text-center my-3">Quản Lý Bài đăng</h2>
 
-<!-- Form for Add/Edit -->
-<form [formGroup]="recruitmentForm" (ngSubmit)="isEditMode ? onUpdateRecruitment() : onAddRecruitment()">
+<div class="text-end mb-3">
+    <button class="btn btn-primary" [routerLink]="['/recruiter', 'edit']">Thêm Bài Đăng</button>
+</div>
 
-    <label>Title:</label>
-    <input formControlName="title" placeholder="Enter title" />
-
-    <label>Description:</label>
-    <textarea formControlName="description" placeholder="Enter description"></textarea>
-
-    <label>Experience:</label>
-    <input formControlName="experience" placeholder="Enter required experience" />
-
-    <label>Quantity:</label>
-    <input type="number" formControlName="quantity" min="1" placeholder="Enter number of vacancies" />
-
-    <label>Rank:</label>
-    <input formControlName="rank" placeholder="Enter rank (e.g., Junior, Senior)" />
-
-    <label>Type:</label>
-    <input formControlName="type" placeholder="Enter type (e.g., Full-time, Part-time)" />
-
-    <label>Salary:</label>
-    <input type="number" formControlName="salary" placeholder="Enter salary" />
-
-    <label>Address:</label>
-    <input formControlName="address" placeholder="Enter address" />
-
-    <label>Deadline:</label>
-    <input type="date" formControlName="deadline" />
-
-    <label>Company ID:</label>
-    <input type="number" formControlName="companyId" placeholder="Enter company ID" />
-
-    <label>Company Name:</label>
-    <input formControlName="companyName" placeholder="Enter company name" /> <!-- ➕ MỚI -->
-
-    <label>Category ID:</label>
-    <input type="number" formControlName="categoryId" placeholder="Enter category ID" />
-
-    <label>Category Name:</label>
-    <input formControlName="categoryName" placeholder="Enter category name" /> <!-- ➕ MỚI -->
-
-    <label>Status:</label>
-    <select formControlName="status">
-        <option [value]="0">Inactive</option>
-        <option [value]="1">Active</option>
-    </select>
-
-    <button type="submit" [disabled]="recruitmentForm.invalid">
-        {{ isEditMode ? 'Update Recruitment' : 'Add Recruitment' }}
-    </button>
-
-    <button type="button" (click)="resetForm()" *ngIf="isEditMode">Cancel</button>
-</form>
-
-
-<!-- Display List of Recruitments -->
-<table>
-    <thead>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Experience</th>
-            <th>Rank</th>
-            <th>Type</th>
-            <th>Salary</th>
-            <th>Status</th>
-            <th>Actions</th>
-            <th>View Candidates</th>
+            <th>Tiêu đề</th>
+            <th>Mô tả</th>
+            <th>Kinh Nghiệm</th>
+            <th>Cấp bậc</th>
+            <th>Loại Thời Gian</th>
+            <th>Lương</th>
+            <th>Trạng Thái</th>
+            <th>Hành Động</th>
+            <th>Xem Ứng Viên</th>
         </tr>
     </thead>
     <tbody>
@@ -80,15 +26,19 @@
             <td>{{ recruitment.rank }}</td>
             <td>{{ recruitment.type }}</td>
             <td>{{ recruitment.salary | currency }}</td>
-            <td>{{ recruitment.status === 1 ? 'Active' : 'Inactive' }}</td>
             <td>
-                <button (click)="onEditRecruitment(recruitment.id)">Edit</button>
-                <button (click)="onDeleteRecruitment(recruitment.id)">Delete</button>
+                <span class="badge" [ngClass]="recruitment.status === 1 ? 'bg-success' : 'bg-danger'">
+                    {{ recruitment.status === 1 ? 'Active' : 'Inactive' }}
+                </span>
             </td>
             <td>
-                <div class="cv-button" [routerLink]="['/recruiter', 'candidate', recruitment.id]">
-                    View
-                </div>
+                <button class="btn btn-warning btn-sm me-2" [routerLink]="['/recruiter', 'edit', recruitment.id]">Chỉnh
+                    Sửa</button>
+                <button class="btn btn-danger btn-sm" (click)="onDeleteRecruitment(recruitment.id)">Xóa</button>
+            </td>
+            <td>
+                <button class="btn btn-info btn-sm" [routerLink]="['/recruiter', 'candidate', recruitment.id]">Xem Ứng
+                    Viên</button>
             </td>
         </tr>
     </tbody>

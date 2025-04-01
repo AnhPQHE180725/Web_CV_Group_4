@@ -8,14 +8,8 @@
 <body>
   <div class="slider-container">
     <div class="slider">
-      <img
-        *ngFor="let image of images; let i = index"
-        [src]="image"
-        class="slide"
-        [class.active]="i === currentIndex"
-        alt="Image slide {{ i + 1 }}"
-        title="Image slide {{ i + 1 }}"
-      />
+      <img *ngFor="let image of images; let i = index" [src]="image" class="slide" [class.active]="i === currentIndex"
+        alt="Image slide {{ i + 1 }}" title="Image slide {{ i + 1 }}" />
     </div>
     <button class="prev" (click)="prevSlide()">&#10094;</button>
     <button class="next" (click)="nextSlide()">&#10095;</button>
@@ -24,12 +18,8 @@
   <div class="container">
     <h2>Top Danh Mục</h2>
     <div class="categories">
-      <div
-        class="category"
-        *ngFor="let category of categories"
-        [routerLink]="['/recruitment', 'category', category.id]"
-        class="clickable"
-      >
+      <div class="category" *ngFor="let category of categories" [routerLink]="['/recruitment', 'category', category.id]"
+        class="clickable">
         {{ category.name }}
       </div>
     </div>
@@ -37,29 +27,16 @@
     <h2>Top Doanh Nghiệp</h2>
     <div class="companies">
       <div class="company" *ngFor="let company of companies">
-        <div
-          class="company-content clickable"
-          [routerLink]="['/recruitment', 'company', company.id]"
-        >
-          <img
-            [src]="
+        <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.id]">
+          <img [src]="
               company.logo
-                ? 'https://localhost:7247/api/Company/logo/' + company.logo
-                : 'assets/images/slide1.jpg'
-            "
-            alt="{{ company.name }}"
-            class="company-logo"
-          />
+                " alt="{{ company.name }}" class="company-logo" />
           <span class="company-name">{{ company.name }}</span>
         </div>
 
         <!-- Chỉ hiển thị nút Theo dõi khi người dùng có role là candidate -->
-        <button
-          class="follow-btn"
-          (click)="toggleCompanyFollow($event, company.id)"
-          *ngIf="isLoggedIn() && isCandidate()"
-          [class.followed]="isCompanyFollowed(company.id)"
-        >
+        <button class="follow-btn" (click)="toggleCompanyFollow($event, company.id)"
+          *ngIf="isLoggedIn() && isCandidate()" [class.followed]="isCompanyFollowed(company.id)">
           {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
         </button>
       </div>
@@ -69,33 +46,26 @@
     <div class="posts">
       <div class="post" *ngFor="let post of recruitments">
         <div>
-          <img
-            [src]="'assets/images/slide1.jpg'"
-            alt="{{ post.companyName }}"
-            class="company-logo"
-          />
+          <img [src]="post.logo" alt="{{ post.companyName }}" class="company-logo" />
         </div>
         <strong>{{ post.type }}</strong>
         <p>{{ post.title }}</p>
 
         <div class="action-buttons">
           <!-- Hiển thị nút "Yêu thích" và "Bỏ yêu thích" chỉ khi người dùng có role là candidate -->
-          <button
-            class="favorite-btn"
-            (click)="toggleJobFollow($event, post.id)"
-            *ngIf="isLoggedIn() && isCandidate()"
-            [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'"
-          >
+          <button class="favorite-btn" (click)="toggleJobFollow($event, post.id)" *ngIf="isLoggedIn() && isCandidate()"
+            [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'">
+            <i class="fas" [ngClass]="{'fa-heart': isJobFollowed(post.id), 'fa-heart-o': !isJobFollowed(post.id)}"></i>
             {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
           </button>
-
           <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
-          <button
-            class="apply-btn"
-            (click)="onApply(post)"
-            *ngIf="isLoggedIn() && isCandidate()"
-          >
-            Ứng tuyển ngay
+          <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
+            <i class="fas fa-paper-plane"></i>
+            Ứng tuyển
+          </button>
+          <button class="apply-btn" (click)="viewDetail(post)">
+            <i></i>
+            Xem chi tiết
           </button>
         </div>
 

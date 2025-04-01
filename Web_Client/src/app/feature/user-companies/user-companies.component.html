@@ -5,12 +5,7 @@
 </div>
 
 <div class="search-container">
-  <input
-    type="text"
-    [(ngModel)]="searchTerm"
-    (ngModelChange)="searchCompanies()"
-    placeholder="Tìm kiếm công ty theo tên, địa chỉ hoặc SĐT"
-  />
+  <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="searchCompanies()" placeholder="Tìm kiếm tên công ty" />
 </div>
 
 <!-- Form for creating/editing company -->
@@ -20,92 +15,50 @@
     <h3>{{ isEditing ? "Chỉnh sửa công ty" : "Tạo công ty mới" }}</h3>
 
     <div class="form-group">
-      <label for="companyName"
-        >Tên công ty: <span class="required">*</span></label
-      >
-      <input
-        type="text"
-        id="companyName"
-        [(ngModel)]="currentCompany.name"
-        required
-        minlength="1"
-        pattern="[^\\s].*"
-      />
+      <label for="companyName">Tên công ty: <span class="required">*</span></label>
+      <input type="text" id="companyName" [(ngModel)]="currentCompany.name" required minlength="1" pattern="[^\\s].*" />
     </div>
 
     <div class="form-group">
       <label for="companyDescription">Mô tả:</label>
-      <textarea
-        id="companyDescription"
-        [(ngModel)]="currentCompany.description"
-        rows="3"
-      ></textarea>
+      <textarea id="companyDescription" [(ngModel)]="currentCompany.description" rows="3"></textarea>
     </div>
 
     <div class="form-group">
       <label for="companyAddress">Địa chỉ:</label>
-      <input
-        type="text"
-        id="companyAddress"
-        [(ngModel)]="currentCompany.address"
-      />
+      <input type="text" id="companyAddress" [(ngModel)]="currentCompany.address" />
     </div>
 
     <div class="form-group">
       <label for="companyEmail">Email:</label>
-      <input
-        type="email"
-        id="companyEmail"
-        [(ngModel)]="currentCompany.email"
-        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-      />
+      <input type="email" id="companyEmail" [(ngModel)]="currentCompany.email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
     </div>
 
     <div class="form-group">
       <label for="companyPhone">Số điện thoại:</label>
-      <input
-        type="tel"
-        id="companyPhone"
-        [(ngModel)]="currentCompany.phoneNumber"
-        pattern="[0-9]{10}"
-        maxlength="10"
-        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-      />
+      <input type="tel" id="companyPhone" [(ngModel)]="currentCompany.phoneNumber" pattern="[0-9]{10}" maxlength="10"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
     </div>
 
     <div class="form-group">
       <label for="companyLogo">
-        Logo công ty: 
+        Logo công ty:
         <span class="required" *ngIf="!isEditing">*</span>
       </label>
       <div class="logo-upload-container">
         <!-- Preview Area -->
-        <div class="logo-preview" *ngIf="logoPreviewUrl || (isEditing && currentCompany.logo)">
-          <img 
-            [src]="logoPreviewUrl || 
-                   ('https://localhost:7247/api/Company/logo/' + currentCompany.logo)"
-            alt="Logo preview"
-            class="preview-image"
-          />
-          <button 
-            class="remove-preview-btn" 
-            (click)="resetLogoPreview()"
-          >
-            ✕
-          </button>
+         
+        <div class="logo-preview" *ngIf="currentCompany.logo">
+          <img [src]="currentCompany.logo" alt="Logo preview" class="preview-image" />
         </div>
-    
+
         <!-- File Input -->
-        <input
-          #logoFileInput
-          type="file"
-          id="companyLogo"
-          accept="image/*"
-          (change)="onLogoSelected($event)"
-        />
+        <input type="text" id="companyLogo" [(ngModel)]="currentCompany.logo"
+          placeholder="Dán đường dẫn ảnh .jpg hoặc .png" />
         <small class="help-text">
-          Chỉ chấp nhận file ảnh (JPEG, PNG, GIF, JPG)
+          Dán đường dẫn hình ảnh (.jpg, .png). Ví dụ: https://example.com/logo.png
         </small>
+
       </div>
     </div>
 
@@ -130,40 +83,17 @@
   <div class="companies">
     <div class="company" *ngFor="let company of paginatedCompanies">
       <div class="company-content">
-        <img
-          [src]="
+        <img [src]="
             'https://localhost:7247/api/Company/logo/' + company.logo ||
             'assets/images/slide1.jpg'
-          "
-          alt="{{ company.name }}"
-          class="company-logo clickable"
-          [routerLink]="['/company', company.id]"
-        />
+          " alt="{{ company.name }}" class="company-logo clickable" [routerLink]="['/company', company.id]" />
         <span class="company-name">{{ company.name }}</span>
-        <div class="company-details" *ngIf="company.description">
-          <strong>Mô tả: </strong>
-          <p class="company-description">{{ company.description }}</p>
-        </div>
-        <div class="company-details" *ngIf="company.address">
-          <strong>Địa chỉ: </strong>
-          <p class="company-address">{{ company.address }}</p>
-        </div>
-        <div class="company-details" *ngIf="company.email">
-          <strong>Email: </strong>
-          <p class="company-email">{{ company.email }}</p>
-        </div>
-        <div class="company-details" *ngIf="company.phoneNumber">
-          <strong>SĐT: </strong>
-          <p class="company-phone">{{ company.phoneNumber }}</p>
-        </div>
+
         <div class="company-status">
-          <span
-            class="status-badge"
-            [ngClass]="{
+          <span class="status-badge" [ngClass]="{
               active: company.status === 1,
               paused: company.status === 0
-            }"
-          >
+            }">
             {{ company.status === 1 ? "Hoạt động" : "Tạm ngưng" }}
           </span>
         </div>
@@ -181,17 +111,11 @@
     <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
       Previous
     </button>
-    <button
-      *ngFor="let page of [].constructor(totalPages); let i = index"
-      (click)="goToPage(i + 1)"
-      [class.active]="currentPage === i + 1"
-    >
+    <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1">
       {{ i + 1 }}
     </button>
-    <button
-      (click)="goToPage(currentPage + 1)"
-      [disabled]="currentPage === totalPages"
-    >
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">
       Next
     </button>
   </div>

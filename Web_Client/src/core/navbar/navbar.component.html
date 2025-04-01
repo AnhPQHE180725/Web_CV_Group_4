@@ -18,7 +18,7 @@
         <a href="home" class="nav-item logo-text">Trang chủ</a>
       </div>
       <div class="dropdown">
-        <button class="nav-item dropbtn">Danh mục ▼</button>
+        <button class="nav-item">Danh mục ▼</button>
         <div class="dropdown-content">
           <table>
             <tr *ngFor="let i of [0, 1, 2, 3, 4]">
@@ -33,10 +33,11 @@
       </div>
       <a href="company" class="nav-item">Doanh nghiệp</a>
       <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
-      <a href="recruiter" class="nav-item">Trang của nhà tuyển dụng(authen sau sẽ tự động vào)</a>
+      <a href="recruiter" class="nav-item" *ngIf="isRecruiter()">Trang của nhà tuyển dụng</a>
+
     </div>
 
-    <div class="nav-right">
+    <div class=" nav-right">
       <!-- Hiển thị Register và Log In khi chưa đăng nhập -->
       <ng-container *ngIf="!isLoggedIn()">
         <div class="dropdown">
@@ -50,26 +51,19 @@
 
       <!-- Hiển thị các chức năng tùy theo Role khi đã đăng nhập -->
       <ng-container *ngIf="isLoggedIn()">
-        <div class="dropdown">
+        <div class="dropdown account-dropdown">
           <button class="nav-item dropbtn">Tài khoản ▼</button>
-          <div class="dropdown-content">
-            <!-- Common options for all logged in users -->
+          <div class="account-dropdown-content">
             <a href="/profile">Profile</a>
-
-            <!-- Options for candidates only -->
             <ng-container *ngIf="isCandidate()">
               <a routerLink="/favorite-jobs">Công việc yêu thích</a>
-              <a routerLink="/applied-jobs">Công việc ứng tuyển</a>
+              <a routerLink="/favorite-applied-jobs">Công việc ứng tuyển</a>
               <a routerLink="/favorite-companies">Công ty theo dõi</a>
-              <a routerLink="/upload-cv">Upload CV</a>
+              <a routerLink="/upload-cv">Tải CV của bạn</a>
             </ng-container>
-
-            <!-- Options for recruiters only -->
             <ng-container *ngIf="isRecruiter()">
               <a routerLink="/user-companies">Công ty của tôi</a>
             </ng-container>
-
-            <!-- Logout option for all -->
             <a href="#" (click)="logout()">Đăng xuất</a>
           </div>
         </div>

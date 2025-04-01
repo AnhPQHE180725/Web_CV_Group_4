@@ -24,20 +24,26 @@
 <div *ngIf="paginatedRecruitments.length > 0; else noResults">
   <div class="post" *ngFor="let post of paginatedRecruitments">
     <div>
-      <img [src]="'assets/images/slide1.jpg'" alt="{{ post.companyName }}" class="company-logo" />
+      <img [src]="post.logo" alt="{{ post.companyName }}" class="company-logo" />
     </div>
     <strong>{{ post.type }}</strong>
     <div class="action-buttons">
       <!-- Hiển thị nút "Yêu thích" và "Bỏ yêu thích" chỉ khi người dùng có role là candidate -->
       <button class="favorite-btn" (click)="toggleJobFollow($event, post.id)" *ngIf="isLoggedIn() && isCandidate()"
         [style.color]="isJobFollowed(post.id) ? 'inherit' : 'red'">
+        <i class="fas" [ngClass]="{'fa-heart': isJobFollowed(post.id), 'fa-heart-o': !isJobFollowed(post.id)}"></i>
         {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
       </button>
 
       <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
       <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
-        Ứng tuyển ngay
+        <i class="fas fa-paper-plane"></i>
+        Ứng tuyển
       </a>
+      <button class="apply-btn" (click)="viewDetail(post)">
+        <i></i>
+        Xem chi tiết
+      </button>
     </div>
     <p>{{ post.title }}</p>
     <small>{{ post.description }}</small>
