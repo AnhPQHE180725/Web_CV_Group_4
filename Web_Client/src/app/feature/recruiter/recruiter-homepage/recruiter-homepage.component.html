@@ -1,23 +1,21 @@
-<!-- Form for Add/Edit -->
-<h2>Recruitments Management</h2>
-<div class="cv-button" [routerLink]="['/recruiter', 'edit']">
-    Add
+<h2 class="text-center my-3">Quản Lý Bài đăng</h2>
+
+<div class="text-end mb-3">
+    <button class="btn btn-primary" [routerLink]="['/recruiter', 'edit']">Thêm Bài Đăng</button>
 </div>
 
-
-<!-- Display List of Recruitments -->
-<table>
-    <thead>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Experience</th>
-            <th>Rank</th>
-            <th>Type</th>
-            <th>Salary</th>
-            <th>Status</th>
-            <th>Actions</th>
-            <th>View Candidates</th>
+            <th>Tiêu đề</th>
+            <th>Mô tả</th>
+            <th>Kinh Nghiệm</th>
+            <th>Cấp bậc</th>
+            <th>Loại Thời Gian</th>
+            <th>Lương</th>
+            <th>Trạng Thái</th>
+            <th>Hành Động</th>
+            <th>Xem Ứng Viên</th>
         </tr>
     </thead>
     <tbody>
@@ -28,17 +26,19 @@
             <td>{{ recruitment.rank }}</td>
             <td>{{ recruitment.type }}</td>
             <td>{{ recruitment.salary | currency }}</td>
-            <td>{{ recruitment.status === 1 ? 'Active' : 'Inactive' }}</td>
             <td>
-                <div class="cv-button" [routerLink]="['/recruiter', 'edit', recruitment.id]">
-                    Update
-                </div>
-                <button (click)="onDeleteRecruitment(recruitment.id)">Delete</button>
+                <span class="badge" [ngClass]="recruitment.status === 1 ? 'bg-success' : 'bg-danger'">
+                    {{ recruitment.status === 1 ? 'Active' : 'Inactive' }}
+                </span>
             </td>
             <td>
-                <div class="cv-button" [routerLink]="['/recruiter', 'candidate', recruitment.id]">
-                    View
-                </div>
+                <button class="btn btn-warning btn-sm me-2" [routerLink]="['/recruiter', 'edit', recruitment.id]">Chỉnh
+                    Sửa</button>
+                <button class="btn btn-danger btn-sm" (click)="onDeleteRecruitment(recruitment.id)">Xóa</button>
+            </td>
+            <td>
+                <button class="btn btn-info btn-sm" [routerLink]="['/recruiter', 'candidate', recruitment.id]">Xem Ứng
+                    Viên</button>
             </td>
         </tr>
     </tbody>

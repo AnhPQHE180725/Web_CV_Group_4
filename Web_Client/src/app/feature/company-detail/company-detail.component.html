@@ -20,8 +20,7 @@
       <div class="company-logo-container">
         <img
           [src]="
-            'https://localhost:7247/api/Company/logo/' + company.logo ||
-            'assets/images/slide1.jpg'
+           company.logo
           "
           alt="{{ company.name }}"
           class="company-logo"

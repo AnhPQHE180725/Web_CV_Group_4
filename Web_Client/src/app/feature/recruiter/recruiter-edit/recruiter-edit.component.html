@@ -1,55 +1,98 @@
-<h2>{{ isEditMode ? 'Edit Recruitment' : 'Add Recruitment' }}</h2>
+<h2>{{ isEditMode ? 'Chỉnh sửa' : 'Thêm bài' }}</h2>
 
-<form [formGroup]="recruitmentForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="recruitmentForm" (ngSubmit)="onSubmit()" class="container mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label class="form-label">Tiêu đề:</label>
+                <input formControlName="title" class="form-control" placeholder="Nhập Tiêu Đề" />
+            </div>
 
-    <label>Title:</label>
-    <input formControlName="title" placeholder="Enter title" />
+            <div class="mb-3">
+                <label class="form-label">Miêu tả:</label>
+                <textarea formControlName="description" class="form-control" placeholder="Nhập Miêu Tả"></textarea>
+            </div>
 
-    <label>Description:</label>
-    <textarea formControlName="description" placeholder="Enter description"></textarea>
+            <div class="mb-3">
+                <label class="form-label">Kinh Nghiệm:</label>
+                <input formControlName="experience" class="form-control" placeholder="Nhập Kinh nghiệm cần thiết" />
+            </div>
 
-    <label>Experience:</label>
-    <input formControlName="experience" placeholder="Enter required experience" />
+            <div class="mb-3">
+                <label class="form-label">Số Lượng:</label>
+                <input type="number" formControlName="quantity" class="form-control" min="1"
+                    placeholder="Nhập số lượng cần thiết" />
+            </div>
 
-    <label>Quantity:</label>
-    <input type="number" formControlName="quantity" min="1" placeholder="Enter number of vacancies" />
+            <div class="mb-3">
+                <label class="form-label">Bậc:</label>
+                <input formControlName="rank" class="form-control" placeholder="nhập hạng(vd : Junior,Senior)" />
+            </div>
 
-    <label>Rank:</label>
-    <input formControlName="rank" placeholder="Enter rank (e.g., Junior, Senior)" />
+            <div class="mb-3">
+                <label class="form-label">Loại thời gian:</label>
+                <input formControlName="type" class="form-control"
+                    placeholder="Nhập Loại Thời Gian (vd : Full-time, Part-time)" />
+            </div>
+        </div>
 
-    <label>Type:</label>
-    <input formControlName="type" placeholder="Enter type (e.g., Full-time, Part-time)" />
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label class="form-label">Lương:</label>
+                <input type="number" formControlName="salary" class="form-control" placeholder="Nhập Lương" />
+            </div>
 
-    <label>Salary:</label>
-    <input type="number" formControlName="salary" placeholder="Enter salary" />
+            <div class="mb-3">
+                <label class="form-label">Địa Chỉ:</label>
+                <input formControlName="address" class="form-control" placeholder="Nhập Địa Chỉ" />
+            </div>
 
-    <label>Address:</label>
-    <input formControlName="address" placeholder="Enter address" />
+            <div class="mb-3">
+                <label class="form-label">Hạn Cuối:</label>
+                <input type="date" formControlName="deadline" class="form-control" />
+            </div>
 
-    <label>Deadline:</label>
-    <input type="date" formControlName="deadline" />
+            <div class="mb-3">
+                <label class="form-label">Id của công ty:</label>
+                <input type="number" formControlName="companyId" class="form-control"
+                    placeholder="Nhập Id của công ty" />
+            </div>
 
-    <label>Company ID:</label>
-    <input type="number" formControlName="companyId" placeholder="Enter company ID" />
+            <div class="mb-3">
+                <label class="form-label">Tên Công ty:</label>
+                <input formControlName="companyName" class="form-control" placeholder="Nhập Tên Công ty" />
+            </div>
 
-    <label>Company Name:</label>
-    <input formControlName="companyName" placeholder="Enter company name" />
+            <div class="mb-3">
+                <label class="form-label">ID của danh mục:</label>
+                <input type="number" formControlName="categoryId" class="form-control"
+                    placeholder="Nhập ID của danh mục" />
+            </div>
 
-    <label>Category ID:</label>
-    <input type="number" formControlName="categoryId" placeholder="Enter category ID" />
+            <div class="mb-3">
+                <label class="form-label">Tên danh mục:</label>
+                <input formControlName="categoryName" class="form-control" placeholder="Nhập tên danh mục" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Hình ảnh:</label>
+                <input formControlName="logo" class="form-control" placeholder="" />
+            </div>
 
-    <label>Category Name:</label>
-    <input formControlName="categoryName" placeholder="Enter category name" />
+            <div class="mb-3">
+                <label class="form-label">Trạng thái:</label>
+                <select formControlName="status" class="form-select">
+                    <option [value]="0">Ngừng Hoạt động</option>
+                    <option [value]="1">Hoạt Động</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
-    <label>Status:</label>
-    <select formControlName="status">
-        <option [value]="0">Inactive</option>
-        <option [value]="1">Active</option>
-    </select>
+    <div class="text-center mt-3">
+        <button type="submit" class="btn btn-primary me-2" [disabled]="recruitmentForm.invalid">
+            {{ isEditMode ? 'Chỉnh sửa' : 'Thêm bài' }}
+        </button>
 
-    <button type="submit" [disabled]="recruitmentForm.invalid">
-        {{ isEditMode ? 'Update Recruitment' : 'Add Recruitment' }}
-    </button>
-
-    <button type="button" (click)="goBack()">Back</button>
+        <button type="button" class="btn btn-secondary" (click)="goBack()">Quay lại</button>
+    </div>
 </form>

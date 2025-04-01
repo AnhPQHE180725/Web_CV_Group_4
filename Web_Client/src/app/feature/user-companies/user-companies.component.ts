@@ -99,11 +99,7 @@ export class UserCompaniesComponent implements OnInit {
         const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/jpg'];
         return validTypes.includes(file.type);
     }
-
-    isValidImageUrl(url: string): boolean {
-        return /\.(jpg|jpeg|png)$/i.test(url.trim());
-    }
-
+    
     // Create new company form
     showCreateForm() {
         this.isEditing = false;
@@ -143,70 +139,6 @@ export class UserCompaniesComponent implements OnInit {
     cancelForm() {
         this.showForm = false;
         this.resetLogoPreview();
-    }
-
-    // Save company method
-    saveCompany() {
-
-        // Validate required fields
-        if (!this.currentCompany.name.trim()) {
-            alert('Vui lòng nhập tên công ty!');
-            return;
-        }
-
-        // Validate email if provided
-        if (this.currentCompany.email && !this.isValidEmail(this.currentCompany.email)) {
-            alert('Email không đúng định dạng!');
-            return;
-        }
-
-        // Validate phone number if provided
-        if (this.currentCompany.phoneNumber && !this.isValidPhoneNumber(this.currentCompany.phoneNumber)) {
-            alert('Số điện thoại phải có 10 chữ số!');
-            return;
-        }
-
-        // Validate logo for new company
-        if (!this.currentCompany.logo || !this.isValidImageUrl(this.currentCompany.logo)) {
-            alert('Vui lòng nhập đường dẫn hợp lệ cho logo (.jpg, .png)!');
-            return;
-        }
-
-        if (this.isEditing) {
-            this.companyService.updateCompany(this.currentCompany).subscribe(
-                (response) => {
-                    alert('Công ty đã được cập nhật thành công!');
-                    this.showForm = false;
-                    this.loadUserCompanies();
-                },
-                (error) => {
-                    console.error('Error updating company:', error);
-                    if (error.status === 404) {
-                        alert('Không tìm thấy công ty để cập nhật');
-                    } else if (error.status === 400) {
-                        alert(error.error || 'Dữ liệu không hợp lệ');
-                    } else {
-                        alert('Đã xảy ra lỗi khi cập nhật công ty');
-                    }
-                }
-            );
-        } else {
-            this.companyService.createCompany(this.currentCompany).subscribe(
-                (response) => {
-                    alert('Công ty đã được tạo thành công!');
-                    this.showForm = false;
-                    this.loadUserCompanies();
-                },
-                (error) => {
-                    console.error('Error creating company:', error);
-                    if (error.status === 400) {
-                        alert(error.error || 'Dữ liệu không hợp lệ');
-                    } else {
-                        alert('Đã xảy ra lỗi khi tạo công ty');
-                    }
-                }
-            );
-        }
     }
 
     loadUserCompanies() {
@@ -280,4 +212,34 @@ export class UserCompaniesComponent implements OnInit {
             );
         }
     }
+
+
+    // Kiểm tra đường dẫn có hợp lệ không (chỉ nhận .jpg, .png)
+    isValidImageUrl(url: string): boolean {
+        return /\.(jpg|jpeg|png)$/i.test(url.trim());
+    }
+
+
+    saveCompany() {
+        if (!this.currentCompany.logo || !this.isValidImageUrl(this.currentCompany.logo)) {
+          alert('Vui lòng nhập đường dẫn hợp lệ cho logo (.jpg, .png)!');
+          return;
+        }
+      
+        if (this.isEditing) {
+          this.companyService.updateCompany(this.currentCompany).subscribe(() => {
+            alert('Công ty đã được cập nhật!');
+            this.showForm = false;
+            this.loadUserCompanies();
+          });
+        } else {
+          this.companyService.createCompany(this.currentCompany).subscribe(() => {
+            alert('Công ty đã được tạo!');
+            this.showForm = false;
+            this.loadUserCompanies();
+          });
+        }
+      }
+      
+
 } 

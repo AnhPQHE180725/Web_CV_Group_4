@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
@@ -38,56 +39,56 @@ namespace Web_Server.Services
             return userId;
         }
 
-        private async Task<string> SaveLogoFromUrlAsync(string logoUrl)
-        {
-            if (string.IsNullOrEmpty(logoUrl))
-                throw new ArgumentException("Logo URL is required");
+        //private async Task<string> SaveLogoFromUrlAsync(string logoUrl)
+        //{
+        //    if (string.IsNullOrEmpty(logoUrl))
+        //        throw new ArgumentException("Logo URL is required");
 
-            // Validate URL
-            if (!Uri.TryCreate(logoUrl, UriKind.Absolute, out Uri uri) ||
-                (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
-                throw new ArgumentException("Invalid logo URL format");
+        //    // Validate URL
+        //    if (!Uri.TryCreate(logoUrl, UriKind.Absolute, out Uri uri) ||
+        //        (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        //        throw new ArgumentException("Invalid logo URL format");
 
-            // Validate file extension
-            string fileExtension = Path.GetExtension(logoUrl).ToLower();
-            if (fileExtension != ".jpg" && fileExtension != ".jpeg" && fileExtension != ".png")
-                throw new ArgumentException("Only .jpg, .jpeg and .png formats are supported");
+        //    // Validate file extension
+        //    string fileExtension = Path.GetExtension(logoUrl).ToLower();
+        //    if (fileExtension != ".jpg" && fileExtension != ".jpeg" && fileExtension != ".png")
+        //        throw new ArgumentException("Only .jpg, .jpeg and .png formats are supported");
 
-            if (string.IsNullOrEmpty(_environment.WebRootPath))
-            {
-                _environment.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
-            }
+        //    if (string.IsNullOrEmpty(_environment.WebRootPath))
+        //    {
+        //        _environment.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+        //    }
 
-            // Create wwwroot folder if it doesn't exist
-            if (!Directory.Exists(_environment.WebRootPath))
-            {
-                Directory.CreateDirectory(_environment.WebRootPath);
-            }
+        //    // Create wwwroot folder if it doesn't exist
+        //    if (!Directory.Exists(_environment.WebRootPath))
+        //    {
+        //        Directory.CreateDirectory(_environment.WebRootPath);
+        //    }
 
-            // Create CompanyLogos folder if it doesn't exist
-            var logoFolderPath = Path.Combine(_environment.WebRootPath, LOGO_FOLDER);
-            if (!Directory.Exists(logoFolderPath))
-                Directory.CreateDirectory(logoFolderPath);
+        //    // Create CompanyLogos folder if it doesn't exist
+        //    var logoFolderPath = Path.Combine(_environment.WebRootPath, LOGO_FOLDER);
+        //    if (!Directory.Exists(logoFolderPath))
+        //        Directory.CreateDirectory(logoFolderPath);
 
-            // Generate unique filename
-            var fileName = $"{Guid.NewGuid()}{fileExtension}";
-            var filePath = Path.Combine(logoFolderPath, fileName);
+        //    // Generate unique filename
+        //    var fileName = $"{Guid.NewGuid()}{fileExtension}";
+        //    var filePath = Path.Combine(logoFolderPath, fileName);
 
-            try
-            {
-                // Download the image
-                using (WebClient client = new WebClient())
-                {
-                    await client.DownloadFileTaskAsync(new Uri(logoUrl), filePath);
-                }
+        //    try
+        //    {
+        //        // Download the image
+        //        using (WebClient client = new WebClient())
+        //        {
+        //            await client.DownloadFileTaskAsync(new Uri(logoUrl), filePath);
+        //        }
 
-                return fileName;
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException($"Failed to download logo: {ex.Message}");
-            }
-        }
+        //        return fileName;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new ArgumentException($"Failed to download logo: {ex.Message}");
+        //    }
+        //}
 
         private async Task DeleteLogoFileAsync(string fileName)
         {
@@ -128,11 +129,11 @@ namespace Web_Server.Services
         {
             var userId = await GetCurrentUserIdAsync();
 
-            // Validate and save logo from URL
+            //Validate and save logo from URL
             if (string.IsNullOrEmpty(companyModel.Logo))
                 throw new ArgumentException("Logo URL is required");
 
-            string logoFileName = await SaveLogoFromUrlAsync(companyModel.Logo);
+            //string logoFileName = await SaveLogoFromUrlAsync(companyModel.Logo);
 
             var company = new Company
             {
@@ -141,7 +142,7 @@ namespace Web_Server.Services
                 Address = companyModel.Address,
                 Email = companyModel.Email,
                 PhoneNumber = companyModel.PhoneNumber,
-                Logo = logoFileName,
+                Logo = companyModel.Logo,
                 Status = companyModel.Status,
                 UserId = userId
             };
@@ -149,22 +150,70 @@ namespace Web_Server.Services
             return await _companyRepository.CreateAsync(company);
         }
 
-        public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel)
+
+        //public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel)
+        //{
+        //    var existingCompany = await _companyRepository.GetByIdAsync(companyModel.Id);
+
+        //    if (existingCompany == null)
+        //        return null;
+
+        //    // Update logo if new URL is provided
+        //    if (!string.IsNullOrEmpty(companyModel.Logo))
+        //    {
+        //        // Delete old logo file
+        //        await DeleteLogoFileAsync(existingCompany.Logo);
+        //        // Save new logo from URL
+        //        existingCompany.Logo = await SaveLogoFromUrlAsync(companyModel.Logo);
+        //    }
+
+        //    existingCompany.Name = companyModel.Name;
+        //    existingCompany.Description = companyModel.Description;
+        //    existingCompany.Address = companyModel.Address;
+        //    existingCompany.Email = companyModel.Email;
+        //    existingCompany.PhoneNumber = companyModel.PhoneNumber;
+        //    existingCompany.Status = companyModel.Status;
+
+        //    return await _companyRepository.UpdateAsync(existingCompany);
+        //}
+
+        //public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel)
+        //{
+        //    var existingCompany = await _companyRepository.GetByIdAsync(companyModel.Id);
+
+        //    if (existingCompany == null)
+        //        return null;
+
+        //    // ✅ Chỉ cập nhật logo nếu có URL mới
+        //    if (!string.IsNullOrEmpty(companyModel.Logo))
+        //    {
+        //        existingCompany.Logo = companyModel.Logo; // ✅ Lưu trực tiếp URL, không tải về
+        //    }
+
+        //    // ✅ Cập nhật thông tin khác
+        //    existingCompany.Name = companyModel.Name;
+        //    existingCompany.Description = companyModel.Description;
+        //    existingCompany.Address = companyModel.Address;
+        //    existingCompany.Email = companyModel.Email;
+        //    existingCompany.PhoneNumber = companyModel.PhoneNumber;
+        //    existingCompany.Status = companyModel.Status;
+
+        //    return await _companyRepository.UpdateAsync(existingCompany);
+        //}
+        public async Task<Company> UpdateCompanyAsync1(int id, CompanyUpdateModel companyModel)
         {
-            var existingCompany = await _companyRepository.GetByIdAsync(companyModel.Id);
+            var existingCompany = await _companyRepository.GetByIdAsync(id);
 
             if (existingCompany == null)
                 return null;
 
-            // Update logo if new URL is provided
+            // ✅ Cập nhật logo nếu có URL mới
             if (!string.IsNullOrEmpty(companyModel.Logo))
             {
-                // Delete old logo file
-                await DeleteLogoFileAsync(existingCompany.Logo);
-                // Save new logo from URL
-                existingCompany.Logo = await SaveLogoFromUrlAsync(companyModel.Logo);
+                existingCompany.Logo = companyModel.Logo;  // Lưu trực tiếp URL vào DB
             }
 
+            // ✅ Cập nhật các thông tin khác của công ty
             existingCompany.Name = companyModel.Name;
             existingCompany.Description = companyModel.Description;
             existingCompany.Address = companyModel.Address;
@@ -174,6 +223,7 @@ namespace Web_Server.Services
 
             return await _companyRepository.UpdateAsync(existingCompany);
         }
+
 
         public async Task<bool> DeleteCompanyAsync(int id)
         {
@@ -206,5 +256,56 @@ namespace Web_Server.Services
             var filePath = Path.Combine(_environment.WebRootPath, LOGO_FOLDER, logoFileName);
             return File.Exists(filePath) ? filePath : null;
         }
+
+        private async Task<string> SaveLogoFromUrlAsync(string logoUrl)
+        {
+            if (string.IsNullOrEmpty(logoUrl))
+                throw new ArgumentException("Logo URL cannot be empty");
+
+            string fileExtension = Path.GetExtension(new Uri(logoUrl).AbsolutePath);
+            string fileName = $"{Guid.NewGuid()}{fileExtension}";
+
+            string uploadPath = Path.Combine(_environment.WebRootPath, "CompanyLogos");
+            if (!Directory.Exists(uploadPath))
+            {
+                Directory.CreateDirectory(uploadPath);
+            }
+
+            string filePath = Path.Combine(uploadPath, fileName);
+
+            using (WebClient client = new WebClient())
+            {
+                await client.DownloadFileTaskAsync(new Uri(logoUrl), filePath);
+            }
+
+            // ✅ Trả về đường dẫn đầy đủ của ảnh
+            return $"/CompanyLogos/{fileName}";
+        }
+        public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel)
+        {
+            var existingCompany = await _companyRepository.GetByIdAsync(companyModel.Id);
+
+            if (existingCompany == null)
+                return null;
+
+            // Cập nhật các thông tin khác
+            existingCompany.Name = companyModel.Name;
+            existingCompany.Description = companyModel.Description;
+            existingCompany.Address = companyModel.Address;
+            existingCompany.Email = companyModel.Email;
+            existingCompany.PhoneNumber = companyModel.PhoneNumber;
+            existingCompany.Status = companyModel.Status;
+
+            // Nếu có URL logo mới, lưu vào database
+            if (!string.IsNullOrEmpty(companyModel.Logo))
+            {
+                existingCompany.Logo = companyModel.Logo;
+            }
+
+            return await _companyRepository.UpdateAsync(existingCompany);
+        }
+
+
+
     }
 }

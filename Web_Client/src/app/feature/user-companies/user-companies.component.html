@@ -46,21 +46,20 @@
         <span class="required" *ngIf="!isEditing">*</span>
       </label>
       <div class="logo-upload-container">
-        <!-- Preview Area -->
-         
+        <!-- Hiển thị ảnh xem trước -->
         <div class="logo-preview" *ngIf="currentCompany.logo">
           <img [src]="currentCompany.logo" alt="Logo preview" class="preview-image" />
         </div>
-
-        <!-- File Input -->
+    
+        <!-- Input đường dẫn ảnh -->
         <input type="text" id="companyLogo" [(ngModel)]="currentCompany.logo"
           placeholder="Dán đường dẫn ảnh .jpg hoặc .png" />
         <small class="help-text">
           Dán đường dẫn hình ảnh (.jpg, .png). Ví dụ: https://example.com/logo.png
         </small>
-
       </div>
     </div>
+    
 
     <div class="form-group">
       <label for="companyStatus">Trạng thái:</label>
@@ -83,9 +82,8 @@
   <div class="companies">
     <div class="company" *ngFor="let company of paginatedCompanies">
       <div class="company-content">
-        <img [src]="
-            'https://localhost:7247/api/Company/logo/' + company.logo ||
-            'assets/images/slide1.jpg'
+          <img [src]="
+            company.logo
           " alt="{{ company.name }}" class="company-logo clickable" [routerLink]="['/company', company.id]" />
         <span class="company-name">{{ company.name }}</span>
 

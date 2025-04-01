@@ -412,11 +412,16 @@
   {
     "ContainingType": "Web_Server.Controllers.CompanyController",
     "Method": "UpdateCompany",
-    "RelativePath": "api/Company/update-company",
+    "RelativePath": "api/Company/update-company/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "companyModel",
         "Type": "Web_Server.ViewModels.CompanyUpdateModel",

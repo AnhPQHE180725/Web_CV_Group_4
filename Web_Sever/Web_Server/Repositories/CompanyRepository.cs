@@ -2,6 +2,7 @@
 using Web_Server.Data;
 using Web_Server.Interfaces;
 using Web_Server.Models;
+using Web_Server.ViewModels;
 
 namespace Web_Server.Repositories
 {
@@ -36,12 +37,12 @@ namespace Web_Server.Repositories
             return company;
         }
 
-        public async Task<Company> UpdateAsync(Company company)
-        {
-            _context.Companies.Update(company);
-            await _context.SaveChangesAsync();
-            return company;
-        }
+        //public async Task<Company> UpdateAsync(Company company)
+        //{
+        //    _context.Companies.Update(company);
+        //    await _context.SaveChangesAsync();
+        //    return company;
+        //}
 
         public async Task<bool> DeleteAsync(int id)
         {
@@ -75,5 +76,36 @@ namespace Web_Server.Repositories
                 .Include(c => c.Recruitments)
                 .ToListAsync();
         }
+
+        public async Task<Company> CreateCompanyAsync(CompanyCreateModel companyModel)
+        {
+            var newCompany = new Company
+            {
+                Name = companyModel.Name,
+                Description = companyModel.Description,
+                Address = companyModel.Address,
+                Email = companyModel.Email,
+                PhoneNumber = companyModel.PhoneNumber,
+                Logo = companyModel.Logo, // Lưu nguyên URL của ảnh
+                Status = companyModel.Status
+            };
+
+            _context.Companies.Add(newCompany);
+            await _context.SaveChangesAsync();
+            return newCompany;
+        }
+
+        public async Task<Company> UpdateAsync(Company company)
+        {
+            _context.Companies.Update(company);
+            await _context.SaveChangesAsync();
+            return company;
+        }
+
+        //public async Task<Company> GetByIdAsync(int id)
+        //{
+        //    return await _context.Companies.FindAsync(id);
+        //}
+
     }
 }
