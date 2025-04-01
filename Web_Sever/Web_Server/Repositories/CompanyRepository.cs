@@ -37,13 +37,6 @@ namespace Web_Server.Repositories
             return company;
         }
 
-        //public async Task<Company> UpdateAsync(Company company)
-        //{
-        //    _context.Companies.Update(company);
-        //    await _context.SaveChangesAsync();
-        //    return company;
-        //}
-
         public async Task<bool> DeleteAsync(int id)
         {
             var company = await _context.Companies.FindAsync(id);
@@ -101,11 +94,6 @@ namespace Web_Server.Repositories
             await _context.SaveChangesAsync();
             return company;
         }
-
-        //public async Task<Company> GetByIdAsync(int id)
-        //{
-        //    return await _context.Companies.FindAsync(id);
-        //}
 
     }
 }

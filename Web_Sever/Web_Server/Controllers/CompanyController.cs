@@ -65,31 +65,6 @@ namespace Web_Server.Controllers
             }
         }
 
-        //[HttpPost("create-company")]
-        //[Authorize]
-        //public async Task<IActionResult> CreateCompany([FromBody] CompanyCreateModel companyModel)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(ModelState);
-
-        //    try
-        //    {
-        //        var createdCompany = await _companyService.CreateCompanyAsync(companyModel);
-        //        return CreatedAtAction(nameof(GetCompanyById), new { id = createdCompany.Id }, createdCompany);
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        return BadRequest(new { message = ex.Message });
-        //    }
-        //    catch (UnauthorizedAccessException ex)
-        //    {
-        //        return Unauthorized(new { message = ex.Message });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, new { message = "An error occurred while creating the company" });
-        //    }
-        //}
         [HttpPost("create-company")]
         [Authorize]
         public async Task<IActionResult> CreateCompany([FromBody] CompanyCreateModel companyModel)
@@ -120,32 +95,6 @@ namespace Web_Server.Controllers
         }
 
 
-
-
-        //[HttpPut("update-company")]
-        //[Authorize]
-        //public async Task<IActionResult> UpdateCompany([FromBody] CompanyUpdateModel companyModel)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(ModelState);
-
-        //    try
-        //    {
-        //        var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel);
-        //        if (updatedCompany == null)
-        //            return NotFound();
-
-        //        return Ok(updatedCompany);
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        return BadRequest(new { message = ex.Message });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, new { message = "An error occurred while updating the company" });
-        //    }
-        //}
         [HttpPut("update-company")]
         [Authorize]
         public async Task<IActionResult> UpdateCompany([FromBody] CompanyUpdateModel companyModel)
@@ -166,7 +115,6 @@ namespace Web_Server.Controllers
                 return StatusCode(500, new { message = "An error occurred while updating the company" });
             }
         }
-
 
 
         [HttpDelete("delete-company/{id}")]

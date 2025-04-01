@@ -195,17 +195,6 @@ namespace Web_Server.Services
             return await _repository.GetRecruitmentByIdAsync(id);
         }
 
-        //public async Task<bool> UpdateRecruitmentView(int id)
-        //{
-        //    var recruitment = await _repository.GetRecruitmentByIdAsync(id);
-        //    if (recruitment == null) return false;
-
-        //    recruitment.View += 1;
-
-        //    return await _repository.EditRecruitmentAsync(recruitment);
-        //}
-
-
         //sd dia chi IP cua ng dung
         public async Task<bool> UpdateRecruitmentView(int id)
         {
@@ -237,7 +226,6 @@ namespace Web_Server.Services
 
             return await _repository.EditRecruitmentAsync(recruitment);
         }
-
 
         public async Task<List<RecruitmentVm>> GetAllRecruitments()
         {

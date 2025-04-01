@@ -649,21 +649,10 @@
         }
       }
     },
-    "/api/Company/update-company/{id}": {
+    "/api/Company/update-company": {
       "put": {
         "tags": [
           "Company"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
         ],
         "requestBody": {
           "content": {

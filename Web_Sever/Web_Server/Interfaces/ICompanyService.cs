@@ -11,9 +11,7 @@ namespace Web_Server.Interfaces
         Task<List<Company>> GetCompaniesByName(string companyName);
         Task<Company> GetCompanyByIdAsync(int id);
         Task<Company> CreateCompanyAsync(CompanyCreateModel companyModel);
-        //co cai thu 2
-        //
-        Task<Company> UpdateCompanyAsync(int id, CompanyUpdateModel companyModel);
+  
         Task<bool> DeleteCompanyAsync(int id);
         Task<List<Company>> GetUserCompaniesAsync();
         Task<string?> GetLogoFilePathAsync(string logoFileName);

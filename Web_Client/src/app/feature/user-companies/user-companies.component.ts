@@ -99,7 +99,7 @@ export class UserCompaniesComponent implements OnInit {
         const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/jpg'];
         return validTypes.includes(file.type);
     }
-    
+
     // Create new company form
     showCreateForm() {
         this.isEditing = false;
@@ -213,33 +213,49 @@ export class UserCompaniesComponent implements OnInit {
         }
     }
 
-
     // Kiểm tra đường dẫn có hợp lệ không (chỉ nhận .jpg, .png)
     isValidImageUrl(url: string): boolean {
         return /\.(jpg|jpeg|png)$/i.test(url.trim());
     }
 
-
     saveCompany() {
+        // Validate tên công ty
+        if (!this.currentCompany.name || this.currentCompany.name.trim().length === 0) {
+            alert('Vui lòng nhập tên công ty!');
+            return;
+        }
+
+        // Validate email
+        if (!this.currentCompany.email || !this.isValidEmail(this.currentCompany.email)) {
+            alert('Vui lòng nhập địa chỉ email hợp lệ!');
+            return;
+        }
+
+        // Validate số điện thoại
+        if (!this.currentCompany.phoneNumber || !this.isValidPhoneNumber(this.currentCompany.phoneNumber)) {
+            alert('Vui lòng nhập số điện thoại hợp lệ (10 chữ số)!');
+            return;
+        }
+
         if (!this.currentCompany.logo || !this.isValidImageUrl(this.currentCompany.logo)) {
-          alert('Vui lòng nhập đường dẫn hợp lệ cho logo (.jpg, .png)!');
-          return;
+            alert('Vui lòng nhập đường dẫn hợp lệ cho logo (.jpg, .png)!');
+            return;
         }
-      
+
         if (this.isEditing) {
-          this.companyService.updateCompany(this.currentCompany).subscribe(() => {
-            alert('Công ty đã được cập nhật!');
-            this.showForm = false;
-            this.loadUserCompanies();
-          });
+            this.companyService.updateCompany(this.currentCompany).subscribe(() => {
+                alert('Công ty đã được cập nhật!');
+                this.showForm = false;
+                this.loadUserCompanies();
+            });
         } else {
-          this.companyService.createCompany(this.currentCompany).subscribe(() => {
-            alert('Công ty đã được tạo!');
-            this.showForm = false;
-            this.loadUserCompanies();
-          });
+            this.companyService.createCompany(this.currentCompany).subscribe(() => {
+                alert('Công ty đã được tạo!');
+                this.showForm = false;
+                this.loadUserCompanies();
+            });
         }
-      }
-      
+    }
+
 
 } 

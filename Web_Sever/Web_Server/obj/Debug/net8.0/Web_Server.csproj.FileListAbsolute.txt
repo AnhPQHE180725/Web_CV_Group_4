@@ -921,3 +921,4 @@ D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\refint\Web_S
 D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.pdb
 D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\Web_Server.genruntimeconfig.cache
 D:\MockProject\Web_CV_Group_4\Web_Sever\Web_Server\obj\Debug\net8.0\ref\Web_Server.dll
+D:\Du_An\Web_CV_Group_4\Web_Sever\Web_Server\bin\Debug\net8.0\Web_Server.staticwebassets.runtime.json

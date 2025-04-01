@@ -1,0 +1,22 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Web_Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Web_Server</BasePath>
+      <RelativePath>CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hrgzuv399l</Fingerprint>
+      <Integrity>Y5aRaCSnznnwAiLJccWYh1+MBvBDyxtcuG/RZ0/6fMY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
