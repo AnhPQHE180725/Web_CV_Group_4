@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Web_Server.Interfaces;
 using Web_Server.ViewModels;
 
@@ -129,6 +130,13 @@ namespace Web_Server.Controllers
             }
 
             return Ok(new { message = "View updated successfully" });
+        }
+
+        [HttpGet("recruitments/count")]
+        public async Task<IActionResult> GetTotalRecruitments(int status)
+        {
+            var totalRecruitments = await _recruitmentService.GetTotalRecruitmentsByStatus(status);
+            return Ok(totalRecruitments);
         }
 
     }

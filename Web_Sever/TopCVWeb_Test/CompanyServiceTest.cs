@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Castle.Components.DictionaryAdapter;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -141,6 +143,28 @@ namespace TopCVWeb_Test
 
             Assert.That(result.Name, Is.EqualTo("UpdatedCo"));
             Assert.That(result.Logo, Is.EqualTo("newlogo.png"));
+        }
+
+        [Test]
+        public async Task GetCompaniesByName_ShouldReturnCompanies()
+        {
+            string name = "Tech";
+            var expectedCompanies = new List<Company>
+        {
+            new Company { Id = 1, Name = name },
+            new Company { Id = 2, Name = name + " Solutions" }
+        };
+
+            _companyRepoMock
+                .Setup(repo => repo.GetCompaniesByName(name))
+                .ReturnsAsync(expectedCompanies);
+
+            
+            var result = await _companyService.GetCompaniesByName(name);
+
+            
+            Assert.NotNull(result);
+            Assert.That(expectedCompanies.Count, Is.EqualTo(2));
         }
     }
 }

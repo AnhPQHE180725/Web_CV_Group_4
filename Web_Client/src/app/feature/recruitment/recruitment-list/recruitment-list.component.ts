@@ -129,6 +129,7 @@ export class RecruitmentListComponent {
   search() {
     if (!this.searchQuery) {
       this.recruitments = [...this.unsearch];
+      this.updatePagination();
       return;
     }
     switch (this.activeTab) {
