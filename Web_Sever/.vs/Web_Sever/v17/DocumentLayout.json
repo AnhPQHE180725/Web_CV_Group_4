@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
               "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
               "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
-              "ViewState": "AgIAAMIAAAAAAAAAAAA6wFEAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAiwFEAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T07:44:12.305Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwEAAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:39:38.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:39:38.208Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAYwBcAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T03:29:39.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T03:29:39.089Z"
             }
           ]
         },
