@@ -29,23 +29,23 @@ namespace Web_Server.Controllers
         {
             return Ok(await _companyService.GetTop4Companies());
         }
-        
+
         [HttpGet("get-companies-by-name/{company}")]
         public async Task<IActionResult> GetCompaniesByName(string company)
         {
             return Ok(await _companyService.GetCompaniesByName(company));
         }
-        
+
         [HttpGet("get-company/{id}")]
         public async Task<IActionResult> GetCompanyById(int id)
         {
             var company = await _companyService.GetCompanyByIdAsync(id);
             if (company == null)
                 return NotFound();
-                
+
             return Ok(company);
         }
-        
+
         [HttpGet("my-companies")]
         [Authorize]
         public async Task<IActionResult> GetUserCompanies()
@@ -64,18 +64,17 @@ namespace Web_Server.Controllers
                 return StatusCode(500, new { message = "An error occurred while fetching your companies" });
             }
         }
-        
+
         [HttpPost("create-company")]
         [Authorize]
-        public async Task<IActionResult> CreateCompany([FromForm] CompanyCreateModel companyModel)
+        public async Task<IActionResult> CreateCompany([FromBody] CompanyCreateModel companyModel)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            
+
             try
             {
-                var logoFile = Request.Form.Files.GetFile("logo");
-                var createdCompany = await _companyService.CreateCompanyAsync(companyModel, logoFile);
+                var createdCompany = await _companyService.CreateCompanyAsync(companyModel);
                 return CreatedAtAction(nameof(GetCompanyById), new { id = createdCompany.Id }, createdCompany);
             }
             catch (ArgumentException ex)
@@ -91,21 +90,20 @@ namespace Web_Server.Controllers
                 return StatusCode(500, new { message = "An error occurred while creating the company" });
             }
         }
-        
+
         [HttpPut("update-company")]
         [Authorize]
-        public async Task<IActionResult> UpdateCompany([FromForm] CompanyUpdateModel companyModel)
+        public async Task<IActionResult> UpdateCompany([FromBody] CompanyUpdateModel companyModel)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-                
+
             try
             {
-                var logoFile = Request.Form.Files.GetFile("logo");
-                var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel, logoFile);
+                var updatedCompany = await _companyService.UpdateCompanyAsync(companyModel);
                 if (updatedCompany == null)
                     return NotFound();
-                    
+
                 return Ok(updatedCompany);
             }
             catch (ArgumentException ex)
@@ -117,7 +115,7 @@ namespace Web_Server.Controllers
                 return StatusCode(500, new { message = "An error occurred while updating the company" });
             }
         }
-        
+
         [HttpDelete("delete-company/{id}")]
         [Authorize]
         public async Task<IActionResult> DeleteCompany(int id)
@@ -127,7 +125,7 @@ namespace Web_Server.Controllers
                 var result = await _companyService.DeleteCompanyAsync(id);
                 if (!result)
                     return NotFound();
-                    
+
                 return NoContent();
             }
             catch (Exception ex)

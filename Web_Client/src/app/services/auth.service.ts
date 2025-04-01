@@ -109,4 +109,7 @@ resendOtp(email: string): Observable<any> {
 verifySignup(request: { email: string; otp: string }) {
     return this.http.post(`${this.baseUrl}/Authentication/verify-signup`, request);
 }
+resendOtpRegister(email: string): Observable<any> {
+  return this.http.post(`${this.baseUrl}/Authentication/resend-otp-register`, { email });
+}
 }
