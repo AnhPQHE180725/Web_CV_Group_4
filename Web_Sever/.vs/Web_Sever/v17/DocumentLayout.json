@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\web_server\\services\\followcompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\followcompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\web_server\\viewmodels\\companycreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\viewmodels\\companycreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FollowCompanyService.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\FollowCompanyService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\FollowCompanyService.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\FollowCompanyService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\FollowCompanyService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T12:45:50.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\UnitTest1.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\UnitTest1.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T12:45:34.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CompanyCreateModel.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\CompanyCreateModel.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\CompanyCreateModel.cs",
@@ -39,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ICompanyService.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICompanyService.cs",
@@ -47,12 +81,11 @@
               "RelativeToolTip": "Web_Server\\Interfaces\\ICompanyService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T12:40:56.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T12:40:56.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CompanyController.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CompanyController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\CompanyController.cs",
@@ -60,8 +93,7 @@
               "RelativeToolTip": "Web_Server\\Controllers\\CompanyController.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T12:40:45.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T12:40:45.392Z"
             }
           ]
         }
