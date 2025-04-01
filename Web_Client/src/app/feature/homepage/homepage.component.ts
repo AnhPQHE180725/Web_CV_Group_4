@@ -68,7 +68,7 @@ export class HomepageComponent {
       error: (err) => console.error('Error fetching total companies:', err)
     });
 
-    this.recruitmentService.getAllRecruitments().subscribe({
+    this.recruitmentService.getTopRecruitments().subscribe({ // goi them phuong thuc ma lay all company dung sua cai nay
       next: (data) => {
         this.recruitments = data;
         this.totalRecruitments = data.length;
