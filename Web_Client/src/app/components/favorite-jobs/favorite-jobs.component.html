@@ -24,7 +24,7 @@
             <i class="fa fa-heart"></i>
             Bỏ yêu thích
           </button>
-          <a class="apply-btn" style="cursor: pointer" (click)="onApply(job.recruitment)" *ngIf="isLoggedIn()">
+          <a class="apply-btn" style="cursor: pointer" (click)="onApply(job.recruitment)" *ngIf="isLoggedIn() && job.recruitment.status === 1">
             <i class="fas fa-paper-plane"></i>
             Ứng tuyển
           </a>

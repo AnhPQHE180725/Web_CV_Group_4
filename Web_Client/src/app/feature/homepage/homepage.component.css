@@ -409,3 +409,9 @@ h2 {
   font-size: 1.5em;
   color: #333;
 }
+
+.status-message {
+  color: red;
+  font-style: italic;
+  margin-top: 5px;
+}

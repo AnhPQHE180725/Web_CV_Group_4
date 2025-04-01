@@ -15,10 +15,17 @@
           " alt="{{ company.name }}" class="company-logo" />
         <span class="company-name">{{ company.name }}</span>
       </div>
+      <!-- Nút Theo dõi khi công ty đang hoạt động -->
       <button class="follow-btn" (click)="toggleFollow($event, company.id)" [class.followed]="isFollowing(company.id)"
-        *ngIf="isLoggedIn() && isCandidate()">
+        *ngIf="isLoggedIn() && isCandidate() && company.status === 1">
         {{ isFollowing(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
       </button>
+
+      <!-- Thông báo khi công ty tạm ngừng -->
+      <p *ngIf="company.status !== 1" class="status-message">
+        Công ty tạm ngừng
+      </p>
+
     </div>
   </div>
 
