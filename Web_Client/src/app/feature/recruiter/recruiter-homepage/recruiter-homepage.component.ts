@@ -39,7 +39,8 @@ export class RecruiterHomepageComponent implements OnInit {
       companyId: [null, Validators.required],
       categoryId: [null, Validators.required],
       companyName: ['', Validators.required],
-      categoryName: ['', Validators.required]
+      categoryName: ['', Validators.required],
+      logo: ['', Validators.required],
     });
   }
 
@@ -52,46 +53,6 @@ export class RecruiterHomepageComponent implements OnInit {
       next: (data) => (this.recruitments = data),
       error: (err) => console.error('Error loading recruitments:', err)
     });
-  }
-
-  onAddRecruitment() {
-    const { companyName, categoryName, ...recruitmentData } = this.recruitmentForm.value;
-    recruitmentData.salary = parseFloat(recruitmentData.salary); // Đảm bảo salary là kiểu float
-    recruitmentData.id = undefined; // Loại bỏ ID khi thêm mới
-
-    this.http.post(`${this.apiUrl}/add-recruitment`, recruitmentData)
-      .subscribe({
-        next: () => alert('Recruitment added successfully!'),
-        error: (error) => console.error('Error adding recruitment:', error)
-      });
-  }
-
-  onEditRecruitment(id: number): void {
-    this.isEditMode = true;
-    this.selectedRecruitmentId = id;
-
-    const selectedRecruitment = this.recruitments.find((r) => r.id === id);
-    if (selectedRecruitment) {
-      this.recruitmentForm.patchValue(selectedRecruitment);
-    }
-  }
-
-  onUpdateRecruitment(): void {
-    if (this.recruitmentForm.valid && this.selectedRecruitmentId) {
-      const formData = {
-        ...this.recruitmentForm.value,
-        deadline: new Date(this.recruitmentForm.value.deadline).toISOString()
-      };
-
-      console.log('🟡 Dữ liệu gửi lên:', formData);
-      this.recruitmentService.editRecruitment(this.selectedRecruitmentId, formData).subscribe({
-        next: () => {
-          alert('Recruitment updated successfully!');
-          this.loadRecruitments();
-          this.resetForm();
-        },
-      });
-    }
   }
 
   onDeleteRecruitment(id: number): void {
