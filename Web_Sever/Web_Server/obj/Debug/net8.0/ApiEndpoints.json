@@ -106,6 +106,16 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
+    "Method": "GetCompanyProfile",
+    "RelativePath": "api/Authentication/company-profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "ForgotPassword",
     "RelativePath": "api/Authentication/forgot-password",
     "HttpMethod": "POST",
@@ -166,22 +176,6 @@
     "ContainingType": "Web_Server.Controllers.AuthenticationController",
     "Method": "ResendOtp",
     "RelativePath": "api/Authentication/resend-otp",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "resendOtpVm",
-        "Type": "Web_Server.ViewModels.ResendOtpVm",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web_Server.Controllers.AuthenticationController",
-    "Method": "ResendOtpRegister",
-    "RelativePath": "api/Authentication/resend-otp-register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -311,6 +305,11 @@
         "Name": "companyModel",
         "Type": "Web_Server.ViewModels.CompanyCreateModel",
         "IsRequired": true
+      },
+      {
+        "Name": "logoFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -421,6 +420,11 @@
         "Name": "companyModel",
         "Type": "Web_Server.ViewModels.CompanyUpdateModel",
         "IsRequired": true
+      },
+      {
+        "Name": "logoFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
