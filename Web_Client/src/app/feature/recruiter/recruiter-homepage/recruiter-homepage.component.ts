@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 import { Recruitment } from '../../../models/Recruitment';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CompanyService } from '../../../services/Company.service';
+import { Company } from '../../../models/Company';
 @Component({
   selector: 'app-recruiter-homepage',
   standalone: true,
-  imports: [CommonModule, NgFor, CurrencyPipe, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, NgFor, ReactiveFormsModule, RouterLink],
   templateUrl: './recruiter-homepage.component.html',
   styleUrl: './recruiter-homepage.component.css'
 })
@@ -18,9 +20,13 @@ export class RecruiterHomepageComponent implements OnInit {
   isEditMode = false;
   selectedRecruitmentId: number | null = null;
   recruitments: Recruitment[] = [];
+  companyName: string = 'YourCompanyName';
+  companyId: number | null = null;
+  selectedCompanyName: string = '';
   apiUrl: string = 'https://localhost:7247/api/Recruitment';
   constructor(
     private recruitmentService: RecruitmentService,
+    private companyService: CompanyService,
     private fb: FormBuilder,
     private http: HttpClient
   ) {
@@ -45,15 +51,32 @@ export class RecruiterHomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadRecruitments();
+    this.companyService.getUserCompanies().subscribe({
+      next: (companies) => {
+        if (companies && companies.length > 0) {
+          // Assuming the user has at least one company, use the first company in the list
+          const companyName = companies[0].name; // Get the name of the first company
+          this.loadRecruitments(companyName); // Load recruitments based on company name
+        } else {
+          console.error('No companies found for the logged-in user');
+        }
+      },
+      error: (err) => console.error('Error fetching user companies:', err)
+    });
   }
 
-  loadRecruitments(): void {
-    this.recruitmentService.getAllRecruitments().subscribe({
-      next: (data) => (this.recruitments = data),
+  loadRecruitments(companyName: string): void {
+    this.recruitmentService.getRecruitmentsByCompanyName(companyName).subscribe({
+      next: (data) => {
+        this.recruitments = data;
+        console.log('Loaded recruitments:', data);
+      },
       error: (err) => console.error('Error loading recruitments:', err)
     });
   }
+
+
+
 
   onDeleteRecruitment(id: number): void {
     if (confirm('Are you sure you want to delete this recruitment?')) {

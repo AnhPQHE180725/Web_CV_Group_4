@@ -13,7 +13,7 @@ namespace Web_Server.Services
         // Dictionary để lưu trữ việc xem bài tuyển dụng gần đây (IP + RecruitmentId -> Thời gian xem)
         private static readonly Dictionary<string, DateTime> ViewRecords = new Dictionary<string, DateTime>();
         // Thời gian tối thiểu giữa các lần tăng view (phút)
-        private const int ViewCooldownMinutes = 2;
+        private const int ViewCooldownMinutes = 30;
 
 
         public RecruitmentService(IRecruitmentRepository repository, IHttpContextAccessor httpContextAccessor)
@@ -21,7 +21,6 @@ namespace Web_Server.Services
             _repository = repository;
             _httpContextAccessor = httpContextAccessor;
         }
-
 
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id)
         {
@@ -52,6 +51,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCompany(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCompany(id);
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with company id={id}");
+            }
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -118,7 +121,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByid(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
-
+            if(recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with id={id}");
+            }
             return recruitments.Select(r => new RecruitmentVm
             {
                 Id = r.Id,
@@ -195,17 +201,6 @@ namespace Web_Server.Services
             return await _repository.GetRecruitmentByIdAsync(id);
         }
 
-        //public async Task<bool> UpdateRecruitmentView(int id)
-        //{
-        //    var recruitment = await _repository.GetRecruitmentByIdAsync(id);
-        //    if (recruitment == null) return false;
-
-        //    recruitment.View += 1;
-
-        //    return await _repository.EditRecruitmentAsync(recruitment);
-        //}
-
-
         //sd dia chi IP cua ng dung
         public async Task<bool> UpdateRecruitmentView(int id)
         {
@@ -237,7 +232,6 @@ namespace Web_Server.Services
 
             return await _repository.EditRecruitmentAsync(recruitment);
         }
-
 
         public async Task<List<RecruitmentVm>> GetAllRecruitments()
         {
@@ -282,6 +276,11 @@ namespace Web_Server.Services
                 CompanyName = r.Company?.Name, // Handle possible null
                 logo = r.Company?.Logo // Ensure logo is valid
             };
+        }
+
+        public async Task<int> GetTotalRecruitmentsByStatus(int status)
+        {
+            return await _repository.GetTotalRecruitmentsByStatus(status);
         }
 
     }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Web_Server.Interfaces;
 using Web_Server.ViewModels;
 
@@ -107,38 +108,6 @@ namespace Web_Server.Controllers
             return Ok(await _recruitmentService.GetRecruitmentById(id));
         }
 
-        //[HttpPut("increment-view/{id}")]
-        //public async Task<IActionResult> IncrementView(int id)
-        //{
-        //    var recruitment = await _recruitmentService.GetRecruitmentById(id);
-        //    if (recruitment == null)
-        //    {
-        //        return NotFound("Recruitment not found");
-        //    }
-
-        //    recruitment.View += 1;
-        //    var updated = await _recruitmentService.EditRecruitmentAsync(recruitment.Id, new RecruitmentVm
-        //    {
-        //        Id = recruitment.Id,
-        //        Title = recruitment.Title,
-        //        Description = recruitment.Description,
-        //        Salary = recruitment.Salary,
-        //        Status = recruitment.Status,
-        //        Type = recruitment.Type,
-        //        Experience = recruitment.Experience,
-        //        CompanyId = recruitment.CompanyId,
-        //        CategoryId = recruitment.CategoryId,
-        //        Quantity = recruitment.Quantity,
-        //        Deadline = recruitment.Deadline,
-        //        Address = recruitment.Address,
-        //        Rank = recruitment.Rank,
-        //        View = recruitment.View,
-        //        CreatedAt = recruitment.CreatedAt,
-        //    });
-
-        //    return updated ? Ok("View incremented") : StatusCode(500, "Failed to update view count");
-        //}
-
         [HttpPut("increment-view/{id}")]
         public async Task<IActionResult> IncrementView(int id)
         {
@@ -161,6 +130,13 @@ namespace Web_Server.Controllers
             }
 
             return Ok(new { message = "View updated successfully" });
+        }
+
+        [HttpGet("recruitments/count")]
+        public async Task<IActionResult> GetTotalRecruitments(int status)
+        {
+            var totalRecruitments = await _recruitmentService.GetTotalRecruitmentsByStatus(status);
+            return Ok(totalRecruitments);
         }
 
     }

@@ -1,6 +1,7 @@
 <h2>{{ pageTitle }}</h2>
 
-<div class="wrapper">
+<div class="wrapper"
+  *ngIf="!(urlPath.startsWith('recruitment/category/') || urlPath.startsWith('recruitment/company/'))">
   <div class="tab-container">
     <button class="tab" (click)="setActiveTab('title')" [ngClass]="{ active: activeTab === 'title' }">
       Tìm công việc
@@ -35,8 +36,9 @@
         {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
       </button>
 
-      <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
-      <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
+      <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate, bài đăng còn tuyển status === 1 -->
+      <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)"
+        *ngIf="isLoggedIn() && isCandidate() && post.status === 1">
         <i class="fas fa-paper-plane"></i>
         Ứng tuyển
       </a>

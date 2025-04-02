@@ -46,4 +46,7 @@ export class CompanyService {
     deleteCompany(id: number): Observable<any> {
         return this.http.delete<any>(`${this.baseUrl}/Company/delete-company/${id}`);
     }
+    getCompanyProfile(): Observable<any>{
+        return this.http.get<Company>(`${this.baseUrl}/Authentication/company-profile`);
+    }
 }

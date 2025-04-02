@@ -17,14 +17,14 @@
       </div>
 
       <div *ngFor="let job of paginatedJobs" class="post">
-        <img [src]="'assets/images/slide1.jpg'" alt="{{ job.recruitment.title }}" class="company-logo" />
+
         <strong>{{ job.recruitment.type }}</strong>
         <div class="action-buttons">
           <button class="favorite-btn" (click)="toggleJobFollow($event, job.recruitment.id)" *ngIf="isLoggedIn()">
             <i class="fa fa-heart"></i>
             Bỏ yêu thích
           </button>
-          <a class="apply-btn" style="cursor: pointer" (click)="onApply(job.recruitment)" *ngIf="isLoggedIn()">
+          <a class="apply-btn" style="cursor: pointer" (click)="onApply(job.recruitment)" *ngIf="isLoggedIn() && job.recruitment.status === 1">
             <i class="fas fa-paper-plane"></i>
             Ứng tuyển
           </a>

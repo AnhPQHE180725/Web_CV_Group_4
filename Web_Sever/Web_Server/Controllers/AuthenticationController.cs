@@ -25,7 +25,7 @@ namespace Web_Server.Controllers
         private readonly IMemoryCache _cache;
 
 
-        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService,IMemoryCache cache)
+        public AuthenticationController(IUserService userService, IConfiguration configuration, IEmailService emailService, IMemoryCache cache)
         {
             _userService = userService;
             _configuration = configuration;
@@ -364,10 +364,9 @@ namespace Web_Server.Controllers
             return Ok("Update successful");
         }
 
-        
+
 
     }
 }
-
 
 

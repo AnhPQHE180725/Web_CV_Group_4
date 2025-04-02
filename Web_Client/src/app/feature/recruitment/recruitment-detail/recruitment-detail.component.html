@@ -24,8 +24,8 @@
             {{ isJobFollowed(recruitment.id) ? "Bỏ yêu thích" : "Yêu thích" }}
         </button>
 
-        <!-- Nút Ứng tuyển ngay chỉ hiển thị khi đã đăng nhập -->
-        <button class="apply-btn" *ngIf="isLoggedIn() && isCandidate()" (click)="onApply(recruitment)">
+        <!-- Nút Ứng tuyển ngay chỉ hiển thị khi đã đăng nhập và bài đăng có status === 1 thôi -->
+        <button class="apply-btn" *ngIf="isLoggedIn() && isCandidate() && recruitment.status === 1" (click)="onApply(recruitment)">
             <i class="fas fa-paper-plane"></i> Ứng tuyển
         </button>
     </div>

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecruitmentService } from '../../../services/Recruitment.service';
 import { Recruitment } from '../../../models/Recruitment';
+import { Company } from '../../../models/Company';
+import { CompanyService } from '../../../services/Company.service';
+import { Category } from '../../../models/Category';
+import { CategoryService } from '../../../services/Category.service';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -16,14 +20,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RecruiterEditComponent implements OnInit {
   recruitmentForm: FormGroup;
+  companyList: { id: number, name: string }[] = [];
   isEditMode = false;
   selectedRecruitmentId: number | null = null;
   recruitments: Recruitment[] = [];
+  categoryList: Category[] = [];
   apiUrl: string = 'https://localhost:7247/api/Recruitment';
 
   constructor(
     private recruitmentService: RecruitmentService,
     private fb: FormBuilder,
+    private companyService: CompanyService,
+    private categoryService: CategoryService,
     private http: HttpClient,
     private router: Router,
     private route: ActivatedRoute
@@ -38,7 +46,7 @@ export class RecruiterEditComponent implements OnInit {
       status: [1, Validators.required],
       experience: ['', Validators.required],
       quantity: [1, [Validators.required, Validators.min(1)]],
-      rank: ['', Validators.required],
+      rank: ['AA', Validators.required],
       type: ['', Validators.required],
       companyId: [null, Validators.required],
       categoryId: [null, Validators.required],
@@ -57,6 +65,8 @@ export class RecruiterEditComponent implements OnInit {
         this.loadRecruitmentById(this.selectedRecruitmentId);
       }
     });
+    this.loadCategories()
+    this.loadCompanies();
   }
 
   loadRecruitments(): void {
@@ -64,6 +74,36 @@ export class RecruiterEditComponent implements OnInit {
       next: (data) => (this.recruitments = data),
       error: (err) => console.error('❌ Error loading recruitments:', err)
     });
+  }
+  loadCompanies(): void {
+    this.companyService.getUserCompanies().subscribe({
+      next: (data) => (this.companyList = data),
+      error: (err) => console.error('❌ Error loading companies:', err)
+    });
+  }
+  onCompanyChange(event: any) {
+    const selectedCompanyName = event.target.value;
+    const selectedCompany = this.companyList.find(c => c.name === selectedCompanyName);
+
+    if (selectedCompany) {
+      this.recruitmentForm.get('companyId')?.setValue(selectedCompany.id);
+    }
+  }
+  loadCategories(): void {
+    this.categoryService.getAllCategories().subscribe({
+      next: (data) => (this.categoryList = data),
+      error: (err) => console.error('❌ Error loading categories:', err)
+    });
+  }
+
+  // 🔹 Khi chọn danh mục, tự động cập nhật ID
+  onCategoryChange(event: any) {
+    const selectedCategoryName = event.target.value;
+    const selectedCategory = this.categoryList.find(c => c.name === selectedCategoryName);
+
+    if (selectedCategory) {
+      this.recruitmentForm.get('categoryId')?.setValue(selectedCategory.id);
+    }
   }
 
   onAddRecruitment() {
@@ -141,4 +181,5 @@ export class RecruiterEditComponent implements OnInit {
       this.onAddRecruitment();
     }
   }
+
 }
