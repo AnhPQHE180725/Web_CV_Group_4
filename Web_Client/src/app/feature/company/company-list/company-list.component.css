@@ -120,3 +120,10 @@
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.status-message {
+  color: red;
+  font-style: italic;
+  margin-top: 5px;
+  text-align: center;
+}

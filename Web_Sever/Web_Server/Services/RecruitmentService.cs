@@ -278,5 +278,10 @@ namespace Web_Server.Services
             };
         }
 
+        public async Task<int> GetTotalRecruitmentsByStatus(int status)
+        {
+            return await _repository.GetTotalRecruitmentsByStatus(status);
+        }
+
     }
 }

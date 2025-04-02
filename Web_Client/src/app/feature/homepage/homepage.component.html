@@ -15,19 +15,26 @@
     <button class="next" (click)="nextSlide()">&#10095;</button>
   </div>
 
-  <div class="container">
-    <h2>Dashboard</h2>
-    <div class="dashboard">
-      <div class="stat-box">
-        <h3>Tổng số Công Ty</h3>
-        <p>{{ totalCompanies }}</p>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <span class="icon">📅</span>
+      <span class="title">Thống kê hôm nay: {{ currentDate }}</span>
+    </div>
+    
+    <div class="dashboard-content">
+      <div class="dashboard-item">
+        <p class="label">Tổng số công ty</p>
+        <p class="number">{{ totalCompanies | number }}</p>
       </div>
-      <div class="stat-box">
-        <h3>Tổng số Bài Đăng</h3>
-        <p>{{ totalRecruitments }}</p>
+  
+      <div class="dashboard-item">
+        <p class="label">Việc làm đang ứng</p>
+        <p class="number">{{ totalRecruitments | number }}</p>
       </div>
     </div>
+  </div>
 
+  <div class="container">
     <h2>Top Danh Mục</h2>
     <div class="categories">
       <div class="category" *ngFor="let category of categories" [routerLink]="['/recruitment', 'category', category.id]"
@@ -46,11 +53,18 @@
           <span class="company-name">{{ company.name }}</span>
         </div>
 
-        <!-- Chỉ hiển thị nút Theo dõi khi người dùng có role là candidate -->
+        <!-- Nút Theo dõi: chỉ hiển thị khi status === 1 -->
         <button class="follow-btn" (click)="toggleCompanyFollow($event, company.id)"
-          *ngIf="isLoggedIn() && isCandidate()" [class.followed]="isCompanyFollowed(company.id)">
+          *ngIf="isLoggedIn() && isCandidate() && company.status === 1"
+          [class.followed]="isCompanyFollowed(company.id)">
           {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
         </button>
+
+        <!-- Thông báo công ty tạm ngừng khi status !== 1 -->
+        <p *ngIf="isLoggedIn() && isCandidate() && company.status !== 1" class="status-message">
+          Công ty tạm ngừng
+        </p>
+
       </div>
     </div>
 
@@ -70,11 +84,12 @@
             <i class="fas" [ngClass]="{'fa-heart': isJobFollowed(post.id), 'fa-heart-o': !isJobFollowed(post.id)}"></i>
             {{ isJobFollowed(post.id) ? "Bỏ yêu thích" : "Yêu thích" }}
           </button>
-          <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate -->
-          <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate()">
+          <!-- Hiển thị nút "Ứng tuyển" chỉ khi người dùng có role là candidate và bài tuyển dụng đang mở (status === 1) -->
+          <button class="apply-btn" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate() && post.status === 1">
             <i class="fas fa-paper-plane"></i>
             Ứng tuyển
           </button>
+
           <button class="apply-btn" (click)="viewDetail(post)">
             <i></i>
             Xem chi tiết

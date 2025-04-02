@@ -88,5 +88,9 @@ namespace Web_Server.Repositories
             _context.Recruitments.Remove(recruitment);
             return await _context.SaveChangesAsync() > 0;
         }
+        public async Task<int> GetTotalRecruitmentsByStatus(int status)
+        {
+            return await _context.Recruitments.CountAsync(r => r.Status == status);
+        }
     }
 }

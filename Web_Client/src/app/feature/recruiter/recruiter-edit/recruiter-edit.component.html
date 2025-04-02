@@ -7,32 +7,26 @@
                 <label class="form-label">Tiêu đề:</label>
                 <input formControlName="title" class="form-control" placeholder="Nhập Tiêu Đề" />
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Miêu tả:</label>
                 <textarea formControlName="description" class="form-control" placeholder="Nhập Miêu Tả"></textarea>
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Kinh Nghiệm:</label>
                 <input formControlName="experience" class="form-control" placeholder="Nhập Kinh nghiệm cần thiết" />
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Số Lượng:</label>
                 <input type="number" formControlName="quantity" class="form-control" min="1"
                     placeholder="Nhập số lượng cần thiết" />
             </div>
-
             <div class="mb-3">
-                <label class="form-label">Bậc:</label>
-                <input formControlName="rank" class="form-control" placeholder="nhập hạng(vd : Junior,Senior)" />
+                <input formControlName="rank" class="form-control" type="text" hidden />
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Loại thời gian:</label>
                 <input formControlName="type" class="form-control"
-                    placeholder="Nhập Loại Thời Gian (vd : Full-time, Part-time)" />
+                    placeholder="Nhập Loại Thời Gian (vd: Full-time, Part-time)" />
             </div>
         </div>
 
@@ -41,43 +35,34 @@
                 <label class="form-label">Lương:</label>
                 <input type="number" formControlName="salary" class="form-control" placeholder="Nhập Lương" />
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Địa Chỉ:</label>
                 <input formControlName="address" class="form-control" placeholder="Nhập Địa Chỉ" />
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Hạn Cuối:</label>
                 <input type="date" formControlName="deadline" class="form-control" />
             </div>
-
-            <div class="mb-3">
-                <label class="form-label">Id của công ty:</label>
-                <input type="number" formControlName="companyId" class="form-control"
-                    placeholder="Nhập Id của công ty" />
-            </div>
-
             <div class="mb-3">
                 <label class="form-label">Tên Công ty:</label>
-                <input formControlName="companyName" class="form-control" placeholder="Nhập Tên Công ty" />
+                <select formControlName="companyName" class="form-select" (change)="onCompanyChange($event)">
+                    <option *ngFor="let company of companyList" [value]="company.name">
+                        {{ company.name }}
+                    </option>
+                </select>
             </div>
-
-            <div class="mb-3">
-                <label class="form-label">ID của danh mục:</label>
-                <input type="number" formControlName="categoryId" class="form-control"
-                    placeholder="Nhập ID của danh mục" />
-            </div>
-
             <div class="mb-3">
                 <label class="form-label">Tên danh mục:</label>
-                <input formControlName="categoryName" class="form-control" placeholder="Nhập tên danh mục" />
+                <select class="form-select" formControlName="categoryName" (change)="onCategoryChange($event)">
+                    <option *ngFor="let category of categoryList" [value]="category.name">
+                        {{ category.name }}
+                    </option>
+                </select>
             </div>
             <div class="mb-3">
                 <label class="form-label">Hình ảnh:</label>
-                <input formControlName="logo" class="form-control" placeholder="" />
+                <input formControlName="logo" class="form-control" placeholder="Nhập đường dẫn hình ảnh" />
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Trạng thái:</label>
                 <select formControlName="status" class="form-select">
@@ -89,10 +74,9 @@
     </div>
 
     <div class="text-center mt-3">
-        <button type="submit" class="btn btn-primary me-2" [disabled]="recruitmentForm.invalid">
-            {{ isEditMode ? 'Chỉnh sửa' : 'Thêm bài' }}
+        <button class="btn btn-primary" [disabled]="recruitmentForm.invalid">
+            {{ isEditMode ? 'Cập nhật' : 'Thêm' }}
         </button>
-
         <button type="button" class="btn btn-secondary" (click)="goBack()">Quay lại</button>
     </div>
 </form>

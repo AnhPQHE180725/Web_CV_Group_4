@@ -50,7 +50,7 @@
         <div class="logo-preview" *ngIf="currentCompany.logo">
           <img [src]="currentCompany.logo" alt="Logo preview" class="preview-image" />
         </div>
-    
+
         <!-- Input đường dẫn ảnh -->
         <input type="text" id="companyLogo" [(ngModel)]="currentCompany.logo"
           placeholder="Dán đường dẫn ảnh .jpg hoặc .png" />
@@ -59,7 +59,7 @@
         </small>
       </div>
     </div>
-    
+
 
     <div class="form-group">
       <label for="companyStatus">Trạng thái:</label>
@@ -82,7 +82,7 @@
   <div class="companies">
     <div class="company" *ngFor="let company of paginatedCompanies">
       <div class="company-content">
-          <img [src]="
+        <img [src]="
             company.logo
           " alt="{{ company.name }}" class="company-logo clickable" [routerLink]="['/company', company.id]" />
         <span class="company-name">{{ company.name }}</span>
@@ -104,7 +104,10 @@
       </div>
     </div>
   </div>
-
+  <!-- Hiển thị thông báo nếu công ty có người theo dõi -->
+  <p class="warning-text">
+    Bạn chỉ có thể xóa công ty nếu không có ứng viên nào theo dõi công ty của bạn.
+  </p>
   <div class="pagination">
     <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
       Previous

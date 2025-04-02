@@ -386,26 +386,53 @@ h2 {
   margin-right: 5px;
 }
 
-.dashboard {
+.dashboard-container {
+  background: linear-gradient(135deg, #008d4c, #00b65c);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  width: 100%;
+  max-width: 1388px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.dashboard-content {
+  margin-top: 20px;
 }
 
 .dashboard-item {
-  text-align: center;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 150px;
-  background-color: #f9f9f9;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.dashboard-item h3 {
-  margin: 0;
-  font-size: 1.2em;
+.label {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.dashboard-item p {
-  font-size: 1.5em;
-  color: #333;
+.number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.status-message {
+  color: red;
+  font-style: italic;
+  margin-top: 5px;
 }

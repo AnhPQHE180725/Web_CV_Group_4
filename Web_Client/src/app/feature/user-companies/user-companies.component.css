@@ -420,3 +420,10 @@
 .logo-upload-container input[type="file"]:hover {
   background-color: #f1f1f1;
 }
+
+.warning-text {
+  color: #d9534f;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  font-style: italic;
+}
