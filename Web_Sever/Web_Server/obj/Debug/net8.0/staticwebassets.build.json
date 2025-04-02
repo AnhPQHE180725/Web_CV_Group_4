@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QZ+iEEiuP5qck2UGMgTo54RrUtTiPVeDJFrsV7IucXc=",
+  "Hash": "oD1ce4wyXrxNQQ0bdmZCxFBWtKmS1bvfR0dbdWkZi48=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Web_Server\\wwwroot",
       "Source": "Web_Server",
-      "ContentRoot": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
       "BasePath": "_content/Web_Server",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png",
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
       "BasePath": "_content/Web_Server",
       "RelativePath": "CompanyLogos/a98f6731-698a-43eb-b79c-5e0126df4a84#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png"
     },
     {
-      "Identity": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
       "BasePath": "_content/Web_Server",
       "RelativePath": "CompanyLogos/c9971092-fd80-45ed-ac64-d3c2cbae407e#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg"
     },
     {
-      "Identity": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
       "BasePath": "_content/Web_Server",
       "RelativePath": "CVs/835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular#[.{fingerprint}]?.pdf",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf"
     },
     {
-      "Identity": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
       "BasePath": "_content/Web_Server",
       "RelativePath": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc#[.{fingerprint}]?.pdf",
       "AssetKind": "All",
@@ -104,7 +104,7 @@
   "Endpoints": [
     {
       "Route": "CompanyLogos/a98f6731-698a-43eb-b79c-5e0126df4a84.png",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -125,7 +125,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 02:24:15 GMT"
+          "Value": "Wed, 02 Apr 2025 04:08:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -141,7 +141,7 @@
     },
     {
       "Route": "CompanyLogos/a98f6731-698a-43eb-b79c-5e0126df4a84.quo8br6t5q.png",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\a98f6731-698a-43eb-b79c-5e0126df4a84.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -162,7 +162,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 02:24:15 GMT"
+          "Value": "Wed, 02 Apr 2025 04:08:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -186,7 +186,7 @@
     },
     {
       "Route": "CompanyLogos/c9971092-fd80-45ed-ac64-d3c2cbae407e.gghd9vdzti.jpg",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -207,7 +207,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 02:24:15 GMT"
+          "Value": "Wed, 02 Apr 2025 04:08:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -231,7 +231,7 @@
     },
     {
       "Route": "CompanyLogos/c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -252,7 +252,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 02:24:15 GMT"
+          "Value": "Wed, 02 Apr 2025 04:08:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -268,7 +268,7 @@
     },
     {
       "Route": "CVs/835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.odferd1ui5.pdf",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -289,7 +289,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 14:42:46 GMT"
+          "Value": "Tue, 01 Apr 2025 13:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -313,7 +313,7 @@
     },
     {
       "Route": "CVs/835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -334,7 +334,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 14:42:46 GMT"
+          "Value": "Tue, 01 Apr 2025 13:33:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -350,7 +350,7 @@
     },
     {
       "Route": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.hrgzuv399l.pdf",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -371,7 +371,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 14:42:46 GMT"
+          "Value": "Tue, 01 Apr 2025 13:30:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -395,7 +395,7 @@
     },
     {
       "Route": "CVs/d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
-      "AssetFile": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -416,7 +416,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 14:42:46 GMT"
+          "Value": "Tue, 01 Apr 2025 13:30:15 GMT"
         },
         {
           "Name": "Cache-Control",
