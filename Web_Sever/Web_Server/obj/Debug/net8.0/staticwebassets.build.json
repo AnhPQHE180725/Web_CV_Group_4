@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oD1ce4wyXrxNQQ0bdmZCxFBWtKmS1bvfR0dbdWkZi48=",
+  "Hash": "iLoQbtfo4+7t/IuLzQNF2FtGr4C7+k8chmuADHQF/Lk=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg"
+    },
+    {
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nafg3q7bai",
+      "Integrity": "kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf"
     },
     {
       "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
@@ -263,6 +284,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-YFGKMa1HO1P2hY7hqF4ENUSb8W10HwZMNh1qeSi6dW0="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.nafg3q7bai.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1054225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 12:45:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nafg3q7bai"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1054225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 12:45:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw="
         }
       ]
     },

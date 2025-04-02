@@ -4,6 +4,8 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CompanyService } from '../../services/Company.service';
 import { Company } from '../../models/Company';
 import { AuthService } from '../../services/auth.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
 
 @Component({
     selector: 'app-company-detail',
@@ -13,6 +15,7 @@ import { AuthService } from '../../services/auth.service';
     styleUrl: './company-detail.component.css'
 })
 export class CompanyDetailComponent implements OnInit {
+    sanitizedDescription: SafeHtml | null = null; // ✅ thêm biến này
     company: Company | null = null;
     isLoading = true;
     isOwner = false;
@@ -22,7 +25,8 @@ export class CompanyDetailComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private companyService: CompanyService,
-        private authService: AuthService
+        private authService: AuthService,
+        private sanitizer: DomSanitizer // ✅ inject vào constructor
     ) { }
 
     ngOnInit(): void {
@@ -42,6 +46,7 @@ export class CompanyDetailComponent implements OnInit {
         this.companyService.getCompanyById(id).subscribe(
             (company) => {
                 this.company = company;
+                this.sanitizedDescription = this.sanitizeHTML(company.description || ''); // ✅ xử lý mô tả
                 this.isLoading = false;
                 // Check if user is the owner of this company
                 this.checkOwnership();
@@ -52,6 +57,10 @@ export class CompanyDetailComponent implements OnInit {
                 this.isLoading = false;
             }
         );
+    }
+
+    sanitizeHTML(html: string): SafeHtml {
+        return this.sanitizer.bypassSecurityTrustHtml(html || '');
     }
 
     checkOwnership(): void {

@@ -19,10 +19,32 @@
       <input type="text" id="companyName" [(ngModel)]="currentCompany.name" required minlength="1" pattern="[^\\s].*" />
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="companyDescription">Mô tả:</label>
       <textarea id="companyDescription" [(ngModel)]="currentCompany.description" rows="3"></textarea>
-    </div>
+    </div> -->
+    <!-- TinyMCE -->
+    <label for="companyDescription">Mô tả:</label>
+    <editor apiKey="ygxzbqd4ej8z1yjswkp0ljn56qm4r6luix9l83auaajk3h3q" id="companyDescription"
+      [(ngModel)]="currentCompany.description" [init]="{
+    height: 200,
+    menubar: true,
+    branding: false, 
+    plugins: [
+      'advlist autolink lists link image charmap preview anchor',
+      'searchreplace visualblocks code fullscreen',
+      'insertdatetime media table paste code help wordcount',
+      'emoticons'
+    ],
+    toolbar: 
+      'undo redo | styleselect fontselect fontsizeselect | ' +
+      'bold italic underline strikethrough forecolor backcolor | ' +
+      'alignleft aligncenter alignright alignjustify | ' +
+      'bullist numlist outdent indent | link image emoticons | ' +
+      'code fullscreen preview',
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+  }">
+    </editor>
 
     <div class="form-group">
       <label for="companyAddress">Địa chỉ:</label>
@@ -59,7 +81,6 @@
         </small>
       </div>
     </div>
-
 
     <div class="form-group">
       <label for="companyStatus">Trạng thái:</label>
@@ -105,9 +126,11 @@
     </div>
   </div>
   <!-- Hiển thị thông báo nếu công ty có người theo dõi -->
-  <p class="warning-text">
-    Bạn chỉ có thể xóa công ty nếu không có ứng viên nào theo dõi công ty hoặc yêu thích bài đăng của công ty đó.
+  <p class="warning-text text-warning">
+    <i class="fas fa-exclamation-triangle"></i>
+    Bạn chỉ có thể xóa công ty nếu không có ứng viên nào theo dõi công ty của bạn.
   </p>
+
   <div class="pagination">
     <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
       Previous

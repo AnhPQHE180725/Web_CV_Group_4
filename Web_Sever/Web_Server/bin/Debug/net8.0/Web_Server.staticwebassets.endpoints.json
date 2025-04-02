@@ -3,6 +3,88 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.nafg3q7bai.pdf",
+      "AssetFile": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1054225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 12:45:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nafg3q7bai"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw="
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "AssetFile": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1054225"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 12:45:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw="
+        }
+      ]
+    },
+    {
       "Route": "CVs/835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.odferd1ui5.pdf",
       "AssetFile": "CVs/835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
       "Selectors": [],
