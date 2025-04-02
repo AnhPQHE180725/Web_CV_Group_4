@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\followjobservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\followjobservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\applypostservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\applypostservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\followcompanyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\followcompanyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\recruitmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\recruitmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\cvservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\cvservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\companyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\companyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\categoryservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\categoryservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\topcvweb_test\\webhostenvironmentstub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\webhostenvironmentstub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|d:\\du_an\\web_cv_group_4\\web_sever\\web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,41 +82,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FollowJobServiceTest.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\FollowJobServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\FollowJobServiceTest.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\FollowJobServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\FollowJobServiceTest.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowD4AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:52:17.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FollowCompanyServiceTest.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\FollowCompanyServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\FollowCompanyServiceTest.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\FollowCompanyServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\FollowCompanyServiceTest.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:38:33.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CVServiceTest.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CVServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\CVServiceTest.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CVServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\CVServiceTest.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAA9wDkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:26:26.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryServiceTest.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CategoryServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\CategoryServiceTest.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CategoryServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\CategoryServiceTest.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:16:15.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecruitmentServiceTest.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwE4AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T02:47:59.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebHostEnvironmentStub.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\WebHostEnvironmentStub.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\WebHostEnvironmentStub.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\WebHostEnvironmentStub.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\WebHostEnvironmentStub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T02:45:12.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ApplyPostServiceTest.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\ApplyPostServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\ApplyPostServiceTest.cs",
               "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\ApplyPostServiceTest.cs",
               "RelativeToolTip": "TopCVWeb_Test\\ApplyPostServiceTest.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwHQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T23:51:13.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
-              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
-              "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T23:37:54.089Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Microsoft.PackageDependencyResolution.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAcwAkBAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-04-01T23:33:51.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "CompanyService.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CompanyService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\CompanyService.cs",
@@ -104,19 +184,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CompanyServiceTest.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CompanyServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\CompanyServiceTest.cs",
               "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CompanyServiceTest.cs",
               "RelativeToolTip": "TopCVWeb_Test\\CompanyServiceTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKIAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAkwBsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T17:20:14.772Z"
+              "WhenOpened": "2025-04-01T17:20:14.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAcwAkBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-01T23:33:51.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
+              "ToolTip": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
+              "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T23:37:54.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "RecruitmentService.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
@@ -128,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "IRecruitmentService.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
@@ -140,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "IRecruitmentRepository.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
@@ -152,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "RecruitmentController.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
@@ -164,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "RecruitmentRepository.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
@@ -176,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",

@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using Web_Server.Interfaces;
-using Web_Server.Models;
+using Web_Server.Data;
+using Web_Server.Repositories;
 using Web_Server.Services;
 using Web_Server.ViewModels;
 
@@ -15,103 +11,113 @@ namespace TopCVWeb_Test
 {
     public class ApplyPostServiceTest
     {
-        private Mock<IApplyPostRepository> _applyPostRepoMock;
-        private Mock<IRecruitmentRepository> _recruitmentRepoMock;
-        private Mock<IUserRepository> _userRepoMock;
-        private Mock<ICVService> _cvServiceMock;
-        private Mock<IHttpContextAccessor> _httpContextAccessorMock;
+        /*
+         Đảm bảo trong DB:
+         User Id = 1 có CV và tồn tại.
+         Recruitment Id = 1 là hợp lệ.
+         */
+        private AppDbContext _context;
+        private ApplyPostRepository _applyPostRepo;
+        private RecruitmentRepository _recruitmentRepo;
+        private UserRepository _userRepo;
+        private CVRepository _cvRepo;
+        private CVService _cvService;
+        private IHttpContextAccessor _httpContextAccessor;
         private ApplyPostService _applyPostService;
 
         [SetUp]
         public void Setup()
         {
-            _applyPostRepoMock = new Mock<IApplyPostRepository>();
-            _recruitmentRepoMock = new Mock<IRecruitmentRepository>();
-            _userRepoMock = new Mock<IUserRepository>();
-            _cvServiceMock = new Mock<ICVService>();
-            _httpContextAccessorMock = new Mock<IHttpContextAccessor>();
+            var config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-            var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-            {
-                new Claim("id", "1")
-            }, "mock"));
+            var options = new DbContextOptionsBuilder<AppDbContext>()
+                .UseSqlServer(config.GetConnectionString("DefaultConnection"))
+                .Options;
 
-            var httpContext = new DefaultHttpContext
+            _context = new AppDbContext(options);
+
+            _applyPostRepo = new ApplyPostRepository(_context);
+            _recruitmentRepo = new RecruitmentRepository(_context);
+            _userRepo = new UserRepository(_context);
+            _cvRepo = new CVRepository(_context);
+
+            _httpContextAccessor = new HttpContextAccessor
             {
-                User = user
+                HttpContext = new DefaultHttpContext
+                {
+                    User = new ClaimsPrincipal(new ClaimsIdentity(new[]
+                    {
+                        new Claim("id", "1") // giả lập userId = 1, bảng role có user id = 1 và cv la hop le
+                    }, "mock"))
+                }
             };
-            _httpContextAccessorMock.Setup(_ => _.HttpContext).Returns(httpContext);
+
+            _cvService = new CVService(_cvRepo, new WebHostEnvironmentStub(), _httpContextAccessor);
 
             _applyPostService = new ApplyPostService(
-                _applyPostRepoMock.Object,
-                _recruitmentRepoMock.Object,
-                _userRepoMock.Object,
-                _cvServiceMock.Object,
-                _httpContextAccessorMock.Object
+                _applyPostRepo,
+                _recruitmentRepo,
+                _userRepo,
+                _cvService,
+                _httpContextAccessor
             );
         }
 
+        //chạy 1 lần vì chỉ cho ứng tuyển 1 lần thôi, lần 2 lỗi , xóa trong ApplyPosst
         [Test]
-        public async Task ApplyWithExistingCVAsync_ShouldReturnNewApplication()
+        public async Task ApplyWithExistingCVAsync_ShouldCreateApplication_WhenValid()
         {
-            var recruitment = new Recruitment { Id = 1, Status = 1 };
-            var user = new User { Id = 1 };
-            var cv = new CV { Id = 1, Name = "cv.pdf", UserId = 1 };
-
-            _recruitmentRepoMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(recruitment);
-            _userRepoMock.Setup(u => u.GetByIdAsync(1)).ReturnsAsync(user);
-            _applyPostRepoMock.Setup(a => a.GetByUserIdAndPostIdAsync(1, 1)).ReturnsAsync((ApplyPost)null);
-            _cvServiceMock.Setup(c => c.GetCVByUserIdAsync(1)).ReturnsAsync(cv);
-            _applyPostRepoMock.Setup(a => a.CreateAsync(It.IsAny<ApplyPost>()))
-                .ReturnsAsync((ApplyPost a) => a);
-
             var applyVm = new ApplyWithExistingCVVm
             {
-                PostId = 1,
-                Text = "I’m applying"
+                PostId = 1, // bài tuyển dụng đã có trong DB
+                Text = "Ứng tuyển test"
             };
 
             var result = await _applyPostService.ApplyWithExistingCVAsync(applyVm);
 
-            Assert.That(result, Is.Not.Null);
-            Assert.That(result.CVName, Is.EqualTo("cv.pdf"));
+            Assert.IsNotNull(result);
+            Assert.That(result.UserId, Is.EqualTo(1));
+            Assert.That(result.CVName, Is.Not.Null);
         }
 
         [Test]
-        public async Task GetApplicationsByUserIdAsync_ShouldReturnApplications()
+        public async Task GetApplicationsByUserIdAsync_ShouldReturnCorrectList()
         {
-            var list = new List<ApplyPost>
-            {
-                new ApplyPost { UserId = 1, CVName = "cv1.pdf" },
-                new ApplyPost { UserId = 1, CVName = "cv2.pdf" }
-            };
-
-            _applyPostRepoMock.Setup(r => r.GetByUserIdAsync(1)).ReturnsAsync(list);
-
             var result = await _applyPostService.GetApplicationsByUserIdAsync(1);
 
-            Assert.That(result, Has.Count.EqualTo(2));
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0);
         }
 
+        //Test lỗi khi không có CV
         [Test]
-        public async Task ApplyWithExistingCVAsync_ShouldThrow_WhenCVNotFound()
+        public async Task ApplyWithExistingCVAsync_ShouldThrow_WhenUserHasNoCV()
         {
-            var recruitment = new Recruitment { Id = 1, Status = 1 };
-            var user = new User { Id = 1 };
-
-            _recruitmentRepoMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(recruitment);
-            _userRepoMock.Setup(u => u.GetByIdAsync(1)).ReturnsAsync(user);
-            _applyPostRepoMock.Setup(a => a.GetByUserIdAndPostIdAsync(1, 1)).ReturnsAsync((ApplyPost)null);
-            _cvServiceMock.Setup(c => c.GetCVByUserIdAsync(1)).ReturnsAsync((CV)null);
-
             var applyVm = new ApplyWithExistingCVVm
             {
-                PostId = 1,
-                Text = "missing CV"
+                PostId = 1, // Bài đăng hợp lệ
+                Text = "Test without CV"
             };
 
+            // Giả lập user ID = 2 (đã tồn tại, nhưng không có CV)
+            _httpContextAccessor.HttpContext.User = new ClaimsPrincipal(new ClaimsIdentity(new[]
+            {
+             new Claim("id", "2")
+    }));
+
             Assert.ThrowsAsync<InvalidOperationException>(async () =>
-                await _applyPostService.ApplyWithExistingCVAsync(applyVm));
+            await _applyPostService.ApplyWithExistingCVAsync(applyVm));
+
         }
+
+
+        [TearDown]
+        public void TearDown()
+        {
+            _context.Dispose();
+        }
+
     }
 }
