@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using System.Text.RegularExpressions;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.Repositories;
@@ -57,6 +58,12 @@ namespace Web_Server.Services
 
         public async Task<bool> RegisterAysnc(RegisterVm registerVm)
         {
+            // Kiểm tra định dạng email hợp lệ
+            var emailRegex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+            if (!emailRegex.IsMatch(registerVm.Email))
+            {
+                return false;
+            }
             var User = await FindEmailExists(registerVm.Email);
             if (User != null)
             {

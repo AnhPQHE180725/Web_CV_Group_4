@@ -2,8 +2,8 @@
 {
     public interface IEmailService
     {
-        Task SendPasswordResetEmailAsync(string toEmail, string resetLink);
-        Task SendOtpEmailAsync(string toEmail, string otpCode);
+        Task<bool> SendPasswordResetEmailAsync(string toEmail, string resetLink);
+        Task<bool> SendOtpEmailAsync(string toEmail, string otpCode);
         Task SendEmailAsync(string to, string subject, string body);
     }
 }
