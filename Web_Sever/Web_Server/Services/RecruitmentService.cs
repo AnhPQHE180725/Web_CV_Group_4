@@ -127,7 +127,7 @@ namespace Web_Server.Services
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
             if(recruitments == null || !recruitments.Any())
             {
-                throw new ArgumentException($"Not found Recruitment with id={id}");
+                return new List<RecruitmentVm>(); ;
             }
             return recruitments.Select(r => new RecruitmentVm
             {

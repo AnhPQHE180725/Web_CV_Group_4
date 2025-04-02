@@ -15,10 +15,10 @@
         <img
           src="https://play-lh.googleusercontent.com/Shy9VB3CKUYUzyzcuJwmDiYZElFJsKYwj5v5X2s3fGfIlL6SzkbAz_sMX6ZX9Sk8JQ"
           alt="WEB-CV Logo" class="logo-img" />
-        <a href="home" class="nav-item logo-text">Trang chủ</a>
+        <a href="home" class="nav-item logo-text" *ngIf="!isRecruiter()">Trang chủ</a>
       </div>
       <div class="dropdown">
-        <button class="nav-item">Danh mục ▼</button>
+        <button class="nav-item" *ngIf="!isRecruiter()">Danh mục ▼</button>
         <div class="dropdown-content">
           <table>
             <tr *ngFor="let i of [0, 1, 2, 3, 4]">
@@ -31,8 +31,8 @@
           </table>
         </div>
       </div>
-      <a href="company" class="nav-item">Doanh nghiệp</a>
-      <a href="recruitment" class="nav-item">Tin tuyển dụng</a>
+      <a href="company" class="nav-item" *ngIf="!isRecruiter()">Doanh nghiệp</a>
+      <a href="recruitment" class="nav-item" *ngIf="!isRecruiter()">Tin tuyển dụng</a>
       <a href="recruiter" class="nav-item" *ngIf="isRecruiter()">Trang của nhà tuyển dụng</a>
 
     </div>

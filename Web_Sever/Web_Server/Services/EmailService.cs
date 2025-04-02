@@ -14,6 +14,10 @@ namespace Web_Server.Services
             _configuration = configuration;
         }
 
+        public EmailService()
+        {
+        }
+
 
         // Phương thức tạo MimeMessage dùng chung
         private MimeMessage CreateEmail(string toEmail, string subject, string body)
@@ -28,7 +32,7 @@ namespace Web_Server.Services
         }
 
         // Phương thức gửi email dùng chung
-        private async Task SendEmailAsync(MimeMessage email)
+        private async Task<bool> SendEmailAsync(MimeMessage email)
         {
             using var smtp = new SmtpClient();
 
@@ -46,10 +50,12 @@ namespace Web_Server.Services
                 );
                 // Gửi email
                 await smtp.SendAsync(email);
+                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Lỗi khi gửi email: {ex.Message}");
+                return false;
             }
             finally
             {
@@ -61,7 +67,7 @@ namespace Web_Server.Services
             }
         }
         // Phương thức gửi email reset password
-        public async Task SendPasswordResetEmailAsync(string toEmail, string resetLink)
+        public async Task<bool> SendPasswordResetEmailAsync(string toEmail, string resetLink)
         {
             // Nội dung email
             var email = CreateEmail(toEmail
@@ -89,13 +95,13 @@ namespace Web_Server.Services
             </body>
             </html>");
 
-            await SendEmailAsync(email);                // Gửi email
+          return await SendEmailAsync(email);                // Gửi email
 
         }
 
 
         //  Phương thức gửi mã OTP
-        public async Task SendOtpEmailAsync(string toEmail, string otpCode)
+        public async Task<bool> SendOtpEmailAsync(string toEmail, string otpCode)
         {
             var email = CreateEmail(toEmail,
                 "Xác nhận đăng nhập",
@@ -113,7 +119,7 @@ namespace Web_Server.Services
                 </body>
                 </html>");
 
-            await SendEmailAsync(email);
+            return await SendEmailAsync(email);
         }
         public async Task SendEmailAsync(string toEmail, string subject, string body)
         {
