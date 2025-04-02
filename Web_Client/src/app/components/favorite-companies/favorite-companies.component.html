@@ -10,12 +10,12 @@
     Không có công ty nào.
   </div>
 
-  <div class="companies">
-    <div class="company" *ngFor="let company of paginatedCompanies">
+  <ng-container *ngFor="let company of paginatedCompanies">
+    <div class="company" *ngIf="company.company.status === 1">
       <div class="company-content">
         <img [src]="
             company.company.logo
-          " alt="{{ company.company.name }}" class="company-logo"/>
+          " alt="{{ company.company.name }}" class="company-logo" />
         <div class="company-details">
           <strong>Tên công ty:</strong>
           <p class="company-description">{{ company.company.name }}</p>
@@ -55,7 +55,7 @@
         Bỏ theo dõi
       </button>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Pagination -->
   <div class="pagination">

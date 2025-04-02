@@ -37,7 +37,8 @@
       </button>
 
       <!-- Hiển thị nút "Ứng tuyển ngay" chỉ khi người dùng có role là candidate, bài đăng còn tuyển status === 1 -->
-      <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)" *ngIf="isLoggedIn() && isCandidate() && post.status === 1">
+      <a class="apply-btn" style="cursor: pointer" (click)="onApply(post)"
+        *ngIf="isLoggedIn() && isCandidate() && post.status === 1">
         <i class="fas fa-paper-plane"></i>
         Ứng tuyển
       </a>
