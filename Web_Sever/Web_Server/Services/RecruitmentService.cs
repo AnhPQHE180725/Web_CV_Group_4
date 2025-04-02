@@ -13,7 +13,7 @@ namespace Web_Server.Services
         // Dictionary để lưu trữ việc xem bài tuyển dụng gần đây (IP + RecruitmentId -> Thời gian xem)
         private static readonly Dictionary<string, DateTime> ViewRecords = new Dictionary<string, DateTime>();
         // Thời gian tối thiểu giữa các lần tăng view (phút)
-        private const int ViewCooldownMinutes = 2;
+        private const int ViewCooldownMinutes = 30;
 
 
         public RecruitmentService(IRecruitmentRepository repository, IHttpContextAccessor httpContextAccessor)
@@ -21,7 +21,6 @@ namespace Web_Server.Services
             _repository = repository;
             _httpContextAccessor = httpContextAccessor;
         }
-
 
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id)
         {
@@ -277,6 +276,11 @@ namespace Web_Server.Services
                 CompanyName = r.Company?.Name, // Handle possible null
                 logo = r.Company?.Logo // Ensure logo is valid
             };
+        }
+
+        public async Task<int> GetTotalRecruitmentsByStatus(int status)
+        {
+            return await _repository.GetTotalRecruitmentsByStatus(status);
         }
 
     }

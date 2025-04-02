@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Web_Server.Models;
+﻿using Web_Server.Models;
 using Web_Server.ViewModels;
 
 namespace Web_Server.Interfaces
@@ -16,5 +15,6 @@ namespace Web_Server.Interfaces
         Task<List<Company>> GetUserCompaniesAsync();
         Task<string?> GetLogoFilePathAsync(string logoFileName);
         Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel);
+        Task<Company> GetCompanyProfileAsync();
     }
 }

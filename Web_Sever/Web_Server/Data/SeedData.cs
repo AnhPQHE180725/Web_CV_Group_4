@@ -77,92 +77,92 @@ namespace Web_Server.Data
 
             modelBuilder.Entity<Recruitment>().HasData(
             // IT Jobs
-            new Recruitment { Id = 1, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển lập trình viên Java", Status = 2, Quantity = 5, Experience = "Senior", Salary = 25, CompanyId = 1, Description = "Lập trình viên Java", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "A", CategoryId = 1, View = 150 },
+            new Recruitment { Id = 1, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển lập trình viên Java", Status = 1, Quantity = 5, Experience = "Senior", Salary = 25, CompanyId = 1, Description = "Lập trình viên Java", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "A", CategoryId = 1, View = 150 },
 
-            new Recruitment { Id = 2, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ sư phần mềm", Status = 3, Quantity = 3, Experience = "Mid", Salary = 30, CompanyId = 1, Description = "Kỹ sư phần mềm", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "B", CategoryId = 1, View = 2 },
+            new Recruitment { Id = 2, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ sư phần mềm", Status = 1, Quantity = 3, Experience = "Mid", Salary = 30, CompanyId = 1, Description = "Kỹ sư phần mềm", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "B", CategoryId = 1, View = 2 },
 
-            new Recruitment { Id = 3, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển fresher lập trình", Status = 0, Quantity = 10, Experience = "Fresher", Salary = 12, CompanyId = 1, Description = "Lập trình viên Fresher", Type = "Intern", Deadline = new DateTime(2025, 4, 15), Rank = "C", CategoryId = 1, View = 50 },
+            new Recruitment { Id = 3, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển fresher lập trình", Status = 1, Quantity = 10, Experience = "Fresher", Salary = 12, CompanyId = 1, Description = "Lập trình viên Fresher", Type = "Intern", Deadline = new DateTime(2025, 4, 15), Rank = "C", CategoryId = 1, View = 50 },
 
             // Healthcare Jobs
-            new Recruitment { Id = 4, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển bác sĩ đa khoa", Status = 5, Quantity = 2, Experience = "Senior", Salary = 35, CompanyId = 2, Description = "Bác sĩ đa khoa", Type = "Full-time", Deadline = new DateTime(2025, 4, 20), Rank = "A", CategoryId = 2, View = 180 },
+            new Recruitment { Id = 4, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển bác sĩ đa khoa", Status = 1, Quantity = 2, Experience = "Senior", Salary = 35, CompanyId = 2, Description = "Bác sĩ đa khoa", Type = "Full-time", Deadline = new DateTime(2025, 4, 20), Rank = "A", CategoryId = 2, View = 180 },
 
-            new Recruitment { Id = 5, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển y tá điều dưỡng", Status = 2, Quantity = 5, Experience = "Mid", Salary = 18, CompanyId = 2, Description = "Y tá điều dưỡng", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "B", CategoryId = 2, View = 90 },
+            new Recruitment { Id = 5, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển y tá điều dưỡng", Status = 1, Quantity = 5, Experience = "Mid", Salary = 18, CompanyId = 2, Description = "Y tá điều dưỡng", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "B", CategoryId = 2, View = 90 },
 
-            new Recruitment { Id = 6, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ thuật viên xét nghiệm", Status = 3, Quantity = 4, Experience = "Mid", Salary = 22, CompanyId = 2, Description = "Kỹ thuật viên xét nghiệm", Type = "Full-time", Deadline = new DateTime(2025, 4, 18), Rank = "B", CategoryId = 2, View = 120 },
+            new Recruitment { Id = 6, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ thuật viên xét nghiệm", Status = 1, Quantity = 4, Experience = "Mid", Salary = 22, CompanyId = 2, Description = "Kỹ thuật viên xét nghiệm", Type = "Full-time", Deadline = new DateTime(2025, 4, 18), Rank = "B", CategoryId = 2, View = 120 },
 
             // Education Jobs
-            new Recruitment { Id = 7, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển giáo viên tiếng Anh", Status = 2, Quantity = 3, Experience = "Senior", Salary = 30, CompanyId = 3, Description = "Giáo viên tiếng Anh", Type = "Full-time", Deadline = new DateTime(2025, 5, 5), Rank = "A", CategoryId = 3, View = 220 },
+            new Recruitment { Id = 7, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển giáo viên tiếng Anh", Status = 1, Quantity = 3, Experience = "Senior", Salary = 30, CompanyId = 3, Description = "Giáo viên tiếng Anh", Type = "Full-time", Deadline = new DateTime(2025, 5, 5), Rank = "A", CategoryId = 3, View = 220 },
 
             new Recruitment { Id = 8, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển trợ giảng Toán", Status = 1, Quantity = 4, Experience = "Junior", Salary = 15, CompanyId = 3, Description = "Trợ giảng Toán", Type = "Part-time", Deadline = new DateTime(2025, 4, 28), Rank = "C", CategoryId = 3, View = 70 },
 
-            new Recruitment { Id = 9, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển giảng viên đại học", Status = 5, Quantity = 2, Experience = "Senior", Salary = 40, CompanyId = 3, Description = "Giảng viên Đại học", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "A", CategoryId = 3, View = 3 },
+            new Recruitment { Id = 9, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển giảng viên đại học", Status = 1, Quantity = 2, Experience = "Senior", Salary = 40, CompanyId = 3, Description = "Giảng viên Đại học", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "A", CategoryId = 3, View = 3 },
 
             // Engineering Jobs
-            new Recruitment { Id = 10, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ sư xây dựng", Status = 3, Quantity = 4, Experience = "Mid", Salary = 28, CompanyId = 4, Description = "Kỹ sư xây dựng", Type = "Full-time", Deadline = new DateTime(2025, 4, 22), Rank = "B", CategoryId = 4, View = 175 },
+            new Recruitment { Id = 10, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ sư xây dựng", Status = 1, Quantity = 4, Experience = "Mid", Salary = 28, CompanyId = 4, Description = "Kỹ sư xây dựng", Type = "Full-time", Deadline = new DateTime(2025, 4, 22), Rank = "B", CategoryId = 4, View = 175 },
 
-            new Recruitment { Id = 11, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kiến trúc sư", Status = 4, Quantity = 2, Experience = "Senior", Salary = 38, CompanyId = 4, Description = "Kiến trúc sư", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "A", CategoryId = 4, View = 240 },
+            new Recruitment { Id = 11, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kiến trúc sư", Status = 1, Quantity = 2, Experience = "Senior", Salary = 38, CompanyId = 4, Description = "Kiến trúc sư", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "A", CategoryId = 4, View = 240 },
 
-            new Recruitment { Id = 12, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ thuật viên điện", Status = 2, Quantity = 5, Experience = "Junior", Salary = 20, CompanyId = 4, Description = "Kỹ thuật viên điện", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "C", CategoryId = 4, View = 95 },
+            new Recruitment { Id = 12, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ thuật viên điện", Status = 1, Quantity = 5, Experience = "Junior", Salary = 20, CompanyId = 4, Description = "Kỹ thuật viên điện", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "C", CategoryId = 4, View = 95 },
 
             // Finance Jobs
-            new Recruitment { Id = 13, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kế toán trưởng", Status = 5, Quantity = 2, Experience = "Senior", Salary = 45, CompanyId = 5, Description = "Kế toán trưởng", Type = "Full-time", Deadline = new DateTime(2025, 4, 20), Rank = "A", CategoryId = 5, View = 260 },
+            new Recruitment { Id = 13, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kế toán trưởng", Status = 1, Quantity = 2, Experience = "Senior", Salary = 45, CompanyId = 5, Description = "Kế toán trưởng", Type = "Full-time", Deadline = new DateTime(2025, 4, 20), Rank = "A", CategoryId = 5, View = 260 },
 
-            new Recruitment { Id = 14, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên tài chính", Status = 3, Quantity = 4, Experience = "Mid", Salary = 30, CompanyId = 5, Description = "Chuyên viên tài chính", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "B", CategoryId = 5, View = 180 },
+            new Recruitment { Id = 14, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên tài chính", Status = 1, Quantity = 4, Experience = "Mid", Salary = 30, CompanyId = 5, Description = "Chuyên viên tài chính", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "B", CategoryId = 5, View = 180 },
 
-            new Recruitment { Id = 15, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên thuế", Status = 2, Quantity = 6, Experience = "Junior", Salary = 22, CompanyId = 1, Description = "Nhân viên thuế", Type = "Full-time", Deadline = new DateTime(2025, 4, 18), Rank = "C", CategoryId = 5, View = 110 },
-             new Recruitment { Id = 16, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên marketing", Status = 3, Quantity = 4, Experience = "Mid", Salary = 28, CompanyId = 6, Description = "Chuyên viên marketing", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 6, View = 150 },
+            new Recruitment { Id = 15, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên thuế", Status = 1, Quantity = 6, Experience = "Junior", Salary = 22, CompanyId = 1, Description = "Nhân viên thuế", Type = "Full-time", Deadline = new DateTime(2025, 4, 18), Rank = "C", CategoryId = 5, View = 110 },
+             new Recruitment { Id = 16, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên marketing", Status = 1, Quantity = 4, Experience = "Mid", Salary = 28, CompanyId = 6, Description = "Chuyên viên marketing", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 6, View = 150 },
 
-    new Recruitment { Id = 17, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên gia SEO", Status = 2, Quantity = 3, Experience = "Senior", Salary = 35, CompanyId = 6, Description = "Chuyên gia SEO", Type = "Full-time", Deadline = new DateTime(2025, 5, 5), Rank = "A", CategoryId = 6, View = 2 },
+    new Recruitment { Id = 17, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên gia SEO", Status = 1, Quantity = 3, Experience = "Senior", Salary = 35, CompanyId = 6, Description = "Chuyên gia SEO", Type = "Full-time", Deadline = new DateTime(2025, 5, 5), Rank = "A", CategoryId = 6, View = 2 },
 
     new Recruitment { Id = 18, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển thực tập sinh marketing", Status = 1, Quantity = 6, Experience = "Fresher", Salary = 12, CompanyId = 6, Description = "Thực tập sinh marketing", Type = "Intern", Deadline = new DateTime(2025, 4, 28), Rank = "C", CategoryId = 6, View = 80 },
 
     // Customer Service Jobs
-    new Recruitment { Id = 19, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên chăm sóc khách hàng", Status = 2, Quantity = 8, Experience = "Junior", Salary = 18, CompanyId = 7, Description = "Chăm sóc khách hàng", Type = "Full-time", Deadline = new DateTime(2025, 4, 22), Rank = "B", CategoryId = 7, View = 130 },
+    new Recruitment { Id = 19, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên chăm sóc khách hàng", Status = 1, Quantity = 8, Experience = "Junior", Salary = 18, CompanyId = 7, Description = "Chăm sóc khách hàng", Type = "Full-time", Deadline = new DateTime(2025, 4, 22), Rank = "B", CategoryId = 7, View = 130 },
 
-    new Recruitment { Id = 20, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên telesales", Status = 3, Quantity = 10, Experience = "Junior", Salary = 20, CompanyId = 7, Description = "Nhân viên telesales", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "C", CategoryId = 7, View = 110 },
+    new Recruitment { Id = 20, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên telesales", Status = 1, Quantity = 10, Experience = "Junior", Salary = 20, CompanyId = 7, Description = "Nhân viên telesales", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "C", CategoryId = 7, View = 110 },
 
-    new Recruitment { Id = 21, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển trưởng nhóm CSKH", Status = 4, Quantity = 3, Experience = "Mid", Salary = 28, CompanyId = 9, Description = "Trưởng nhóm CSKH", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "A", CategoryId = 7, View = 170 },
+    new Recruitment { Id = 21, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển trưởng nhóm CSKH", Status = 1, Quantity = 3, Experience = "Mid", Salary = 28, CompanyId = 9, Description = "Trưởng nhóm CSKH", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "A", CategoryId = 7, View = 170 },
 
     // Logistics & Supply Chain Jobs
-    new Recruitment { Id = 22, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển quản lý kho vận", Status = 5, Quantity = 2, Experience = "Senior", Salary = 40, CompanyId = 9, Description = "Quản lý kho vận", Type = "Full-time", Deadline = new DateTime(2025, 4, 18), Rank = "A", CategoryId = 8, View = 250 },
+    new Recruitment { Id = 22, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển quản lý kho vận", Status = 1, Quantity = 2, Experience = "Senior", Salary = 40, CompanyId = 9, Description = "Quản lý kho vận", Type = "Full-time", Deadline = new DateTime(2025, 4, 18), Rank = "A", CategoryId = 8, View = 250 },
 
-    new Recruitment { Id = 23, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên vận hành logistics", Status = 2, Quantity = 6, Experience = "Mid", Salary = 30, CompanyId = 9, Description = "Nhân viên vận hành logistics", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 8, View = 180 },
+    new Recruitment { Id = 23, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên vận hành logistics", Status = 1, Quantity = 6, Experience = "Mid", Salary = 30, CompanyId = 9, Description = "Nhân viên vận hành logistics", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 8, View = 180 },
 
     new Recruitment { Id = 24, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển tài xế giao hàng", Status = 1, Quantity = 10, Experience = "Junior", Salary = 22, CompanyId = 9, Description = "Tài xế giao hàng", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "C", CategoryId = 8, View = 120 },
 // Legal & Compliance Jobs
-new Recruitment { Id = 25, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên pháp lý", Status = 3, Quantity = 4, Experience = "Mid", Salary = 30, CompanyId = 9, Description = "Chuyên viên pháp lý", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 11, View = 90 },
+new Recruitment { Id = 25, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên pháp lý", Status = 1, Quantity = 4, Experience = "Mid", Salary = 30, CompanyId = 9, Description = "Chuyên viên pháp lý", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 11, View = 90 },
 
-new Recruitment { Id = 26, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển luật sư doanh nghiệp", Status = 5, Quantity = 2, Experience = "Senior", Salary = 50, CompanyId = 9, Description = "Luật sư doanh nghiệp", Type = "Full-time", Deadline = new DateTime(2025, 5, 15), Rank = "A", CategoryId = 11, View = 110 },
+new Recruitment { Id = 26, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển luật sư doanh nghiệp", Status = 1, Quantity = 2, Experience = "Senior", Salary = 50, CompanyId = 9, Description = "Luật sư doanh nghiệp", Type = "Full-time", Deadline = new DateTime(2025, 5, 15), Rank = "A", CategoryId = 11, View = 110 },
 
 new Recruitment { Id = 27, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển trợ lý luật sư", Status = 1, Quantity = 6, Experience = "Junior", Salary = 22, CompanyId = 9, Description = "Trợ lý luật sư", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "C", CategoryId = 11, View = 130 },
 
 // Creative & Design Jobs
-new Recruitment { Id = 28, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển thiết kế đồ họa", Status = 2, Quantity = 4, Experience = "Mid", Salary = 25, CompanyId = 1, Description = "Thiết kế đồ họa", Type = "Full-time", Deadline = new DateTime(2025, 5, 1), Rank = "B", CategoryId = 12, View = 150 },
+new Recruitment { Id = 28, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển thiết kế đồ họa", Status = 1, Quantity = 4, Experience = "Mid", Salary = 25, CompanyId = 1, Description = "Thiết kế đồ họa", Type = "Full-time", Deadline = new DateTime(2025, 5, 1), Rank = "B", CategoryId = 12, View = 150 },
 
-new Recruitment { Id = 29, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển UI/UX Designer", Status = 3, Quantity = 3, Experience = "Mid", Salary = 30, CompanyId = 1, Description = "UI/UX Designer", Type = "Full-time", Deadline = new DateTime(2025, 5, 12), Rank = "B", CategoryId = 12, View = 170 },
+new Recruitment { Id = 29, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển UI/UX Designer", Status = 1, Quantity = 3, Experience = "Mid", Salary = 30, CompanyId = 1, Description = "UI/UX Designer", Type = "Full-time", Deadline = new DateTime(2025, 5, 12), Rank = "B", CategoryId = 12, View = 170 },
 
-new Recruitment { Id = 30, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên thiết kế nội thất", Status = 2, Quantity = 4, Experience = "Mid", Salary = 28, CompanyId = 9, Description = "Thiết kế nội thất", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "B", CategoryId = 12, View = 190 },
+new Recruitment { Id = 30, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên thiết kế nội thất", Status = 1, Quantity = 4, Experience = "Mid", Salary = 28, CompanyId = 9, Description = "Thiết kế nội thất", Type = "Full-time", Deadline = new DateTime(2025, 4, 25), Rank = "B", CategoryId = 12, View = 190 },
 
 // Manufacturing & Production Jobs
 new Recruitment { Id = 31, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển công nhân sản xuất", Status = 1, Quantity = 10, Experience = "Junior", Salary = 15, CompanyId = 1, Description = "Công nhân sản xuất", Type = "Full-time", Deadline = new DateTime(2025, 5, 2), Rank = "C", CategoryId = 13, View = 210 },
 
-new Recruitment { Id = 32, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ sư cơ khí", Status = 3, Quantity = 4, Experience = "Mid", Salary = 35, CompanyId = 1, Description = "Kỹ sư cơ khí", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 13, View = 230 },
+new Recruitment { Id = 32, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển kỹ sư cơ khí", Status = 1, Quantity = 4, Experience = "Mid", Salary = 35, CompanyId = 1, Description = "Kỹ sư cơ khí", Type = "Full-time", Deadline = new DateTime(2025, 4, 30), Rank = "B", CategoryId = 13, View = 230 },
 
-new Recruitment { Id = 33, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển giám sát sản xuất", Status = 4, Quantity = 3, Experience = "Senior", Salary = 40, CompanyId = 1, Description = "Giám sát sản xuất", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "A", CategoryId = 13, View = 250 },
+new Recruitment { Id = 33, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển giám sát sản xuất", Status = 1, Quantity = 3, Experience = "Senior", Salary = 40, CompanyId = 1, Description = "Giám sát sản xuất", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "A", CategoryId = 13, View = 250 },
 
 // Retail & E-Commerce Jobs
 new Recruitment { Id = 34, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển nhân viên bán hàng online", Status = 1, Quantity = 6, Experience = "Junior", Salary = 14, CompanyId = 1, Description = "Nhân viên bán hàng online", Type = "Full-time", Deadline = new DateTime(2025, 5, 1), Rank = "C", CategoryId = 15, View = 30 },
 
-new Recruitment { Id = 35, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển quản lý cửa hàng", Status = 3, Quantity = 3, Experience = "Mid", Salary = 28, CompanyId = 1, Description = "Quản lý cửa hàng", Type = "Full-time", Deadline = new DateTime(2025, 4, 28), Rank = "B", CategoryId = 15, View = 50 },
+new Recruitment { Id = 35, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển quản lý cửa hàng", Status = 1, Quantity = 3, Experience = "Mid", Salary = 28, CompanyId = 1, Description = "Quản lý cửa hàng", Type = "Full-time", Deadline = new DateTime(2025, 4, 28), Rank = "B", CategoryId = 15, View = 50 },
 
-new Recruitment { Id = 36, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên TMĐT", Status = 2, Quantity = 4, Experience = "Mid", Salary = 30, CompanyId = 1, Description = "Chuyên viên TMĐT", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "B", CategoryId = 15, View = 70 },
+new Recruitment { Id = 36, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển chuyên viên TMĐT", Status = 1, Quantity = 4, Experience = "Mid", Salary = 30, CompanyId = 1, Description = "Chuyên viên TMĐT", Type = "Full-time", Deadline = new DateTime(2025, 5, 10), Rank = "B", CategoryId = 15, View = 70 },
 
 // Hospitality & Tourism Jobs
 new Recruitment { Id = 37, Address = "Hà Nội", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển lễ tân khách sạn", Status = 1, Quantity = 5, Experience = "Junior", Salary = 16, CompanyId = 8, Description = "Lễ tân khách sạn", Type = "Full-time", Deadline = new DateTime(2025, 5, 5), Rank = "C", CategoryId = 16, View = 90 },
 
-new Recruitment { Id = 38, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển quản lý khách sạn", Status = 5, Quantity = 2, Experience = "Senior", Salary = 45, CompanyId = 8, Description = "Quản lý khách sạn", Type = "Full-time", Deadline = new DateTime(2025, 5, 15), Rank = "A", CategoryId = 16, View = 110 },
+new Recruitment { Id = 38, Address = "TP. HCM", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển quản lý khách sạn", Status = 1, Quantity = 2, Experience = "Senior", Salary = 45, CompanyId = 8, Description = "Quản lý khách sạn", Type = "Full-time", Deadline = new DateTime(2025, 5, 15), Rank = "A", CategoryId = 16, View = 110 },
 
-new Recruitment { Id = 39, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển hướng dẫn viên du lịch", Status = 2, Quantity = 4, Experience = "Mid", Salary = 22, CompanyId = 8, Description = "Hướng dẫn viên du lịch", Type = "Full-time", Deadline = new DateTime(2025, 4, 28), Rank = "B", CategoryId = 16, View = 130 }
+new Recruitment { Id = 39, Address = "Đà Nẵng", CreatedAt = new DateTime(2025, 3, 26), Title = "Tuyển hướng dẫn viên du lịch", Status = 1, Quantity = 4, Experience = "Mid", Salary = 22, CompanyId = 8, Description = "Hướng dẫn viên du lịch", Type = "Full-time", Deadline = new DateTime(2025, 4, 28), Rank = "B", CategoryId = 16, View = 130 }
 
         );
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Net;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Web_Server.Interfaces;
+﻿using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
 
@@ -131,30 +125,6 @@ namespace Web_Server.Services
             return File.Exists(filePath) ? filePath : null;
         }
 
-        private async Task<string> SaveLogoFromUrlAsync(string logoUrl)
-        {
-            if (string.IsNullOrEmpty(logoUrl))
-                throw new ArgumentException("Logo URL cannot be empty");
-
-            string fileExtension = Path.GetExtension(new Uri(logoUrl).AbsolutePath);
-            string fileName = $"{Guid.NewGuid()}{fileExtension}";
-
-            string uploadPath = Path.Combine(_environment.WebRootPath, "CompanyLogos");
-            if (!Directory.Exists(uploadPath))
-            {
-                Directory.CreateDirectory(uploadPath);
-            }
-
-            string filePath = Path.Combine(uploadPath, fileName);
-
-            using (WebClient client = new WebClient())
-            {
-                await client.DownloadFileTaskAsync(new Uri(logoUrl), filePath);
-            }
-
-            // ✅ Trả về đường dẫn đầy đủ của ảnh
-            return $"/CompanyLogos/{fileName}";
-        }
         public async Task<Company> UpdateCompanyAsync(CompanyUpdateModel companyModel)
         {
             var existingCompany = await _companyRepository.GetByIdAsync(companyModel.Id);
@@ -180,6 +150,11 @@ namespace Web_Server.Services
         }
 
         public Task<Company> UpdateCompanyAsync(int id, CompanyUpdateModel companyModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Company> GetCompanyProfileAsync()
         {
             throw new NotImplementedException();
         }

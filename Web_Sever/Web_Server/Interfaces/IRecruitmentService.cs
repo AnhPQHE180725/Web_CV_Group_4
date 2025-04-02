@@ -23,6 +23,7 @@ namespace Web_Server.Interfaces
         Task<Recruitment> GetRecruitmentById(int id);
 
         Task<bool> UpdateRecruitmentView(int id);
+        Task<int> GetTotalRecruitmentsByStatus(int status);
 
     }
 }

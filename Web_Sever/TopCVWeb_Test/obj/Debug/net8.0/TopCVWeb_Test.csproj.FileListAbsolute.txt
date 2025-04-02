@@ -328,20 +328,21 @@ D:\MockProject\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_
 D:\MockProject\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.genruntimeconfig.cache
 D:\MockProject\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\ref\TopCVWeb_Test.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\CoverletSourceRootsMapping_TopCVWeb_Test
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\testhost.dll
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.deps.json
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.runtimeconfig.json
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\appsettings.Development.json
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\appsettings.json
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.staticwebassets.runtime.json
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.staticwebassets.endpoints.json
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.exe
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\testhost.exe
-D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\testhost.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\NUnit3.TestAdapter.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\NUnit3.TestAdapter.pdb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\nunit.engine.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\nunit.engine.api.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\nunit.engine.core.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\testcentric.engine.metadata.dll
-D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.deps.json
-D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.runtimeconfig.json
-D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.staticwebassets.endpoints.json
-D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.exe
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\TopCVWeb_Test.deps.json
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\TopCVWeb_Test.runtimeconfig.json
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\TopCVWeb_Test.dll
@@ -349,6 +350,7 @@ D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\TopCVWeb_Test.p
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Azure.Core.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Azure.Identity.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Castle.Core.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\MailKit.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -384,6 +386,7 @@ D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Microsoft.TestP
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\MimeKit.dll
+D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Moq.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\NuGet.Frameworks.dll
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\nunit.framework.dll
@@ -491,4 +494,3 @@ D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\refint\TopCVWeb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.pdb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.genruntimeconfig.cache
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\ref\TopCVWeb_Test.dll
-D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Web_Server.staticwebassets.runtime.json

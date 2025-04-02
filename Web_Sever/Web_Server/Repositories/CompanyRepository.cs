@@ -95,5 +95,9 @@ namespace Web_Server.Repositories
             return company;
         }
 
+        public Task<Company> GetCompanyProfileAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

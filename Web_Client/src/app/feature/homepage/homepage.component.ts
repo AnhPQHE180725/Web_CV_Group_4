@@ -24,7 +24,9 @@ import { CompanyFollowService } from '../../services/company-follow.service';
 export class HomepageComponent {
   categories: Category[] = [];
   companies: Company[] = [];
+  allCompanies: Company[] = [];
   recruitments: Recruitment[] = [];
+  allRecruitments: Recruitment[] = [];
   images: string[] = [
     'assets/images/slide1.png',
     'assets/images/slide2.png',
@@ -37,6 +39,7 @@ export class HomepageComponent {
   followedCompanies: number[] = [];
   totalCompanies: number = 0;
   totalRecruitments: number = 0;
+  currentDate: string = '';
 
   constructor(
     private categoryService: CategoryService,
@@ -51,6 +54,7 @@ export class HomepageComponent {
   ) { }
 
   ngOnInit(): void {
+    this.currentDate = new Date().toLocaleDateString('vi-VN');
     this.categoryService.getTopCategories().subscribe({
       next: (data) => {
         this.categories = data;
@@ -61,17 +65,16 @@ export class HomepageComponent {
 
     this.companyService.getAllCompanies().subscribe({
       next: (data) => {
-        this.companies = data;
+        this.allCompanies = data;
         this.totalCompanies = data.length;
         console.log('Total companies:', this.totalCompanies);
       },
       error: (err) => console.error('Error fetching total companies:', err)
     });
 
-    this.recruitmentService.getAllRecruitments().subscribe({
+    this.recruitmentService.getRecruitmentByStatus(1).subscribe({ // goi them phuong thuc ma lay all company dung sua cai nay
       next: (data) => {
-        this.recruitments = data;
-        this.totalRecruitments = data.length;
+        this.totalRecruitments = data;
         console.log('Total recruitments:', this.totalRecruitments);
       },
       error: (err) => console.error('Error fetching total recruitments:', err)
