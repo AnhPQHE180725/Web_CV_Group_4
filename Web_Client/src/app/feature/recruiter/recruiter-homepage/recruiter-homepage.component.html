@@ -7,6 +7,7 @@
 <table class="table table-bordered table-striped">
     <thead class="table-dark">
         <tr>
+            <th>Công ty</th>
             <th>Tiêu đề</th>
             <th>Mô tả</th>
             <th>Kinh Nghiệm</th>
@@ -19,6 +20,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let recruitment of recruitments">
+            <td>{{ recruitment.companyName }}</td>
             <td>{{ recruitment.title }}</td>
             <td>{{ recruitment.description }}</td>
             <td>{{ recruitment.experience }}</td>

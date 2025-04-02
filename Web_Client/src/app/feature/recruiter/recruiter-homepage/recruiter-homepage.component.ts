@@ -54,9 +54,10 @@ export class RecruiterHomepageComponent implements OnInit {
     this.companyService.getUserCompanies().subscribe({
       next: (companies) => {
         if (companies && companies.length > 0) {
-          // Assuming the user has at least one company, use the first company in the list
-          const companyName = companies[0].name; // Get the name of the first company
-          this.loadRecruitments(companyName); // Load recruitments based on company name
+          // Lặp qua tất cả công ty của user và tải dữ liệu tuyển dụng
+          companies.forEach(company => {
+            this.loadRecruitments(company.name);
+          });
         } else {
           console.error('No companies found for the logged-in user');
         }
@@ -68,12 +69,16 @@ export class RecruiterHomepageComponent implements OnInit {
   loadRecruitments(companyName: string): void {
     this.recruitmentService.getRecruitmentsByCompanyName(companyName).subscribe({
       next: (data) => {
-        this.recruitments = data;
-        console.log('Loaded recruitments:', data);
+        if (data && data.length > 0) {
+          // Thêm vào mảng recruitments thay vì ghi đè
+          this.recruitments = [...this.recruitments, ...data];
+        }
+        console.log(`Loaded recruitments for ${companyName}:`, data);
       },
-      error: (err) => console.error('Error loading recruitments:', err)
+      error: (err) => console.error(`Error loading recruitments for ${companyName}:`, err)
     });
   }
+
 
 
 
