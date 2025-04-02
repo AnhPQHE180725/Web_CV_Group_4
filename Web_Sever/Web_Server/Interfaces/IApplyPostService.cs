@@ -11,4 +11,4 @@ namespace Web_Server.Interfaces
         Task<List<ApplyPost>> GetApplicationsByPostIdAsync(int postId);
         Task<bool> UpdateApplicationStatusAsync(int applicationId, int status);
     }
-} 
+}

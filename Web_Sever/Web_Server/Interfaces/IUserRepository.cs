@@ -20,7 +20,7 @@ namespace Web_Server.Interfaces
         Task UpdatePasswordAsync(int userId, string newPassword);
 
         Task<ApplyPost> ApplyCV(int id);
-        Task<ApplyPost> RejectCV(int id);   
+        Task<ApplyPost> RejectCV(int id);
 
 
         Task<User> GetUserByIdAsync(int id);

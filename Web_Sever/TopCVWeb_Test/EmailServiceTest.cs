@@ -1,10 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Web_Server.Services;
 
 namespace TopCVWeb_Test
@@ -34,7 +29,7 @@ namespace TopCVWeb_Test
         {
             string realEmail = "quanganhpham2k4@gmail.com";
             string resetLink = "http://localhost/reset-password/token";
-            var result= await _emailService.SendPasswordResetEmailAsync(realEmail, resetLink);
+            var result = await _emailService.SendPasswordResetEmailAsync(realEmail, resetLink);
             Assert.IsTrue(result);
         }
 

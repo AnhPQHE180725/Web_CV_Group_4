@@ -36,23 +36,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CompanyLogos\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>Web_Server</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Web_Server</BasePath>
-      <RelativePath>CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf</RelativePath>
+      <RelativePath>CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nafg3q7bai</Fingerprint>
-      <Integrity>kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=</Integrity>
+      <Fingerprint>86ecjpiua8</Fingerprint>
+      <Integrity>wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf'))">
       <SourceType>Package</SourceType>

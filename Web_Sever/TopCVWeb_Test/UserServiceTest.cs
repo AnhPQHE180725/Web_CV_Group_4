@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Web_Server.Data;
-using Web_Server.Interfaces;
 using Web_Server.Repositories;
 using Web_Server.Services;
 using Web_Server.ViewModels;
@@ -84,7 +78,7 @@ namespace TopCVWeb_Test
         public async Task FindEmailExists_ExistsEmail_ReturnUser()
         {
             string email = "alice@example.com";
-            
+
             var result = await _userService.FindEmailExists(email);
 
             // Kiểm tra kết quả trả về
@@ -114,8 +108,8 @@ namespace TopCVWeb_Test
             {
                 Email = "invalid-email",
                 Password = "123",
-                ConfirmPassword ="123",
-                FullName ="Invalid",
+                ConfirmPassword = "123",
+                FullName = "Invalid",
                 RoleName = "Candidate"
 
             };
@@ -179,7 +173,7 @@ namespace TopCVWeb_Test
         public async Task ForgotPasswordAsync_NotExistMail_ReturnFalse()
         {
             string email = "invalidemail@gmail.com";
-            
+
             var result = await _userService.ForgotPasswordAsync(email);
             Assert.IsFalse(result);
         }
@@ -190,7 +184,7 @@ namespace TopCVWeb_Test
         [Test]
         public async Task ResetPasswordAsync_NotValidToken_ReturnFalse()
         {
-            var result = await _userService.ResetPasswordAsync("NotValidToken","1234");
+            var result = await _userService.ResetPasswordAsync("NotValidToken", "1234");
             Assert.IsFalse(result);
         }
 

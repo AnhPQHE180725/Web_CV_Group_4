@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Web_Server.Data;
 using Web_Server.Repositories;
 using Web_Server.Services;
@@ -28,7 +23,7 @@ namespace TopCVWeb_Test
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlServer(connectionString) 
+                .UseSqlServer(connectionString)
                 .Options;
 
             _context = new AppDbContext(options);
@@ -36,12 +31,12 @@ namespace TopCVWeb_Test
 
 
             _recruitmentRepository = new RecruitmentRepository(_context);
-            _recruitmentService = new RecruitmentService(_recruitmentRepository,_httpContextAccessor);
+            _recruitmentService = new RecruitmentService(_recruitmentRepository, _httpContextAccessor);
         }
         [Test]
         public async Task GetRecruitmentsByCategory_ShouldReturnRecruitments_WhenCalledWithValidId()
         {
-            
+
             var result = await _recruitmentService.GetRecruitmentsByCategory(1);
 
             Assert.IsNotNull(result);
@@ -50,7 +45,7 @@ namespace TopCVWeb_Test
         [Test]
         public async Task GetRecruitmentsByCategory_ShouldNotReturnRecruitments_WhenCalledWithInValidId()
         {
-           
+
             var result = await _recruitmentService.GetRecruitmentsByCategory(10000);
 
             Assert.IsNotNull(result);
@@ -62,8 +57,8 @@ namespace TopCVWeb_Test
         public async Task GetRecruitmentsByCompany_ShouldNotReturnRecruitments_WhenCalledWithInValidId()
         {
             int id = 10000;
-           var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetRecruitmentsByCompany(id));
-            Assert.AreEqual($"Not found Recruitment with company id={id}",ex.Message);
+            var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetRecruitmentsByCompany(id));
+            Assert.AreEqual($"Not found Recruitment with company id={id}", ex.Message);
 
         }
         [Test]
@@ -78,10 +73,10 @@ namespace TopCVWeb_Test
         [Test]
         public async Task GetTop2Recruitments_ShouldReturnTwoRecruitments()
         {
-            
+
             var result = await _recruitmentService.GetTop2Recruitments();
 
-            
+
             Assert.IsNotNull(result);
             Assert.AreEqual(2, result.Count, "Should return exactly 2 recruitments");
 

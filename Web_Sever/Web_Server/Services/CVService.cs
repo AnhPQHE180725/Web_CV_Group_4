@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Http;
-using Web_Server.Models;
 using Web_Server.Interfaces;
+using Web_Server.Models;
 
 namespace Web_Server.Services
 {
@@ -12,7 +11,7 @@ namespace Web_Server.Services
         private const string CV_FOLDER = "CVs";
 
         public CVService(
-            ICVRepository cvRepository, 
+            ICVRepository cvRepository,
             IWebHostEnvironment environment,
             IHttpContextAccessor httpContextAccessor)
         {
@@ -128,4 +127,4 @@ namespace Web_Server.Services
             return File.Exists(filePath) ? filePath : null;
         }
     }
-} 
+}

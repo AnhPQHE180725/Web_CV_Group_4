@@ -23,7 +23,7 @@ namespace Web_Server.Services
         private MimeMessage CreateEmail(string toEmail, string subject, string body)
         {
             var email = new MimeMessage();
-            email.From.Add(new MailboxAddress("CV_Web_Email_Sender", 
+            email.From.Add(new MailboxAddress("CV_Web_Email_Sender",
                 _configuration["EmailSettings:SenderEmail"]));  // Tên người gửi
             email.To.Add(new MailboxAddress("", toEmail));      // Tên người nhận
             email.Subject = subject;                            // Tiêu đề email
@@ -95,7 +95,7 @@ namespace Web_Server.Services
             </body>
             </html>");
 
-          return await SendEmailAsync(email);                // Gửi email
+            return await SendEmailAsync(email);                // Gửi email
 
         }
 

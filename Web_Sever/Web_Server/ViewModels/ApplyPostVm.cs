@@ -6,10 +6,10 @@ namespace Web_Server.ViewModels
     {
         [Required]
         public int PostId { get; set; }
-        
+
         [Required]
         public IFormFile CVFile { get; set; }
-        
+
         [Required]
         public string Text { get; set; }
     }
@@ -18,8 +18,8 @@ namespace Web_Server.ViewModels
     {
         [Required]
         public int PostId { get; set; }
-        
+
         [Required]
         public string Text { get; set; }
     }
-} 
+}

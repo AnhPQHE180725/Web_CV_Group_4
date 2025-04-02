@@ -10,4 +10,4 @@ public class CompanyUpdateModel
     public string PhoneNumber { get; set; }
     public string? Logo { get; set; }
     public int Status { get; set; }
-} 
+}

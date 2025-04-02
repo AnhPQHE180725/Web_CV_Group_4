@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http;
 using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
@@ -88,7 +87,7 @@ namespace Web_Server.Services
             {
                 // Upload new CV
                 var cv = await _cvService.UploadCVAsync(applyVm.CVFile);
-                
+
                 // Create new application with new CV
                 var newApplication = new ApplyPost
                 {
@@ -170,4 +169,4 @@ namespace Web_Server.Services
             return await _applyPostRepository.UpdateAsync(application) != null;
         }
     }
-} 
+}

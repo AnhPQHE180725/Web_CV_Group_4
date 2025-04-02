@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iLoQbtfo4+7t/IuLzQNF2FtGr4C7+k8chmuADHQF/Lk=",
+  "Hash": "ma5yX5bGccNTIZHejzNOR+jY7mdae7dwqQI7bj4MKxI=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -59,12 +59,12 @@
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg"
     },
     {
-      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
       "BasePath": "_content/Web_Server",
-      "RelativePath": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy#[.{fingerprint}]?.pdf",
+      "RelativePath": "CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2#[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -73,11 +73,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nafg3q7bai",
-      "Integrity": "kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=",
+      "Fingerprint": "86ecjpiua8",
+      "Integrity": "wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf"
+      "OriginalItemSpec": "wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf"
     },
     {
       "Identity": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
@@ -288,8 +288,8 @@
       ]
     },
     {
-      "Route": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.nafg3q7bai.pdf",
-      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Route": "CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.86ecjpiua8.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -298,7 +298,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1054225"
+          "Value": "903186"
         },
         {
           "Name": "Content-Type",
@@ -306,11 +306,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=\""
+          "Value": "\"wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 12:45:41 GMT"
+          "Value": "Wed, 02 Apr 2025 15:46:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -320,21 +320,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nafg3q7bai"
+          "Value": "86ecjpiua8"
         },
         {
           "Name": "label",
-          "Value": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf"
+          "Value": "CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw="
+          "Value": "sha256-wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY="
         }
       ]
     },
     {
-      "Route": "CVs/7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
-      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\7686f8a3-8af8-4d08-8766-2beb39ad005f_cvHuy.pdf",
+      "Route": "CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
+      "AssetFile": "D:\\Du_An\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -343,7 +343,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1054225"
+          "Value": "903186"
         },
         {
           "Name": "Content-Type",
@@ -351,11 +351,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw=\""
+          "Value": "\"wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 12:45:41 GMT"
+          "Value": "Wed, 02 Apr 2025 15:46:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -365,7 +365,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kZMajDxMtXKjFe2oXniFOGGZjX5sR0yN2Ql7WgWzhaw="
+          "Value": "sha256-wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY="
         }
       ]
     },

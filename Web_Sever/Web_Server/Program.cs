@@ -1,12 +1,12 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 using Web_Server.Data;
 using Web_Server.Interfaces;
-using Web_Server.Services;
 using Web_Server.Repositories;
-using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
+using Web_Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -121,4 +121,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();  
+app.Run();
