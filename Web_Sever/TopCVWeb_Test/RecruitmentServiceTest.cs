@@ -59,7 +59,7 @@ namespace TopCVWeb_Test
         }
 
         [Test]
-        public async Task GetRecruitmentsByCompany_ShouldNotReturnRecruitments_WhenCalledWithInValidId()
+        public async Task GetRecruitmentsByCompany_ShouldThrowExceptions_WhenCalledWithInValidId()
         {
             int id = 10000;
            var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetRecruitmentsByCompany(id));
