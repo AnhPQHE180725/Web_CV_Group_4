@@ -20,8 +20,8 @@
         
         <div class="profile-card">
             <div class="user-info">
-                <img [src]="userProfile.image || 'default-avatar.png'" alt="User Avatar" class="avatar">
-                <input type="file" class="avatar-input">
+                <img [src]="userProfile.image" alt="User Avatar" class="avatar">
+                <input type="file" (change)="onImageChange($event)" class="avatar-input">
                 <div>
                     <h3>{{ userProfile.fullName }}</h3>
                     <p>{{ userProfile.email }}</p>
