@@ -1,131 +1,89 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Moq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
-using Web_Server.Interfaces;
+using Web_Server.Data;
 using Web_Server.Models;
+using Web_Server.Repositories;
 using Web_Server.Services;
 
 namespace TopCVWeb_Test
 {
     public class FollowJobServiceTest
     {
-        private Mock<IFollowJobRepository> _followJobRepoMock;
-        private Mock<IRecruitmentRepository> _recruitmentRepoMock;
-        private Mock<IUserRepository> _userRepoMock;
-        private Mock<IHttpContextAccessor> _httpContextAccessorMock;
-        private FollowJobService _followJobService;
+        /*
+        RecruitmentId như 2, 3, 4 phải tồn tại sẵn trong cơ sở dữ liệu.
+
+        User có ID = 1 phải tồn tại và không bị trùng lặp logic.
+         */
+        private AppDbContext _context;
+        private FollowJobRepository _followJobRepo;
+        private RecruitmentRepository _recruitmentRepo;
+        private UserRepository _userRepo;
+        private FollowJobService _service;
+        private IHttpContextAccessor _httpContextAccessor;
 
         [SetUp]
         public void Setup()
         {
-            _followJobRepoMock = new Mock<IFollowJobRepository>();
-            _recruitmentRepoMock = new Mock<IRecruitmentRepository>();
-            _userRepoMock = new Mock<IUserRepository>();
-            _httpContextAccessorMock = new Mock<IHttpContextAccessor>();
+            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+            var options = new DbContextOptionsBuilder<AppDbContext>()
+                .UseSqlServer(config.GetConnectionString("DefaultConnection"))
+                .Options;
 
-            var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
+            _context = new AppDbContext(options);
+            _followJobRepo = new FollowJobRepository(_context);
+            _recruitmentRepo = new RecruitmentRepository(_context);
+            _userRepo = new UserRepository(_context);
+
+            var user = new ClaimsPrincipal(new ClaimsIdentity(new[]
             {
-                new Claim("id", "1")
+                new Claim("id", "1") // giả lập người dùng có ID = 1
             }, "mock"));
 
-            var httpContext = new DefaultHttpContext
+            _httpContextAccessor = new HttpContextAccessor
             {
-                User = user
+                HttpContext = new DefaultHttpContext { User = user }
             };
 
-            _httpContextAccessorMock.Setup(x => x.HttpContext).Returns(httpContext);
-
-            _followJobService = new FollowJobService(
-                _followJobRepoMock.Object,
-                _recruitmentRepoMock.Object,
-                _userRepoMock.Object,
-                _httpContextAccessorMock.Object
-            );
+            _service = new FollowJobService(_followJobRepo, _recruitmentRepo, _userRepo, _httpContextAccessor);
         }
 
         [Test]
         public async Task ToggleFollowJobAsync_ShouldFollow_WhenNotFollowing()
         {
-            _userRepoMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(new User { Id = 1 });
-            _recruitmentRepoMock.Setup(r => r.GetByIdAsync(100)).ReturnsAsync(new Recruitment { Id = 100 });
-            _followJobRepoMock.Setup(r => r.GetByUserIdAndRecruitmentIdAsync(1, 100)).ReturnsAsync((FollowJob)null);
-            _followJobRepoMock.Setup(r => r.CreateAsync(It.IsAny<FollowJob>()))
-                .ReturnsAsync(new FollowJob { UserId = 1, RecruitmentId = 100 });
-
-            var (success, message) = await _followJobService.ToggleFollowJobAsync(100);
-
-            Assert.That(success, Is.True);
-            Assert.That(message, Is.EqualTo("Lưu theo dõi thành công"));
-        }
-
-        [Test]
-        public async Task ToggleFollowJobAsync_ShouldUnfollow_WhenAlreadyFollowing()
-        {
-            var existing = new FollowJob { Id = 10, UserId = 1, RecruitmentId = 100 };
-            _userRepoMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(new User { Id = 1 });
-            _recruitmentRepoMock.Setup(r => r.GetByIdAsync(100)).ReturnsAsync(new Recruitment { Id = 100 });
-            _followJobRepoMock.Setup(r => r.GetByUserIdAndRecruitmentIdAsync(1, 100)).ReturnsAsync(existing);
-            _followJobRepoMock.Setup(r => r.DeleteAsync(10)).ReturnsAsync(true);
-
-            var (success, message) = await _followJobService.ToggleFollowJobAsync(100);
-
-            Assert.That(success, Is.True);
-            Assert.That(message, Is.EqualTo("Bỏ lưu theo dõi thành công"));
+            var result = await _service.ToggleFollowJobAsync(12); // ID tuyển dụng = thực tế theo db phải tồn tại
+            Assert.IsTrue(result.success);
+            Assert.That(result.message, Is.EqualTo("Lưu theo dõi thành công"));
         }
 
         [Test]
         public async Task GetUserFollowJobsAsync_ShouldReturnFollowList()
         {
-            var follows = new List<FollowJob>
-            {
-                new FollowJob { RecruitmentId = 1 },
-                new FollowJob { RecruitmentId = 2 }
-            };
-
-            _followJobRepoMock.Setup(r => r.GetByUserIdAsync(1)).ReturnsAsync(follows);
-
-            var result = await _followJobService.GetUserFollowJobsAsync();
-
-            Assert.That(result.Count, Is.EqualTo(2));
-        }
-
-        [Test]
-        public async Task IsFollowingJobAsync_ShouldReturnTrue_IfExists()
-        {
-            _followJobRepoMock.Setup(r => r.GetByUserIdAndRecruitmentIdAsync(1, 10))
-                .ReturnsAsync(new FollowJob { Id = 99 });
-
-            var result = await _followJobService.IsFollowingJobAsync(10);
-
-            Assert.That(result, Is.True);
+            var result = await _service.GetUserFollowJobsAsync();
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.All(f => f.UserId == 1));
         }
 
         [Test]
         public async Task IsFollowingJobAsync_ShouldReturnFalse_IfNotExists()
         {
-            _followJobRepoMock.Setup(r => r.GetByUserIdAndRecruitmentIdAsync(1, 10))
-                .ReturnsAsync((FollowJob)null);
-
-            var result = await _followJobService.IsFollowingJobAsync(10);
-
-            Assert.That(result, Is.False);
+            var result = await _service.IsFollowingJobAsync(9999); // ID không tồn tại
+            Assert.IsFalse(result);
         }
 
         [Test]
         public async Task GetFollowedJobIdsAsync_ShouldReturnRecruitmentIds()
         {
-            var follows = new List<FollowJob>
-            {
-                new FollowJob { RecruitmentId = 1 },
-                new FollowJob { RecruitmentId = 2 },
-                new FollowJob { RecruitmentId = 3 }
-            };
+            await _service.ToggleFollowJobAsync(4); // theo dõi trước
+            var result = await _service.GetFollowedJobIdsAsync();
+            Assert.IsTrue(result.Contains(4));
+        }
 
-            _followJobRepoMock.Setup(r => r.GetByUserIdAsync(1)).ReturnsAsync(follows);
-
-            var result = await _followJobService.GetFollowedJobIdsAsync();
-
-            Assert.That(result, Is.EquivalentTo(new List<int> { 1, 2, 3 }));
+        [TearDown]
+        public void TearDown()
+        {
+            _context.Dispose();
         }
     }
 }

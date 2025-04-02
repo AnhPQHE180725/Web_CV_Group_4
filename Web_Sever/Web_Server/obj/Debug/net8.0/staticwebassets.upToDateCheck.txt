@@ -1,2 +1,4 @@
+wwwroot\CompanyLogos\a98f6731-698a-43eb-b79c-5e0126df4a84.png
+wwwroot\CompanyLogos\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg
 wwwroot\CVs\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf
 wwwroot\CVs\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf
