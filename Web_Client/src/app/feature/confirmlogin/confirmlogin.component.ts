@@ -37,7 +37,7 @@ export class ConfirmloginComponent {
         this.cookieService.delete('UserEmail', '/');
         
         alert('Xác minh thành công!');
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/recruiter');
       },
       error: () => {
         alert('Xác minh thất bại. Vui lòng thử lại!');
