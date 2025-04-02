@@ -44,6 +44,8 @@ namespace TopCVWeb_Test
             _userService = new UserService(_userRepository, null, null);  // Sử dụng null cho IMemoryCache và IEmailService
         }
 
+        //CheckLoginAsync
+
         // Kiểm tra đăng nhập với thông tin hợp lệ
         [Test]
         public async Task CheckLoginAsync_ValidCredentials_ReturnsUser()
@@ -71,7 +73,7 @@ namespace TopCVWeb_Test
             Assert.IsNull(result); // Kết quả phải là null vì thông tin đăng nhập sai
         }
 
-
+        //
 
 
         // Phương thức dọn dẹp sau khi kiểm thử (TearDown)
