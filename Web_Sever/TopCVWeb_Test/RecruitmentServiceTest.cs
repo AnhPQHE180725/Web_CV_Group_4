@@ -48,18 +48,17 @@ namespace TopCVWeb_Test
             Assert.IsTrue(result.Count > 0);
         }
         [Test]
-        public async Task GetRecruitmentsByCategory_ShouldNotReturnRecruitments_WhenCalledWithInValidId()
+        public async Task GetRecruitmentsByCategory_ShouldThrowException_WhenCalledWithInValidId()
         {
-           
-            var result = await _recruitmentService.GetRecruitmentsByCategory(10000);
+            int id = 10000;
+            var ex = Assert.ThrowsAsync<ArgumentException>( async() => await _recruitmentService.GetRecruitmentsByCategory(id));
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual(0, result.Count);
+            Assert.AreEqual($"Not found Recruitment with category id={id}", ex.Message);
 
         }
 
         [Test]
-        public async Task GetRecruitmentsByCompany_ShouldThrowExceptions_WhenCalledWithInValidId()
+        public async Task GetRecruitmentsByCompany_ShouldThrowException_WhenCalledWithInValidId()
         {
             int id = 10000;
            var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetRecruitmentsByCompany(id));
@@ -110,6 +109,24 @@ namespace TopCVWeb_Test
             var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetRecruitmentsByid(id));
             Assert.AreEqual($"Not found Recruitment with id={id}", ex.Message);
         }
+        [Test]
+        public async Task GetAllRecruitments_ShouldReturnRecruitments_WhenRecruitmentsExist()
+        {
+            
+            var result = await _recruitmentService.GetAllRecruitments();
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0, "Should return a list of recruitments");
+        }
+
+        [Test]
+        public void GetAllRecruitments_ShouldThrowException_WhenNoRecruitmentsExist()
+        {
+            
+            var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetAllRecruitments());
+            Assert.AreEqual("Recruitment list is null", ex.Message);
+        }
+
         [TearDown]
         public void TearDown()
         {
