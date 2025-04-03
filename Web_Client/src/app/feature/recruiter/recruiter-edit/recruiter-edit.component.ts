@@ -10,7 +10,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-
+import { forkJoin } from 'rxjs';
 @Component({
   selector: 'app-recruiter-edit',
   standalone: true,
@@ -62,13 +62,34 @@ export class RecruiterEditComponent implements OnInit {
       if (id) {
         this.isEditMode = true;
         this.selectedRecruitmentId = +id;
-        this.loadRecruitmentById(this.selectedRecruitmentId);
+
+        // Load tất cả dữ liệu cùng lúc
+        forkJoin({
+          companies: this.companyService.getUserCompanies(),
+          categories: this.categoryService.getAllCategories(),
+          recruitment: this.recruitmentService.getRecruitmentById(this.selectedRecruitmentId)
+        }).subscribe(({ companies, categories, recruitment }) => {
+          this.companyList = companies;
+          this.categoryList = categories;
+
+          // Tìm công ty & danh mục theo ID
+          const selectedCompany = companies.find(c => c.id === recruitment.companyId);
+          const selectedCategory = categories.find(cat => cat.id === recruitment.categoryId);
+
+          // Cập nhật form với giá trị ban đầu
+          this.recruitmentForm.patchValue({
+            ...recruitment,
+            companyName: selectedCompany ? selectedCompany.name : '',
+            categoryName: selectedCategory ? selectedCategory.name : ''
+          });
+        }, error => console.error('❌ Error loading data:', error));
+      } else {
+        // Nếu không phải chế độ chỉnh sửa thì chỉ load danh sách
+        this.loadCategories();
+        this.loadCompanies();
       }
     });
-    this.loadCategories()
-    this.loadCompanies();
   }
-
   loadRecruitments(): void {
     this.recruitmentService.getAllRecruitments().subscribe({
       next: (data) => (this.recruitments = data),
@@ -130,10 +151,20 @@ export class RecruiterEditComponent implements OnInit {
     this.recruitmentService.getRecruitmentById(id).subscribe({
       next: (recruitment) => {
         this.recruitmentForm.patchValue(recruitment);
+
+        // Tìm công ty & danh mục tương ứng để hiển thị đúng tên
+        const selectedCompany = this.companyList.find(c => c.id === recruitment.companyId);
+        const selectedCategory = this.categoryList.find(cat => cat.id === recruitment.categoryId);
+
+        this.recruitmentForm.patchValue({
+          companyName: selectedCompany ? selectedCompany.name : '',
+          categoryName: selectedCategory ? selectedCategory.name : ''
+        });
       },
-      error: (err) => console.error('Error loading recruitment:', err)
+      error: (err) => console.error('❌ Error loading recruitment:', err)
     });
   }
+
   onEditRecruitment(id: number): void {
     this.isEditMode = true;
     this.selectedRecruitmentId = id;

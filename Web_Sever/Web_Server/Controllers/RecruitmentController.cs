@@ -85,7 +85,7 @@ namespace Web_Server.Controllers
         [HttpDelete("delete-recruitment/{id}")]
         public async Task<IActionResult> DeleteRecruitment(int id)
         {
-            var recruitment = await _recruitmentService.GetRecruitmentsByid(id);
+            var recruitment = await _recruitmentService.GetRecruitmentByid(id);
 
             if (recruitment == null)
             {
