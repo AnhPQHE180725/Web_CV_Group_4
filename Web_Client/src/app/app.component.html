@@ -1,9 +1,11 @@
-<div class="container navbar-container">
+<div *ngIf="!isResetPasswordPage" class="container navbar-container">
   <app-navbar></app-navbar>
 </div>
+
 <div class="container main-content">
-  <router-outlet />
+  <router-outlet></router-outlet>
 </div>
-<div class="container footer-container">
+
+<div *ngIf="!isResetPasswordPage" class="container footer-container">
   <app-footer></app-footer>
 </div>
