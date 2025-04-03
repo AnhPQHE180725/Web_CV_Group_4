@@ -18,7 +18,8 @@
           <strong>Tên công ty:</strong>
           <p class="company-description">{{ company.company.name }}</p>
           <strong>Mô tả:</strong>
-          <p class="company-description">{{ company.company.description }}</p>
+          <p class="company-description" [innerHTML]="sanitizeDescription(company.company.description)"></p>
+
           <strong>Địa chỉ:</strong>
           <p class="company-description">{{ company.company.address }}</p>
           <strong>Email:</strong>
