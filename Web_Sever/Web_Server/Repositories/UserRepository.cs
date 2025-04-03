@@ -114,6 +114,7 @@ namespace Web_Server.Repositories
         public async Task<ApplyPost> RejectCV(int id)
         {
             var applyPost = await _context.ApplyPosts
+                
         .Include(a => a.User)
         .Include(a => a.Recruitment) 
 
