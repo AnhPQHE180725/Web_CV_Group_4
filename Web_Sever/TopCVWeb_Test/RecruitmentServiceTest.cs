@@ -105,6 +105,28 @@ namespace TopCVWeb_Test
             var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.GetRecruitmentsByid(id));
             Assert.AreEqual($"Not found Recruitment with id={id}", ex.Message);
         }
+        [Test]
+        public async Task GetRecruitmentsByCompanyName_ShouldReturnMatchingRecruitments()
+        {
+            var result = await _recruitmentService.GetRecruitmentsByCompanyName("Vin");
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Any(r => r.CompanyName.Contains("Vin")));
+        }
+        [Test]
+        public async Task GetRecruitmentsByTitle_ShouldReturnMatchingRecruitments()
+        {
+            var result = await _recruitmentService.GetRecruitmentsByTitle("Tuyển");
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Any(r => r.Title.Contains("Tuyển")));
+        }
+        [Test]
+        public async Task GetRecruitmentsByLocation_ShouldReturnMatchingRecruitments()
+        {
+            var result = await _recruitmentService.GetRecruitmentsByLocation("Hà Nội");
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Any(r => r.Address.Contains("Hà Nội")));
+        }
+
         [TearDown]
         public void TearDown()
         {
