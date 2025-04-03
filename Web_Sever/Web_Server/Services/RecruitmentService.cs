@@ -128,6 +128,34 @@ namespace Web_Server.Services
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
             if (recruitments == null || !recruitments.Any())
             {
+                throw new ArgumentException($"Not found Recruitment with id={id}");
+            }
+            return recruitments.Select(r => new RecruitmentVm
+            {
+                Id = r.Id,
+                Address = r.Address,
+                CreatedAt = r.CreatedAt,
+                Description = r.Description,
+                Experience = r.Experience,
+                Quantity = r.Quantity,
+                Rank = r.Rank,
+                Salary = r.Salary,
+                Status = r.Status,
+                Title = r.Title,
+                Type = r.Type,
+                View = r.View,
+                Deadline = r.Deadline,
+
+                CompanyName = r.Company?.Name ?? "Unknown",
+                CategoryName = r.Category?.Name ?? "Unknown"
+
+            }).ToList();
+        }
+        public async Task<List<RecruitmentVm>> GetRecruitmentByid(int id)
+        {
+            var recruitments = await _repository.GetRecruitmentsByCategory(id);
+            if (recruitments == null || !recruitments.Any())
+            {
                 return new List<RecruitmentVm>(); ;
             }
             return recruitments.Select(r => new RecruitmentVm
@@ -243,7 +271,7 @@ namespace Web_Server.Services
             var recruitments = await _repository.GetAllRecruitments();
             if (recruitments == null || !recruitments.Any())
             {
-                throw new ArgumentException($"Recruitment list is null");
+                throw new ArgumentException("Recruitment list is null");
             }
             return recruitments.Select(r => new RecruitmentVm
             {
