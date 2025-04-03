@@ -3,52 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\cvservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\cvservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\recruitmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\recruitmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\applypostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\applypostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iapplypostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iapplypostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\models\\applypost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\companyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\companyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\icompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\icompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\icvservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\icvservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\webhostenvironmentstub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\webhostenvironmentstub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\ifollowcompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\ifollowcompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\ifollowjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\ifollowjobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\ifollowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\ifollowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\irecruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\trong\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\userservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,157 +98,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CVService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CVService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\CVService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CVService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\CVService.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RecruitmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\RecruitmentRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T03:02:39.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\EmailService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\EmailService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAApwEMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:28:55.571Z",
+              "WhenOpened": "2025-04-03T04:12:35.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\UserService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\UserService.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAlwD8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:28:38.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
-              "RelativeToolTip": "Web_Server\\Data\\SeedData.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwE8AAABbAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:11:51.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplyPost.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Models\\ApplyPost.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Models\\ApplyPost.cs",
-              "RelativeToolTip": "Web_Server\\Models\\ApplyPost.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:00:49.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Web_Server\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswD4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T01:54:20.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserServiceTest.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\UserServiceTest.cs",
-              "RelativeDocumentMoniker": "TopCVWeb_Test\\UserServiceTest.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\UserServiceTest.cs",
-              "RelativeToolTip": "TopCVWeb_Test\\UserServiceTest.cs",
-              "ViewState": "AgIAAAoBAAAAAAAAAAAkwBsBAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T01:53:06.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RecruitmentService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:44:54.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CategoryService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:44:01.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "RecruitmentServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\RecruitmentServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
               "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\RecruitmentServiceTest.cs",
               "RelativeToolTip": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAlwHcAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:42:08.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T03:52:42.531Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WebHostEnvironmentStub.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\WebHostEnvironmentStub.cs",
-              "RelativeDocumentMoniker": "TopCVWeb_Test\\WebHostEnvironmentStub.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\WebHostEnvironmentStub.cs",
-              "RelativeToolTip": "TopCVWeb_Test\\WebHostEnvironmentStub.cs",
+              "DocumentIndex": 2,
+              "Title": "RecruitmentService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAIA3wIIAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:52:26.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplyPostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:50:28.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IApplyPostService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IApplyPostService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IApplyPostService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IApplyPostService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IApplyPostService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:39:49.822Z"
+              "WhenOpened": "2025-04-03T03:49:59.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:49:50.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICompanyService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICompanyService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICompanyService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\ICompanyService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:49:39.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ICVService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICVService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICVService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICVService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\ICVService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:49:30.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:49:25.477Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CompanyServiceTest.cs",
-              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CompanyServiceTest.cs",
-              "RelativeDocumentMoniker": "TopCVWeb_Test\\CompanyServiceTest.cs",
-              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CompanyServiceTest.cs",
-              "RelativeToolTip": "TopCVWeb_Test\\CompanyServiceTest.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAowCMAAAAPAAAAAAAAAA==",
+              "Title": "IFollowCompanyService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IFollowCompanyService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IFollowCompanyService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IFollowCompanyService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IFollowCompanyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T05:07:35.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T03:49:19.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IFollowJobService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IFollowJobService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IFollowJobService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IFollowJobService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IFollowJobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:49:08.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IFollowService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IFollowService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IFollowService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IFollowService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IFollowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:48:58.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRecruitmentService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IRecruitmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:48:46.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Web_Server\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:48:18.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\UserServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\UserServiceTest.cs",
+              "ToolTip": "C:\\Users\\trong\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\UserServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\UserServiceTest.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAD4vxABAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:30:18.021Z"
             }
           ]
         },
