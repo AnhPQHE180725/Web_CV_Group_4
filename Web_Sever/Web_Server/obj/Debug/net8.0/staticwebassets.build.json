@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ipyl08yaiOIa6QvR4i44iE9ej02eFUHV2CGRPs5oOgA=",
+  "Hash": "Ob6QqdJb9Dy6MQeWBW8UBIdylt5nSes/MaEQfLctM1U=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf"
+    },
+    {
+      "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fbmvely2fc",
+      "Integrity": "RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf"
     },
     {
       "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf",
@@ -366,6 +387,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-wGned2+Es39y3zOqD0LmUZu3R26+AZK0pPt3SEgNzZY="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.fbmvely2fc.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111173"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 02:51:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbmvely2fc"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111173"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 02:51:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo="
         }
       ]
     },

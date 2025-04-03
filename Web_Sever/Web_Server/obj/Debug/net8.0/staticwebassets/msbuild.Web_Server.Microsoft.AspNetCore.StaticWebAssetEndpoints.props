@@ -36,6 +36,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wGned2\u002BEs39y3zOqD0LmUZu3R26\u002BAZK0pPt3SEgNzZY="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"903186"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022wGned2\u002BEs39y3zOqD0LmUZu3R26\u002BAZK0pPt3SEgNzZY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 01:47:52 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web_Server/CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.fbmvely2fc.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fbmvely2fc"},{"Name":"integrity","Value":"sha256-RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo="},{"Name":"label","Value":"_content/Web_Server/CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"111173"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 02:51:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Web_Server/CVs/761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\761d20f7-b352-49ff-b368-f9bbd84ed055_cvDuyNQ.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"111173"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022RZs3rBhu4EjdgVaJB1jiZwP385rcKQi1ABOsG7fy3Bo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 02:51:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Web_Server/CVs/835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.odferd1ui5.pdf">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CVs\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

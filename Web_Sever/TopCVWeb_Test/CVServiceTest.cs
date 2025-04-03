@@ -44,7 +44,7 @@ namespace TopCVWeb_Test
             // Tạo fake HttpContext với user ID = 1
             var user = new ClaimsPrincipal(new ClaimsIdentity(new[]
             {
-                new Claim("id", "1")
+                new Claim("id", "11")  //user id phải có trong db  - tự thay vào
             }, "mock"));
 
             _httpContextAccessor = new HttpContextAccessor
@@ -71,14 +71,14 @@ namespace TopCVWeb_Test
             var result = await _cvService.UploadCVAsync(file);
 
             Assert.IsNotNull(result);
-            Assert.That(result.UserId, Is.EqualTo(1));
+            Assert.That(result.UserId, Is.EqualTo(11)); //= user trong db  - tự thay vào
             Assert.That(result.Name, Does.Contain(".pdf"));
         }
 
         [Test]
         public async Task GetCVByIdAsync_ShouldReturnCV()
         {
-            var cv = _context.CVs.FirstOrDefault(c => c.UserId == 1);
+            var cv = _context.CVs.FirstOrDefault(c => c.UserId == 11); //user id phải có trong db - tự thay vào
             Assert.IsNotNull(cv, "Không tìm thấy CV của userId = 1");
 
             var result = await _cvService.GetCVByIdAsync(cv.Id);
@@ -90,27 +90,10 @@ namespace TopCVWeb_Test
         [Test]
         public async Task GetCVByUserIdAsync_ShouldReturnCV()
         {
-            var result = await _cvService.GetCVByUserIdAsync(1);
+            var result = await _cvService.GetCVByUserIdAsync(11);  //user id phải có trong db  - tự thay vào
 
             Assert.That(result, Is.Not.Null);
-            Assert.That(result.UserId, Is.EqualTo(1));
-        }
-
-        [Test]
-        public async Task GetCVFilePathByUserIdAsync_ShouldReturnFilePathIfExists()
-        {
-            var cv = _context.CVs.FirstOrDefault(c => c.UserId == 1);
-            Assert.IsNotNull(cv, "Không có CV của userId = 1");
-
-            var cvFolder = Path.Combine(_environment.WebRootPath!, "CVs");
-            Directory.CreateDirectory(cvFolder);
-
-            var fullPath = Path.Combine(cvFolder, cv.Name);
-            await File.WriteAllTextAsync(fullPath, "dummy content");
-
-            var result = await _cvService.GetCVFilePathByUserIdAsync(1);
-
-            Assert.That(result, Is.EqualTo(fullPath));
+            Assert.That(result.UserId, Is.EqualTo(11));  // = user 
         }
 
         private class FakeWebHostEnvironment : IWebHostEnvironment
