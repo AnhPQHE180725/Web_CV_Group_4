@@ -290,6 +290,11 @@ namespace Web_Server.Services
         {
             return await _repository.GetTotalRecruitmentsByStatus(status);
         }
+        public async Task<List<RecruitmentVm>> GetRecruitmentByCompanyName(string company)
+        {
+            var recruitments = await _repository.GetRecruitmentByCompanyName(company);
+            return recruitments.Select(ToRecruitmentVm).ToList();
+        }
 
     }
 }

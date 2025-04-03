@@ -67,7 +67,7 @@ export class RecruiterHomepageComponent implements OnInit {
   }
 
   loadRecruitments(companyName: string): void {
-    this.recruitmentService.getRecruitmentsByCompanyName(companyName).subscribe({
+    this.recruitmentService.getRecruitmentByCompanyName(companyName).subscribe({
       next: (data) => {
         if (data && data.length > 0) {
           // Thêm vào mảng recruitments thay vì ghi đè
