@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf",
+      "PackagePath": "staticwebassets\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf"
+    },
+    {
       "Id": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "PackagePath": "staticwebassets\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf"
     },

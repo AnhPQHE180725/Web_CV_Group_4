@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ob6QqdJb9Dy6MQeWBW8UBIdylt5nSes/MaEQfLctM1U=",
+  "Hash": "P1YKtOxdDDMf1qOZ3COg4p8/heI01FgFxFqivbGvq6k=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CompanyLogos\\c9971092-fd80-45ed-ac64-d3c2cbae407e.jpg"
+    },
+    {
+      "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "odferd1ui5",
+      "Integrity": "XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf"
     },
     {
       "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
@@ -309,6 +330,88 @@
       ]
     },
     {
+      "Route": "CVs/478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.odferd1ui5.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1357243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:35:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "odferd1ui5"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1357243"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:35:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y="
+        }
+      ]
+    },
+    {
       "Route": "CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.86ecjpiua8.pdf",
       "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "Selectors": [],
@@ -413,7 +516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 02:51:49 GMT"
+          "Value": "Thu, 03 Apr 2025 04:39:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -458,7 +561,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 02:51:49 GMT"
+          "Value": "Thu, 03 Apr 2025 04:39:43 GMT"
         },
         {
           "Name": "Cache-Control",
