@@ -16,7 +16,9 @@
             <div class="options">
                 <a href="forgot-password" class="forgot-password">Forgot Password?</a>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" [disabled]="isWorking">
+                {{ isWorking ? 'Đang đăng nhập...' : 'Login' }}
+            </button>
             <p class="register-link">Don't have an Account? <a href="register">Sign up</a></p>
         </form>
     </div>

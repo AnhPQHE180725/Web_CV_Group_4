@@ -46,11 +46,22 @@ namespace Web_Server.Services
 
         public async Task<List<CandidateVm>> GetCandidateByPostId(int id)
         {
+            if(id <=0)
+            {
+                throw new ArgumentOutOfRangeException("id");
+            }
+            else
             return await _repository.GetCandidateByPostId(id);
+            
         }
 
         public Task<CV> GetCVByUserId(int id)
-        {
+        {   
+            if(id <=0)
+            {
+                throw new ArgumentOutOfRangeException("id");
+            }
+            else
             return _repository.GetCVByUserId(id);
         }
 

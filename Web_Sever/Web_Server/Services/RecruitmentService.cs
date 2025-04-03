@@ -24,6 +24,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with category id={id}");
+            }
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -79,7 +83,7 @@ namespace Web_Server.Services
 
         public async Task<List<RecruitmentVm>> GetTop2Recruitments()
         {
-            var recruitments = await _repository.GetTop2Recruitments(); // Get raw data
+            var recruitments = await _repository.GetTop2Recruitments(); 
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -236,8 +240,11 @@ namespace Web_Server.Services
 
         public async Task<List<RecruitmentVm>> GetAllRecruitments()
         {
-            var recruitments = await _repository.GetAllRecruitments(); // Get raw data
-
+            var recruitments = await _repository.GetAllRecruitments();
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Recruitment list is null");
+            }
             return recruitments.Select(r => new RecruitmentVm
             {
                 Id = r.Id,
