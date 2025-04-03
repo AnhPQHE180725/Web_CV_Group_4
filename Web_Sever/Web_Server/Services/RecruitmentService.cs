@@ -129,6 +129,7 @@ namespace Web_Server.Services
             if (recruitments == null || !recruitments.Any())
             {
                 throw new ArgumentException($"Not found Recruitment with id={id}");
+
             }
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -243,7 +244,7 @@ namespace Web_Server.Services
             var recruitments = await _repository.GetAllRecruitments();
             if (recruitments == null || !recruitments.Any())
             {
-                throw new ArgumentException($"Recruitment list is null");
+                throw new ArgumentException("Recruitment list is null");
             }
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -289,6 +290,11 @@ namespace Web_Server.Services
         public async Task<int> GetTotalRecruitmentsByStatus(int status)
         {
             return await _repository.GetTotalRecruitmentsByStatus(status);
+        }
+        public async Task<List<RecruitmentVm>> GetRecruitmentByCompanyName(string company)
+        {
+            var recruitments = await _repository.GetRecruitmentByCompanyName(company);
+            return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
     }

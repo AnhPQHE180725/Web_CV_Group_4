@@ -92,5 +92,9 @@ namespace Web_Server.Repositories
         {
             return await _context.Recruitments.CountAsync(r => r.Status == status);
         }
+        public async Task<List<Recruitment>> GetRecruitmentByCompanyName(string company)
+        {
+            return await _context.Recruitments.Include(r => r.Company).Where(c => c.Company.Name.Contains(company)).ToListAsync();
+        }
     }
 }

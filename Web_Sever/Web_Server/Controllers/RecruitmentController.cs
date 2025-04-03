@@ -85,7 +85,7 @@ namespace Web_Server.Controllers
         [HttpDelete("delete-recruitment/{id}")]
         public async Task<IActionResult> DeleteRecruitment(int id)
         {
-            var recruitment = await _recruitmentService.GetRecruitmentsByid(id);
+            var recruitment = await _recruitmentService.GetRecruitmentByid(id);
 
             if (recruitment == null)
             {
@@ -134,6 +134,11 @@ namespace Web_Server.Controllers
         {
             var totalRecruitments = await _recruitmentService.GetTotalRecruitmentsByStatus(status);
             return Ok(totalRecruitments);
+        }
+        [HttpGet("get-recruitment-by-company-name/{company}")]
+        public async Task<IActionResult> GetRecruitmentByCompanyName(string company)
+        {
+            return Ok(await _recruitmentService.GetRecruitmentByCompanyName(company));
         }
 
     }
