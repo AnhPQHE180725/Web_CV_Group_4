@@ -18,7 +18,7 @@
         public int View { get; set; }
         public DateTime Deadline { get; set; }
 
-        public string? CompanyName {  get; set; }
+        public string? CompanyName { get; set; }
 
         public string? CategoryName { get; set; }
 

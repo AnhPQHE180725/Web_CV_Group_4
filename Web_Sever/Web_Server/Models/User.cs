@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace Web_Server.Models
+﻿namespace Web_Server.Models
 {
-    public class User 
+    public class User
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
         public string? Address { get; set; }
 
         public string FullName { get; set; }
@@ -17,7 +15,7 @@ namespace Web_Server.Models
 
         public string? Image { get; set; }
 
-        public int Status {  get; set; }
+        public int Status { get; set; }
 
         public string? Description { get; set; }
         public int? CVId { get; set; }
@@ -26,9 +24,9 @@ namespace Web_Server.Models
         public int RoleId { get; set; }
         public Role Role { get; set; }
 
-        public List<Recruitment> Recruitments { get; set; }  
-        
+        public List<Recruitment> Recruitments { get; set; }
+
         public List<FollowJob> FollowJobs { get; set; }
-        public List<FollowCompany> FollowCompany {  get; set; }
+        public List<FollowCompany> FollowCompany { get; set; }
     }
 }

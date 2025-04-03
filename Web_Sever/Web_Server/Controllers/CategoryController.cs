@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Web_Server.Interfaces;
-using Web_Server.Services;
 
 namespace Web_Server.Controllers
 {

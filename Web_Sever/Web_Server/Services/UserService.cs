@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using System.Text.RegularExpressions;
 using Web_Server.Interfaces;
 using Web_Server.Models;
-using Web_Server.Repositories;
 using Web_Server.ViewModels;
 
 namespace Web_Server.Services

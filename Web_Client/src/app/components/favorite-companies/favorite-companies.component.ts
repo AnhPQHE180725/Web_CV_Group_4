@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { CompanyFollowService } from '../../services/company-follow.service';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-favorite-companies',
@@ -27,8 +28,13 @@ export class FavoriteCompaniesComponent implements OnInit {
     private userService: UserService,
     private authService: AuthService,
     private router: Router,
-    private companyFollowService: CompanyFollowService
+    private companyFollowService: CompanyFollowService,
+    private sanitizer: DomSanitizer
   ) { }
+
+  sanitizeDescription(description: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(description);
+  }
 
   ngOnInit(): void {
     if (!this.authService.isLoggedIn()) {

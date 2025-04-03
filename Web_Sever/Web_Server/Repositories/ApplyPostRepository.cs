@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Web_Server.Data;
-using Web_Server.Models;
 using Web_Server.Interfaces;
+using Web_Server.Models;
 
 namespace Web_Server.Repositories
 {
@@ -78,4 +78,4 @@ namespace Web_Server.Repositories
             return true;
         }
     }
-} 
+}

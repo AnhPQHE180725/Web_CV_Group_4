@@ -16,15 +16,15 @@ namespace Web_Server.Repositories
 
         public async Task<List<Recruitment>> GetAllRecruitments()
         {
-            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).ToListAsync();   
+            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).ToListAsync();
         }
 
         public async Task<List<Recruitment>> GetRecruitmentsByCategory(int id)
         {
             return await _context.Recruitments
-          .Where(r => r.CategoryId == id && r.Status==1)
-          .Include(r => r.Company) 
-          .Include(r => r.Category) 
+          .Where(r => r.CategoryId == id && r.Status == 1)
+          .Include(r => r.Company)
+          .Include(r => r.Category)
           .ToListAsync();
         }
 
@@ -39,7 +39,7 @@ namespace Web_Server.Repositories
 
         public async Task<List<Recruitment>> GetTop2Recruitments()
         {
-            return await _context.Recruitments.Where(r=>r.Status==1).Include(r => r.Company).OrderByDescending(c=>c.View).Take(2).ToListAsync();
+            return await _context.Recruitments.Where(r => r.Status == 1).Include(r => r.Company).OrderByDescending(c => c.View).Take(2).ToListAsync();
         }
         public async Task<List<Recruitment>> GetRecruitmentsByCompanyName(string company)
         {

@@ -6,8 +6,8 @@
         public User User { get; set; }
         public Company Company { get; set; }
 
-        public int UserId {  get; set; }
-        public int CompanyId {  get; set; }
+        public int UserId { get; set; }
+        public int CompanyId { get; set; }
 
 
     }

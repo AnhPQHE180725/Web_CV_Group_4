@@ -13,4 +13,4 @@ namespace Web_Server.Interfaces
         Task<ApplyPost> UpdateAsync(ApplyPost applyPost);
         Task<bool> DeleteAsync(int id);
     }
-} 
+}

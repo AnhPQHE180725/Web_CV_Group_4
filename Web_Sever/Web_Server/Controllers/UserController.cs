@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Web_Server.Interfaces;
-using Web_Server.Models;
 
 namespace Web_Server.Controllers
 {
@@ -20,9 +18,9 @@ namespace Web_Server.Controllers
         [HttpGet("get-user-by-post-id/{id}")]
 
         public async Task<IActionResult> GetUserByPostId(int id)
-        { 
-        return Ok(await _userService.GetCandidateByPostId(id));
-}
+        {
+            return Ok(await _userService.GetCandidateByPostId(id));
+        }
         [Authorize]
         [HttpGet("get-cv-by-user-id/{id}")]
 
@@ -32,7 +30,7 @@ namespace Web_Server.Controllers
         }
         [Authorize(Roles = "Recruiter")]
         [HttpPut("apply-cv/{id}")]
-        public async Task<IActionResult> ApplyCV( int id)
+        public async Task<IActionResult> ApplyCV(int id)
         {
             return Ok(await _userService.ApplyCV(id));
         }

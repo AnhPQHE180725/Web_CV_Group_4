@@ -7,7 +7,7 @@ namespace Web_Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    
+
     public class CVController : ControllerBase
     {
         private readonly ICVService _cvService;
@@ -73,4 +73,4 @@ namespace Web_Server.Controllers
         }
 
     }
-} 
+}

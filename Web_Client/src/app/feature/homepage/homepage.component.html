@@ -46,25 +46,37 @@
     <h2>Top Doanh Nghiệp</h2>
     <div class="companies">
       <div class="company" *ngFor="let company of companies">
-        <div class="company-content clickable" [routerLink]="['/recruitment', 'company', company.id]">
-          <img [src]="
-              company.logo
-                " alt="{{ company.name }}" class="company-logo" />
+        <!-- khi cty ngừng hoat động thì ko vào xem dc danh sách các bài đăng của cty đó, cty phá sản nên ko tuyển nữa -->
+        <div
+          class="company-content clickable"
+          [routerLink]="company.status === 1 ? ['/recruitment', 'company', company.id] : null"
+          [class.disabled]="company.status !== 1"
+        >
+          <img
+            [src]="company.logo"
+            alt="{{ company.name }}"
+            class="company-logo"
+          />
           <span class="company-name">{{ company.name }}</span>
         </div>
-
+    
         <!-- Nút Theo dõi: chỉ hiển thị khi status === 1 -->
-        <button class="follow-btn" (click)="toggleCompanyFollow($event, company.id)"
+        <button
+          class="follow-btn"
+          (click)="toggleCompanyFollow($event, company.id)"
           *ngIf="isLoggedIn() && isCandidate() && company.status === 1"
-          [class.followed]="isCompanyFollowed(company.id)">
+          [class.followed]="isCompanyFollowed(company.id)"
+        >
           {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
         </button>
-
-        <!-- Thông báo công ty tạm ngừng khi status !== 1 -->
-        <p *ngIf="isLoggedIn() && isCandidate() && company.status !== 1" class="status-message">
+    
+        <!-- Thông báo công ty tạm ngừng cho cả ung viên lẫn nhà tuyen dung để họ biết-->
+        <p
+          *ngIf="isLoggedIn() && isCandidate() && company.status !== 1 || isLoggedIn() && company.status !== 1"
+          class="status-message"
+        >
           Công ty tạm ngừng
         </p>
-
       </div>
     </div>
 

@@ -10,6 +10,6 @@ namespace Web_Server.Interfaces
         Task<CV> UpdateAsync(CV cv);
         Task<bool> DeleteAsync(int id);
 
-        
+
     }
-} 
+}
