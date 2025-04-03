@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
+using Moq;
 using Web_Server.Data;
+using Web_Server.Models;
 using Web_Server.Repositories;
 using Web_Server.Services;
 using Web_Server.ViewModels;
@@ -186,6 +188,56 @@ namespace TopCVWeb_Test
         {
             var result = await _userService.ResetPasswordAsync("NotValidToken", "1234");
             Assert.IsFalse(result);
+        }
+
+        [Test]
+        public async Task GetUserByIdAsync_ShouldReturnUser()
+        {
+            var result = await _userService.GetUserByIdAsync(1);
+            Assert.IsNotNull(result);
+            Assert.That(result.Id, Is.EqualTo(1));
+        }
+
+        [Test]
+        public async Task UpdateProfileAsync_UserExists_ShouldReturnsTrue()
+        {
+            var user = new User { FullName = "Old Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com" };
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            var newUser = new UserVm { FullName = "New Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com" };
+            var result = await _userService.UpdateProfileAsync(user.Id, newUser);
+            Assert.IsTrue(result);
+
+            var updatedUser = await _context.Users.FindAsync(user.Id);
+            Assert.AreEqual("New Name", updatedUser.FullName);
+        }
+
+        [Test]
+        public async Task UpdateEmailAsync_EmailNotTaken_ReturnsTrue()
+        {
+            var user = new User { Email = "old@example.com" };
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            string newEmail = "new@example.com";
+
+            var result = await _userService.UpdateEmailAsync(user.Id, newEmail);
+
+            Assert.True(result);
+
+            var updatedUser = await _context.Users.FindAsync(user.Id);
+            Assert.AreEqual("new@example.com", updatedUser.Email);
+        }
+
+        [Test]
+        public async Task IsTakenEmailAsync_EmailExists_ReturnsTrue()
+        {
+            string existingEmail = "exist@example.com";
+            _context.Users.Add(new User { Email = existingEmail });
+            await _context.SaveChangesAsync();
+
+            var result = await _userService.IsTakenEmailAsync(existingEmail);
+            Assert.True(result);
         }
 
         // Phương thức dọn dẹp sau khi kiểm thử (TearDown)
