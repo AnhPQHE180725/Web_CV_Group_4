@@ -49,7 +49,7 @@ namespace TopCVWeb_Test
                 {
                     User = new ClaimsPrincipal(new ClaimsIdentity(new[]
                     {
-                        new Claim("id", "1") // giả lập userId = 1, bảng role có user id = 1 và cv la hop le
+                        new Claim("id", "11") // user id trong db có role la candidate  - tự thay vào
                     }, "mock"))
                 }
             };
@@ -71,21 +71,21 @@ namespace TopCVWeb_Test
         {
             var applyVm = new ApplyWithExistingCVVm
             {
-                PostId = 1, // bài tuyển dụng đã có trong DB
+                PostId = 3, // bài tuyển dụng đã có trong DB  - tự thay vào
                 Text = "Ứng tuyển test"
             };
 
             var result = await _applyPostService.ApplyWithExistingCVAsync(applyVm);
 
             Assert.IsNotNull(result);
-            Assert.That(result.UserId, Is.EqualTo(1));
+            Assert.That(result.UserId, Is.EqualTo(11));
             Assert.That(result.CVName, Is.Not.Null);
         }
 
         [Test]
         public async Task GetApplicationsByUserIdAsync_ShouldReturnCorrectList()
         {
-            var result = await _applyPostService.GetApplicationsByUserIdAsync(1);
+            var result = await _applyPostService.GetApplicationsByUserIdAsync(11); //user id trong db  - tự thay vào
 
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Count > 0);
@@ -97,7 +97,7 @@ namespace TopCVWeb_Test
         {
             var applyVm = new ApplyWithExistingCVVm
             {
-                PostId = 1, // Bài đăng hợp lệ
+                PostId = 3, // Bài đăng hợp lệ có trong db  - tự thay vào
                 Text = "Test without CV"
             };
 

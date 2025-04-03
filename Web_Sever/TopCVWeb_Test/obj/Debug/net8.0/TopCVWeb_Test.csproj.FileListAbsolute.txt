@@ -494,6 +494,5 @@ D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\refint\TopCVWeb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.pdb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.genruntimeconfig.cache
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\ref\TopCVWeb_Test.dll
-C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Castle.Core.dll
-C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\Users\admin\Documents\GitHub\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Moq.dll
+D:\MockProject\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Castle.Core.dll
+D:\MockProject\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\Moq.dll
