@@ -494,3 +494,4 @@ D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\refint\TopCVWeb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.pdb
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\TopCVWeb_Test.genruntimeconfig.cache
 D:\Du_An\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\obj\Debug\net8.0\ref\TopCVWeb_Test.dll
+C:\Users\nghie\OneDrive\Máy tính\Project_FA\Web_CV_Group_4\Web_Sever\TopCVWeb_Test\bin\Debug\net8.0\testhost.exe
