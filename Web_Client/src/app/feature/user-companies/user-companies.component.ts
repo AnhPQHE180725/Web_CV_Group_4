@@ -5,11 +5,12 @@ import { RouterLink } from '@angular/router';
 import { Company } from '../../models/Company';
 import { CompanyService } from '../../services/Company.service';
 import { AuthService } from '../../services/auth.service';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @Component({
     selector: 'app-user-companies',
     standalone: true,
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterLink],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterLink, EditorModule],
     templateUrl: './user-companies.component.html',
     styleUrl: './user-companies.component.css'
 })

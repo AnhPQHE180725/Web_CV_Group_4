@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
 using Web_Server.Data;
-using Web_Server.Models;
 using Web_Server.Repositories;
 using Web_Server.Services;
 

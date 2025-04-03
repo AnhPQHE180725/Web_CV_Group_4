@@ -21,7 +21,7 @@ namespace Web_Server.Repositories
 
         public async Task<List<Category>> GetAllCategories()
         {
-           return await _context.Categories.ToListAsync();
+            return await _context.Categories.ToListAsync();
         }
 
 

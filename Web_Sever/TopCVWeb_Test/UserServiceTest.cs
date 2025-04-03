@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
+using Moq;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Web_Server.Data;
 using Web_Server.Interfaces;
+
+
+using Web_Server.Models;
 using Web_Server.Repositories;
 using Web_Server.Services;
 using Web_Server.ViewModels;
@@ -42,7 +47,7 @@ namespace TopCVWeb_Test
             _context = new AppDbContext(options);
 
             // Khởi tạo repository và service
-            _emailService = new EmailService();
+            _emailService = new EmailService(configuration);
             _userRepository = new UserRepository(_context);
             _memoryCache = new MemoryCache(new MemoryCacheOptions());
             _userService = new UserService(_userRepository, _memoryCache, _emailService);
@@ -84,7 +89,7 @@ namespace TopCVWeb_Test
         public async Task FindEmailExists_ExistsEmail_ReturnUser()
         {
             string email = "alice@example.com";
-            
+
             var result = await _userService.FindEmailExists(email);
 
             // Kiểm tra kết quả trả về
@@ -114,8 +119,8 @@ namespace TopCVWeb_Test
             {
                 Email = "invalid-email",
                 Password = "123",
-                ConfirmPassword ="123",
-                FullName ="Invalid",
+                ConfirmPassword = "123",
+                FullName = "Invalid",
                 RoleName = "Candidate"
 
             };
@@ -179,7 +184,7 @@ namespace TopCVWeb_Test
         public async Task ForgotPasswordAsync_NotExistMail_ReturnFalse()
         {
             string email = "invalidemail@gmail.com";
-            
+
             var result = await _userService.ForgotPasswordAsync(email);
             Assert.IsFalse(result);
         }
@@ -190,8 +195,147 @@ namespace TopCVWeb_Test
         [Test]
         public async Task ResetPasswordAsync_NotValidToken_ReturnFalse()
         {
-            var result = await _userService.ResetPasswordAsync("NotValidToken","1234");
+            var result = await _userService.ResetPasswordAsync("NotValidToken", "1234");
             Assert.IsFalse(result);
+        }
+
+        [Test]
+
+        public async Task ApplyCV_ShouldSendEmail_WhenUserHasEmail()
+        {
+            
+            var applyPostId = 1; 
+
+            
+            var result = await _userService.ApplyCV(applyPostId);
+
+           
+            Assert.IsNotNull(result);             Assert.IsNotNull(result.User); 
+            Assert.IsNotNull(result.User.Email);
+        }
+        [Test]
+        public async Task RejectCV_ShouldSendEmail_WhenUserHasEmail()
+        {
+
+            var applyPostId = 1;
+
+
+            var result = await _userService.RejectCV(applyPostId);
+
+
+            Assert.IsNotNull(result); Assert.IsNotNull(result.User);
+            Assert.IsNotNull(result.User.Email);
+        }
+
+        [Test]
+        public async Task GetCandidateByPostId_ShouldReturnCandidates_WhenCandidatesExist()
+        {
+            var postId = 1;
+
+            var result = await _userService.GetCandidateByPostId(postId);
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0);
+        }
+
+        [Test]
+        public async Task GetCandidateByPostId_ShouldReturnEmptyList_WhenNoCandidatesExist()
+        {
+            var postId = 999;
+
+            var result = await _userService.GetCandidateByPostId(postId);
+
+            Assert.IsNotNull(result);
+            Assert.IsEmpty(result);
+        }
+
+        [Test]
+        public void GetCandidateByPostId_ShouldThrowException_WhenIdIsNegative()
+        {
+            var postId = -1;
+
+            Assert.ThrowsAsync<ArgumentOutOfRangeException>(async () => await _userService.GetCandidateByPostId(postId));
+            Assert.AreEqual(postId, -1);
+        }
+        [Test]
+        public async Task GetCVByUserId_ShouldReturnCV_WhenUserHasCV()
+        {
+            var userId = 1;
+
+            var result = await _userService.GetCVByUserId(userId);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(userId, result.UserId);
+        }
+
+        [Test]
+        public async Task GetCVByUserId_ShouldReturnNull_WhenUserHasNoCV()
+        {
+            var userId = 999;
+
+            var result = await _userService.GetCVByUserId(userId);
+
+            Assert.IsNull(result);
+        }
+
+        [Test]
+        public void GetCVByUserId_ShouldThrowException_WhenUserIdIsNegative()
+        {
+            var userId = -1;
+
+            Assert.ThrowsAsync<ArgumentOutOfRangeException>(async () => await _userService.GetCVByUserId(userId));
+
+            Assert.AreEqual(userId, -1);
+        }
+        [Test]
+        public async Task GetUserByIdAsync_ShouldReturnUser()
+        {
+            var result = await _userService.GetUserByIdAsync(1);
+            Assert.IsNotNull(result);
+            Assert.That(result.Id, Is.EqualTo(1));
+        }
+
+        [Test]
+        public async Task UpdateProfileAsync_UserExists_ShouldReturnsTrue()
+        {
+            var user = new User { FullName = "Old Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com" };
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            var newUser = new UserVm { FullName = "New Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com" };
+            var result = await _userService.UpdateProfileAsync(user.Id, newUser);
+            Assert.IsTrue(result);
+
+            var updatedUser = await _context.Users.FindAsync(user.Id);
+            Assert.AreEqual("New Name", updatedUser.FullName);
+        }
+
+        [Test]
+        public async Task UpdateEmailAsync_EmailNotTaken_ReturnsTrue()
+        {
+            var user = new User { Email = "old@example.com" };
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            string newEmail = "new@example.com";
+
+            var result = await _userService.UpdateEmailAsync(user.Id, newEmail);
+
+            Assert.True(result);
+
+            var updatedUser = await _context.Users.FindAsync(user.Id);
+            Assert.AreEqual("new@example.com", updatedUser.Email);
+        }
+
+        [Test]
+        public async Task IsTakenEmailAsync_EmailExists_ReturnsTrue()
+        {
+            string existingEmail = "exist@example.com";
+            _context.Users.Add(new User { Email = existingEmail });
+            await _context.SaveChangesAsync();
+
+            var result = await _userService.IsTakenEmailAsync(existingEmail);
+            Assert.True(result);
+
         }
 
         // Phương thức dọn dẹp sau khi kiểm thử (TearDown)

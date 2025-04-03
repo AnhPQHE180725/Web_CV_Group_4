@@ -1,6 +1,4 @@
-﻿using Web_Server.Models;
-
-namespace Web_Server.ViewModels
+﻿namespace Web_Server.ViewModels
 {
     public class UserVm
     {

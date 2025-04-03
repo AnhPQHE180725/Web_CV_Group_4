@@ -8,13 +8,12 @@
 <div *ngIf="paginatedCompanies.length > 0; else noResults">
   <div class="companies">
     <div class="company" *ngFor="let company of companies">
-      <div class="company-content clickable" [routerLink]="['/company', company.id]">
-        <img [src]="
-            company.logo
-              
-          " alt="{{ company.name }}" class="company-logo" />
+      <div class="company-content clickable" [routerLink]="company.status === 1 ? ['/company', company.id] : null"
+        [class.disabled]="company.status !== 1">
+        <img [src]="company.logo" alt="{{ company.name }}" class="company-logo" />
         <span class="company-name">{{ company.name }}</span>
       </div>
+
       <!-- Nút Theo dõi khi công ty đang hoạt động -->
       <button class="follow-btn" (click)="toggleFollow($event, company.id)" [class.followed]="isFollowing(company.id)"
         *ngIf="isLoggedIn() && isCandidate() && company.status === 1">
@@ -25,7 +24,6 @@
       <p *ngIf="company.status !== 1" class="status-message">
         Công ty tạm ngừng
       </p>
-
     </div>
   </div>
 

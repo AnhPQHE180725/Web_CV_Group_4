@@ -23,7 +23,8 @@ namespace Web_Server.Controllers
             try
             {
                 var application = await _applyPostService.ApplyWithNewCVAsync(applyVm);
-                return Ok(new { 
+                return Ok(new
+                {
                     message = "Application submitted successfully with new CV",
                     application = application
                 });
@@ -52,7 +53,8 @@ namespace Web_Server.Controllers
             try
             {
                 var application = await _applyPostService.ApplyWithExistingCVAsync(applyVm);
-                return Ok(new { 
+                return Ok(new
+                {
                     message = "Application submitted successfully with existing CV",
                     application = application
                 });

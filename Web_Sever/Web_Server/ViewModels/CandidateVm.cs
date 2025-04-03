@@ -1,10 +1,8 @@
-﻿using Web_Server.Models;
-
-namespace Web_Server.ViewModels
+﻿namespace Web_Server.ViewModels
 {
     public class CandidateVm
     {
-        public int postId {  get; set; }
+        public int postId { get; set; }
         public int id { get; set; }
         public string? Address { get; set; }
 

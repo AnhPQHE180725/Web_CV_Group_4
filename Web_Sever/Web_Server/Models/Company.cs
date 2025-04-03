@@ -18,7 +18,7 @@
 
         public User User { get; set; }
 
-        public int UserId {  get; set; }
+        public int UserId { get; set; }
 
         public List<Recruitment> Recruitments { get; set; }
     }

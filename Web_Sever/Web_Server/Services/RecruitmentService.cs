@@ -1,5 +1,4 @@
-﻿    using Microsoft.EntityFrameworkCore;
-using Web_Server.Interfaces;
+﻿using Web_Server.Interfaces;
 using Web_Server.Models;
 using Web_Server.ViewModels;
 
@@ -25,6 +24,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with category id={id}");
+            }
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -43,7 +46,8 @@ namespace Web_Server.Services
                 Deadline = r.Deadline,
 
                 CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown", logo = r.Company?.Logo
+                CategoryName = r.Category?.Name ?? "Unknown",
+                logo = r.Company?.Logo
 
             }).ToList();
         }
@@ -70,15 +74,16 @@ namespace Web_Server.Services
                 Title = r.Title,
                 Type = r.Type,
                 View = r.View,
-                Deadline =  r.Deadline,
+                Deadline = r.Deadline,
                 CompanyName = r.Company?.Name ?? "Unknown",
-                CategoryName = r.Category?.Name ?? "Unknown", logo = r.Company?.Logo
+                CategoryName = r.Category?.Name ?? "Unknown",
+                logo = r.Company?.Logo
             }).ToList();
         }
 
         public async Task<List<RecruitmentVm>> GetTop2Recruitments()
         {
-            var recruitments = await _repository.GetTop2Recruitments(); // Get raw data
+            var recruitments = await _repository.GetTop2Recruitments(); 
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -121,7 +126,7 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByid(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
-            if(recruitments == null || !recruitments.Any())
+            if (recruitments == null || !recruitments.Any())
             {
                 return new List<RecruitmentVm>(); ;
             }
@@ -235,8 +240,11 @@ namespace Web_Server.Services
 
         public async Task<List<RecruitmentVm>> GetAllRecruitments()
         {
-            var recruitments = await _repository.GetAllRecruitments(); // Get raw data
-
+            var recruitments = await _repository.GetAllRecruitments();
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Recruitment list is null");
+            }
             return recruitments.Select(r => new RecruitmentVm
             {
                 Id = r.Id,

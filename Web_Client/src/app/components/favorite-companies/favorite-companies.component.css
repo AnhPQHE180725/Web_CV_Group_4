@@ -167,3 +167,12 @@
   margin-right: 6px;
   color: #007bff;
 }
+
+.recruitment-link-disabled {
+  cursor: not-allowed;
+  color: #888; /* Màu nhạt hơn */
+}
+
+.recruitment-link-disabled s {
+  text-decoration: line-through;
+}

@@ -10,52 +10,52 @@
     Không có công ty nào.
   </div>
 
-  <ng-container *ngFor="let company of paginatedCompanies">
-    <div class="company" *ngIf="company.company.status === 1">
+  <div class="companies">
+    <div class="company" *ngFor="let company of paginatedCompanies">
       <div class="company-content">
-        <img [src]="
-            company.company.logo
-          " alt="{{ company.company.name }}" class="company-logo" />
+        <img [src]="company.company.logo" alt="{{ company.company.name }}" class="company-logo"/>
         <div class="company-details">
           <strong>Tên công ty:</strong>
           <p class="company-description">{{ company.company.name }}</p>
-
           <strong>Mô tả:</strong>
-          <p class="company-description">{{ company.company.description }}</p>
+          <p class="company-description" [innerHTML]="sanitizeDescription(company.company.description)"></p>
 
           <strong>Địa chỉ:</strong>
           <p class="company-description">{{ company.company.address }}</p>
-
           <strong>Email:</strong>
           <p class="company-description">{{ company.company.email }}</p>
-
           <strong>Số điện thoại:</strong>
           <p class="company-description">{{ company.company.phoneNumber }}</p>
-
-          <a [routerLink]="['/list-job-company', company.company.id]" class="recruitment-link">
+          
+          <!-- Active company: Normal clickable link -->
+          <a *ngIf="company.company.status === 1" 
+             [routerLink]="['/list-job-company', company.company.id]" 
+             class="recruitment-link">
             <i class="fas fa-hand-point-right"></i>
             <strong>Danh sách Việc làm</strong>
           </a>
-
-
+          
+          <!-- Inactive company: Strikethrough, non-clickable -->
+          <span *ngIf="company.company.status !== 1" 
+                class="recruitment-link-disabled">
+            <i class="fas fa-hand-point-right"></i>
+            <strong><s>Danh sách Việc làm</s></strong>
+          </span>
+          
           <!-- Status -->
           <div class="company-status">
-            <span class="status-badge" [ngClass]="{
-                active: company.company.status === 1,
-                paused: company.company.status === 0
-              }">
+            <span class="status-badge" [ngClass]="{ active: company.company.status === 1, paused: company.company.status === 0 }">
               {{ company.company.status === 1 ? "Hoạt động" : "Tạm ngưng" }}
             </span>
           </div>
         </div>
       </div>
-
       <!-- Follow Button -->
       <button class="follow-btn followed" (click)="toggleFollow($event, company.companyId)">
         Bỏ theo dõi
       </button>
     </div>
-  </ng-container>
+  </div>
 
   <!-- Pagination -->
   <div class="pagination">

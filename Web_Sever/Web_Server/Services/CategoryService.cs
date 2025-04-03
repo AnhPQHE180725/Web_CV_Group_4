@@ -14,12 +14,17 @@ namespace Web_Server.Services
 
         public async Task<List<Category>> Get5TopCategories()
         {
-           return await _categoryRepository.Get5TopCategories();
+            return await _categoryRepository.Get5TopCategories();
         }
 
         public async Task<List<Category>> GetAllCategories()
         {
-            return await _categoryRepository.GetAllCategories();
+            var  list = await _categoryRepository.GetAllCategories();
+            if (list == null || !list.Any())
+            {
+                throw new ArgumentException($"Not found any category");
+            }
+            return list;
         }
 
 

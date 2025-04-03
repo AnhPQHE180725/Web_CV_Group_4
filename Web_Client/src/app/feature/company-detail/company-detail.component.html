@@ -18,13 +18,9 @@
   <div *ngIf="!isLoading && !errorMessage && company" class="company-detail">
     <div class="company-header">
       <div class="company-logo-container">
-        <img
-          [src]="
+        <img [src]="
            company.logo
-          "
-          alt="{{ company.name }}"
-          class="company-logo"
-        />
+          " alt="{{ company.name }}" class="company-logo" />
       </div>
       <div class="company-title">
         <h1>{{ company.name }}</h1>
@@ -70,9 +66,9 @@
       <div class="info-card">
         <h2>Mô tả công ty</h2>
         <div class="info-content">
-          <div class="description" *ngIf="company.description">
-            {{ company.description }}
-          </div>
+          <div class="description" *ngIf="sanitizedDescription" [innerHTML]="sanitizedDescription"></div>
+
+
           <div class="no-data" *ngIf="!company.description">Không có mô tả</div>
         </div>
       </div>

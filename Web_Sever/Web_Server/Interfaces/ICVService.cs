@@ -10,4 +10,4 @@ namespace Web_Server.Interfaces
         Task<bool> DeleteCVAsync(int id);
         Task<string?> GetCVFilePathByUserIdAsync(int userId);
     }
-} 
+}

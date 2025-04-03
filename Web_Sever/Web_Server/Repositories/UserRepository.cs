@@ -23,12 +23,12 @@ namespace Web_Server.Repositories
 
         public async Task<User> CheckLoginAsync(LoginVm loginVm)
         {
-           return await _context.Users.FirstOrDefaultAsync(u => u.Email == loginVm.Email && u.Password == loginVm.Password);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == loginVm.Email && u.Password == loginVm.Password);
         }
 
         public async Task<User> TakeRoleAsync(User user)
         {
-            return  await _context.Users
+            return await _context.Users
                                     .Include(u => u.Role)
                                     .FirstOrDefaultAsync(u => u.Id == user.Id);
         }
@@ -75,7 +75,7 @@ namespace Web_Server.Repositories
 
         public async Task<CV> GetCVByUserId(int id)
         {
-            return await _context.CVs.FirstOrDefaultAsync(c=>c.UserId == id);    
+            return await _context.CVs.FirstOrDefaultAsync(c => c.UserId == id);
         }
 
         public async Task UpdatePasswordAsync(int userId, string newPassword)
@@ -91,10 +91,10 @@ namespace Web_Server.Repositories
         public async Task<ApplyPost> ApplyCV(int id)
         {
             var applyPost = await _context.ApplyPosts
-         .Include(a => a.User) 
-         .Include(a => a.Recruitment) 
-             
-                 .ThenInclude(u => u.Company) 
+         .Include(a => a.User)
+         .Include(a => a.Recruitment)
+
+                 .ThenInclude(u => u.Company)
          .FirstOrDefaultAsync(a => a.Id == id);
 
             if (applyPost == null)
@@ -102,10 +102,10 @@ namespace Web_Server.Repositories
                 throw new Exception("ApplyPost not found.");
             }
 
-           
+
             applyPost.Status = 2;
 
-       
+
             await _context.SaveChangesAsync();
 
             return applyPost;
@@ -114,8 +114,9 @@ namespace Web_Server.Repositories
         public async Task<ApplyPost> RejectCV(int id)
         {
             var applyPost = await _context.ApplyPosts
+                
         .Include(a => a.User)
-        .Include(a => a.Recruitment) 
+        .Include(a => a.Recruitment)
 
                 .ThenInclude(u => u.Company)
         .FirstOrDefaultAsync(a => a.Id == id);

@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Web_Server.Interfaces;
 using Web_Server.ViewModels;
 
@@ -18,7 +15,7 @@ namespace Web_Server.Controllers
         {
             _recruitmentService = recruitmentService;
         }
-        
+
         [HttpGet("get-all-recruitments")]
 
         public async Task<IActionResult> GetAllRecruitments()

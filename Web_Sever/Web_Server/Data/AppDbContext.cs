@@ -30,23 +30,23 @@ namespace Web_Server.Data
                 .HasOne(u => u.CV)
                 .WithOne(c => c.User)
                 .HasForeignKey<CV>(c => c.UserId)
-                .OnDelete(DeleteBehavior.Cascade); 
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<FollowCompany>()
                 .HasOne(f => f.Company)
                 .WithMany()
                 .HasForeignKey(f => f.CompanyId)
-                .OnDelete(DeleteBehavior.NoAction);  
+                .OnDelete(DeleteBehavior.NoAction);
 
             builder.Entity<ApplyPost>()
                 .HasOne(a => a.User)
                 .WithMany()
                 .HasForeignKey(a => a.UserId)
-                .OnDelete(DeleteBehavior.NoAction);  
+                .OnDelete(DeleteBehavior.NoAction);
             builder.Entity<FollowJob>()
                 .HasOne(fj => fj.User)
-                .WithMany(u => u.FollowJobs)  
-                .HasForeignKey(fj => fj.UserId) 
+                .WithMany(u => u.FollowJobs)
+                .HasForeignKey(fj => fj.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             SeedData.Seed(builder);
