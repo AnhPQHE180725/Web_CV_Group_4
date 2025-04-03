@@ -704,6 +704,22 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
+    "Method": "GetRecruitmentByCompanyName",
+    "RelativePath": "api/Recruitment/get-recruitment-by-company-name/{company}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "company",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web_Server.Controllers.RecruitmentController",
     "Method": "GetRecruitmentById",
     "RelativePath": "api/Recruitment/get-recruitment-by-id/{id}",
     "HttpMethod": "GET",

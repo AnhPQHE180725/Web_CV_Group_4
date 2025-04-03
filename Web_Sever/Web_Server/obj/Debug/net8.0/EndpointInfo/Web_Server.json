@@ -1361,6 +1361,28 @@
         }
       }
     },
+    "/api/Recruitment/get-recruitment-by-company-name/{company}": {
+      "get": {
+        "tags": [
+          "Recruitment"
+        ],
+        "parameters": [
+          {
+            "name": "company",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/User/get-user-by-post-id/{id}": {
       "get": {
         "tags": [
