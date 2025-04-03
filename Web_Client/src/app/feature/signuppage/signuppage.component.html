@@ -36,7 +36,9 @@
                 </select>
             </div>
 
-            <button type="submit">Register</button>
+            <button type="submit" [disabled]="isWorking">
+                {{ isWorking ? 'Đang đăng ký...' : 'Register' }}
+            </button>
         </form>
         <p class="login-link">Already have an Account? <a href="login">Sign in</a></p>
 

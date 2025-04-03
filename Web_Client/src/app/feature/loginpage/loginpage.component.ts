@@ -16,10 +16,15 @@ export class LoginpageComponent {
     email: '',
     password: ''
   };
+    isWorking = false; // Trạng thái xử lý
+
 
   constructor(private authService: AuthService, private router: Router, private cookieService: CookieService) {}
 
 onFormSubmit() {
+    if (this.isWorking) return; // Nếu đang xử lý, không làm gì cả
+    this.isWorking = true; // Bắt đầu xử lý
+
   this.authService.login(this.model).subscribe({
     next: response => {
       if (response.token) {
@@ -36,7 +41,10 @@ onFormSubmit() {
     },
     error: () => {
       alert('Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!');
-    }
+    },
+          complete: () => {
+        this.isWorking = false; // Hoàn tất xử lý
+      }
   });
 }
 }
