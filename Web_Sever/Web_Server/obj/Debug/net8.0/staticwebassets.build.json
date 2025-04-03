@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P1YKtOxdDDMf1qOZ3COg4p8/heI01FgFxFqivbGvq6k=",
+  "Hash": "GoBGxXm+XtPCcVtBi5MSuFw+InG1ottDe2dGmwVgPPI=",
   "Source": "Web_Server",
   "BasePath": "_content/Web_Server",
   "Mode": "Default",
@@ -80,6 +80,27 @@
       "OriginalItemSpec": "wwwroot\\CVs\\478104a5-257b-45e2-ba06-43ce40cb2924_GuideToInstallAngular.pdf"
     },
     {
+      "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5hzxo5d2su",
+      "Integrity": "JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.pdf"
+    },
+    {
       "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "SourceId": "Web_Server",
       "SourceType": "Discovered",
@@ -141,6 +162,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CVs\\835fb5f0-8495-4d93-85f9-490cdc5ae6d7_GuideToInstallAngular.pdf"
+    },
+    {
+      "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.pdf",
+      "SourceId": "Web_Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\",
+      "BasePath": "_content/Web_Server",
+      "RelativePath": "CVs/9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1xm98xk7pa",
+      "Integrity": "RQhFg7zo97ZvDV8Q4tzqN4ali7keBtn9Ilo0c7B1tv8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CVs\\9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.pdf"
     },
     {
       "Identity": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\d6c4c6ad-d637-48c6-ac61-940ec74875f2_cvDuc.pdf",
@@ -412,6 +454,88 @@
       ]
     },
     {
+      "Route": "CVs/5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.5hzxo5d2su.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 05:06:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5hzxo5d2su"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\5aa9a3ce-c69f-4aaf-827e-21583addce7f_cvTuan.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 05:06:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JzK3w7AWZcaFR0aiVL8V2kzMRHXAM37MuzY33RNgTPI="
+        }
+      ]
+    },
+    {
       "Route": "CVs/6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.86ecjpiua8.pdf",
       "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\6cb22f7b-bd9a-4df1-ad84-d45c51fc8b5c_Assignment 2.pdf",
       "Selectors": [],
@@ -654,6 +778,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-XCQZwpamXYNV4c6m3F5k8xOHVNPBvnaJ7mwIr+Zi92Y="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.1xm98xk7pa.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "348009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RQhFg7zo97ZvDV8Q4tzqN4ali7keBtn9Ilo0c7B1tv8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:59:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1xm98xk7pa"
+        },
+        {
+          "Name": "label",
+          "Value": "CVs/9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RQhFg7zo97ZvDV8Q4tzqN4ali7keBtn9Ilo0c7B1tv8="
+        }
+      ]
+    },
+    {
+      "Route": "CVs/9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.pdf",
+      "AssetFile": "D:\\MockProject\\Web_CV_Group_4\\Web_Sever\\Web_Server\\wwwroot\\CVs\\9a6c674e-bdc1-4ec3-a85d-52f31e03178d_NCTR_Practice_T02.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "348009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RQhFg7zo97ZvDV8Q4tzqN4ali7keBtn9Ilo0c7B1tv8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:59:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RQhFg7zo97ZvDV8Q4tzqN4ali7keBtn9Ilo0c7B1tv8="
         }
       ]
     },

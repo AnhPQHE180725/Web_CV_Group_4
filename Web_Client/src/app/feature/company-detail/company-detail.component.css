@@ -252,3 +252,11 @@
     grid-template-columns: 1fr;
   }
 }
+
+.company-inactive {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}

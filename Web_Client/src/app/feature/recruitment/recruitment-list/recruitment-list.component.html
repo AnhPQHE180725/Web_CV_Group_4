@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<div *ngIf="paginatedRecruitments.length > 0; else noResults">
+<div *ngIf="paginatedRecruitments.length > 0 ; else noResults">
   <div class="post" *ngFor="let post of paginatedRecruitments">
     <div>
       <img [src]="post.logo" alt="{{ post.companyName }}" class="company-logo" />
