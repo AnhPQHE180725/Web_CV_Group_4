@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\recruitmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\recruitmentservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\topcvweb_test\\applypostservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9A7BE76-CB68-46A2-825E-35600DD4391E}|TopCVWeb_Test\\TopCVWeb_Test.csproj|solutionrelative:topcvweb_test\\applypostservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\services\\recruitmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|c:\\users\\admin\\documents\\github\\web_cv_group_4\\web_sever\\web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AC62587-1390-418F-A08B-72F6384C3A22}|Web_Server\\Web_Server.csproj|solutionrelative:web_server\\repositories\\recruitmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -109,7 +113,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -137,31 +141,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CVController.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CVController.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Controllers\\CVController.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CVController.cs",
-              "RelativeToolTip": "Web_Server\\Controllers\\CVController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAA7wEMAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RecruitmentServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "RelativeDocumentMoniker": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "RelativeToolTip": "TopCVWeb_Test\\RecruitmentServiceTest.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAowOAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T02:07:26.905Z"
+              "WhenOpened": "2025-04-03T16:13:04.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplyPostRepository.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\ApplyPostRepository.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Repositories\\ApplyPostRepository.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\ApplyPostRepository.cs",
-              "RelativeToolTip": "Web_Server\\Repositories\\ApplyPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T17:18:47.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ApplyPostVm.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\ViewModels\\ApplyPostVm.cs",
               "RelativeDocumentMoniker": "Web_Server\\ViewModels\\ApplyPostVm.cs",
@@ -173,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ApplyPostService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\ApplyPostService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\ApplyPostService.cs",
@@ -185,20 +178,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ApplyPostServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\ApplyPostServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\ApplyPostServiceTest.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\ApplyPostServiceTest.cs",
               "RelativeToolTip": "TopCVWeb_Test\\ApplyPostServiceTest.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAqwGcAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAHUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T23:51:13.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T23:51:13.989Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "RecruitmentService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
+              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAADwv+4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T16:43:07.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplyPostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "RelativeToolTip": "Web_Server\\Repositories\\ApplyPostRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T17:18:47.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CVController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CVController.cs",
+              "RelativeDocumentMoniker": "Web_Server\\Controllers\\CVController.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\CVController.cs",
+              "RelativeToolTip": "Web_Server\\Controllers\\CVController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAA7wEMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T02:07:26.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CompanyServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CompanyServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\CompanyServiceTest.cs",
@@ -210,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CVServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\CVServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\CVServiceTest.cs",
@@ -222,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CVRepository.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\CVRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\CVRepository.cs",
@@ -234,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CVService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CVService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\CVService.cs",
@@ -246,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ICVService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\ICVService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\ICVService.cs",
@@ -258,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "IApplyPostRepository.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IApplyPostRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IApplyPostRepository.cs",
@@ -270,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\EmailService.cs",
@@ -282,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IEmailService.cs",
@@ -294,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ApplyPostController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\ApplyPostController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\ApplyPostController.cs",
@@ -306,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "FollowJobServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\FollowJobServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\FollowJobServiceTest.cs",
@@ -318,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "Web_Server\\Data\\SeedData.cs",
@@ -330,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -342,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CompanyService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\CompanyService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Services\\CompanyService.cs",
@@ -354,19 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RecruitmentService.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeDocumentMoniker": "Web_Server\\Services\\RecruitmentService.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Services\\RecruitmentService.cs",
-              "RelativeToolTip": "Web_Server\\Services\\RecruitmentService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAgwAQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T16:43:07.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IRecruitmentService.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentService.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentService.cs",
@@ -378,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "RecruitmentController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\RecruitmentController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\RecruitmentController.cs",
@@ -390,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "RecruitmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Repositories\\RecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Repositories\\RecruitmentRepository.cs",
@@ -402,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "FollowCompanyServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\TopCVWeb_Test\\FollowCompanyServiceTest.cs",
               "RelativeDocumentMoniker": "TopCVWeb_Test\\FollowCompanyServiceTest.cs",
@@ -414,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IRecruitmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Interfaces\\IRecruitmentRepository.cs",
               "RelativeDocumentMoniker": "Web_Server\\Interfaces\\IRecruitmentRepository.cs",
@@ -426,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Web_CV_Group_4\\Web_Sever\\Web_Server\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Web_Server\\Controllers\\AuthenticationController.cs",
