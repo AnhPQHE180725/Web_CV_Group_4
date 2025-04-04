@@ -82,7 +82,7 @@ export class HomepageComponent {
       error: (err) => console.error('Error fetching total recruitments:', err)
     });
 
-    this.recruitmentService.getTotalViews().subscribe({
+    this.recruitmentService.getViews().subscribe({
       next: (data) => {
         this.totalViews = data;
         console.log('Total views:', this.totalViews);
