@@ -141,5 +141,11 @@ namespace Web_Server.Controllers
             return Ok(await _recruitmentService.GetRecruitmentByCompanyName(company));
         }
 
+        [HttpGet("recruitments/views")]
+        public async Task<IActionResult> GetTotalViews()
+        {
+            return Ok(await _recruitmentService.GetTotalViews());
+        }
+
     }
 }

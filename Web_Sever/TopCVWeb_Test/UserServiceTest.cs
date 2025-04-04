@@ -298,7 +298,7 @@ namespace TopCVWeb_Test
         [Test]
         public async Task UpdateProfileAsync_UserExists_ShouldReturnsTrue()
         {
-            var user = new User { FullName = "Old Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com" };
+            var user = new User { FullName = "Old Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com", Password = "hashed_password", RoleId = 1 };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             var newUser = new UserVm { FullName = "New Name", PhoneNumber = "123456789", Address = "Ha noi", Description = "desc", Image = "image.jpg", Email = "test@example.com" };
@@ -312,7 +312,13 @@ namespace TopCVWeb_Test
         [Test]
         public async Task UpdateEmailAsync_EmailNotTaken_ReturnsTrue()
         {
-            var user = new User { Email = "old@example.com" };
+            var user = new User
+            {
+                FullName = "User",
+                Email = "old@example.com",
+                Password = "hashed_password",
+                RoleId = 1,
+            };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
@@ -330,13 +336,26 @@ namespace TopCVWeb_Test
         public async Task IsTakenEmailAsync_EmailExists_ReturnsTrue()
         {
             string existingEmail = "exist@example.com";
-            _context.Users.Add(new User { Email = existingEmail });
+            var testUser = new User
+            {
+                FullName = "Test User",
+                Email = existingEmail,
+                PhoneNumber = "0123456789",
+                Address = "123 Test Street",
+                Description = "Test Description",
+                Image = "test.jpg",
+                Password = "hashed_password",
+                RoleId = 2
+            };
+            _context.Users.Add(testUser);
             await _context.SaveChangesAsync();
 
             var result = await _userService.IsTakenEmailAsync(existingEmail);
+
             Assert.True(result);
 
         }
+
 
         // Phương thức dọn dẹp sau khi kiểm thử (TearDown)
         [TearDown]

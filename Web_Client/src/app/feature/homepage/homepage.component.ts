@@ -39,7 +39,9 @@ export class HomepageComponent {
   followedCompanies: number[] = [];
   totalCompanies: number = 0;
   totalRecruitments: number = 0;
+  totalViews: number = 0;
   currentDate: string = '';
+
 
   constructor(
     private categoryService: CategoryService,
@@ -80,6 +82,14 @@ export class HomepageComponent {
       error: (err) => console.error('Error fetching total recruitments:', err)
     });
 
+    this.recruitmentService.getTotalViews().subscribe({
+      next: (data) => {
+        this.totalViews = data;
+        console.log('Total views:', this.totalViews);
+      },
+      error: (err) => console.error('Error fetching total views:', err)
+    });
+
 
     this.companyService.getTopCompanies().subscribe({
       next: (data) => {
@@ -88,6 +98,8 @@ export class HomepageComponent {
       },
       error: (err) => console.error('Error fetching companies:', err)
     });
+
+
 
     this.recruitmentService.getTopRecruitments().subscribe({
       next: (data) => {

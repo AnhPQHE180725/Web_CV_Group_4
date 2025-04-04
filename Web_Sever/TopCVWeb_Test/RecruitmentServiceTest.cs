@@ -172,6 +172,30 @@ namespace TopCVWeb_Test
             Assert.IsTrue(result);
         }
         [Test]
+        public void AddRecruitment_ShouldThrowException_WhenInvalidDataProvided()
+        {
+            var invalidRecruitmentVm = new RecruitmentVm
+            {
+                Title = "", // Trống
+                Description = "Thiếu title",
+                Salary = -1000, // Lương âm
+                Status = 1,
+                Type = "Full-Time",
+                Experience = "1 year",
+                CompanyId = 0, // Sai ID
+                CategoryId = 0, // Sai ID
+                Quantity = 0, // Không hợp lệ
+                Deadline = DateTime.UtcNow.AddDays(-2), // Quá hạn
+                Address = "Some address",
+                Rank = "Junior"
+            };
+
+            var ex = Assert.ThrowsAsync<ArgumentException>(async () =>
+                await _recruitmentService.AddRecruitmentAsync(invalidRecruitmentVm));
+            Assert.AreEqual("Invalid recruitment data", ex.Message);
+        }
+
+        [Test]
         public async Task EditRecruitment_ShouldReturnTrue_WhenRecruitmentUpdated()
         {
             // Arrange - Thêm dữ liệu trước khi test
@@ -197,6 +221,54 @@ namespace TopCVWeb_Test
             // Assert
             Assert.IsTrue(result, "Recruitment should be updated successfully.");
         }
+        [Test]
+        public async Task EditRecruitment_ShouldThrowException_WhenDataIsInvalid()
+        {
+            var updatedRecruitment = new RecruitmentVm
+            {
+                Title = "",  // Rỗng
+                Description = "",
+                Salary = 0,  // Không hợp lệ
+                Status = 1,
+                Type = "Full-Time",
+                Experience = "3 years",
+                CompanyId = 1,
+                CategoryId = 1,
+                Quantity = 1,
+                Deadline = DateTime.UtcNow.AddDays(10),
+                Address = "HCM",
+                Rank = "Junior"
+            };
+
+            var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.EditRecruitmentAsync(1, updatedRecruitment));
+
+            Assert.AreEqual("Invalid recruitment data", ex.Message);
+        }
+        [Test]
+        public async Task EditRecruitment_ShouldThrowException_WhenRecruitmentDoesNotExist()
+        {
+            var recruitmentVm = new RecruitmentVm
+            {
+                Title = "Fake Job",
+                Description = "No such recruitment",
+                Salary = 1000,
+                Status = 1,
+                Type = "Full-Time",
+                Experience = "1 year",
+                CompanyId = 1,
+                CategoryId = 1,
+                Quantity = 1,
+                Deadline = DateTime.UtcNow.AddDays(10),
+                Address = "Unknown",
+                Rank = "Junior"
+            };
+
+            var ex = Assert.ThrowsAsync<ArgumentException>(async () =>
+                await _recruitmentService.EditRecruitmentAsync(9999, recruitmentVm));
+
+            Assert.AreEqual($"Recruitment with id={9999} not found", ex.Message);
+        }
+
 
 
         [Test]
@@ -214,6 +286,12 @@ namespace TopCVWeb_Test
             var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.DeleteRecruitmentAsync(nonExistentRecruitmentId));
 
             Assert.AreEqual($"Recruitment with ID {nonExistentRecruitmentId} not found", ex.Message);
+        }
+        [Test]
+        public async Task GetTotalViews_ShouldReturnCorrectTotal()
+        {
+            var result = await _recruitmentService.GetTotalViews();
+            Assert.IsTrue(result > 0, "should return total views");
         }
 
         [TearDown]

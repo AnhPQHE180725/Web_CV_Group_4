@@ -155,6 +155,13 @@ namespace Web_Server.Services
 
         public async Task<bool> AddRecruitmentAsync(RecruitmentVm recruitmentVm)
         {
+            if (string.IsNullOrWhiteSpace(recruitmentVm.Title) ||
+                recruitmentVm.Salary < 0 ||
+                recruitmentVm.Quantity <= 0 ||
+                recruitmentVm.Deadline <= DateTime.UtcNow)
+            {
+                throw new ArgumentException("Invalid recruitment data");
+            }
             var recruitment = new Recruitment
             {
                 Title = recruitmentVm.Title,
@@ -179,8 +186,21 @@ namespace Web_Server.Services
         public async Task<bool> EditRecruitmentAsync(int id, RecruitmentVm recruitmentVm)
         {
             var existingRecruitment = await _repository.GetRecruitmentByIdAsync(id);
-            if (existingRecruitment == null) return false;
+            if (existingRecruitment == null)
+            {
+                throw new ArgumentException($"Recruitment with id={id} not found");
+            }
 
+            // Kiểm tra dữ liệu đầu vào có hợp lệ không
+            if (string.IsNullOrWhiteSpace(recruitmentVm.Title) ||
+                recruitmentVm.Salary < 0 ||
+                recruitmentVm.Quantity <= 0 ||
+                recruitmentVm.Deadline <= DateTime.UtcNow)
+            {
+                throw new ArgumentException("Invalid recruitment data");
+            }
+
+            // Cập nhật dữ liệu
             existingRecruitment.Title = recruitmentVm.Title;
             existingRecruitment.Description = recruitmentVm.Description;
             existingRecruitment.Salary = recruitmentVm.Salary;
@@ -196,6 +216,7 @@ namespace Web_Server.Services
 
             return await _repository.EditRecruitmentAsync(existingRecruitment);
         }
+
 
         public async Task<bool> DeleteRecruitmentAsync(int id)
         {
@@ -306,6 +327,12 @@ namespace Web_Server.Services
             return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
-        
+
+        public Task<int> GetTotalViews()
+        {
+            return _repository.GetTotalViews();
+        }
+
+
     }
 }
