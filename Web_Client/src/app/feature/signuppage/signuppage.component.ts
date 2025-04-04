@@ -19,6 +19,8 @@ export class SignuppageComponent {
     confirmPassword: '',
     roleName: ''
   };
+    isWorking = false; // Trạng thái xử lý
+
 
   constructor(
     private authService: AuthService,
@@ -27,6 +29,8 @@ export class SignuppageComponent {
   ) {}
 
   onFormSubmit() {
+        if (this.isWorking) return; // Nếu đang xử lý, không làm gì cả
+
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!emailPattern.test(this.model.email)) {
@@ -43,6 +47,7 @@ export class SignuppageComponent {
       alert('Vui lòng chọn vai trò!');
       return;
     }
+        this.isWorking = true; // Bắt đầu xử lý
 
     this.authService.register(this.model).subscribe({
       next: (response) => {
@@ -55,6 +60,9 @@ export class SignuppageComponent {
       error: (error) => {
         alert('Đăng ký thất bại! Vui lòng thử lại.');
         console.error('Lỗi đăng ký:', error);
+      },
+      complete: () => {
+        this.isWorking = false; // Hoàn tất xử lý
       }
     });
   }

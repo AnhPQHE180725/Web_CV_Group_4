@@ -27,7 +27,7 @@ namespace TopCVWeb_Test
         [Test]
         public async Task SendPasswordResetEmailAsync_SendMail_ReturnTrue()
         {
-            string realEmail = "quanganhpham2k4@gmail.com";
+            string realEmail = "thisisyouryour@mail.com";
             string resetLink = "http://localhost/reset-password/token";
             var result = await _emailService.SendPasswordResetEmailAsync(realEmail, resetLink);
             Assert.IsTrue(result);
@@ -37,7 +37,7 @@ namespace TopCVWeb_Test
         [Test]
         public async Task SendOtpEmailAsync_SendMail_ReturnTrue()
         {
-            string realEmail = "quanganhpham2k4@gmail.com";
+            string realEmail = "thisisyour@mail.com";
             string otp = "this is otp";
             var result = await _emailService.SendOtpEmailAsync(realEmail, otp);
             Assert.IsTrue(result);

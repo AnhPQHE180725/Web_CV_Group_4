@@ -8,7 +8,7 @@
 <div *ngIf="paginatedCompanies.length > 0; else noResults">
   <div class="companies">
     <div class="company" *ngFor="let company of companies">
-      <div class="company-content clickable" [routerLink]="company.status === 1 ? ['/company', company.id] : null"
+      <div class="company-content clickable" [routerLink]="['/company', company.id]"
         [class.disabled]="company.status !== 1">
         <img [src]="company.logo" alt="{{ company.name }}" class="company-logo" />
         <span class="company-name">{{ company.name }}</span>

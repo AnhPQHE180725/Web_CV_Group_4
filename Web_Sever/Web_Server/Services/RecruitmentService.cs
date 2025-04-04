@@ -24,6 +24,10 @@ namespace Web_Server.Services
         public async Task<List<RecruitmentVm>> GetRecruitmentsByCategory(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with category id={id}");
+            }
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -79,7 +83,7 @@ namespace Web_Server.Services
 
         public async Task<List<RecruitmentVm>> GetTop2Recruitments()
         {
-            var recruitments = await _repository.GetTop2Recruitments(); // Get raw data
+            var recruitments = await _repository.GetTop2Recruitments(); 
 
             return recruitments.Select(r => new RecruitmentVm
             {
@@ -120,6 +124,34 @@ namespace Web_Server.Services
         }
 
         public async Task<List<RecruitmentVm>> GetRecruitmentsByid(int id)
+        {
+            var recruitments = await _repository.GetRecruitmentsByCategory(id);
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException($"Not found Recruitment with id={id}");
+            }
+            return recruitments.Select(r => new RecruitmentVm
+            {
+                Id = r.Id,
+                Address = r.Address,
+                CreatedAt = r.CreatedAt,
+                Description = r.Description,
+                Experience = r.Experience,
+                Quantity = r.Quantity,
+                Rank = r.Rank,
+                Salary = r.Salary,
+                Status = r.Status,
+                Title = r.Title,
+                Type = r.Type,
+                View = r.View,
+                Deadline = r.Deadline,
+
+                CompanyName = r.Company?.Name ?? "Unknown",
+                CategoryName = r.Category?.Name ?? "Unknown"
+
+            }).ToList();
+        }
+        public async Task<List<RecruitmentVm>> GetRecruitmentByid(int id)
         {
             var recruitments = await _repository.GetRecruitmentsByCategory(id);
             if (recruitments == null || !recruitments.Any())
@@ -194,8 +226,17 @@ namespace Web_Server.Services
 
         public async Task<bool> DeleteRecruitmentAsync(int id)
         {
-            return await _repository.DeleteRecruitmentAsync(id);
+            var recruitment = await _repository.GetRecruitmentByIdAsync(id);
+
+            if (recruitment == null)
+            {
+                throw new ArgumentException($"Recruitment with ID {id} not found");
+            }
+
+            await _repository.DeleteRecruitmentAsync(id);
+            return true;
         }
+
 
         public async Task<Recruitment> GetRecruitmentById(int id)
         {
@@ -236,8 +277,11 @@ namespace Web_Server.Services
 
         public async Task<List<RecruitmentVm>> GetAllRecruitments()
         {
-            var recruitments = await _repository.GetAllRecruitments(); // Get raw data
-
+            var recruitments = await _repository.GetAllRecruitments();
+            if (recruitments == null || !recruitments.Any())
+            {
+                throw new ArgumentException("Recruitment list is null");
+            }
             return recruitments.Select(r => new RecruitmentVm
             {
                 Id = r.Id,
@@ -282,6 +326,11 @@ namespace Web_Server.Services
         public async Task<int> GetTotalRecruitmentsByStatus(int status)
         {
             return await _repository.GetTotalRecruitmentsByStatus(status);
+        }
+        public async Task<List<RecruitmentVm>> GetRecruitmentByCompanyName(string company)
+        {
+            var recruitments = await _repository.GetRecruitmentByCompanyName(company);
+            return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
     }

@@ -31,7 +31,9 @@ export class RecruitmentService {
     getRecruitmentsByCompanyName(company: string): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-company-name/${company}`);
     }
-
+    getRecruitmentByCompanyName(company: string): Observable<any> {
+        return this.http.get(`${this.baseUrl}/Recruitment/get-recruitment-by-company-name/${company}`);
+    }
     getRecruitmentsByTitle(title: string): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/get-recruitments-by-title/${title}`);
     }
@@ -62,7 +64,7 @@ export class RecruitmentService {
     updateView(id: number): Observable<any> {
         return this.http.put(`${this.baseUrl}/Recruitment/update-view/${id}`, {});
     }
-    getRecruitmentByStatus(status: number): Observable<any>{
+    getRecruitmentByStatus(status: number): Observable<any> {
         return this.http.get(`${this.baseUrl}/Recruitment/recruitments/count?status=${status}`);
     }
 }
