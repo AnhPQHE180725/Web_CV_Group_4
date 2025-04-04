@@ -202,10 +202,20 @@ namespace TopCVWeb_Test
         [Test]
         public async Task DeleteRecruitment_ShouldReturnTrue_WhenRecruitmentDeleted()
         {
-            var result = await _recruitmentService.DeleteRecruitmentAsync(44);
+            var result = await _recruitmentService.DeleteRecruitmentAsync(4);
 
             Assert.IsTrue(result);
         }
+        [Test]
+        public async Task DeleteRecruitment_ShouldThrowException_WhenRecruitmentDoesNotExist()
+        {
+            int nonExistentRecruitmentId = 9999;
+
+            var ex = Assert.ThrowsAsync<ArgumentException>(async () => await _recruitmentService.DeleteRecruitmentAsync(nonExistentRecruitmentId));
+
+            Assert.AreEqual($"Recruitment with ID {nonExistentRecruitmentId} not found", ex.Message);
+        }
+
         [TearDown]
         public void TearDown()
         {

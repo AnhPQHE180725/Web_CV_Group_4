@@ -74,18 +74,26 @@
       </div>
     </div>
 
-    <div class="jobs-section" *ngIf="company.recruitments && company.recruitments.length > 0">
-      <h3>Việc làm đã đăng</h3>
-      <div class="jobs-list">
-        <div class="job-card" *ngFor="let job of company.recruitments">
-          <h3>{{ job.title }}</h3>
-          <div *ngIf="job.salary" class="job-salary">
-            <span>Lương: {{ job.salary }}</span>
+    <div *ngIf="company.status === 1">
+      <div class="jobs-section" *ngIf="company.recruitments && company.recruitments.length > 0">
+        <h3>Việc làm đã đăng</h3>
+        <div class="jobs-list">
+          <div class="job-card" *ngFor="let job of company.recruitments">
+            <h3>{{ job.title }}</h3>
+            <div *ngIf="job.salary" class="job-salary">
+              <span>Lương: {{ job.salary }}</span>
+            </div>
+            <a [routerLink]="['/recruitment', 'detail', job.id]" class="view-job-btn">Xem chi tiết</a>
           </div>
-          <a [routerLink]="['/recruitment', 'detail', job.id]" class="view-job-btn">Xem chi tiết</a>
         </div>
       </div>
     </div>
+    
+    <!-- Hiển thị thông báo nếu công ty tạm ngưng -->
+    <div *ngIf="company.status !== 1" class="company-inactive">
+      <p>Công ty tạm ngưng nên không có việc làm.</p>
+    </div>
+    
 
     <div class="jobs-section" *ngIf="!company.recruitments || company.recruitments.length === 0">
       <h3>Việc làm đã đăng</h3>

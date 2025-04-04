@@ -199,8 +199,17 @@ namespace Web_Server.Services
 
         public async Task<bool> DeleteRecruitmentAsync(int id)
         {
-            return await _repository.DeleteRecruitmentAsync(id);
+            var recruitment = await _repository.GetRecruitmentByIdAsync(id);
+
+            if (recruitment == null)
+            {
+                throw new ArgumentException($"Recruitment with ID {id} not found");
+            }
+
+            await _repository.DeleteRecruitmentAsync(id);
+            return true;
         }
+
 
         public async Task<Recruitment> GetRecruitmentById(int id)
         {
