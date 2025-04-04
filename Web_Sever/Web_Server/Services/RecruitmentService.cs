@@ -297,5 +297,6 @@ namespace Web_Server.Services
             return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
+        
     }
 }

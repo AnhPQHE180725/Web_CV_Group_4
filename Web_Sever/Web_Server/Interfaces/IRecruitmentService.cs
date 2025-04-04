@@ -25,6 +25,6 @@ namespace Web_Server.Interfaces
         Task<bool> UpdateRecruitmentView(int id);
         Task<int> GetTotalRecruitmentsByStatus(int status);
         Task<List<RecruitmentVm>> GetRecruitmentByCompanyName(string company);
-        Task<List<RecruitmentVm>> GetRecruitmentByid(int id);
+        
     }
 }
