@@ -41,7 +41,9 @@ export class HomepageComponent {
   totalRecruitments: number = 0;
   totalViews: number = 0;
   currentDate: string = '';
+  recentJobs: { company: string; title: string }[] = []; // Placeholder for recent jobs
 
+  
 
   constructor(
     private categoryService: CategoryService,
@@ -56,6 +58,7 @@ export class HomepageComponent {
   ) { }
 
   ngOnInit(): void {
+
     this.currentDate = new Date().toLocaleDateString('vi-VN');
     this.categoryService.getTopCategories().subscribe({
       next: (data) => {
@@ -90,6 +93,19 @@ export class HomepageComponent {
       error: (err) => console.error('Error fetching total views:', err)
     });
 
+    // Fetch top recruitments
+    this.recruitmentService.getTopRecruitments().subscribe({
+      next: (data) => {
+        this.recruitments = data;
+        this.recentJobs = data.slice(0, 5).map((recruitment: Recruitment) => ({
+          company: recruitment.companyName,
+          title: recruitment.title
+        })); // Map for recent jobs
+        console.log('Recruitments loaded:', this.recruitments);
+      },
+      error: (err) => console.error('Error fetching recruitments:', err)
+    });
+
 
     this.companyService.getTopCompanies().subscribe({
       next: (data) => {
@@ -108,6 +124,7 @@ export class HomepageComponent {
       },
       error: (err) => console.error('Error fetching recruitments:', err)
     });
+    
 
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
@@ -118,6 +135,7 @@ export class HomepageComponent {
       this.loadFollowedCompanies();
     }
   }
+
 
   prevSlide() {
     this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;

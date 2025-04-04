@@ -858,8 +858,8 @@
   },
   {
     "ContainingType": "Web_Server.Controllers.RecruitmentController",
-    "Method": "GetAllView",
-    "RelativePath": "api/Recruitment/total-views",
+    "Method": "GetTotalViews",
+    "RelativePath": "api/Recruitment/recruitments/views",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

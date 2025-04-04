@@ -20,23 +20,38 @@
       <span class="icon">📅</span>
       <span class="title">Thống kê hôm nay: {{ currentDate }}</span>
     </div>
-    
+
     <div class="dashboard-content">
-      <div class="dashboard-item">
-        <p class="label">Tổng số công ty</p>
-        <p class="number">{{ totalCompanies | number }}</p>
-      </div>
-  
-      <div class="dashboard-item">
-        <p class="label">Việc làm đang ứng</p>
-        <p class="number">{{ totalRecruitments | number }}</p>
+      <!-- Stats Row -->
+      <div class="stats-row">
+        <div class="dashboard-item">
+          <p class="label">Tổng số công ty</p>
+          <p class="number">{{ totalCompanies | number }}</p>
+        </div>
+
+        <div class="dashboard-item">
+          <p class="label">Việc làm đang ứng</p>
+          <p class="number">{{ totalRecruitments | number }}</p>
+        </div>
+
+        <div class="dashboard-item">
+          <p class="label">Tổng số lượt xem</p>
+          <p class="number">{{ totalViews | number }}</p>
+        </div>
       </div>
 
-      <div class="dashboard-item">
-        <p class="label">Tổng số lượt xem</p>
-        <p class="number">{{ totalViews | number }}</p>
+      <!-- List and Charts Row -->
+      <div class="dashboard-details">
+        <!-- Left: List of Recent Jobs -->
+        <div class="dashboard-list">
+          <h3>Việc làm hot nhất</h3>
+          <ul>
+            <li *ngFor="let job of recentJobs">
+              <strong>{{ job.company }}</strong> - {{ job.title }}
+            </li>
+          </ul>
+        </div>
       </div>
-
     </div>
   </div>
 
@@ -53,34 +68,23 @@
     <div class="companies">
       <div class="company" *ngFor="let company of companies">
         <!-- khi cty ngừng hoat động thì ko vào xem dc danh sách các bài đăng của cty đó, cty phá sản nên ko tuyển nữa -->
-        <div
-          class="company-content clickable"
+        <div class="company-content clickable"
           [routerLink]="company.status === 1 ? ['/recruitment', 'company', company.id] : null"
-          [class.disabled]="company.status !== 1"
-        >
-          <img
-            [src]="company.logo"
-            alt="{{ company.name }}"
-            class="company-logo"
-          />
+          [class.disabled]="company.status !== 1">
+          <img [src]="company.logo" alt="{{ company.name }}" class="company-logo" />
           <span class="company-name">{{ company.name }}</span>
         </div>
-    
+
         <!-- Nút Theo dõi: chỉ hiển thị khi status === 1 -->
-        <button
-          class="follow-btn"
-          (click)="toggleCompanyFollow($event, company.id)"
+        <button class="follow-btn" (click)="toggleCompanyFollow($event, company.id)"
           *ngIf="isLoggedIn() && isCandidate() && company.status === 1"
-          [class.followed]="isCompanyFollowed(company.id)"
-        >
+          [class.followed]="isCompanyFollowed(company.id)">
           {{ isCompanyFollowed(company.id) ? "Bỏ theo dõi" : "Theo dõi" }}
         </button>
-    
+
         <!-- Thông báo công ty tạm ngừng cho cả ung viên lẫn nhà tuyen dung để họ biết-->
-        <p
-          *ngIf="isLoggedIn() && isCandidate() && company.status !== 1 || isLoggedIn() && company.status !== 1"
-          class="status-message"
-        >
+        <p *ngIf="isLoggedIn() && isCandidate() && company.status !== 1 || isLoggedIn() && company.status !== 1"
+          class="status-message">
           Công ty tạm ngừng
         </p>
       </div>
