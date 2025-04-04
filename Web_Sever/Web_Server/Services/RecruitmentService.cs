@@ -333,5 +333,10 @@ namespace Web_Server.Services
             return recruitments.Select(ToRecruitmentVm).ToList();
         }
 
+        public Task<int> GetTotalViews()
+        {
+            return _repository.GetTotalViews();
+        }
+
     }
 }
