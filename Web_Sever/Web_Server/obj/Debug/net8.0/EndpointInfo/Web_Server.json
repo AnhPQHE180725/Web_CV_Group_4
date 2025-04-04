@@ -1383,6 +1383,18 @@
         }
       }
     },
+    "/api/Recruitment/total-views": {
+      "get": {
+        "tags": [
+          "Recruitment"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/User/get-user-by-post-id/{id}": {
       "get": {
         "tags": [

@@ -1,143 +1,143 @@
 .job-detail-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .job-info {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex: 1;
-  }
-  
-  .company-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .job-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .job-type {
-    font-size: 14px;
-    color: #6c757d;
-    margin-bottom: 5px;
-  }
-  
-  .job-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .job-location {
-    font-size: 14px;
-    color: #6c757d;
-    margin-bottom: 5px;
-  }
-  
-  .job-salary {
-    font-size: 16px;
-    font-weight: 600;
-    color: #28a745;
-  }
-  
-  .job-actions {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .favorite-btn,
-  .apply-btn {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .favorite-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-  }
-  
-  .favorite-btn:hover {
-    background-color: #e9ecef;
-  }
-  
-  .favorite-btn.favorited {
-    background-color: #ffebee;
-    color: #e53935;
-    border-color: #e53935;
-  }
-  
-  .apply-btn {
-    background-color: #007bff;
-    color: white;
-    border: 1px solid #007bff;
-  }
-  
-  .apply-btn:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
-  .apply-btn:disabled {
-    background-color: #ccc;
-    border-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .favorite-btn i,
-  .apply-btn i {
-    margin-right: 5px;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 
-  .back-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 16px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-  }
-  
-  .back-btn:hover {
-    background-color: #e9ecef;
-  }
+.job-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+}
 
-  .login-message {
-    margin-top: 10px;
-    color: #666;
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.job-type {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.job-location {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.job-salary {
+  font-size: 16px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.job-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.favorite-btn,
+.apply-btn {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+.favorite-btn:hover {
+  background-color: #e9ecef;
+}
+
+.favorite-btn.favorited {
+  background-color: #ffebee;
+  color: #e53935;
+  border-color: #e53935;
+}
+
+.apply-btn {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.apply-btn:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.favorite-btn i,
+.apply-btn i {
+  margin-right: 5px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background-color: #e9ecef;
+}
+
+.login-message {
+  margin-top: 10px;
+  color: #666;
 }
 
 .login-message a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .login-message a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h2 {

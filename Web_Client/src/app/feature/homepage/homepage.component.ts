@@ -41,6 +41,7 @@ export class HomepageComponent {
   totalRecruitments: number = 0;
   currentDate: string = '';
 
+
   constructor(
     private categoryService: CategoryService,
     private companyService: CompanyService,
@@ -88,6 +89,8 @@ export class HomepageComponent {
       },
       error: (err) => console.error('Error fetching companies:', err)
     });
+
+
 
     this.recruitmentService.getTopRecruitments().subscribe({
       next: (data) => {
