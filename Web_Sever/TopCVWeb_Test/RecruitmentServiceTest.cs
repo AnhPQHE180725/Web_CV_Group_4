@@ -287,6 +287,12 @@ namespace TopCVWeb_Test
 
             Assert.AreEqual($"Recruitment with ID {nonExistentRecruitmentId} not found", ex.Message);
         }
+        [Test]
+        public async Task GetTotalViews_ShouldReturnCorrectTotal()
+        {
+            var result = await _recruitmentService.GetTotalViews();
+            Assert.IsTrue(result > 0, "should return total views");
+        }
 
         [TearDown]
         public void TearDown()

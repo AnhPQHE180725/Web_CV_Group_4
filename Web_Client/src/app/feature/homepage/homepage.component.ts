@@ -39,6 +39,7 @@ export class HomepageComponent {
   followedCompanies: number[] = [];
   totalCompanies: number = 0;
   totalRecruitments: number = 0;
+  totalViews: number = 0;
   currentDate: string = '';
 
 
@@ -79,6 +80,14 @@ export class HomepageComponent {
         console.log('Total recruitments:', this.totalRecruitments);
       },
       error: (err) => console.error('Error fetching total recruitments:', err)
+    });
+
+    this.recruitmentService.getTotalViews().subscribe({
+      next: (data) => {
+        this.totalViews = data;
+        console.log('Total views:', this.totalViews);
+      },
+      error: (err) => console.error('Error fetching total views:', err)
     });
 
 

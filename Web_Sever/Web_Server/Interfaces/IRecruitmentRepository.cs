@@ -21,6 +21,7 @@ namespace Web_Server.Interfaces
         Task<bool> DeleteRecruitmentAsync(int id);
         Task<int> GetTotalRecruitmentsByStatus(int status);
         Task<List<Recruitment>> GetRecruitmentByCompanyName(string company);
+        Task<int> GetTotalViews();
 
 
     }
