@@ -68,7 +68,9 @@ export class RecruitmentService {
         return this.http.get(`${this.baseUrl}/Recruitment/recruitments/count?status=${status}`);
     }
 
+
     getTotalViews(): Observable<any> {
+
         return this.http.get(`${this.baseUrl}/Recruitment/recruitments/views`);
     }
 }

@@ -1383,7 +1383,7 @@
         }
       }
     },
-    "/api/Recruitment/total-views": {
+    "/api/Recruitment/recruitments/views": {
       "get": {
         "tags": [
           "Recruitment"
